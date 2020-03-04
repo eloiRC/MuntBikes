@@ -8,7 +8,8 @@
 	<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
 		integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
 	<link rel="stylesheet" href="./llibrerias/bootstrap-4.4.1-dist/css/bootstrap.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="icon" type="image/png" href="favicon-16x16.png">
 
 </head>
 
@@ -20,14 +21,12 @@
 	<span class="navbar-brand mb-0 h1 ">MONTAJES A LA CARTA</span>
 </nav>
 	<div class="mt-5">
-	<div class="col-8 offset-2">
+	<div class="col-12 col-lg-8 offset-lg-2">
 		<div class="card shadow rounded-lg">
 			<div class="card-body">
 		<form action="" method="post" id="formulari_a_la_carta">
-		<div class="input-group mt-5">
-			<div class="input-group-prepend">
-				<label class="input-group-text" for="modalitat">Modlaidad:</label>
-			  </div>
+		<div class="form-group mt-2">
+				<label class="" for="modalitat">Modalaidad:</label>
 			  <select class="custom-select " id="modalitat">
 				<option selected>Selecciona una modalidad</option>
 				<option value="road_disc">Carretera Disco</option>
@@ -36,82 +35,80 @@
 				<option value="mtb">MTB</option>
 			  </select>
 			</div>
-			<div class="input-group mt-5">
-			<div class="input-group-prepend">
-			  <label class="input-group-text" for="quadre">Cuadro:</label>
-			</div>
+			<div class="form-group mt-2">
+			  <label class="" for="quadre">Cuadro:</label>
 			<select class="custom-select" id="quadre" onchange="preu()">
 			  <option selected>Selecciona el cuadro</option>
 			</select>			
 		  </div>
-		  <div class="input-group mt-5">
-			<div class="input-group-prepend">
-			  <label class="input-group-text" for="rodes">Ruedas:</label>
+		  <div class="form-group mt-2">
+			<div class="">
+			  <label class="" for="rodes">Ruedas:</label>
 			</div>			
 			<select class="custom-select" id="rodes" onchange="preu()">
 			  <option selected>Selecciona las Ruedas</option>
 			</select>			
 		  </div>
-		  <div class="input-group mt-5">
-			<div class="input-group-prepend">
-			  <label class="input-group-text" for="grup">Grupo:</label>
+		  <div class="form-group mt-2">
+			<div class="">
+			  <label class="" for="grup">Grupo:</label>
 			</div>			
 			<select class="custom-select" id="grup" onchange="preu()">
 			  <option selected>Selecciona el Grupo</option>
 			</select>			
 		  </div>
-		  <div class="input-group mt-5">
-			<div class="input-group-prepend">
-			  <label class="input-group-text" for="frens">Frenos:</label>
+		  <div class="form-group mt-2">
+			<div class="">
+			  <label class="" for="frens">Frenos:</label>
 			</div>			
 			<select class="custom-select" id="frens" onchange="preu()">
 			  <option selected>Selecciona el Grupo</option>
 			</select>			
 		  </div>
-		  <div class="input-group mt-5">
-			<div class="input-group-prepend">
-			  <label class="input-group-text" for="manillar">Manillar:</label>
+		  <div class="form-group mt-2">
+			<div class="">
+			  <label class="" for="manillar">Manillar:</label>
 			</div>			
 			<select class="custom-select" id="manillar" onchange="preu()">
 			  <option selected>Selecciona el Mnaillar</option>
 			</select>			
 		  </div>
 		  <p class="text-muted small">*Todos los manillares son de una pieza Manillar/Potencia o son conjuntos de manillar y potencia de la misma marca y misma gama</p>
-		  <div class="input-group mt-5">
-			<div class="input-group-prepend">
-			  <label class="input-group-text" for="seient">Sillin:</label>
+		  <div class="form-group mt-2">
+			<div class="form-group">
+			  <label class="" for="seient">Sillin:</label>
 			</div>			
 			<select class="custom-select" id="seient" onchange="preu()">
 			  <option selected>Selecciona el Sillin</option>
 			</select>			
 		  </div> 
-		  <div class="input-group mt-5">
-			<div class="input-group-prepend">
-			  <label class="input-group-text" for="tija">Tija:</label>
+		  <div class="form-group mt-2">
+			<div class="">
+			  <label class="" for="tija">Tija:</label>
 			</div>			
 			<select class="custom-select" id="tija" onchange="preu()">
 			  <option selected>Selecciona la Tija</option>
 			</select>			
 		  </div>
-		  <div class="input-group mt-5">
-			<div class="input-group-prepend">
-			  <label class="input-group-text" for="cinta">Cinta:</label>
+		  <div class="form-group mt-2">
+			<div class="">
+			  <label class="" for="cinta">Cinta:</label>
 			</div>			
 			<select class="custom-select" id="cinta" onchange="preu()">
 			  <option selected>Selecciona la Cinta del Manillar</option>
 			</select>			
 		  </div>
-		  <div class="input-group mt-5">
-			<div class="input-group-prepend">
-			  <label class="input-group-text" for="punys">Puños:</label>
+		  <div class="form-group mt-2">
+			<div class="">
+			  <label class="" for="punys">Puños:</label>
 			</div>			
 			<select class="custom-select" id="punys" onchange="preu()">
 			  <option selected>Selecciona los Puños del Manillar</option>
 			</select>			
 		  </div>
-		  <div class="input-group mt-5">
-			<div class="input-group-prepend">
-			  <label class="input-group-text" for="pneumatics">Pneumaticos:</label>
+		  <div class="form-group mt-2">
+			<div class="">
+			  <label class="" for="pneumatics">Pneumaticos:</label>
 			</div>			
 			<select class="custom-select" id="pneumatics" onchange="preu()">
 			  <option selected>Selecciona los Pneumaticos</option>
