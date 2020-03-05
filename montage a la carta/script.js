@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     esconde();
     document.getElementById("modalitat").addEventListener("change", modalitat)
 
@@ -15,10 +15,52 @@ $(document).ready(function () {
 
 });
 
+//estructura de les taules, [{Nom:"",preu:0}]
+t_road_disc = [{
+    nom: "Pinarello F12 DISC",
+    preu: 5799
+}, {
+    nom: "Pinarello Prince FX DISC",
+    preu: 4300
+}, {
+    nom: "Colnago C64 DISC",
+    preu: 5300
+}, {
+    nom: "Colnago V3RS DISC",
+    preu: 4000
+}, {
+    nom: "Bianchi XR4 DISC",
+    preu: 5499
+}, {
+    nom: "Scott Addict RC Ultimate Disc",
+    preu: 2999
+}, {
+    nom: "Scott Addict RC PRO Disc",
+    preu: 2199
+}];
 
-
-
-
+t_road = [];
+t_gravel = [];
+t_mtb = [];
+t_manillars_road = [];
+t_manillars_gravel = [];
+t_manillars_mtb = [];
+t_rodes_disc = [];
+t_rodes_road = [];
+t_rodes_gravel = [];
+t_rodes_mtb = [];
+t_tijes = [];
+t_cinta = [];
+t_punys = [];
+t_seient = [];
+t_pneumatics_road = [];
+t_pneumatics_gravel = [];
+t_pneumatics_mtb = [];
+t_grup_road = [];
+t_grup_disc = [];
+t_grup_gravel = [];
+t_grup_mtb = [];
+t_frens = [];
 
 
 function modalitat() {
@@ -33,227 +75,150 @@ function modalitat() {
     $("#punys").empty();
     $("#seient").empty();
     $("#pneumatics").empty();
+
+    //ROAD DISCK
     if ($("#modalitat").val() == "road_disc") {
-        $("#quadre").append(
-            new Option("Selecciona un cuadro", 0, true),
-            new Option("Pinarello F12 DISC", 5799),
-            new Option("Pinarello Prince FX DISC", 4300),
-            new Option("Colnago C64 DISC", 5300),
-            new Option("Colnago V3RS DISC", 4000),
-            new Option("Bianchi XR4 DISC", 5499),
-            new Option("Scott Addict RC Ultimate Disc", 2999),
-            new Option("Scott Addict RC PRO Disc", 2199));
+        //quadres disc
+        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+        t_road_disc.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#quadre").append(t_tmp);
 
-        $("#rodes").append(
-            new Option("Selecciona unas ruedas", 0, true),
-            new Option("Enve SES 3.4 Tubular", 3400),
-            new Option("Campagnolo Bora One 35 Tubular", 2880),
-            new Option("Campagnolo Bora One 50 Tubular", 2880),
-            new Option("Fulcrum speed 40 Tubular"),
-            new Option("Corima WS Tubular", 1680),
-            new Option("Corima WS+ Tubular", 2300),
-            new Option("Carbon-ti Tubular", 2880),
-            new Option("Enve SES 3.4 Tubeless/Cubierta", 3400),
-            new Option("Campagnolo Bora One 35 Tubeless/Cubierta", 2880),
-            new Option("Campagnolo Bora One 50 Tubeless/Cubierta", 2880),
-            new Option("Fulcrum speed 40 Tubeless/Cubierta"),
-            new Option("Corima WS Tubeless/Cubierta", 1680),
-            new Option("Corima WS+ Tubeless/Cubierta", 2300),
-            new Option("Carbon-ti Tubeless/Cubierta", 2880));
+        //rodes disc 
+        t_tmp = '<option value="0" selected>Selecciona las Ruedas</option>';
+        t_rodes_disc.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#rodes").append(t_tmp)
 
-        $("#grup").append(
-            new Option("Selecciona un Grupo", 0, true),
-            new Option("Sram Red etap AXS 12v", 3600),
-            new Option("Sram Force etap AXS 12v", 2600),
-            new Option("Shimano Dura-Ace Di2", 3400),
-            new Option("Shimano Dura-Ace", 2400),
-            new Option("Shimano Ultegra Di2", 2600),
-            new Option("Shimano Ultegra", 1800),
-            new Option("Campagnolo Super Record EPS 12v", 4000),
-            new Option("Campagnolo Super Record 12v", 3300),
-            new Option("Campagnolo Record 12v", 2600),
-            new Option("Campagnolo Chorus 12v", 2000),
-        );
+        //grup disc
+        t_tmp = '<option value="0" selected>Selecciona un Grupo</option>';
+        t_grup_disc.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#grup").append(t_tmp);
 
-        $("#manillar").append(
-            new Option("Selecciona un Manillar", 0, true),
-            new Option("Most Talon Aero", 750),
-            new Option("Most Talon Ultra", 2600),
-            new Option("Most Talon UD", 3400),
-            new Option("Kit Most Tiger 3k conjunto", 2400),
-            new Option("Vison Metron 5D ACR", 2600),
-            new Option("Syncros Creston IC SL", 1800),
-            new Option("Pro ", 2000),
-            new Option("Pro Vive conjunto", 4000),
-            new Option("Zipp AERO conjunto", 3300),
-            new Option("Zipp Ergo Conjunto", 2600),
-            new Option("Enve Aero Conjunto", 4000),
-            new Option("Enve STD Conjunto", 4000),
-        );
+        //manillar
+        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+        t_manillars_road.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#manillar").append(t_tmp);
+
         seient();
         mostrar_cinta()
         pneumatic_road()
     }
+
+    //ROAD RIM BRAKE
     if ($("#modalitat").val() == "road_rim") {
-        $("#quadre").append(
-            new Option("Selecciona un cuadro", 0, true),
-            new Option("Pinarello F12", 5799),
-            new Option("Pinarello Prince FX", 4300),
-            new Option("Colnago C64", 5300),
-            new Option("Colnago V3RS", 4000),
-            new Option("Bianchi Specialissima", 4499),
-            new Option("Bianchi XR4", 3999));
+        //quadre road
+        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+        t_road.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#quadre").append(t_tmp);
 
-        $("#rodes").append(
-            new Option("Selecciona unas ruedas", 0, true),
-            new Option("Enve SES 3.4 Tubular", 3400),
-            new Option("Campagnolo Bora One 35 Tubular", 2880),
-            new Option("Campagnolo Bora One 50 Tubular", 2880),
-            new Option("Fulcrum speed 40 Tubular"),
-            new Option("Corima WS Tubular", 1680),
-            new Option("Corima WS+ Tubular", 2300),
-            new Option("Carbon-ti Tubular", 2880),
-            new Option("Enve SES 3.4 Tubeless/Cubierta", 3400),
-            new Option("Campagnolo Bora One 35 Tubeless/Cubierta", 2880),
-            new Option("Campagnolo Bora One 50 Tubeless/Cubierta", 2880),
-            new Option("Fulcrum speed 40 Tubeless/Cubierta"),
-            new Option("Corima WS Tubeless/Cubierta", 1680),
-            new Option("Corima WS+ Tubeless/Cubierta", 2300),
-            new Option("Carbon-ti Tubeless/Cubierta", 2880));
+        //rodes road 
+        t_tmp = '<option value="0" selected>Selecciona las Ruedas</option>';
+        t_rodes_road.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#rodes").append(t_tmp)
 
-        $("#grup").append(
-            new Option("Selecciona un Grupo", 0, true),
-            new Option("Sram Red etap AXS 12v", 3600),
-            new Option("Sram Force etap AXS 12v", 2600),
-            new Option("Shimano Dura-Ace Di2", 3400),
-            new Option("Shimano Dura-Ace", 2400),
-            new Option("Shimano Ultegra Di2", 2600),
-            new Option("Shimano Ultegra", 1800),
-            new Option("Campagnolo Super Record EPS 12v", 4000),
-            new Option("Campagnolo Super Record 12v", 3300),
-            new Option("Campagnolo Record 12v", 2600),
-            new Option("Campagnolo Chorus 12v", 2000),
-        );
+        //grup disc
+        t_tmp = '<option value="0" selected>Selecciona un Grupo</option>';
+        t_grup_road.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#grup").append(t_tmp);
 
-        $("#manillar").append(
-            new Option("Selecciona un Manillar", 0, true),
-            new Option("Most Talon Aero", 750),
-            new Option("Most Talon Ultra", 2600),
-            new Option("Most Talon UD", 3400),
-            new Option("Kit Most Tiger 3k conjunto", 2400),
-            new Option("Vison Metron 5D ACR", 2600),
-            new Option("Syncros Creston IC SL", 1800),
-            new Option("Pro ", 2000),
-            new Option("Pro Vive conjunto", 4000),
-            new Option("Zipp AERO conjunto", 3300),
-            new Option("Zipp Ergo Conjunto", 2600),
-            new Option("Enve Aero Conjunto", 4000),
-            new Option("Enve STD Conjunto", 4000),
-        );
+        //manillar
+        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+        t_manillars_road.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#manillar").append(t_tmp);
+
         seient();
         mostrar_tija();
         mostrar_cinta();
         pneumatic_road();
     }
+
+    //gravel
     if ($("#modalitat").val() == "gravel") {
-        $("#quadre").append(
-            new Option("Selecciona un cuadro", 0, true),
-            new Option("Pinarello Grevil", 3799),
-            new Option("Pinarello Crossista", 4300),
-            new Option("Colnago Prestige", 3300),
-            new Option("Bianchi Zolder Pro", 4499),
-            new Option("Bianchi XR4", 3999),
-            new Option("Scott Addict CX", 3400),
-            new Option("Scott Addict Gravel", 3400));
+        //quadre gravel
+        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+        t_gravel.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#quadre").append(t_tmp);
 
-        $("#rodes").append(
-            new Option("Selecciona unas ruedas", 0, true),
-            new Option("DT-1200 Tubular", 3400),
-            new Option("DT-1400 Cubierta", 2880),
-            new Option("Dura_Ace C40 Cubierta", 2880),
-            new Option("Fulcrum Racing Zero cubierta", 1200),
-            new Option("Fulcrum Racing 4 Cubierta", 1680));
+        //rodes gravel
+        t_tmp = '<option value="0" selected>Selecciona las Ruedas</option>';
+        t_rodes_gravel.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#rodes").append(t_tmp)
 
-        $("#grup").append(
-            new Option("Selecciona un Grupo", 0, true),
-            new Option("Sram Red etap AXS 12v 2x", 3600),
-            new Option("Sram Force etap AXS 12v 2x", 2600),
-            new Option("Sram Red etap AXS 12v 1x", 3600),
-            new Option("Sram Force etap AXS 12v 1x", 2600),
-            new Option("Shimano GRX 812 Di2 2x", 3400),
-            new Option("Shimano GRX 800 2x", 2400),
-            new Option("Shimano GRX 600 2x", 1800),
-            new Option("Shimano GRX 812 Di2 1x", 3400),
-            new Option("Shimano GRX 800 1x", 2400),
-            new Option("Shimano GRX 600 1x", 1800)
-        );
+        //grup gravel
+        t_tmp = '<option value="0" selected>Selecciona un Grupo</option>';
+        t_grup_gravel.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#grup").append(t_tmp);
 
-        $("#manillar").append(
-            new Option("Selecciona un Manillar", 0, true),
-            new Option("Most Talon Aero", 750),
-            new Option("Most Talon Ultra", 2600),
-            new Option("Most Talon UD", 3400),
-            new Option("Kit Most Tiger 3k GR conjunto", 2400),
-            new Option("Pro ", 2000),
-            new Option("Pro Vive conjunto", 4000),
-            new Option("Zipp AERO conjunto", 3300),
-            new Option("Zipp Ergo Conjunto", 2600),
-            new Option("Enve Aero Conjunto", 4000),
-            new Option("Enve STD Conjunto", 4000),
-        );
+        //manillar gravel
+        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+        t_manillars_gravel.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#manillar").append(t_tmp);
+
         seient();
         mostrar_tija();
         mostrar_cinta();
 
-        $("#pneumatics").append(
-            new Option("Selecciona un Manillar", 0, true),
-            new Option("Vittoria X-dry", 750),
-            new Option("Vittoria X-wet", 750),
-            new Option("Vittoria X-mix", 750),
-            new Option("Shualbe x-one", 750),
-            new Option("WTB XXX", 750),
-            new Option("WTB XXX", 750),
-            new Option("WTB XXX", 750),
-
-        );
+        //pneumatics gravel
+        t_tmp = '<option value="0" selected>Selecciona los Pneumaticos</option>';
+        t_pneumatics_gravel.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#pneumatics").append(t_tmp);
 
 
     }
 
     if ($("#modalitat").val() == "mtb") {
-        $("#quadre").append(
-            new Option("Selecciona un cuadro", 0, true),
-            new Option("Scott Spark RC Ultimate SL", 4300),
-            new Option("Scott Spark RC WC N1NO Canada Edition", 5699),
-            new Option("Scott Spark RC WC N1NO SilverFish", 5699),
-            new Option("Scott Scale RC Ultimate SL", 5300),
-            new Option("Scott Scale RC WC", 4000),
-            new Option("Bianchi FS", 5499),
-            new Option("Bianchi CV RS", 3900),
-            new Option("Bianchi CV S", 3400),
-            new Option("Megamo Track SL", 3500),
-            new Option("Megamo Track", 2900)
-        );
+        //quadre gravel
+        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+        t_mtb.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#quadre").append(t_tmp);
 
-        $("#rodes").append(
-            new Option("Selecciona unas ruedas", 0, true),
-            new Option("DT XRC 1200", 3400),
-            new Option("DT XR 1501 Cubierta", 2880),
-            new Option("DT XR 1700 Cubierta", 2880),
-            new Option("Syncros Silverton SL", 3700),
-            new Option("Syncros Silverton 1.0", 1500),
-            new Option("Carbon-ti ", 1680));
+        //rodes gravel
+        t_tmp = '<option value="0" selected>Selecciona las Ruedas</option>';
+        t_rodes_mtb.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#rodes").append(t_tmp)
 
-        $("#grup").append(
-            new Option("Selecciona un Grupo", 0, true),
-            new Option("Sram XX1 AXS", 1600),
-            new Option("Sram XX0 AXS", 1400),
-            new Option("Sram XX1", 1200),
-            new Option("Sram XX0", 1000),
-            new Option("Sram GX", 700),
-            new Option("Shimano XTR", 1500),
-            new Option("Shimano XT", 700)
-        );
+        //grup gravel
+        t_tmp = '<option value="0" selected>Selecciona un Grupo</option>';
+        t_grup_mtb.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#grup").append(t_tmp);
+
+        //frens mtb
+        t_tmp = '<option value="0" selected>Selecciona un Grupo</option>';
+        t_grup_mtb.forEach(element => {
+            t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+        });
+        $("#grup").append(t_tmp);
         $("#frens").append(
             new Option("Selecciona unos Frenos", 0, true),
             new Option("Sram TLM ULTIMATE", 750),
@@ -308,65 +273,39 @@ function modalitat() {
 };
 
 function seient() {
-    $("#seient").append(
-        new Option("Selecciona el Sillin", 0, true),
-        new Option("Tune SpeedNedlee", 1800),
-        new Option("Tune SkyRacer", 2000),
-        new Option("Selle italia SLR Carbon", 4000),
-        new Option("Selle Italia SLR", 3300),
-        new Option("Fizik Antares 00 Evo", 2600),
-        new Option("Fizik Aliente 00 EVO", 2600),
-        new Option("Fizik Arione 00 EVO", 2600),
-        new Option("Fizik Antares R1", 2600),
-        new Option("Fizik Aliente R1", 2600),
-        new Option("Fizik Arione R1", 2600),
-
-    );
+    t_tmp = '<option value="0" selected>Selecciona el Sillin</option>';
+    t_seient.forEach(element => {
+        t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+    });
+    $("#seient").append(t_tmp);
 };
 
 function pneumatic_road() {
-    $("#pneumatics").append(
-        new Option("Selecciona los Pneumaticos", 0, true),
-        new Option("Continental Competition Tubular", 1800),
-        new Option("Continetal Sprinter Tubular", 2000),
-        new Option("Verdestein Fortezza Tubular", 4000),
-        new Option("Vittoria Corsa Tubular", 3300),
-        new Option("Continental GP5000 cubierta", 2600),
-        new Option("Continental Ultrasport cubierta", 2600),
-        new Option("Verdestein Fortezza cubierta", 2600),
-        new Option("Vittoria corsa cubierta", 2600),
-        new Option("Continental GP5000 tubeless", 2600),
-        new Option("Continental Ultrasport tubeless", 2600),
-        new Option("Verdestein Fortezza tubeless", 2600),
-        new Option("Vittoria corsa tubeless", 2600),
-    );
+    t_tmp = '<option value="0" selected>Selecciona los Pneumaticos</option>';
+    t_pneumatics_road.forEach(element => {
+        t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+    });
+    $("#pneumatics").append(t_tmp);
 };
 
 function mostrar_cinta() {
     $("#cinta").parent().show();
-    $("#cinta").append(
-        new Option("Selecciona una Cinta de Manillar", 0, true),
-        new Option("Most ultraGrip", 750),
-        new Option("Most ultraLight", 2600),
-        new Option("Bianchi Dots", 2400),
-        new Option("Pro Sport Confort", 2600),
-        new Option("Lizard Skin", 1800),
-        new Option("Supacaz", 2000),
-    );
+
+    t_tmp = '<option value="0" selected>Selecciona la cinta</option>';
+    t_cinta.forEach(element => {
+        t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+    });
+    $("#cinta").append(t_tmp);
 };
 
 function mostrar_tija() {
     $("#tija").parent().show();
 
-    $("#tija").append(
-        new Option("Selecciona un Tija", 0, true),
-        new Option("Syncros 1.0", 1800),
-        new Option("ONOFF Helium carbon", 3300),
-        new Option("ONOFF Helium ", 2600),
-        new Option("New Ultimate Aluminio", 4000),
-        new Option("Enve", 4000),
-        new Option("Tune", 4000),
-    );
+    t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+    t_tija.forEach(element => {
+        t_tmp += '<option value="' + element.preu + '">' + element.nom + '</option>'
+    });
+    $("#tija").append(t_tmp);
 };
 
 function preu() {

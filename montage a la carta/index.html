@@ -2,145 +2,143 @@
 <html lang="es">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>A la carta</title>
-	<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A la carta</title>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
 		integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
-	<link rel="stylesheet" href="./llibrerias/bootstrap-4.4.1-dist/css/bootstrap.css">
-	<link rel="stylesheet" href="./style.css">
-	<link rel="icon" type="image/png" href="favicon-16x16.png">
+    <link rel="stylesheet" href="./llibrerias/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="favicon-16x16.png">
 
 </head>
 
 <body>
-<nav class="navbar navbar-dark bg-black shadow">
-	<a class="navbar-brand " href="http://muntbikes.com">
-		<img src="./images/muntbikes.jpg" id="logo" alt="">
-	  </a>
-	<span class="navbar-brand mb-0 h1 ">MONTAJES A LA CARTA</span>
-</nav>
-	<div class="mt-5">
-	<div class="col-12 col-lg-8 offset-lg-2">
-		<div class="card shadow rounded-lg">
-			<div class="card-body">
-		<form action="" method="post" id="formulari_a_la_carta">
-		<div class="form-group mt-2">
-				<label class="" for="modalitat">Modalaidad:</label>
-			  <select class="custom-select " id="modalitat">
+    <nav class="navbar navbar-dark bg-black shadow">
+        <a class="navbar-brand " href="http://muntbikes.com">
+            <img src="./images/muntbikes.jpg" id="logo" alt="">
+        </a>
+
+        <span class="navbar-brand mb-0 h1 mx-auto">MONTAJES A LA CARTA</span>
+    </nav>
+    <div class="mt-5">
+        <div class="col-12 col-lg-8 offset-lg-2">
+            <div class="card shadow rounded-lg">
+                <div class="card-body">
+                    <form action="" method="post" id="formulari_a_la_carta">
+                        <div class="form-group mt-2">
+                            <label class="" for="modalitat">Modalaidad:</label>
+                            <select class="custom-select " id="modalitat">
 				<option selected>Selecciona una modalidad</option>
 				<option value="road_disc">Carretera Disco</option>
 				<option value="road_rim">Carreterea</option>
 				<option value="gravel">Gravel & CX</option>
 				<option value="mtb">MTB</option>
 			  </select>
-			</div>
-			<div class="form-group mt-2">
-			  <label class="" for="quadre">Cuadro:</label>
-			<select class="custom-select" id="quadre" onchange="preu()">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label class="" for="quadre">Cuadro:</label>
+                            <select class="custom-select" id="quadre" onchange="preu()">
 			  <option selected>Selecciona el cuadro</option>
-			</select>			
-		  </div>
-		  <div class="form-group mt-2">
-			<div class="">
-			  <label class="" for="rodes">Ruedas:</label>
-			</div>			
-			<select class="custom-select" id="rodes" onchange="preu()">
+			</select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="rodes">Ruedas:</label>
+                            </div>
+                            <select class="custom-select" id="rodes" onchange="preu()">
 			  <option selected>Selecciona las Ruedas</option>
-			</select>			
-		  </div>
-		  <div class="form-group mt-2">
-			<div class="">
-			  <label class="" for="grup">Grupo:</label>
-			</div>			
-			<select class="custom-select" id="grup" onchange="preu()">
+			</select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="grup">Grupo:</label>
+                            </div>
+                            <select class="custom-select" id="grup" onchange="preu()">
 			  <option selected>Selecciona el Grupo</option>
-			</select>			
-		  </div>
-		  <div class="form-group mt-2">
-			<div class="">
-			  <label class="" for="frens">Frenos:</label>
-			</div>			
-			<select class="custom-select" id="frens" onchange="preu()">
+			</select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="frens">Frenos:</label>
+                            </div>
+                            <select class="custom-select" id="frens" onchange="preu()">
 			  <option selected>Selecciona el Grupo</option>
-			</select>			
-		  </div>
-		  <div class="form-group mt-2">
-			<div class="">
-			  <label class="" for="manillar">Manillar:</label>
-			</div>			
-			<select class="custom-select" id="manillar" onchange="preu()">
+			</select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="manillar">Manillar:</label>
+                            </div>
+                            <select class="custom-select" id="manillar" onchange="preu()">
 			  <option selected>Selecciona el Mnaillar</option>
-			</select>			
-		  </div>
-		  <p class="text-muted small">*Todos los manillares son de una pieza Manillar/Potencia o son conjuntos de manillar y potencia de la misma marca y misma gama</p>
-		  <div class="form-group mt-2">
-			<div class="form-group">
-			  <label class="" for="seient">Sillin:</label>
-			</div>			
-			<select class="custom-select" id="seient" onchange="preu()">
+			</select>
+                        </div>
+                        <p class="text-muted small">*Todos los manillares son de una pieza Manillar/Potencia o son conjuntos de manillar y potencia de la misma marca y misma gama</p>
+                        <div class="form-group mt-2">
+                            <div class="form-group">
+                                <label class="" for="seient">Sillin:</label>
+                            </div>
+                            <select class="custom-select" id="seient" onchange="preu()">
 			  <option selected>Selecciona el Sillin</option>
-			</select>			
-		  </div> 
-		  <div class="form-group mt-2">
-			<div class="">
-			  <label class="" for="tija">Tija:</label>
-			</div>			
-			<select class="custom-select" id="tija" onchange="preu()">
+			</select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="tija">Tija:</label>
+                            </div>
+                            <select class="custom-select" id="tija" onchange="preu()">
 			  <option selected>Selecciona la Tija</option>
-			</select>			
-		  </div>
-		  <div class="form-group mt-2">
-			<div class="">
-			  <label class="" for="cinta">Cinta:</label>
-			</div>			
-			<select class="custom-select" id="cinta" onchange="preu()">
+			</select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="cinta">Cinta:</label>
+                            </div>
+                            <select class="custom-select" id="cinta" onchange="preu()">
 			  <option selected>Selecciona la Cinta del Manillar</option>
-			</select>			
-		  </div>
-		  <div class="form-group mt-2">
-			<div class="">
-			  <label class="" for="punys">Puños:</label>
-			</div>			
-			<select class="custom-select" id="punys" onchange="preu()">
+			</select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="punys">Puños:</label>
+                            </div>
+                            <select class="custom-select" id="punys" onchange="preu()">
 			  <option selected>Selecciona los Puños del Manillar</option>
-			</select>			
-		  </div>
-		  <div class="form-group mt-2">
-			<div class="">
-			  <label class="" for="pneumatics">Pneumaticos:</label>
-			</div>			
-			<select class="custom-select" id="pneumatics" onchange="preu()">
+			</select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="pneumatics">Pneumaticos:</label>
+                            </div>
+                            <select class="custom-select" id="pneumatics" onchange="preu()">
 			  <option selected>Selecciona los Pneumaticos</option>
-			</select>			
-		  </div>
-		  
-		  <br>
-		  <div class="float-right">
-			  <div class=" rounded-lg border px-2 py-1 bg-dark text-white">
-				<h2>Total: <span id="total">0</span>€</h2>
-			  </div>			
-		  </div>
-		  </form>
-		</div>
-		</div>
-	</div>
-	
-</div>
-	
-	
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-	</script>
-	<script src="./script.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-		integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
-		integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous">
-	</script>
-	
-	<!--<script src="https://storage.cloud.google.com/configurador/montage%20a%20la%20carta/script.js?authuser=3&folder=true&organizationId=true"></script>-->
+			</select>
+                        </div>
+
+                        <br>
+                        <div class="float-right">
+                            <div class=" rounded-lg border px-2 py-1 bg-dark text-white">
+                                <h2>Total: <span id="total">0</span>€</h2>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous">
+    </script>
+
+    <!--<script src="https://storage.cloud.google.com/configurador/montage%20a%20la%20carta/script.js?authuser=3&folder=true&organizationId=true"></script>-->
 </body>
 
 </html>
