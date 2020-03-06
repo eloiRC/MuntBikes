@@ -25,7 +25,7 @@
         <div class="col-12 col-lg-8 offset-lg-2">
             <div class="card shadow rounded-lg mb-5">
                 <div class="card-body">
-                    <form action="" method="post" id="formulari_a_la_carta">
+                    <form  method="post" id="formulari_a_la_carta">
                         <div class="form-group mt-2">
                             <label class="" for="modalitat">Modalaidad:</label>
                             <select class="custom-select " id="modalitat">
@@ -145,28 +145,29 @@
                         <br>
                         <div class="form-group">
                             <label for="comentaris">Comentarios y extras:</label>
-                            <textarea class="form-control" id="comentaris" rows="4"></textarea>
+                            <textarea class="form-control" id="comentaris" rows="4"placeholder="medida del manillar, talla del cuadro,dientes del desarrollo...."></textarea>
                           </div>
                           <div class="form-group">
                             <label for="nom">Nombre:</label>
-                            <input type="text" class="form-control" id="nom" placeholder="">
+                            <input type="text" class="form-control" id="nom" placeholder="juan" required>
                           </div>
                           <div class="form-group">
                             <label for="cognom">Apellido:</label>
-                            <input type="text" class="form-control" id="cognom" placeholder="">
+                            <input type="text" class="form-control" id="cognom" placeholder="martinez">
                           </div>
                           <div class="form-group">
                             <label for="mail">Email</label>
-                            <input type="email" class="form-control" id="mail" placeholder="Email">
+                            <input type="email" class="form-control" id="mail" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                           </div>
                           <div class="form-group">
                             <label for="tel">Telefono:</label>
-                            <input type="text" class="form-control" id="tel">
+                            <input type="text" class="form-control" id="tel" pattern="[0-9]{9}"required placeholder="666777666" >
                           </div>
-
+                          <button type="submit" class="btn btn-primary" >Enviar</button>
+                          
                     </form>
 
-                    <button type="button" class="btn btn-primary" onclick="enviar()">Enviar</button>
+                    
                 </div>
             </div>
         </div>

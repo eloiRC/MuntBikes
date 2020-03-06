@@ -12,6 +12,10 @@ $(document).ready(function () {
     document.getElementById("seient").addEventListener("change", preu);
     document.getElementById("pneumatics").addEventListener("change", preu);
     document.getElementById("quadre").addEventListener("change", info);
+    $("#formulari_a_la_carta").submit(function(e) {
+        e.preventDefault();
+        enviar();
+    });
 });
 
 
@@ -1389,77 +1393,95 @@ function info(){
     }
 
 };
-quadre="";
 
+quadre=""
 function enviar(){
-    text="";
-    text+="Nom: "+$("#nom").val()+"\nCognom: "+$("#cognom").val()+"\nEmail: "+$("#mail").val()+"\nTelefon:"+$("#tel").val()+"\nComentaris: "+$("#comentaris").val();
-    text+=configuracio(text);
+
+
+    
     Email.send({
-        SecureToken : "6c822613-fc7f-47e1-8294-e4bee7b54db2",
-        Username : "configurador.muntbikes@gmail.com",
+        SecureToken : "e73157c6-e8cb-4301-8f40-838dc3f6e2b4",
         To : 'eloirebollodp@gmail.com',
         From : "configurador.muntbikes@gmail.com",
         Subject : "Configuracio "+quadre+"",
-        Body : text
-    }).then(
-      message => alert(message)
+        Body : configuracio()
+    }).then(function(message) {
+            alert("el correo ha sido enviado")        
+       }
     );
+    
 }
 
 
-function configuracio(tx){
-    tx +="\n---------------------------------------------------------------"
-    tx +="\nQuadre: "
+
+function configuracio(){
+    tx='<html><body><style>table, th, td {border: 1px solid black;border-collapse: collapse;}th, td {padding: 15px;}</style>'
+    tx+='<table style="width:100%">';
+    tx+="<tr><td>Nom: "+$("#nom").val()
+    +"</td></tr><tr><td>Cognom: "
+    +$("#cognom").val()
+    +"</td></tr><tr><td>Email: "
+    +$("#mail").val()
+    +"</td></tr><tr><td>Telefon:"
+    +$("#tel").val()
+    +"</td></tr><tr><td>Comentaris: "
+    +$("#comentaris").val()
+    +"</td></tr>";
+    
+
+    
+    tx +="<tr><td></td></tr>"
+    tx +="<tr><td>Quadre: "
     if($("#quadre").val()!="0"){
         tx +=JSON.parse($("#quadre").val()).nom
-        quadre=JSON.parse($("#quadre").val()).nom;
+        quadre=JSON.parse($("#quadre").val()).nom
     }
-    tx +="\nRodes: "
+    tx +="</td></tr><tr><td>Rodes: "
     if($("#rodes").val()!="0"){
         tx += JSON.parse($("#rodes").val()).nom
     }
-    tx +="\nGrup: "
+    tx +="</td></tr><tr><td>Grup: "
     if($("#grup").val()!="0"){
         tx += JSON.parse($("#grup").val()).nom
     }
-    tx +="\nManillar: "
+    tx +="</td></tr><tr><td>Manillar: "
     if($("#manillar").val()!="0"){
         tx += JSON.parse($("#manillar").val()).nom
     }
-    tx +="\nSeient: "
+    tx +="</td></tr><tr><td>Seient: "
     if($("#seient").val()!="0"){
         tx += JSON.parse($("#seient").val()).nom
     }
-    tx +="\nPneumatics: "
+    tx +="</td></tr><tr><td>Pneumatics: "
     if($("#pneumatics").val()!="0"){
         tx += JSON.parse($("#pneumatics").val()).nom
     }   
-    tx +="\nPedals: " 
+    tx +="</td></tr><tr><td>Pedals: " 
     if($("#pedals").val()!="0"){
     tx += JSON.parse($("#pedals").val()).nom
     }
-    tx +="\nFrens: "
+    tx +="</td></tr><tr><td>Frens: "
     if ($("#frens").val() && $("#frens").val()!="0") {
         tx += JSON.parse($("#frens").val()).nom
     }
-    tx +="\nTija: "
+    tx +="</td></tr><tr><td>Tija: "
     if ($("#tija").val() && $("#tija").val()!="0" ) {
         tx +=JSON.parse($("#tija").val()).nom
     }
-    tx +="\nCinta: "
+    tx +="</td></tr><tr><td>Cinta: "
     if ($("#cinta").val() && $("#cinta").val()!="0" ) {
         tx += JSON.parse($("#cinta").val()).nom
     }
-    tx +="\nPunys: "
+    tx +="</td></tr><tr><td>Punys: "
     if ($("#punys").val() && $("#punys").val()!="0" ) {
         tx += JSON.parse($("#punys").val()).nom
     }
-    tx +="\nForquilla: "
+    tx +="</td></tr><tr><td>Forquilla: "
     if ($("#forquilla").val() && $("#forquilla").val()!="0") {
         tx += JSON.parse($("#forquilla").val()).nom
     }
-
+    tx+="</td></tr>"
+    tx+='</table></body></html>'
     return tx;
 
 }
