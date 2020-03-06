@@ -7,9 +7,9 @@
     <title>A la carta</title>
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
 		integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
-	<link rel="stylesheet" href="./llibrerias/bootstrap-4.4.1-dist/css/bootstrap.css">
-	<link rel="stylesheet" href="./style.css">
-	<link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="./llibrerias/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
 
 </head>
 
@@ -23,7 +23,7 @@
     </nav>
     <div class="mt-5">
         <div class="col-12 col-lg-8 offset-lg-2">
-            <div class="card shadow rounded-lg">
+            <div class="card shadow rounded-lg mb-5">
                 <div class="card-body">
                     <form action="" method="post" id="formulari_a_la_carta">
                         <div class="form-group mt-2">
@@ -40,7 +40,9 @@
                             <label class="" for="quadre">Cuadro:</label>
                             <select class="custom-select" id="quadre" onchange="preu()">
 			  <option selected>Selecciona el cuadro</option>
-			</select>
+            </select>
+            <p class="text-muted small" id="info"></p>
+
                         </div>
                         <div class="form-group mt-2">
                             <div class="">
@@ -63,8 +65,9 @@
                                 <label class="" for="frens">Frenos:</label>
                             </div>
                             <select class="custom-select" id="frens" onchange="preu()">
-			  <option selected>Selecciona el Grupo</option>
-			</select>
+			  <option selected>Selecciona los Frenos</option>
+            </select>
+            <p class="text-muted small">*Los kits de freno incluyen los discos</p>
                         </div>
                         <div class="form-group mt-2">
                             <div class="">
@@ -72,9 +75,9 @@
                             </div>
                             <select class="custom-select" id="manillar" onchange="preu()">
 			  <option selected>Selecciona el Mnaillar</option>
-			</select>
+            </select>                        
+            <p class="text-muted small">*Todos los manillares son de una pieza Manillar/Potencia o son conjuntos de manillar y potencia de la misma marca y misma gama</p>
                         </div>
-                        <p class="text-muted small">*Todos los manillares son de una pieza Manillar/Potencia o son conjuntos de manillar y potencia de la misma marca y misma gama</p>
                         <div class="form-group mt-2">
                             <div class="form-group">
                                 <label class="" for="seient">Sillin:</label>
@@ -101,6 +104,22 @@
                         </div>
                         <div class="form-group mt-2">
                             <div class="">
+                                <label class="" for="pedals">Pedales:</label>
+                            </div>
+                            <select class="custom-select" id="pedals" onchange="preu()">
+			  <option selected>Selecciona los Pedales</option>
+			</select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="forquilla">Horquilla:</label>
+                            </div>
+                            <select class="custom-select" id="forquilla" onchange="preu()">
+			  <option selected>Selecciona la Horquilla</option>
+			</select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
                                 <label class="" for="punys">Puños:</label>
                             </div>
                             <select class="custom-select" id="punys" onchange="preu()">
@@ -122,14 +141,40 @@
                                 <h2>Total: <span id="total">0</span>€</h2>
                             </div>
                         </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label for="comentaris">Comentarios y extras:</label>
+                            <textarea class="form-control" id="comentaris" rows="4"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="nom">Nombre:</label>
+                            <input type="text" class="form-control" id="nom" placeholder="">
+                          </div>
+                          <div class="form-group">
+                            <label for="cognom">Apellido:</label>
+                            <input type="text" class="form-control" id="cognom" placeholder="">
+                          </div>
+                          <div class="form-group">
+                            <label for="mail">Email</label>
+                            <input type="email" class="form-control" id="mail" placeholder="Email">
+                          </div>
+                          <div class="form-group">
+                            <label for="tel">Telefono:</label>
+                            <input type="text" class="form-control" id="tel">
+                          </div>
+
                     </form>
+
+                    <button type="button" class="btn btn-primary" onclick="enviar()">Enviar</button>
                 </div>
             </div>
         </div>
 
     </div>
 
-
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
     <script src="./script.js"></script>
