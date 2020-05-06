@@ -1,5 +1,6 @@
-$(document).ready(function () {
+$(window).load(function () {
     esconde();
+    document.getElementById("darkMode").addEventListener("click", toggleDarkMode)
     document.getElementById("modalitat").addEventListener("change", modalitat)
     document.getElementById("quadre").addEventListener("change", preu);
     document.getElementById("rodes").addEventListener("change", preu);
@@ -12,14 +13,13 @@ $(document).ready(function () {
     document.getElementById("seient").addEventListener("change", preu);
     document.getElementById("pneumatics").addEventListener("change", preu);
     document.getElementById("quadre").addEventListener("change", info);
-    $("#formulari_a_la_carta").submit(function(e) {
+    $("#formulari_a_la_carta").submit(function (e) {
         e.preventDefault();
         enviar();
     });
+    
 });
-
-
-//estructura de les taules, [{Nom:"",preu:0}]
+let darkMode=false;
 t_road_disc = [{
         nom: "Pinarello F12",
         preu: 5595
@@ -131,37 +131,37 @@ t_gravel = [{
 t_mtb = [{
         nom: "Scott Spark N1NO Canda",
         preu: 5999,
-        info:"*Hoquilla SID ultimate,amortiguador (RS) ,bielas xx1, frenos level ultimate, manillar fraser ic y tija incluidos "
+        info: "*Hoquilla SID ultimate,amortiguador (RS) ,bielas xx1, frenos level ultimate, manillar fraser ic y tija incluidos "
     },
     {
         nom: "Scott Spark N1NO SilverFish",
         preu: 5999,
-        info:"*Hoquilla SID ultimate,amortiguador (RS) ,bielas xx1, frenos lvl ultimate, manillar fraser ic y tija incluidos "
+        info: "*Hoquilla SID ultimate,amortiguador (RS) ,bielas xx1, frenos lvl ultimate, manillar fraser ic y tija incluidos "
     },
     {
         nom: "Scott Spark SL ",
         preu: 5499,
-        info:"*Horquilla y amortiguador fox kashima y manillar fracer ic y tija incluidos"
+        info: "*Horquilla y amortiguador fox kashima y manillar fracer ic y tija incluidos"
     },
     {
         nom: "Scott Scale N1NO ",
         preu: 4999,
-        info:"*Hoquilla SID ultimate,bielas xx1, frenos level ultimate, manillar fracer ic y tija incluidos"
+        info: "*Hoquilla SID ultimate,bielas xx1, frenos level ultimate, manillar fracer ic y tija incluidos"
     },
     {
         nom: "Scott Scale SL",
         preu: 3499,
-        info:"*Manillar fracer ic y tija incluidos"
+        info: "*Manillar fracer ic y tija incluidos"
     },
     {
         nom: "Bianchi Methanol FS",
         preu: 3590,
-        info:"*Amortiguador Fox Kashima incluido"
+        info: "*Amortiguador Fox Kashima incluido"
     },
     {
         nom: "Bianchi Methanol RS",
         preu: 2590,
-        info:""
+        info: ""
     }
 ];
 
@@ -190,7 +190,7 @@ t_manillars_road = [{
         preu: 649
     },
     {
-        nom: "ZIPP SL AERO + SPEED conjunto" ,
+        nom: "ZIPP SL AERO + SPEED conjunto",
         preu: 615
     },
     {
@@ -842,10 +842,6 @@ t_grup_disc = [{
     {
         nom: "Sram FROCE AXS 12v",
         preu: 2600
-    },
-    {
-        nom: "Sram FROCE AXS 12v",
-        preu: 2600
     }
 ];
 
@@ -1081,7 +1077,7 @@ function modalitat() {
     $("#forquilla").empty();
     $("#info").text("");
 
-    cometa="''"
+    cometa = "''"
 
     //ROAD DISCK
     if ($("#modalitat").val() == "road_disc") {
@@ -1107,7 +1103,7 @@ function modalitat() {
         $("#grup").append(t_tmp);
 
         //manillar
-        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+        t_tmp = '<option value="0" selected>Selecciona el Manillar</option>';
         t_manillars_road.forEach(element => {
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
         });
@@ -1144,7 +1140,7 @@ function modalitat() {
         $("#grup").append(t_tmp);
 
         //manillar
-        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+        t_tmp = '<option value="0" selected>Selecciona el Manillar</option>';
         t_manillars_road.forEach(element => {
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
         });
@@ -1182,7 +1178,7 @@ function modalitat() {
         $("#grup").append(t_tmp);
 
         //manillar gravel
-        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+        t_tmp = '<option value="0" selected>Selecciona el Manillar</option>';
         t_manillars_gravel.forEach(element => {
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
         });
@@ -1235,7 +1231,7 @@ function modalitat() {
         $("#frens").parent().show();
 
         //frens mtb
-        t_tmp = '<option value="0" selected>Selecciona unos Frenos</option>';
+        t_tmp = '<option value="0" selected>Selecciona un Manillar</option>';
         t_manillars_mtb.forEach(element => {
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
         });
@@ -1245,7 +1241,7 @@ function modalitat() {
         mostrar_pedals_mtb();
 
         //punys mtb
-        t_tmp = '<option value="0" selected>Selecciona unos Frenos</option>';
+        t_tmp = '<option value="0" selected>Selecciona unos Punños</option>';
         t_punys.forEach(element => {
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
         });
@@ -1253,7 +1249,7 @@ function modalitat() {
         $("#punys").parent().show();
 
         //pneumatics mtb
-        t_tmp = '<option value="0" selected>Selecciona unos Frenos</option>';
+        t_tmp = '<option value="0" selected>Selecciona unos Pneumaticos</option>';
         t_pneumatics_mtb.forEach(element => {
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
         });
@@ -1261,7 +1257,7 @@ function modalitat() {
 
 
 
-        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+        t_tmp = '<option value="0" selected>Selecciona la Tija</option>';
         t_tijes_mtb.forEach(element => {
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
         });
@@ -1291,7 +1287,7 @@ function pneumatic_road() {
 function mostrar_cinta() {
     $("#cinta").parent().show();
 
-    t_tmp = '<option value="0" selected>Selecciona la cinta</option>';
+    t_tmp = '<option value="0" selected>Selecciona la Cinta</option>';
     t_cinta.forEach(element => {
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
     });
@@ -1301,7 +1297,7 @@ function mostrar_cinta() {
 function mostrar_tija() {
     $("#tija").parent().show();
 
-    t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+    t_tmp = '<option value="0" selected>Selecciona la Tija</option>';
     t_tijes.forEach(element => {
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
     });
@@ -1310,7 +1306,7 @@ function mostrar_tija() {
 
 function mostrar_pedals_mtb() {
 
-    t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+    t_tmp = '<option value="0" selected>Selecciona el Pedales</option>';
     t_pedals_mtb.forEach(element => {
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
     });
@@ -1319,7 +1315,7 @@ function mostrar_pedals_mtb() {
 };
 
 function mostrar_pedals_road() {
-    t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+    t_tmp = '<option value="0" selected>Selecciona los Pedales</option>';
     t_pedals_road.forEach(element => {
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
     });
@@ -1328,50 +1324,106 @@ function mostrar_pedals_road() {
 };
 
 function preu() {
+    $("#desglos").empty();
+    let total = 0;
+    let part1 = '<div class="d-flex justify-content-around row">';
+    let part2 = "";
+    let part3 = '<div class="col-5 col-sm-8 col-md-7 col-lg-8 col-xl-9 text-truncate px-0">..................................................................................................................................................................................................................................................................................................................................................................................................</div>'
+    let part4 = "";
+    let part5="</div>"
 
-    total = 0;
-    if($("#quadre").val()!="0"){
-        total += JSON.parse($("#quadre").val()).preu
+    if ($("#quadre").val() != "0") {
+        preu = JSON.parse($("#quadre").val()).preu;
+        part2 = '<div class="col-4 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Cuadro</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
     }
-    if($("#rodes").val()!="0"){
-        total += JSON.parse($("#rodes").val()).preu
+    if ($("#rodes").val() != "0") {
+        preu = JSON.parse($("#rodes").val()).preu;
+        part2 = '<div class="col-4 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Ruedas</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
     }
-    if($("#grup").val()!="0"){
-        total += JSON.parse($("#grup").val()).preu
+    if ($("#grup").val() != "0") {
+        preu = JSON.parse($("#grup").val()).preu;
+        part2 = '<div class="col-4 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Grupo</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
     }
-    if($("#manillar").val()!="0"){
-        total += JSON.parse($("#manillar").val()).preu
+    if ($("#manillar").val() != "0") {
+        preu = JSON.parse($("#manillar").val()).preu;
+        part2 = '<div class="col-4 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Manillar</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
     }
-    if($("#seient").val()!="0"){
-        total += JSON.parse($("#seient").val()).preu
+    if ($("#seient").val() != "0") {
+        preu = JSON.parse($("#seient").val()).preu;
+        part2 = '<div class="col-4 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Sillin</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
     }
-    if($("#pneumatics").val()!="0"){
-        total += JSON.parse($("#pneumatics").val()).preu
-        console.log(total)
-    }    
-    if($("#pedals").val()!="0"){
-    total += JSON.parse($("#pedals").val()).preu
+    if ($("#pneumatics").val() != "0") {
+        preu = JSON.parse($("#pneumatics").val()).preu;
+        part2 = '<div class="col-4 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Pneumaticos</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#pedals").val() != "0") {
+        preu = JSON.parse($("#pedals").val()).preu;
+        part2 = '<div class="col-4 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Pedales</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
     }
 
-    if ($("#frens").val() && $("#frens").val()!="0") {
-        total += JSON.parse($("#frens").val()).preu
+    if ($("#frens").val() && $("#frens").val() != "0") {
+        preu = JSON.parse($("#frens").val()).preu;
+        part2 = '<div class="col-4 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Frenos</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
     }
-    if ($("#tija").val() && $("#tija").val()!="0" ) {
-        total += JSON.parse($("#tija").val()).preu
+    if ($("#tija").val() && $("#tija").val() != "0") {
+        preu = JSON.parse($("#tija").val()).preu;
+        part2 = '<div class="col-4 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Tija</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
     }
-    if ($("#cinta").val() && $("#cinta").val()!="0" ) {
-        total += JSON.parse($("#cinta").val()).preu
+    if ($("#cinta").val() && $("#cinta").val() != "0") {
+        preu = JSON.parse($("#cinta").val()).preu;
+        part2 = '<div class="col-4 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Cinta</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
     }
-    if ($("#punys").val() && $("#punys").val()!="0" ) {
-        total += JSON.parse($("#punys").val()).preu
+    if ($("#punys").val() && $("#punys").val() != "0") {
+        preu = JSON.parse($("#punys").val()).preu;
+        part2 = '<div class="col-4 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Puños</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
     }
-    if ($("#forquilla").val() && $("#forquilla").val()!="0") {
-        total += JSON.parse($("#forquilla").val()).preu
+    if ($("#forquilla").val() && $("#forquilla").val() != "0") {
+        preu = JSON.parse($("#forquilla").val()).preu
+        part2 = '<div class="col-4 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Horquilla</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
     }
 
 
     $("#total").text(total);
+    $('#card-desglose').show();
+
 };
+
 
 function esconde() {
     $("#forquilla").parent().hide();
@@ -1380,108 +1432,140 @@ function esconde() {
     $("#punys").parent().hide();
     $("#cinta").parent().hide();
     $("#info").hide();
-
 };
 
-function info(){
-    if($("#modalitat").val() != "road_disc"){
-        if($("#quadre").val()!="0"){
-            text=JSON.parse($("#quadre").val()).info;
+
+function info() {
+    if ($("#modalitat").val() != "road_disc") {
+        if ($("#quadre").val() != "0") {
+            text = JSON.parse($("#quadre").val()).info;
             $("#info").text(text);
             console.log(text)
-        }        
+        }
     }
 
 };
 
-quadre=""
-function enviar(){
+quadre = ""
+
+function enviar() {
 
 
-    
+
     Email.send({
-        SecureToken : "e73157c6-e8cb-4301-8f40-838dc3f6e2b4",
-        To : 'eloirebollodp@gmail.com',
-        From : "configurador.muntbikes@gmail.com",
-        Subject : "Configuracio "+quadre+"",
-        Body : configuracio()
-    }).then(function(message) {
-            alert("el correo ha sido enviado")        
-       }
-    );
-    
+        SecureToken: "e73157c6-e8cb-4301-8f40-838dc3f6e2b4",
+        To: 'configurador.muntbikes@gmail.com',
+        From: "configurador.muntbikes@gmail.com",
+        Subject: "Configuracio " + quadre + "",
+        Body: configuracio()
+    }).then(function (message) {
+        alert("el correo ha sido enviado")
+    });
+
 }
 
 
 
-function configuracio(){
-    tx='<html><body><style>table, th, td {border: 1px solid black;border-collapse: collapse;}th, td {padding: 15px;}</style>'
-    tx+='<table style="width:100%">';
-    tx+="<tr><td>Nom: "+$("#nom").val()
-    +"</td></tr><tr><td>Cognom: "
-    +$("#cognom").val()
-    +"</td></tr><tr><td>Email: "
-    +$("#mail").val()
-    +"</td></tr><tr><td>Telefon:"
-    +$("#tel").val()
-    +"</td></tr><tr><td>Comentaris: "
-    +$("#comentaris").val()
-    +"</td></tr>";
-    
+function configuracio() {
+    tx = '<html><body><style>table, th, td {border: 1px solid black;border-collapse: collapse;}th, td {padding: 15px;}</style>'
+    tx += '<table style="width:100%">';
+    tx += "<tr><td>Nom: " + $("#nom").val() +
+        "</td></tr><tr><td>Cognom: " +
+        $("#cognom").val() +
+        "</td></tr><tr><td>Email: " +
+        $("#mail").val() +
+        "</td></tr><tr><td>Telefon:" +
+        $("#tel").val() +
+        "</td></tr><tr><td>Comentaris: " +
+        $("#comentaris").val() +
+        "</td></tr>";
 
-    
-    tx +="<tr><td></td></tr>"
-    tx +="<tr><td>Quadre: "
-    if($("#quadre").val()!="0"){
-        tx +=JSON.parse($("#quadre").val()).nom
-        quadre=JSON.parse($("#quadre").val()).nom
+
+
+    tx += "<tr><td></td></tr>"
+    tx += "<tr><td>Quadre: "
+    if ($("#quadre").val() != "0") {
+        tx += JSON.parse($("#quadre").val()).nom
+        quadre = JSON.parse($("#quadre").val()).nom
     }
-    tx +="</td></tr><tr><td>Rodes: "
-    if($("#rodes").val()!="0"){
+    tx += "</td></tr><tr><td>Rodes: "
+    if ($("#rodes").val() != "0") {
         tx += JSON.parse($("#rodes").val()).nom
     }
-    tx +="</td></tr><tr><td>Grup: "
-    if($("#grup").val()!="0"){
+    tx += "</td></tr><tr><td>Grup: "
+    if ($("#grup").val() != "0") {
         tx += JSON.parse($("#grup").val()).nom
     }
-    tx +="</td></tr><tr><td>Manillar: "
-    if($("#manillar").val()!="0"){
+    tx += "</td></tr><tr><td>Manillar: "
+    if ($("#manillar").val() != "0") {
         tx += JSON.parse($("#manillar").val()).nom
     }
-    tx +="</td></tr><tr><td>Seient: "
-    if($("#seient").val()!="0"){
+    tx += "</td></tr><tr><td>Seient: "
+    if ($("#seient").val() != "0") {
         tx += JSON.parse($("#seient").val()).nom
     }
-    tx +="</td></tr><tr><td>Pneumatics: "
-    if($("#pneumatics").val()!="0"){
+    tx += "</td></tr><tr><td>Pneumatics: "
+    if ($("#pneumatics").val() != "0") {
         tx += JSON.parse($("#pneumatics").val()).nom
-    }   
-    tx +="</td></tr><tr><td>Pedals: " 
-    if($("#pedals").val()!="0"){
-    tx += JSON.parse($("#pedals").val()).nom
     }
-    tx +="</td></tr><tr><td>Frens: "
-    if ($("#frens").val() && $("#frens").val()!="0") {
+    tx += "</td></tr><tr><td>Pedals: "
+    if ($("#pedals").val() != "0") {
+        tx += JSON.parse($("#pedals").val()).nom
+    }
+    tx += "</td></tr><tr><td>Frens: "
+    if ($("#frens").val() && $("#frens").val() != "0") {
         tx += JSON.parse($("#frens").val()).nom
     }
-    tx +="</td></tr><tr><td>Tija: "
-    if ($("#tija").val() && $("#tija").val()!="0" ) {
-        tx +=JSON.parse($("#tija").val()).nom
+    tx += "</td></tr><tr><td>Tija: "
+    if ($("#tija").val() && $("#tija").val() != "0") {
+        tx += JSON.parse($("#tija").val()).nom
     }
-    tx +="</td></tr><tr><td>Cinta: "
-    if ($("#cinta").val() && $("#cinta").val()!="0" ) {
+    tx += "</td></tr><tr><td>Cinta: "
+    if ($("#cinta").val() && $("#cinta").val() != "0") {
         tx += JSON.parse($("#cinta").val()).nom
     }
-    tx +="</td></tr><tr><td>Punys: "
-    if ($("#punys").val() && $("#punys").val()!="0" ) {
+    tx += "</td></tr><tr><td>Punys: "
+    if ($("#punys").val() && $("#punys").val() != "0") {
         tx += JSON.parse($("#punys").val()).nom
     }
-    tx +="</td></tr><tr><td>Forquilla: "
-    if ($("#forquilla").val() && $("#forquilla").val()!="0") {
+    tx += "</td></tr><tr><td>Forquilla: "
+    if ($("#forquilla").val() && $("#forquilla").val() != "0") {
         tx += JSON.parse($("#forquilla").val()).nom
     }
-    tx+="</td></tr>"
-    tx+='</table></body></html>'
+    tx += "</td></tr>"
+    tx += '</table></body></html>'
     return tx;
 
+}
+
+function toggleDarkMode(){
+    if(darkMode==false){
+        $('body').removeClass('text-black')
+        $('div').removeClass('bg-white')
+        $('body').addClass('text-white bg-dark2')        
+        $('div.card').addClass('dark')
+        $('input').addClass('bg-dark2 text-white')
+        $('select').addClass('bg-dark2 text-white')
+        $('textarea').addClass('bg-dark2 text-white')
+        $('#darkMode').html('<i class="far fa-sun"></i>')
+        $('.custom-select').css({border:0});
+        $('.form-control').css({border:0});
+        $('.form-control').addClass('form-black')
+        darkMode=true;
+
+    }
+    else{
+        console.log('white')
+        $('body').removeClass('text-white bg-dark2')        
+        $('div.card').removeClass('dark')
+        $('input').removeClass('bg-dark2 text-white')
+        $('select').removeClass('bg-dark2 text-white')
+        $('textarea').removeClass('bg-dark2 text-white')
+        $('#darkMode').html('<i class="far fa-moon"></i>')
+        $('.custom-select').removeAttr('style');
+        $('.form-control').removeAttr('style');
+        $('.form-control').removeClass('form-black')
+        darkMode=false;
+    }
+    
 }

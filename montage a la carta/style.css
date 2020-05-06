@@ -14,13 +14,32 @@
 }
 
 #logo {
-    height: 10%;
-    width: 10%;
+    height: auto;
+    width: 8vw;
 }
 
 .bg-black {
     background-color: black;
 }
+.bg-dark2{
+    background-color: rgb(65, 65, 65);
+}
+.dark{
+    background-color: rgb(30, 30, 30);
+}
+
+.fa-sun{
+    color: #c5bc38;
+}
+.fa-moon{
+    color: #3b6cb6
+}
+
+.form-black:focus{
+    background-color: rgb(65, 65, 65);
+    text:white;
+}
+
 
 @media only screen and (max-width: 600px) {
     #logo {
