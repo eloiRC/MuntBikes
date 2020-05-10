@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="configurador de bicicletas de muntbikes, monta tu propia bici pieza a pieza y contactanos para saber el mejor precio">
+    <meta name="keywords" content="configurador de bicicletas, configurador de bicis, configurador, continental, bici a medida, bici a piezas, shimano, sram, campagnolo, carbon-ti, enve, megamo, colnago, bicicleta, quadro, cuadro,a medida, a la carta, personalizada, scott, pinarello, bianchi, celeste, muntbikes, gama alta, presupuesto, vale, precio, ruedas, xr4, xr3, carbono, f12, specialissima, addict, fox, eagle, dura-ace, red, axs, e-tap, ultegra, super record, n1no, nino, ineos, lightweight, ceramic speed, jumbo "/>
+    <meta name="copyright" content="MuntBikes" />
+    <meta name="robots" content="index,follow"/>
+    <meta content="/images/muntbikes.jpg" itemprop="image">
+    <link rel="canonical" href="https://configurador.muntbikes.com"/>
+    <title>A la carta by MuntBikes</title>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+		integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
+    <link rel="stylesheet"  href="./llibrerias/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./llibrerias/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/favicon.jpg">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "https://configurador.munrbikes.com",
+          "logo": "https://configurador.munrbikes.com/images/logo.png"
+        }
+        </script>
+        <link rel="preconnect" href="https://firebaseinstallations.googleapis.com">
+        <link rel="preconnect" href="https://firebaseremoteconfig.googleapis.com">
+</head>
+
+<body>
+    
+        
+
+        <nav class="d-flex justify-content-between flex-wrap col-12 navbar navbar-dark bg-black shadow">
+            <a class="col-12 col-md-2 text-center text-md-left navbar-brand img-fluid" href="http://muntbikes.com" id="logo" alt="logo con link a la pagina oficial">
+                
+            </a>
+            <div class="col-10 col-md-7 text-left text-md-center pl-0 pl-md-3">
+                <a class=" nav-item mb-0 h3 text-white skip-link" href="#maincontent">A la carta by MuntBikes</a>
+            </div>
+            <div class="col-2 col-md-2 text-center pr-0">
+                <button class="btn btn-dark" id="darkMode" aria-label="Cambiar a modo oscuro"><i class="far fa-moon"></i></button>
+            </div>
+            
+            
+        </nav>
+        
+<main id="maincontent">
+    <div class="mt-5">
+        <div class="col-12 col-lg-8 offset-lg-2">
+            <div class="card shadow rounded-lg mb-5">
+                <div class="card-body">
+                    <form method="post" id="formulari_a_la_carta">
+                        <div class="form-group mt-2">
+                            <label class="" for="modalitat">Modalidad:</label>
+                            <select class="custom-select " id="modalitat">
+                                <option selected>Selecciona una modalidad</option>
+                                <option value="road_disc">Carretera Disco</option>
+                                <option value="road_rim">Carretera</option>
+                                <option value="gravel">Gravel & CX</option>
+                                <option value="mtb">MTB</option>
+                            </select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label class="" for="quadre">Cuadro:</label>
+                            <select class="custom-select" id="quadre" >
+                              
+                            </select>
+                            <p class="text-muted small" id="info"></p>
+
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="rodes">Ruedas:</label>
+                            </div>
+                            <select class="custom-select" id="rodes" >
+                               
+                            </select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="grup">Grupo:</label>
+                            </div>
+                            <select class="custom-select" id="grup" >
+                              
+                            </select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="frens">Frenos:</label>
+                            </div>
+                            <select class="custom-select" id="frens" >
+                                
+                            </select>
+                            <p class="text-muted small">*Los kits de freno incluyen los discos</p>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="forquilla">Horquilla:</label>
+                            </div>
+                            <select class="custom-select" id="forquilla" >
+                                
+                            </select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="manillar">Manillar:</label>
+                            </div>
+                            <select class="custom-select" id="manillar" >
+                                
+                            </select>
+                            <p class="text-muted small">*Todos los manillares son de una pieza Manillar/Potencia o son
+                                conjuntos de manillar y potencia de la misma marca y misma gama</p>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="seient">Sillin:</label>
+                            </div>
+                            <select class="custom-select" id="seient" >
+                                
+                            </select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="tija">Tija:</label>
+                            </div>
+                            <select class="custom-select" id="tija" >
+                                
+                            </select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="cinta">Cinta:</label>
+                            </div>
+                            <select class="custom-select" id="cinta" >
+                              
+                            </select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="pedals">Pedales:</label>
+                            </div>
+                            <select class="custom-select" id="pedals" >
+                                
+                            </select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="punys">Puños:</label>
+                            </div>
+                            <select class="custom-select" id="punys" >
+                                
+                            </select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="pneumatics">Neumaticos:</label>
+                            </div>
+                            <select class="custom-select" id="pneumatics" >
+                                
+                            </select>
+                        </div>
+
+                    
+
+                </div>
+                
+            </div>
+            <div class="card shadow rounded-lg mb-5" style="display: none;" id="card-desglose">
+                <div class="card-body">
+                    <div id="desglos">
+                    
+                        
+                    </div>
+                    <br>
+                    <div class="float-right">
+                        <div class=" rounded-lg px-2 py-1 btn btn-lg btn-primary text-white">
+                            Total: <span id="total">0</span> €
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="card shadow rounded-lg mb-4">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="comentaris">Comentarios y extras:</label>
+                            <textarea class="form-control" id="comentaris" rows="4"
+                                placeholder="medida del manillar, talla del cuadro,dientes del desarrollo...."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Nombre:</label>
+                            <input type="text" class="form-control" id="nom" placeholder="juan" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cognom">Apellido:</label>
+                            <input type="text" class="form-control" id="cognom" placeholder="martinez">
+                        </div>
+                        <div class="form-group">
+                            <label for="mail">Email</label>
+                            <input type="email" class="form-control" id="mail" placeholder="Email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">Telefono:</label>
+                            <input type="text" class="form-control" id="tel" pattern="[0-9]{9}" required
+                                placeholder="666777666">
+                        </div>
+                        <div class="float-right">
+                            <button type="submit" class="btn btn-lg btn-success" aria-label="Enviar Correo" id="enviar" >Enviar</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                </form>
+        </div>
+
+    </div>
+    <p id='text'>configura tu propia bici a medida seleccioanndo pieza por pieza, componente por componente, ruedas, grupo, cuadro, cinta, horquilla, manillar, tija, pedales, y sabras un precio para tu bici perfecta, al finalizar puedes enviarnos un correo para que te passemos un presupuesto mejor y poder especificar mejor lo que quieres que tenga tu bici perfecta, nosotros revisaremos que no haya ninguna incompatibilidad de componentes y nos pondremos en contacto contigo.</p>
+</main>
+    <script src="./llibrerias/smtp.js"></script>
+    <script src="./llibrerias/jquery-ui-1.12.1/jquery-3.5.1.min.js"></script>
+    <script src="./llibrerias/jquery-ui-1.12.1/jquery-ui.min.js"></script>   
+    <script src="./llibrerias/popperjs2.0.6/popper.min.js"></script>
+    <script src="./llibrerias/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.4.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.4.0/firebase-analytics.js"></script>
+
+<script src="/__/firebase/7.4.0/firebase-performance.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+<script>
+    // Get the Analytics service for the default app
+    const analytics = firebase.analytics();
+
+    $("#enviar").click(function(){
+        analytics.logEvent('click', {
+    name: 'enviar correo',
+    content_id: 'correo'
+});
+    })
+    
+</script>
+    
+
+</body>
+
+</html>

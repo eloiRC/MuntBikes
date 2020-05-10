@@ -1,0 +1,22 @@
+{
+    "short_name": "Configurador",
+    "name": "Configurador Muntbikes",
+    "description": "Configurat tu bici poerfecta con el configurador y obten un precio al instante",
+    "icons": [
+      {
+        "src": "./favicon.png",
+        "type": "image/png",
+        "sizes": "60x60"
+      },
+      {
+        "src": "/images/muntbikes.jpg",
+        "type": "image/jpg",
+        "sizes": "1595x962"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#ffffff"
+  }

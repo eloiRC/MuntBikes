@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /llibreries
+
+Sitemap: http://configurador.muntbikes.com/sitemap.xml

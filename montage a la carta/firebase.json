@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "public",
+    "site": "configurador-muntbikes",
+    "ignore": [
+      "firebase.json",
+      "**/node_modules/**"
+    ]
+  }
+}
