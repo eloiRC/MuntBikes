@@ -1465,7 +1465,7 @@ function enviar() {
     }
     Email.send({
         SecureToken: "e73157c6-e8cb-4301-8f40-838dc3f6e2b4",
-        To: 'muntbikes.configurador@gmail.com',
+        To: 'comercial@muntbikes.com',
         From: "configurador.muntbikes@gmail.com",
         Subject: "Configuracio " + quadre + "",
         Body: configuracio()
