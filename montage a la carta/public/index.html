@@ -17,9 +17,9 @@
     <link rel="stylesheet"  href="./llibrerias/bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./llibrerias/fontawesome-free-5.13.0-web/css/all.min.css">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon50x50.png">
     <link rel="manifest" href="./manifest.webmanifest">
-    <link rel="apple-touch-icon" href="/favicon.jpg">
+    <link rel="apple-touch-icon" type="image/png" href="/favicon50x50.png">
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -33,7 +33,16 @@
 </head>
 
 <body>
-    
+    <div id="txt" class="h-100 w-100 d-flex txt ">
+        <div class="align-self-center col-12">
+            <div class="card shadow rounded-lg col-12 col-md-6 offset-md-3 mt-5 p-5 ">
+                <p class="textP">Configura tu Bicicleta perfecta seleccionando cada componente, al finalizar veras un precio aproximado, puedes darnos tu información de contacto y nos pondremos en contacto contigo para darte una oferta personalizada y validar que no hay ninguna incompatibilidad con el montaje.</p>
+                <br>
+                <button class="btn btn-lg btn-primary mx-auto btn-block textP" id="textBtn">Entendido</button>
+            </div>
+        </div>
+        
+    </div>
         
 
         <nav class="d-flex justify-content-between flex-wrap col-12 navbar navbar-dark bg-black shadow">
@@ -173,6 +182,10 @@
             </div>
             <div class="card shadow rounded-lg mb-5" style="display: none;" id="card-desglose">
                 <div class="card-body">
+                    <div class="text-right">
+                        <p>*Precios P.V.P solo orientativo, nos pondremos en contatco contigo para hacerte una oferta personalizada. </p>
+
+                    </div>
                     <div id="desglos">
                     
                         
@@ -192,6 +205,18 @@
                             <textarea class="form-control" id="comentaris" rows="4"
                                 placeholder="medida del manillar, talla del cuadro,dientes del desarrollo...."></textarea>
                         </div>
+                        <div class="form-group">
+                            <label for="estatura">Estatura:</label>
+                            <div class="input-group">                           
+                                <input type="number" class="form-control" id="estatura" pattern="[0-9]{9}" required
+                                    placeholder="175">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="basic-addon2">cm</span>
+                                      </div>
+                            </div>
+                        </div>
+                        
+                        
                         <div class="form-group">
                             <label for="nom">Nombre:</label>
                             <input type="text" class="form-control" id="nom" placeholder="juan" required>
@@ -220,8 +245,11 @@
         </div>
 
     </div>
-    <p id='text'>configura tu propia bici a medida seleccioanndo pieza por pieza, componente por componente, ruedas, grupo, cuadro, cinta, horquilla, manillar, tija, pedales, y sabras un precio para tu bici perfecta, al finalizar puedes enviarnos un correo para que te passemos un presupuesto mejor y poder especificar mejor lo que quieres que tenga tu bici perfecta, nosotros revisaremos que no haya ninguna incompatibilidad de componentes y nos pondremos en contacto contigo.</p>
+
+    
 </main>
+
+
     <script src="./llibrerias/smtp.js"></script>
     <script src="./llibrerias/jquery-ui-1.12.1/jquery-3.5.1.min.js"></script>
     <script src="./llibrerias/jquery-ui-1.12.1/jquery-ui.min.js"></script>   

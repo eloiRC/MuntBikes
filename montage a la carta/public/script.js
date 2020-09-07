@@ -1,6 +1,6 @@
 //window.location.replace("https://configurador-muntbikes.web.app");
 $(document).ready(function () {
-    $("#text").hide();
+    document.getElementById("textBtn").addEventListener("click", hidetext)
     esconde();
     document.getElementById("darkMode").addEventListener("click", toggleDarkMode)
     document.getElementById("modalitat").addEventListener("change", modalitat)
@@ -620,7 +620,7 @@ t_cinta = [{
         preu: 18
     },
     {
-        nom: "MOST UltraLight",
+        nom: "MOST SuperLight",
         preu: 15
     },
     {
@@ -1478,6 +1478,11 @@ function enviar() {
 
 
 function configuracio() {
+    let modallitat;
+    if($("#modalitat").val() !=null ){
+        modalitat = $("#modalitat").val()
+    }
+
     tx = '<html><body><style>table, th, td {border: 1px solid black;border-collapse: collapse;}th, td {padding: 15px;}</style>'
     tx += '<table style="width:100%">';
     tx += "<tr><td>Nom: " + $("#nom").val() +
@@ -1489,12 +1494,15 @@ function configuracio() {
         $("#tel").val() +
         "</td></tr><tr><td>Comentaris: " +
         $("#comentaris").val() +
+        "</td></tr><tr><td>Estatura: " +
+        $("#estatura").val() +
         "</td></tr>";
 
 
 
     tx += "<tr><td></td></tr>"
-    tx += "<tr><td>Quadre: "
+    tx += "<tr><td>Modalitat: " + modalitat;
+    tx += "</td></tr><tr><td>Quadre: "
     if ($("#quadre").val() && $("#quadre").val() != null) {
         tx += JSON.parse($("#quadre").val()).nom
         quadre = JSON.parse($("#quadre").val()).nom
@@ -1544,7 +1552,10 @@ function configuracio() {
         tx += JSON.parse($("#forquilla").val()).nom
     }
     tx += "</td></tr>"
-    tx += '</table></body></html>'
+    tx += '</table>'
+    tx+="<br><br>"
+    tx+=$("#desglos").html();
+    tx+="</body></html>"
     return tx;
 
 }
@@ -1579,4 +1590,10 @@ function toggleDarkMode(){
         darkMode=false;
     }
     
+}
+
+function hidetext(){
+    $('#txt').hide();
+    $('#txt').children().hide();
+    $('#txt').removeClass('txt')
 }
