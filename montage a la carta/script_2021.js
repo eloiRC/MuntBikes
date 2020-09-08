@@ -1432,6 +1432,7 @@ function esconde() {
     $("#punys").parent().hide();
     $("#cinta").parent().hide();
     $("#info").hide();
+    $("#imgs").hide();
 };
 
 
