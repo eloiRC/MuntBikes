@@ -175,7 +175,7 @@ t_mtb = [{
 ];
 
 t_manillars_road = [{
-    nom: "MOST TALON ULTRA",
+    nom: "MOST TALON ULTRA f12",
     preu: 845
 },
 {
@@ -191,7 +191,7 @@ t_manillars_road = [{
     preu: 247
 },
 {
-    nom: "SYNCROS CRESTON IC SL", //
+    nom: "SYNCROS CRESTON IC SL rc", //
     preu: 579
 },
 {
@@ -1077,6 +1077,7 @@ function modalitat() {
     $("#pneumatics").empty();
     $("#pedals").empty();
     $("#forquilla").empty();
+    $("#imgs").empty();
     $("#info").text("");
 
     cometa = "''"
@@ -1117,7 +1118,7 @@ function modalitat() {
         mostrar_pedals_road();
 
         //img
-        carrergar_image(["xr44_disc.jpg","f12_disc.jpg","c64_disc.jpg",""])
+        carregar_image(["xr4.jpg","f12.jpg","c64.jpg","v3rs.jpg","rc_pro2.jpg","rc_ultimate3.jpg","f12_2.jpg","xr4_2.jpg","rc_pro.jpg","rc_ultimate.jpg","rc_ultimate2.jpg","fun.jpg"])
         
     }
 
@@ -1157,6 +1158,10 @@ function modalitat() {
         mostrar_cinta();
         pneumatic_road();
         mostrar_pedals_road();
+
+        //img
+        carregar_image(["c64_rim_2.jpg","f12_rim.jpg","xr4_rim.jpg","f12_rim_2.jpg","specialissima.jpg","c64_rim.jpg","specialissima_2.jpg","xr4_rim_2.jpg"])
+        
     }
 
     //gravel
@@ -1202,7 +1207,8 @@ function modalitat() {
         });
         $("#pneumatics").append(t_tmp);
 
-
+        //img
+        carregar_image(["grevil.jpg","grevil2.jpg","zolder.jpg"])
     }
 
     if ($("#modalitat").val() == "mtb") {
@@ -1278,7 +1284,12 @@ function modalitat() {
         $("#tija").append(t_tmp);
         $("#tija").parent().show();
 
+        
+        //img
+        carregar_image(["n1no.jpg","spark_ultimate.jpg","methanol_cv.jpg","methanol_fs.jpg"])
     }
+
+  
 
 };
 
@@ -1337,6 +1348,13 @@ function mostrar_pedals_road() {
     $("#pedals").parent().show();
 };
 
+function carregar_image(img){
+    $("#imgs").show();
+    img.forEach(element => {
+        htm='<div class="card shadow rounded-lg mb-4"><div class="card-body text-center"><img src="./images/'+element+'" alt="'+element+'" srcset="" class="img-fluid rounded-lg"></div></div>'
+        $("#imgs").append(htm)
+    });
+}
 
 function preu() {
     $("#desglos").empty();
