@@ -1482,7 +1482,7 @@ function info() {
 
 
 function enviar() {
-    if ($("#frens").val() &&$("#quadre").val() != "0") {
+    if ($("#quadre").val() != "0" && $("#quadre").val() != null) {
         quadre = JSON.parse($("#quadre").val()).nom
     }
     Email.send({
