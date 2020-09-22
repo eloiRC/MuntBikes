@@ -43,12 +43,12 @@ t_road_disc = [{
     preu: 3690
 },
 {
-    nom: "Colnago C64",
-    preu: 5105
+    nom: "Colnago C64",//
+    preu: 4637
 },
 {
-    nom: "Colngao V3 RS",
-    preu: 4325
+    nom: "Colngao V3 RS",//
+    preu: 4379
 },
 {
     nom: "Scott ADDICT RC ULTIMATE", //
@@ -89,13 +89,13 @@ t_road = [{
     info: ""
 },
 {
-    nom: "Colnago C64",
-    preu: 4568,
+    nom: "Colnago C64",//
+    preu: 4087,
     info: "*tija incluida"
 },
 {
-    nom: "Colngao V3 RS",
-    preu: 3958,
+    nom: "Colngao V3 RS",//
+    preu: 4012,
     info: "*tija incluida"
 }
 ];
@@ -131,8 +131,13 @@ t_gravel = [{
     info: "*tija incluida"
 },
 {
-    nom: "Colango Prestige",
+    nom: "Colango Prestige",//
     preu: 2190,
+    info: "*tija NO incluida"
+},
+{
+    nom: "Colango G3X",//
+    preu: 2825,
     info: "*tija incluida"
 }
 ];
@@ -217,6 +222,14 @@ t_manillars_road = [{
 {
     nom: "PRO VIVE conjunto",//
     preu: 458
+},
+{
+    nom: "Deda Alanera colnago",//
+    preu: 847
+},
+{
+    nom: "Potencia colnago sr9",//
+    preu: 171
 }
 ];
 
