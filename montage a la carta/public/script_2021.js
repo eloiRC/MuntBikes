@@ -1131,7 +1131,7 @@ function modalitat() {
         mostrar_pedals_road();
 
         //img
-        carregar_image(["xr4.jpg","f12.jpg","c64.jpg","v3rs.jpg","rc_pro2.jpg","rc_ultimate3.jpg","f12_2.jpg","xr4_2.jpg","rc_pro.jpg","rc_ultimate.jpg","rc_ultimate2.jpg","fun.jpg"])
+        carregar_image(["xr4.jpg","f12_3.jpg","c64.jpg","v3rs.jpg","rc_pro2.jpg","rc_ultimate3.jpg","f12_2.jpg","xr4_2.jpg","rc_pro.jpg","rc_ultimate.jpg","rc_ultimate2.jpg","fun.jpg","f12.jpg"])
         
     }
 
