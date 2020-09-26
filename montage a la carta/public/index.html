@@ -20,6 +20,7 @@
     <link rel="icon" type="image/png" href="favicon50x50.png">
     <link rel="manifest" href="./manifest.webmanifest">
     <link rel="apple-touch-icon" type="image/png" href="/favicon50x50.png">
+    <script src="./llibrerias/html2pdf.bundle.min.js"></script>
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
@@ -191,7 +192,10 @@
                         
                     </div>
                     <br>
-                    <div class="float-right">
+                    <div class="d-flex justify-content-between">
+                        <div class=" rounded-lg px-2 py-1 btn btn-lg btn-success text-white" id="pdf">
+                            Imprimir <i class="fas fa-print"></i>
+                        </div>
                         <div class=" rounded-lg px-2 py-1 btn btn-lg btn-primary text-white">
                             Total: <span id="total">0</span> €
                         </div>
@@ -248,7 +252,30 @@
         </div>
 
     </div>
+    <div class="" id="invoice">
+        <div class="col-12 bg-black d-flex justify-content-between p-3">
+            <div class="">
+                <img src="./images/muntbikes.png" alt="muntibkes logo" class="img-fluid w-50 ">
+            </div>
+            <div class="text-white text-center pr-5 font-weight-bold">
+                <br>
+                <p>www.muntbikes.com</p>
+                <p>muntbikes@muntbikes.com</p>
+                <p>937939135</p>
+                <p>instagram: @muntbikes</p>
+            </div>
 
+        </div>
+        <div id="print" class="m-5" >
+
+        </div>
+        <br>
+        <div class="m-5">
+        <p class="textP"> *Los precios son pvp oficiales, ponte en conatcto con nosotros para obtener una oferta personalizada, y validar la configuracion</p>
+        </div>
+        
+
+    </div>
     
 </main>
 

@@ -1,8 +1,10 @@
 //window.location.replace("https://configurador-muntbikes.web.app");
 $(document).ready(function () {
+    $("#invoice").hide()  
     document.getElementById("textBtn").addEventListener("click", hidetext)
     esconde();
     document.getElementById("darkMode").addEventListener("click", toggleDarkMode)
+    document.getElementById("pdf").addEventListener("click", generatePDF)
     document.getElementById("modalitat").addEventListener("change", modalitat)
     document.getElementById("quadre").addEventListener("change", preu);
     document.getElementById("rodes").addEventListener("change", preu);
@@ -1632,3 +1634,125 @@ function hidetext(){
     $('#txt').children().hide();
     $('#txt').removeClass('txt')
 }
+
+async function generatePDF() {
+    // Choose the element that our invoice is rendered in.
+    $("#print").append(print());
+    $("#invoice").show()
+    const element = document.getElementById("invoice");
+    var opt = {
+        filename:     'configurador_muntbikes.pdf'
+      };
+    // Choose the element and save the PDF for our user.
+    
+    await html2pdf().set(opt).from(element).save();
+    
+    $("#invoice").hide()
+
+  }
+
+function print(){
+    let modallitat;
+    if($("#modalitat").val() !=null ){
+        modalitat = $("#modalitat").val()
+    }
+    let total = 0;
+
+    let part1 = '<div class="d-flex justify-content-around row">';
+    let part2 = "";
+    let part3 = '<div class="col-2 text-truncate px-0">.....................................................................................................................................................................................</div>'
+    let part4 = "";
+    let part5="</div>"
+
+    if ($("#quadre").val() != "0") {
+        modalitat='<h4>'+$("#modalitat").val()+'</h4>';
+        $("#print").append(modalitat);
+        preu = JSON.parse($("#quadre").val()).preu;
+        part2 = '<div class="col-7  pr-0">Cuadro: '+JSON.parse($("#quadre").val()).nom+'</div>';
+        part4 = '<div class="col-3  text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#rodes").val() != "0") {
+        preu = JSON.parse($("#rodes").val()).preu;
+        part2 = '<div class="col-7 pr-0">Ruedas: '+JSON.parse($("#rodes").val()).nom+'</div>';
+        part4 = '<div class="col-3 text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#grup").val() != "0") {
+        preu = JSON.parse($("#grup").val()).preu;
+        part2 = '<div class="col-7  pr-0"Grupo: >'+JSON.parse($("#grup").val()).nom+'</div>';
+        part4 = '<div class="col-3  text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#frens").val() && $("#frens").val() != "0") {
+        preu = JSON.parse($("#frens").val()).preu;
+        part2 = '<div class="col-7 pr-0">Frenos: '+JSON.parse($("#frens").val()).nom+'</div>';
+        part4 = '<div class="col-3 text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#forquilla").val() && $("#forquilla").val() != "0") {
+        preu = JSON.parse($("#forquilla").val()).preu
+        part2 = '<div class="col-7 pr-0">Horquilla: '+JSON.parse($("#forquilla").val()).nom+'</div>';
+        part4 = '<div class="col-3 text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#manillar").val() != "0") {
+        preu = JSON.parse($("#manillar").val()).preu;
+        part2 = '<div class="col-7 pr-0">Manillar: '+JSON.parse($("#manillar").val()).nom+'</div>';
+        part4 = '<div class="col-3 text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#seient").val() != "0") {
+        preu = JSON.parse($("#seient").val()).preu;
+        part2 = '<div class="col-7 pr-0">Sillin: '+JSON.parse($("#seient").val()).nom+'</div>';
+        part4 = '<div class="col-3 text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#tija").val() && $("#tija").val() != "0") {
+        preu = JSON.parse($("#tija").val()).preu;
+        part2 = '<div class="col-7 pr-0">Tija: '+JSON.parse($("#tija").val()).nom+'</div>';
+        part4 = '<div class="col-3  text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#pedals").val() != "0") {
+        preu = JSON.parse($("#pedals").val()).preu;
+        part2 = '<div class="col-7 pr-0">Pedales: '+JSON.parse($("#pedals").val()).nom+'</div>';
+        part4 = '<div class="col-3 text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#cinta").val() && $("#cinta").val() != "0") {
+        preu = JSON.parse($("#cinta").val()).preu;
+        part2 = '<div class="col-7 pr-0">Cinta: '+JSON.parse($("#cinta").val()).nom+'</div>';
+        part4 = '<div class="col-3 text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#punys").val() && $("#punys").val() != "0") {
+        preu = JSON.parse($("#punys").val()).preu;
+        part2 = '<div class="col-7 pr-0">Puños: '+JSON.parse($("#punys").val()).nom+'</div>';
+        part4 = '<div class="col-3 text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#pneumatics").val() != "0") {
+        preu = JSON.parse($("#pneumatics").val()).preu;
+        part2 = '<div class="col-7 pr-0">Neumaticos: '+JSON.parse($("#pneumatics").val()).nom+'</div>';
+        part4 = '<div class="col-3 text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }  
+    
+    textPreu='<br><div class=" rounded-lg px-2 py-1 btn btn-lg btn-primary text-dark float-right">Total: <span id="total2">'+total+'</span> €</div><br>'
+    $("#print").append(textPreu);
+
+
+};
