@@ -1,3 +1,12 @@
+@font-face {
+    font-family: scriptMtBold;
+    src: url('./llibrerias/scrpit_mt/scrptbl.eot');
+    src: url('./llibrerias/scrpit_mt/scrptbl.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./llibrerias/scrpit_mt/scriptmtbold.ttf')  format('truetype'),
+       url('./llibrerias/scrpit_mt/scriptbl.woff') format('woff');
+       font-weight:bold;
+  }
+
 body{
 z-index: 0;
 }
@@ -84,13 +93,7 @@ z-index: 0;
       text-decoration: none;
   }
 
-  @font-face {
-    font-family: scriptMtBold;
-    src: url(./llibrerias/mtbold/scriptbl.woff);
-    src: url(./llibrerias/mtbold/scriptbl.eot) format('embedded-opentype'), /* IE6-IE8 */
-       url(./llibrerias/mtbold/scriptbl.ttf)  format('truetype'), /* Safari, Android, iOS */
-    font-weight: bold;
-  }
+  
  
   .mb{
     font-family: scriptMtBold;
