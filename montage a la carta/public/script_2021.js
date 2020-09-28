@@ -19,6 +19,7 @@ $(document).ready(function () {
     document.getElementById("cinta").addEventListener("change", preu);
     document.getElementById("punys").addEventListener("change", preu);
     document.getElementById("seient").addEventListener("change", preu);
+    document.getElementById("bieles").addEventListener("change", preu);
     document.getElementById("pneumatics").addEventListener("change", preu);
     document.getElementById("portabido").addEventListener("change", preu);
     document.getElementById("portabido2").addEventListener("change", preu);

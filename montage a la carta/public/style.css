@@ -87,6 +87,8 @@ z-index: 0;
   @font-face {
     font-family: scriptMtBold;
     src: url(./llibrerias/mtbold/scriptbl.woff);
+    src: url(./llibrerias/mtbold/scriptbl.eot) format('embedded-opentype'), /* IE6-IE8 */
+       url(./llibrerias/mtbold/scriptbl.ttf)  format('truetype'), /* Safari, Android, iOS */
     font-weight: bold;
   }
  
