@@ -83,3 +83,17 @@ z-index: 0;
   .skip-link:hover{
       text-decoration: none;
   }
+
+  @font-face {
+    font-family: scriptMtBold;
+    src: url(./llibrerias/mtbold/scriptbl.woff);
+    font-weight: bold;
+  }
+ 
+  .mb{
+    font-family: scriptMtBold;
+  }
+
+  .xl{
+      font-size: x-large;
+  }

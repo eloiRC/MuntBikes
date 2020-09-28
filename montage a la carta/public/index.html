@@ -51,7 +51,7 @@
                 
             </a>
             <div class="col-10 col-md-7 text-left text-md-center pl-0 pl-md-3">
-                <a class=" nav-item mb-0 h3 text-white skip-link" href="#maincontent">A la carta by MuntBikes</a>
+                <a class=" nav-item mb-0 h3 text-white skip-link" href="#maincontent">A la carta by <span class="mb">MuntBikes</span> </a>
             </div>
             <div class="col-2 col-md-2 text-center pr-0">
                 <button class="btn btn-dark" id="darkMode" aria-label="Cambiar a modo oscuro"><i class="far fa-moon"></i></button>
@@ -86,6 +86,16 @@
                         </div>
                         <div class="form-group mt-2">
                             <div class="">
+                                <label class="" for="manillar">Manillar:</label>
+                            </div>
+                            <select class="custom-select" id="manillar" >
+                                
+                            </select>
+                            <p class="text-muted small">*Todos los manillares son de una pieza Manillar/Potencia o son
+                                conjuntos de manillar y potencia de la misma marca y misma gama</p>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
                                 <label class="" for="rodes">Ruedas:</label>
                             </div>
                             <select class="custom-select" id="rodes" >
@@ -116,16 +126,6 @@
                             <select class="custom-select" id="forquilla" >
                                 
                             </select>
-                        </div>
-                        <div class="form-group mt-2">
-                            <div class="">
-                                <label class="" for="manillar">Manillar:</label>
-                            </div>
-                            <select class="custom-select" id="manillar" >
-                                
-                            </select>
-                            <p class="text-muted small">*Todos los manillares son de una pieza Manillar/Potencia o son
-                                conjuntos de manillar y potencia de la misma marca y misma gama</p>
                         </div>
                         <div class="form-group mt-2">
                             <div class="">
@@ -172,6 +172,38 @@
                                 <label class="" for="pneumatics">Neumaticos:</label>
                             </div>
                             <select class="custom-select" id="pneumatics" >
+                                
+                            </select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="portabidon">Portabidon:</label>
+                            </div>
+                            <select class="custom-select" id="portabido" >
+                                
+                            </select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="portabidon2">Segundo Portabidon:</label>
+                            </div>
+                            <select class="custom-select" id="portabido2" >
+                                
+                            </select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="pedalier">Pedalier CeramicSpeed:</label>
+                            </div>
+                            <select class="custom-select" id="pedalier" >
+                                
+                            </select>
+                        </div>
+                        <div class="form-group mt-2">
+                            <div class="">
+                                <label class="" for="roldanes">Pata de Cambio CeramicSpeed:</label>
+                            </div>
+                            <select class="custom-select" id="roldanes" >
                                 
                             </select>
                         </div>
@@ -252,11 +284,14 @@
         </div>
 
     </div>
+
+    <!-- html del pdf -->
     <div class="" id="invoice">
         <div class="col-12 bg-black d-flex justify-content-between px-3 py-1 align-items-center shadow">
-            <div class="col-4 text-center">            
-                    <img src="./images/muntbikes.png" alt="muntibkes logo" class="img-fluid">
-                    <h5 class="text-white ">A la carta by MuntBikes</h5>            
+            <div class="col-5 text-center">
+                    <div class="px-5 mt-2"> <img src="./images/muntbikes2.png" alt="muntibkes logo" class="img-fluid"></div>            
+                   
+                    <h5 class="text-white mt-0 ">A la carta by <span class="mb xl">MuntBikes</span></h5>            
             </div>
             <div class="text-white text-center pr-4 font-weight-bold">
                 <br>
@@ -267,12 +302,27 @@
             </div>
 
         </div>
-        <div id="print" class="mx-5 mt-5" >
+        <div class="mt-5 d-flex justify-content-between">
+            <div class="d-flex align-items-center px-5">
+                <div id="data"  class="d-flex flex-column">
+
+                </div>
+            </div>
+            <div class="col-4 px-5 d-flex align-items-center" id="logo_marca">
+                
+            </div>
+        </div>
+        <div id="print" class="mx-5 mt-2" >
 
         </div>
         <br>
         <div class="mx-5">
         <p class="text-secondary"> *Los precios son pvp oficiales, ponte en conatcto con nosotros para obtener una oferta personalizada y validar la configuracion</p>
+        <div class="col-12 border border-bottom border-dark"></div>
+        </div>
+        <br>
+        <div id="dades_client" class="mx-5 mt-2">
+            
         </div>
         
 

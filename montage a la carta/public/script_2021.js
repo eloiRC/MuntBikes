@@ -1,4 +1,6 @@
 //window.location.replace("https://configurador-muntbikes.web.app");
+dades_clinet=false;
+
 $(document).ready(function () {
     $("#invoice").hide();
 
@@ -9,6 +11,7 @@ $(document).ready(function () {
     document.getElementById("modalitat").addEventListener("change", modalitat)
     document.getElementById("quadre").addEventListener("change", preu);
     document.getElementById("rodes").addEventListener("change", preu);
+    document.getElementById("pedals").addEventListener("change", preu);
     document.getElementById("grup").addEventListener("change", preu);
     document.getElementById("frens").addEventListener("change", preu);
     document.getElementById("manillar").addEventListener("change", preu);
@@ -17,7 +20,15 @@ $(document).ready(function () {
     document.getElementById("punys").addEventListener("change", preu);
     document.getElementById("seient").addEventListener("change", preu);
     document.getElementById("pneumatics").addEventListener("change", preu);
+    document.getElementById("portabido").addEventListener("change", preu);
+    document.getElementById("portabido2").addEventListener("change", preu);
+    document.getElementById("pedalier").addEventListener("change", preu);
+    document.getElementById("roldanes").addEventListener("change", preu);
     document.getElementById("quadre").addEventListener("change", info);
+    document.getElementById("nom").addEventListener("change", dades_modificades);
+    document.getElementById("cognom").addEventListener("change", dades_modificades);
+    document.getElementById("tel").addEventListener("change", dades_modificades);
+    document.getElementById("mail").addEventListener("change", dades_modificades);
     $("#formulari_a_la_carta").submit(function (e) {
         e.preventDefault();
         enviar();
@@ -27,162 +38,231 @@ $(document).ready(function () {
 let darkMode=false;
 t_road_disc = [{
     nom: "Pinarello F12",
-    preu: 5595
+    preu: 5595,
+    marca: "pinarello"
 },
 {
     nom: "Pinarello PRINCE FX",
-    preu: 3720
+    preu: 3720,
+    marca: "pinarello"    
 },
 {
     nom: "Bianchi XR4",//preu quadro amb vision restat -749€ del manillar
-    preu: 4041
+    preu: 4041,
+    marca: "bianchi"
 },
 {
     nom: "Bianchi SPECIALISSIMA",//preu quadro amb vision restat -749€ del manillar
-    preu: 4590
+    preu: 4590,
+    marca: "bianchi"
 },
 {
     nom: "Bianchi INFINITO CV",//preu quadro amb vision restat -749€ del manillar
-    preu: 3690
+    preu: 3690,
+    marca: "bianchi"
 },
 {
     nom: "Colnago C64",//
-    preu: 4637
+    preu: 4637,
+    marca: "colnago"
 },
 {
     nom: "Colngao V3 RS",//
-    preu: 4379
+    preu: 4379,
+    marca: "colnago"
 },
 {
     nom: "Scott ADDICT RC ULTIMATE", //
-    preu: 3999
+    preu: 3999,
+    marca: "scott"
 },
 {
     nom: "Scott ADDICT RC PRO", //
-    preu: 2849
+    preu: 2849,
+    marca: "scott"
 },
 {
     nom: "Scott FOIL SUPERSONIC EDT. HMX", //
-    preu: 3999
+    preu: 3999,
+    marca: "scott"
 },
 {
     nom: "Scott FOIL 10 HMF ", //
-    preu: 2649
+    preu: 2649,
+    marca: "scott"
 }
 ];
 
 t_road = [{
     nom: "Pinarello F12",
     preu: 5395,
-    info: "*tija incluida"
+    info: "*tija incluida",
+    marca: "pinarello"  
 },
 {
     nom: "Pinarello PRINCE FX",
     preu: 3445,
-    info: "*tija incluida"
+    info: "*tija incluida",
+    marca: "pinarello"  
 },
 {
     nom: "Bianchi XR4",//
     preu: 3690,
-    info: "*tija incluida"
+    info: "*tija incluida",
+    marca: "bianchi"
 },
 {
     nom: "Bianchi SPECIALISSIMA",//
     preu: 3990,
-    info: ""
+    info: "",
+    marca: "bianchi"
 },
 {
     nom: "Colnago C64",//
     preu: 4087,
-    info: "*tija incluida"
+    info: "*tija incluida",
+    marca: "colnago"
 },
 {
     nom: "Colngao V3 RS",//
     preu: 4012,
-    info: "*tija incluida"
+    info: "*tija incluida",
+    marca: "colnago"
 }
 ];
 
 t_gravel = [{
     nom: "Pinarello Grevil",
     preu: 2895,
-    info: "*tija incluida"
+    info: "*tija incluida",
+    marca: "pinarello"  
 },
 {
     nom: "Pinarello Crossista +",
     preu: 4835,
-    info: "*tija incluida"
+    info: "*tija incluida",
+    marca: "pinarello"  
 },
 {
     nom: "Pinarello Crossista ",
     preu: 2715,
-    info: "*tija incluida"
+    info: "*tija incluida",
+    marca: "pinarello"  
 },
 {
     nom: "Bianchi Zolder Pro",//
     preu: 1990,
-    info: ""
+    info: "",
+    marca: "bianchi"
 },
 {
     nom: "Bianchi ARCADEX ",//PREU CALCULAT DESCONATANT UNS 600€ DEL GRX
     preu: 2090,
-    info: ""
+    info: "",
+    marca: "bianchi"
 },
 {
     nom: "Scott Addict CX RC", //
     preu: 2249,
-    info: "*tija incluida"
+    info: "*tija incluida",
+    marca: "scott"
 },
 {
     nom: "Colango Prestige",//
     preu: 2190,
-    info: "*tija NO incluida"
+    info: "*tija NO incluida",
+    marca: "colnago"
 },
 {
     nom: "Colango G3X",//
     preu: 2825,
-    info: "*tija incluida"
+    info: "*tija incluida",
+    marca: "colnago"
 }
 ];
 
 t_mtb = [{
     nom: "Scott Spark N1NO Canda", //
     preu: 5999,
-    info: "*Hoquilla SID ultimate,amortiguador RockShox NUDE ,bielas xx1, frenos level ultimate, manillar fraser ic y tija incluidos "
+    info: "*Hoquilla SID ultimate,amortiguador RockShox NUDE ,bielas xx1, frenos level ultimate, manillar fraser ic y tija incluidos ",
+    marca: "scott"
 },
 {
     nom: "Scott Spark N1NO SilverFish", //
     preu: 5999,
-    info: "*Hoquilla SID ultimate,amortiguador RockShox NUDE ,bielas xx1, frenos lvl ultimate, manillar fraser ic y tija incluidos "
+    info: "*Hoquilla SID ultimate,amortiguador RockShox NUDE ,bielas xx1, frenos lvl ultimate, manillar fraser ic y tija incluidos ",
+    marca: "scott"
 },
 {
     nom: "Scott Spark RC Supersonic HMX SL ",//
     preu: 5499,
-    info: "*Hoquilla SID ultimate,amortiguador RockShox NUDE ,bielas xx1, frenos lvl ultimate, manillar fraser ic y tija incluidos"
+    info: "*Hoquilla SID ultimate,amortiguador RockShox NUDE ,bielas xx1, frenos lvl ultimate, manillar fraser ic y tija incluidos",
+    marca: "scott"
 },
 {
     nom: "Scott Scale 910 HMF ",//
     preu: 2349,
-    info: "*tija incluidos, horquilla fox sc 32 performance"
+    info: "*tija incluidos, horquilla fox sc 32 performance",
+    marca: "scott"
 },
 {
     nom: "Scott Scale SL", //
     preu: 3499,
-    info: "*Manillar fraser ic, tija, horquilla sid sl, frenos sram level ultimate incluidos"
+    info: "*Manillar fraser ic, tija, horquilla sid sl, frenos sram level ultimate incluidos",
+    marca: "scott"
 },
 {
     nom: "Bianchi Methanol FS",
     preu: 3590,
-    info: "*Amortiguador Fox Kashima incluido"
+    info: "*Amortiguador Fox Kashima incluido",
+    marca: "bianchi"
 },
 {
     nom: "Bianchi Methanol RS",
     preu: 2590,
-    info: ""
+    info: "",
+    marca: "bianchi"
 }
 ];
 
-t_manillars_road = [{
+t_manillars_road_disc = [{
+    nom: "MOST TALON ULTRA f12",
+    preu: 845
+},
+{
+    nom: "MOST TALON AERO",
+    preu: 718
+},
+{
+    nom: "SYNCROS CRESTON IC SL rc", //
+    preu: 579
+},
+{
+    nom: "VISION METRON 5D ACR Bianchi", //
+    preu: 749
+},
+{
+    nom: "Deda Alanera colnago",//
+    preu: 847
+},
+{
+    nom: "Colnago sr9 + ZIPP service course ERGO ",//
+    preu: 294
+},
+{
+    nom: "Colnago sr9 + ZIPP SL ERGO ",//
+    preu: 477
+},
+{
+    nom: "Colnago sr9 + BikeAhead ",//
+    preu: 565
+},
+{
+    nom: "Colnago sr9 + LIGHTWEIGHT RENNBÜGEL ",//
+    preu: 537
+}];
+
+t_manillars_road= [{
     nom: "MOST TALON ULTRA f12",
     preu: 845
 },
@@ -199,11 +279,7 @@ t_manillars_road = [{
     preu: 247
 },
 {
-    nom: "SYNCROS CRESTON IC SL rc", //
-    preu: 579
-},
-{
-    nom: "VISION METRON 5D ACR Bianchi", //
+    nom: "VISION METRON 5D Bianchi", //
     preu: 749
 },
 {
@@ -213,6 +289,10 @@ t_manillars_road = [{
 {
     nom: "ZIPP SL ERGO + SPEED conjunto",//
     preu: 590
+},
+{
+    nom: "ZIPP service course",
+    preu: 237
 },
 {
     nom: "Black-inc",//
@@ -231,10 +311,25 @@ t_manillars_road = [{
     preu: 847
 },
 {
-    nom: "Potencia colnago sr9",//
-    preu: 171
-}
-];
+    nom: "Colnago sr9 + ZIPP service course ERGO ",//
+    preu: 294
+},
+{
+    nom: "Colnago sr9 + ZIPP SL ERGO ",//
+    preu: 477
+},
+{
+    nom: "Colnago sr9 + BikeAhead ",//
+    preu: 565
+},
+{
+    nom: "Colnago sr9 + LIGHTWEIGHT RENNBÜGEL ",//
+    preu: 537
+},
+{
+    nom: "Lightweight BÜGELHALTER + LIGHTWEIGHT RENNBÜGEL",//
+    preu: 675
+}];
 
 t_manillars_gravel = [{
     nom: "MOST TALON 1K",
@@ -255,6 +350,10 @@ t_manillars_gravel = [{
 {
     nom: "ZIPP SL ERGO + SPEED",
     preu: 590
+},
+{
+    nom: "ZIPP service course",
+    preu: 237
 },
 {
     nom: "Black-inc",
@@ -344,6 +443,10 @@ t_rodes_disc = [
 {
     nom: "Lightweight Melnstein T 24D tubular",//
     preu: 4079
+},
+{
+    nom: "Lightweight Melnstein T 24D tubular schwarz",//
+    preu: 4479
 },
 {
     nom: "ZIPP 303s tubeless / cubierta",//
@@ -445,6 +548,10 @@ t_rodes_road = [{
     preu: 3582
 },
 {
+    nom: "Lightweight Melnstein T 24E tubular schwarz",//
+    preu: 3982
+},
+{
     nom: "Corima WS+ 47 cubierta",//
     preu: 2149
 },
@@ -531,6 +638,10 @@ t_rodes_gravel = [{
     preu: 558
 },
 {
+    nom: "Syncros capital x40",//
+    preu: 1399
+},
+{
     nom: "Fulcrum Racing Zero carbon",//
     preu: 1990
 },
@@ -605,7 +716,11 @@ t_tijes = [{
 {
     nom: "ENVE SEATPOST",
     preu: 275
-}
+},
+{
+    nom: "LIGHTWEIGHT LEISTUNGSTRÄGER",
+    preu: 308
+},
 ];
 
 t_cinta = [{
@@ -619,10 +734,6 @@ t_cinta = [{
 {
     nom: "MOST UltraGrip EVO",
     preu: 24
-},
-{
-    nom: "MOST UltraGrip",
-    preu: 18
 },
 {
     nom: "MOST UltraLight",
@@ -653,24 +764,28 @@ t_punys = [{
 ];
 
 t_seient = [{
-    nom: "SKYRACER",//
+    nom: "tune SKYRACER",//
     preu: 349
 },
 {
-    nom: "SPEEDNEEDLE",//
+    nom: "tune SPEEDNEEDLE",//
     preu: 225
 },
 {
-    nom: "BELCARRA / TOFINO",//
+    nom: "syncros BELCARRA",//
     preu: 159
 },
 {
-    nom: "ASPIDE CARBON",//
+    nom: "san marco ASPIDE CARBON",//
     preu: 189
 },
 {
-    nom: "SLR CARBON KIT",//
+    nom: "selle italia SLR CARBON KIT",//
     preu: 219
+},
+{
+    nom: "selle italia SLR C59",//
+    preu: 474
 },
 {
     nom: "FIZIK 00 EVO ",//
@@ -691,7 +806,20 @@ t_seient = [{
 
 ];
 
-t_pneumatics_road = [{
+t_pneumatics_road = [
+{
+    nom: "Veloflex ProTour Race Tubular",//
+    preu: 150
+},
+{
+    nom: "Veloflex ProTour Tubular",//
+    preu: 130
+},
+{
+    nom: "Veloflex Corsa Race",//
+    preu: 84
+},
+{
     nom: "Continental COMPETITION TUBULAR",//
     preu: 238
 },
@@ -756,6 +884,10 @@ t_pneumatics_gravel = [{
 {
     nom: "Huchiston Piranha 2",//
     preu: 78
+},
+{
+    nom: "Pirelli Cinturato Gravel",//
+    preu: 120
 }
 ];
 
@@ -882,12 +1014,16 @@ t_grup_gravel = [{
     preu: 2200
 },
 {
-    nom: "RED AXS 1x 'eagle 10-52'",//
+    nom: "RED AXS 1x *eagle 10-52*",//
     preu: 3286
 },
 {
-    nom: "RED AXS 1x 'eagle 10-52'",//
+    nom: "RED AXS 1x *eagle 10-52*",//
     preu: 3181
+},
+{
+    nom: "Campagnolo Ekar",//
+    preu: 1696
 },
 
 ];
@@ -941,7 +1077,20 @@ t_frens = [{
 
 ];
 
-t_pedals_road = [{
+t_pedals_road = [
+{
+    nom: "Dura-Ace",//
+    preu: 215
+},
+{
+    nom: "Ultegra",//
+    preu: 135
+},
+{
+    nom: "105",//
+    preu: 104
+},
+{
     nom: "LOOK TITANIUM",//
     preu: 285
 },
@@ -968,19 +1117,7 @@ t_pedals_road = [{
 {
     nom: "XPRESSO 4",//
     preu: 80
-},
-{
-    nom: "Dura-Ace",//
-    preu: 215
-},
-{
-    nom: "Ultegra",//
-    preu: 135
-},
-{
-    nom: "105",//
-    preu: 104
-},
+}
 ];
 
 t_pedals_mtb = [{
@@ -1026,23 +1163,23 @@ t_tijes_mtb = [{
     preu: 60
 },
 {
-    nom: "REVERB STEALTH ",//
+    nom: "Telescopica REVERB STEALTH ",//
     preu: 443
 },
 {
-    nom: "Transfer",//
+    nom: "Telescopica Transfer",//
     preu: 489
 },
 {
-    nom: "Koryak",//
+    nom: "Telescopica Koryak",//
     preu: 240
 },
 {
-    nom: "Syncros Telescopica",//
+    nom: "Telescopica Syncros Telescopica",//
     preu: 229
 },
 {
-    nom: "DT 232 one",//
+    nom: "Telescopica DT 232 one",//
     preu: 498
 },
 ];
@@ -1077,11 +1214,110 @@ t_forquilla = [{
 },
 ];
 
+t_forquilla = [{
+    nom: "Fox 32 kashima",//
+    preu: 1279
+},
+{
+    nom: "Fox 34 kashima",//
+    preu: 1369
+},
+{
+    nom: "Fox 32 anoditzat",//
+    preu: 959
+},
+{
+    nom: "Fox 34 anoditzat",//
+    preu: 1059
+},
+{
+    nom: "SID 35 ultimate",//
+    preu: 1059
+},
+{
+    nom: "SID 32 sl ultiimate ",//
+    preu: 949
+},
+{
+    nom: "SID ultimate",//
+    preu: 945
+},
+];
+
+t_portabido = [{
+    nom: "Tune WASSERTRÄGER 2.0",//
+    preu: 56
+},
+{
+    nom: "Tune RECHTSTRÄGER",//
+    preu: 56
+},
+{
+    nom: "Most wings carbon 1k",//
+    preu: 52
+},
+{
+    nom: "Syncros Carbon 1.0",//
+    preu: 65
+},
+{
+    nom: "Syncros Tailor MB cage multiHerramientas",//
+    preu: 55
+},
+{
+    nom: "Elite Vico carbon",//
+    preu: 28
+},
+{
+    nom: "Elite Rocko carbon",//
+    preu: 30
+},
+{
+    nom: "Pro LIGHTWEIGHT",//
+    preu: 52
+},
+{
+    nom: "LIGHTWEIGHT Edelhelfer",//
+    preu: 92
+},
+{
+    nom: "SUPACAZ FLY CAGEZ CARBON",//
+    preu: 59
+}];
+
+t_pedalier = [{
+    nom: "CeramicSpeed ",//
+    preu: 282
+},
+{
+    nom: "CeramicSpeed coated",//
+    preu: 387
+}];
+
+t_roldanes = [{
+    nom: "Camapgnolo ",//
+    preu: 483
+},
+{
+    nom: "Campagnolo EPS",//
+    preu: 503
+},
+{
+    nom: "Shimano",//
+    preu: 482
+},
+{
+    nom: "Sram",//
+    preu: 503
+}];
+
 
 
 function modalitat() {
     esconde();
     $("#quadre").empty();
+    $("#portabido").empty();
+    $("#portabido2").empty();
     $("#rodes").empty();
     $("#grup").empty();
     $("#frens").empty();
@@ -1093,12 +1329,16 @@ function modalitat() {
     $("#pneumatics").empty();
     $("#pedals").empty();
     $("#forquilla").empty();
+    $("#portabido").empty();
+    $("#portabido2").empty();
+    $("#pedalier").empty();
+    $("#roldanes").empty();
     $("#imgs").empty();
     $("#info").text("");
 
     cometa = "''"
 
-    //ROAD DISCK
+    //ROAD DISC
     if ($("#modalitat").val() == "road_disc") {
         //quadres disc
         t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
@@ -1123,15 +1363,17 @@ function modalitat() {
 
         //manillar
         t_tmp = '<option value="0" selected>Selecciona el Manillar</option>';
-        t_manillars_road.forEach(element => {
+        t_manillars_road_disc.forEach(element => {
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
         });
         $("#manillar").append(t_tmp);
 
+        portabido()
         seient();
         mostrar_cinta();
         pneumatic_road();
         mostrar_pedals_road();
+        ceramicspeed();
 
         //img
         carregar_image(["xr4.jpg","f12_3.jpg","c64.jpg","v3rs.jpg","rc_pro2.jpg","rc_ultimate3.jpg","f12_2.jpg","xr4_2.jpg","rc_pro.jpg","rc_ultimate.jpg","rc_ultimate2.jpg","fun.jpg","f12.jpg"])
@@ -1169,11 +1411,13 @@ function modalitat() {
         });
         $("#manillar").append(t_tmp);
 
+        portabido()
         seient();
         mostrar_tija();
         mostrar_cinta();
         pneumatic_road();
         mostrar_pedals_road();
+        ceramicspeed();
 
         //img
         carregar_image(["c64_rim_2.jpg","f12_rim.jpg","xr4_rim.jpg","f12_rim_2.jpg","specialissima.jpg","c64_rim.jpg","specialissima_2.jpg","xr4_rim_2.jpg"])
@@ -1222,6 +1466,9 @@ function modalitat() {
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
         });
         $("#pneumatics").append(t_tmp);
+
+        portabido();
+        ceramicspeed();
 
         //img
         carregar_image(["grevil.jpg","grevil2.jpg","zolder.jpg"])
@@ -1300,6 +1547,8 @@ function modalitat() {
         $("#tija").append(t_tmp);
         $("#tija").parent().show();
 
+        portabido()
+
         
         //img
         carregar_image(["n1no.jpg","spark_ultimate.jpg","methanol_cv.jpg","methanol_fs.jpg"])
@@ -1308,6 +1557,42 @@ function modalitat() {
   
 
 };
+
+function portabido(){
+    //portabido1
+    t_tmp = '<option value="0" selected>Selecciona el Portabidon</option>';
+    t_portabido.forEach(element => {
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+    });
+    $("#portabido").append(t_tmp);
+
+    //portabido2
+    t_tmp = '<option value="0" selected>Selecciona el segundo Portabidon</option>';
+    t_portabido.forEach(element => {
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+    });
+    $("#portabido2").append(t_tmp);
+}
+
+function ceramicspeed(){
+    //pedalier
+    t_tmp = '<option value="0" selected>Selecciona el Pedalier CeramicSpeed</option>';
+    t_pedalier.forEach(element => {
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+    });
+    $("#pedalier").parent().show();
+    $("#pedalier").append(t_tmp);
+    
+
+    //roldanes
+    t_tmp = '<option value="0" selected>Selecciona la pata CeramicSpeed</option>';
+    t_roldanes.forEach(element => {
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+    });
+    $("#roldanes").parent().show();
+    $("#roldanes").append(t_tmp);
+    
+}
 
 function seient() {
     t_tmp = '<option value="0" selected>Selecciona el Sillin</option>';
@@ -1388,6 +1673,13 @@ function preu() {
         $("#desglos").append(part1+part2+part3+part4+part5);
         total += preu;
     }
+    if ($("#manillar").val() != "0") {
+        preu = JSON.parse($("#manillar").val()).preu;
+        part2 = '<div class="col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Manillar</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
     if ($("#rodes").val() != "0") {
         preu = JSON.parse($("#rodes").val()).preu;
         part2 = '<div class="col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Ruedas</div>';
@@ -1412,13 +1704,6 @@ function preu() {
     if ($("#forquilla").val() && $("#forquilla").val() != "0") {
         preu = JSON.parse($("#forquilla").val()).preu
         part2 = '<div class="col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Horquilla</div>';
-        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
-        $("#desglos").append(part1+part2+part3+part4+part5);
-        total += preu;
-    }
-    if ($("#manillar").val() != "0") {
-        preu = JSON.parse($("#manillar").val()).preu;
-        part2 = '<div class="col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Manillar</div>';
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1+part2+part3+part4+part5);
         total += preu;
@@ -1464,6 +1749,34 @@ function preu() {
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1+part2+part3+part4+part5);
         total += preu;
+    }
+    if ($("#portabido").val() != "0") {
+        preu = JSON.parse($("#portabido").val()).preu;
+        part2 = '<div class="col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Portabidon</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }  
+    if ($("#portabido2").val() != "0") {
+        preu = JSON.parse($("#portabido2").val()).preu;
+        part2 = '<div class="col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Segundo Portabidon</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#pedalier").val() != "0") {
+        preu = JSON.parse($("#pedalier").val()).preu;
+        part2 = '<div class="col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Pedalier</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
+    } 
+    if ($("#roldanes").val() != "0") {
+        preu = JSON.parse($("#roldanes").val()).preu;
+        part2 = '<div class="col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Roldanas</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
     }  
     
 
@@ -1480,6 +1793,8 @@ function esconde() {
     $("#tija").parent().hide();
     $("#punys").parent().hide();
     $("#cinta").parent().hide();
+    $("#pedalier").parent().hide();
+    $("#roldanes").parent().hide();
     $("#info").hide();
 };
 
@@ -1589,6 +1904,22 @@ function configuracio() {
     if ($("#forquilla").val() && $("#forquilla").val() != "0") {
         tx += JSON.parse($("#forquilla").val()).nom
     }
+    tx += "</td></tr><tr><td>Portabido: "
+    if ($("#portabido").val() && $("#portabido").val() != "0") {
+        tx += JSON.parse($("#portabido").val()).nom
+    }
+    tx += "</td></tr><tr><td>Portabido 2: "
+    if ($("#portabido2").val() && $("#portabido2").val() != "0") {
+        tx += JSON.parse($("#portabido2").val()).nom
+    }
+    tx += "</td></tr><tr><td>Pedalier: "
+    if ($("#pedalier").val() && $("#pedalier").val() != "0") {
+        tx += JSON.parse($("#pedalier").val()).nom
+    }
+    tx += "</td></tr><tr><td>Roldanes: "
+    if ($("#roldanes").val() && $("#roldanes").val() != "0") {
+        tx += JSON.parse($("#roldanes").val()).nom
+    }
     tx += "</td></tr>"
     tx += '</table>'
     tx+="<br><br>"
@@ -1639,7 +1970,6 @@ function hidetext(){
 async function generatePDF() {
     // Choose the element that our invoice is rendered in.
 
-
     $("#print").append(print());
     $("#invoice").show()
     const element = document.getElementById("invoice");
@@ -1678,6 +2008,29 @@ function print(){
         }
         
     }
+    //imatge al pdf
+    if($("#quadre").val() !=null || $("#quadre").val() !=0  ){
+        img_marca="";
+        switch (JSON.parse($("#quadre").val()).marca) {
+            case "scott":
+                img_marca="./images/marcas/scott.png"
+                break;
+            case "bianchi":
+                img_marca="./images/marcas/bianchi.png"
+                break;
+            case "pinarello":
+                img_marca="./images/marcas/pinarello.png"
+                break;
+            case "colnago":
+                img_marca= "./images/marcas/colnago.png"
+                break;        
+            default: "0"
+                break;
+        }
+        img_html='<img src="'+img_marca+'" alt="" class="img-fluid"></img>'
+        $("#logo_marca").append(img_html);
+    }
+    
     let total = 0;
 
     let part1 = '<div class="d-flex justify-content-around row">';
@@ -1688,12 +2041,12 @@ function print(){
 
     if ($("#quadre").val() != "0") {
         date= new Date()
-        date_html='<p class="mb-0">Configuracion hecha el '+date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+'</p>';
+        date_html='<p class="mb-0 p2">Configuracion hecha el '+date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+'</p>';
         date.setMonth(date.getMonth()+1);
-        date_html_fi='<p class="mb-0">Oferta valida hasta el '+date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+'</p> <br>';
-        $("#print").append(date_html);
-        $("#print").append(date_html_fi);
-        modalitat_html='<p class="h6">Modalidad:<span class="h5 float-right"> '+modalitat+'</span></p><br>';
+        date_html_fi='<p class="mb-0 p2">Oferta valida hasta el '+date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear()+'</p> <br>';
+        $("#data").append(date_html);
+        $("#data").append(date_html_fi);
+        modalitat_html='<p class="h6">Modalidad:<span class="h5 float-right"> '+modalitat+'</span></p><div class="col-12 border border-bottom border-dark"></div><br>';
         $("#print").append(modalitat_html);
         preu = JSON.parse($("#quadre").val()).preu;
         part2 = '<div class="col-7  pr-0">Cuadro: <span class="font-weight-bold">'+JSON.parse($("#quadre").val()).nom+'</span></div>';
@@ -1778,9 +2131,60 @@ function print(){
         $("#print").append(part1+part2+part3+part4+part5);
         total += preu;
     }  
+    if ($("#portabido").val() != "0") {
+        preu = JSON.parse($("#portabido").val()).preu;
+        part2 = '<div class="col-7 pr-0">Portabidon: <span class="font-weight-bold">'+JSON.parse($("#portabido").val()).nom+'</span></div>';
+        part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#portabido2").val() != "0") {
+        preu = JSON.parse($("#portabido2").val()).preu;
+        part2 = '<div class="col-7 pr-0">Segundo Portabidon: <span class="font-weight-bold">'+JSON.parse($("#portabido2").val()).nom+'</span></div>';
+        part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
+    if ($("#pedalier").val() != "0") {
+        preu = JSON.parse($("#pedalier").val()).preu;
+        part2 = '<div class="col-7 pr-0">Segundo Portabidon: <span class="font-weight-bold">'+JSON.parse($("#pedalier").val()).nom+'</span></div>';
+        part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    } 
+    if ($("#roldanes").val() != "0") {
+        preu = JSON.parse($("#roldanes").val()).preu;
+        part2 = '<div class="col-7 pr-0">Segundo Portabidon: <span class="font-weight-bold">'+JSON.parse($("#roldanes").val()).nom+'</span></div>';
+        part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    } 
     
-    textPreu='<br><div class=" rounded-lg px-2 py-1 bg-primary text-white float-right font-weight-bold" >Total: <span id="total2">'+total+'</span> €</div><br><br><div class="col-12 border border-bottom border-dark"></div>'
+    textPreu='<br><div class=" rounded-lg px-2 py-1 bg-primary text-white float-right font-weight-bold" >Total: <span id="total2">'+total+'</span> €</div><br>'
     $("#print").append(textPreu);
+
+    if (!dades_clinet) {
+    if ($("#nom").val() !="0" && $("#cognom").val() != "0") {
+            d='<p>Nombre: <span class="font-weight-bold text-capitalize">'+$("#nom").val()+' '+$("#cognom").val()+'</span></p>'+'<p>Telefon: <span class="font-weight-bold text-capitalize">'+$("#tel").val()+'</span></p>'+'<p>Correo: <span class="font-weight-bold">'+$("#mail").val()+'</span></p>'
+            $("#dades_client").append(d);
+                
+
+    }
+    else{
+            d='<p>Nombre: </p>'+'<p>Telefon: </p>'+'<p>Correo: </p>'
+            $("#dades_client").append(d);
+            
+        
+    }
+    dades_clinet=true;
+    }
+    
+    
 
 
 };
+
+function dades_modificades(){
+    $("#dades_client").empty();
+    dades_clinet=false;
+}
