@@ -921,105 +921,105 @@ t_pneumatics_mtb = [{
 }
 ];
 
-t_grup_road = [{
+t_grup_road = [{//sense bieles
     nom: "Shimano DURA-ACE Di2",//
-    preu: 3187
+    preu: 2692
 },
 {
     nom: "Shimano DURA-ACE",//
-    preu: 1807
+    preu: 1312
 },
 {
     nom: "Shimano ULTEGRA Di2",//
-    preu: 1678
+    preu: 1440
 },
 {
     nom: "Shimano ULTEGRA",//
-    preu: 867
+    preu: 629
 },
 {
     nom: "Sram RED AXS 12v",//
-    preu: 3520
+    preu: 2820
 },
 {
     nom: "Sram FROCE AXS 12v",//
-    preu: 2600
+    preu: 2165
 },
 {
     nom: "Campagnolo Super Record 12v",//
-    preu: 2905
+    preu: 1943
 }
 ];
 
-t_grup_disc = [{
+t_grup_disc = [{//sense bieles
     nom: "Shimano DURA-ACE Di2",//
-    preu: 3290
+    preu: 2795
 },
 {
     nom: "Shimano DURA-ACE",//
-    preu: 2356
+    preu: 1861
 },
 {
     nom: "Shimano ULTEGRA Di2",//
-    preu: 1941
+    preu: 1703
 },
 {
     nom: "Shimano ULTEGRA",//
-    preu: 1133
+    preu: 895
 },
 {
     nom: "Sram RED AXS 12v",//
-    preu: 3620
+    preu: 2920
 },
 {
     nom: "Sram FROCE AXS 12v",//
-    preu: 2600
+    preu: 2165
 }
 ];
 
 t_grup_gravel = [{
     nom: "GRX Di2",//
-    preu: 3187
+    preu: 2946
 },
 {
     nom: "GRX 800 1x",//
-    preu: 1228
+    preu: 987
 },
 {
     nom: "GRX 800 2x",//
-    preu: 1347
+    preu: 1106
 },
 {
     nom: "GRX 600 1x",//
-    preu: 997
+    preu: 875
 },
 {
     nom: "GRX 600 2x",//
-    preu: 1075
+    preu: 953
 },
 {
     nom: "RED AXS 2x",//
-    preu: 3620
+    preu: 2920
 },
 {
     nom: "RED AXS 1x",//
-    preu: 3170
+    preu: 2470
 },
 {
     nom: "FORCE AXS 2x wide",//
-    preu: 2600
+    preu: 2165
 },
 {
     nom: "FROCE AXS 1x wide",//
-    preu: 2200
+    preu: 1765
 },
 {
     nom: "RED AXS 1x *eagle 10-52*",//
-    preu: 3286
+    preu: 2715
 },
 {
     nom: "RED AXS 1x *eagle 10-52*",//
-    preu: 3181
+    preu: 2610
 },
 {
     nom: "Campagnolo Ekar",//
@@ -1030,31 +1030,31 @@ t_grup_gravel = [{
 
 t_grup_mtb = [{
     nom: "XX1 AXS",//
-    preu: 2144
+    preu: 1573
 },
 {
     nom: "X01 AXS",//
-    preu: 2044
+    preu: 1506
 },
 {
     nom: "XX1",//
-    preu: 1619
+    preu: 1048
 },
 {
     nom: "X01",//
-    preu: 1419
+    preu: 881
 },
 {
-    nom: "GX",//
-    preu: 599
+    nom: "GX",//////////////////////
+    preu: 449
 },
 {
     nom: "XTR",//
-    preu: 1205
+    preu: 718
 },
 {
     nom: "XT",//
-    preu: 522
+    preu: 337
 }
 ];
 
@@ -1311,11 +1311,159 @@ t_roldanes = [{
     preu: 503
 }];
 
+t_bieles_road = [
+{ 
+    nom: "Dura-Ace ",//
+    preu: 495
+},
+{
+    nom: "Ultegra",//
+    preu: 238
+},
+{
+    nom: "Red AXS",//
+    preu: 700
+},
+{
+    nom: "Force AXS",//
+    preu: 435
+},
+{
+    nom: "Campagnolo Super Record",//
+    preu: 962
+},
+{
+    nom: "Campagnolo Record",//
+    preu: 536
+},
+//+potenciometre
+{ 
+    nom: "Dura-Ace Potenciometro",//
+    preu: 1366
+},
+{ 
+    nom: "Stages Dura-Ace LR",//
+    preu: 999
+},
+{
+    nom: "Stages Ultegra Potenciometro LR",//
+    preu: 749
+},
+{
+    nom: "Stages Ultegra Potenciometro L",//
+    preu: 638
+},
+{
+    nom: "Quarq Red AXS",//
+    preu: 1200
+},
+{
+    nom: "Quarq Force AXS",//
+    preu: 1034
+},
+{
+    nom: "Stages Campagnolo Super Record L",//
+    preu: 1861
+},
+{
+    nom: "Stages Campagnolo Record L",//
+    preu: 1235
+}];
+
+t_bieles_gravel = [
+    { 
+        nom: "GRX 810 ",//
+        preu: 241
+    },
+    {
+        nom: "GRX 600",//
+        preu: 122
+    },
+    {
+        nom: "Red AXS",//
+        preu: 700
+    },
+    {
+        nom: "Force AXS",//
+        preu: 435
+    },
+    {
+        nom: "Camapgnolo Ekar",//
+        preu: 0
+    },
+    //+potenciometre
+    { 
+        nom: "Stages GRX 810 L",//
+        preu: 640
+    },
+    { 
+        nom: "Stages GRX 600 L",//
+        preu: 521
+    },
+    {
+        nom: "Quarq Red AXS",//
+        preu: 1200
+    },
+    {
+        nom: "Quarq Force AXS",//
+        preu: 1034
+    },
+    {
+        nom: "Quarq dzero xx1 carbon",//
+        preu: 883
+    },
+];
+
+t_bieles_mtb = [
+    { 
+        nom: "XTR",//
+        preu: 487
+    },
+    {
+        nom: "XT",//
+        preu: 185
+    },
+    {
+        nom: "XX1",//
+        preu: 571
+    },
+    {
+        nom: "X01",//
+        preu: 435
+    },
+    {
+        nom: "GX",//
+        preu: 150
+    },
+    //+potenciometre
+    { 
+        nom: "Stages XTR LR",//
+        preu: 1199
+    },
+    { 
+        nom: "Stages XTR L",//
+        preu: 1016
+    },
+    {
+        nom: "Stages XT LR",//
+        preu: 749
+    },
+    {
+        nom: "Stages XT L",//
+        preu: 584
+    },
+    {
+        nom: "Quarq xx1",//
+        preu: 1071
+    },
+];
+
 
 
 function modalitat() {
     esconde();
     $("#quadre").empty();
+    $("#bieles").empty();
     $("#portabido").empty();
     $("#portabido2").empty();
     $("#rodes").empty();
@@ -1360,6 +1508,12 @@ function modalitat() {
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
         });
         $("#grup").append(t_tmp);
+        //bieles
+        t_tmp = '<option value="0" selected>Selecciona las bielas</option>';
+        t_bieles_road.forEach(element => {
+            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        });
+        $("#bieles").append(t_tmp);
 
         //manillar
         t_tmp = '<option value="0" selected>Selecciona el Manillar</option>';
@@ -1404,6 +1558,13 @@ function modalitat() {
         });
         $("#grup").append(t_tmp);
 
+        //bieles
+        t_tmp = '<option value="0" selected>Selecciona las bielas</option>';
+        t_bieles_road.forEach(element => {
+            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        });
+        $("#bieles").append(t_tmp);
+
         //manillar
         t_tmp = '<option value="0" selected>Selecciona el Manillar</option>';
         t_manillars_road.forEach(element => {
@@ -1440,6 +1601,7 @@ function modalitat() {
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
         });
         $("#rodes").append(t_tmp)
+      
 
         //grup gravel
         t_tmp = '<option value="0" selected>Selecciona un Grupo</option>';
@@ -1447,6 +1609,13 @@ function modalitat() {
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
         });
         $("#grup").append(t_tmp);
+
+        //bieles
+        t_tmp = '<option value="0" selected>Selecciona las bielas</option>';
+        t_bieles_gravel.forEach(element => {
+            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        });
+        $("#bieles").append(t_tmp);
 
         //manillar gravel
         t_tmp = '<option value="0" selected>Selecciona el Manillar</option>';
@@ -1496,6 +1665,13 @@ function modalitat() {
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
         });
         $("#grup").append(t_tmp);
+
+        //bieles
+        t_tmp = '<option value="0" selected>Selecciona las bielas</option>';
+        t_bieles_mtb.forEach(element => {
+            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        });
+        $("#bieles").append(t_tmp);
 
         //horquilla
         t_tmp = '<option value="0" selected>Selecciona una Horquilla</option>';
@@ -1694,6 +1870,13 @@ function preu() {
         $("#desglos").append(part1+part2+part3+part4+part5);
         total += preu;
     }
+    if ($("#bieles").val() != "0") {
+        preu = JSON.parse($("#bieles").val()).preu;
+        part2 = '<div class="col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Bielas</div>';
+        part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
+        $("#desglos").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
     if ($("#frens").val() && $("#frens").val() != "0") {
         preu = JSON.parse($("#frens").val()).preu;
         part2 = '<div class="col-5 col-sm-2 col-md-3 col-lg-2 col-xl-2 pr-0">Frenos</div>';
@@ -1867,6 +2050,10 @@ function configuracio() {
     tx += "</td></tr><tr><td>Grup: "
     if ($("#grup").val() && $("#grup").val() != "0") {
         tx += JSON.parse($("#grup").val()).nom
+    }
+    tx += "</td></tr><tr><td>Bieles: "
+    if ($("#bieles").val() && $("#bieles").val() != "0") {
+        tx += JSON.parse($("#bieles").val()).nom
     }
     tx += "</td></tr><tr><td>Manillar: "
     if ($("#manillar").val() && $("#manillar").val() != "0") {
@@ -2068,6 +2255,13 @@ function print(){
         $("#print").append(part1+part2+part3+part4+part5);
         total += preu;
     }
+    if ($("#bieles").val() != "0") {
+        preu = JSON.parse($("#bieles").val()).preu;
+        part2 = '<div class="col-7  pr-0">Bielas: <span class="font-weight-bold">'+JSON.parse($("#bieles").val()).nom+'</span></div>';
+        part4 = '<div class="col-2  text-right pl-0">' + preu + ' €</div>';
+        $("#print").append(part1+part2+part3+part4+part5);
+        total += preu;
+    }
     if ($("#frens").val() && $("#frens").val() != "0") {
         preu = JSON.parse($("#frens").val()).preu;
         part2 = '<div class="col-7 pr-0">Frenos: <span class="font-weight-bold">'+JSON.parse($("#frens").val()).nom+'</span></div>';
@@ -2147,14 +2341,14 @@ function print(){
     }
     if ($("#pedalier").val() != "0") {
         preu = JSON.parse($("#pedalier").val()).preu;
-        part2 = '<div class="col-7 pr-0">Segundo Portabidon: <span class="font-weight-bold">'+JSON.parse($("#pedalier").val()).nom+'</span></div>';
+        part2 = '<div class="col-7 pr-0">Pedalier: <span class="font-weight-bold">'+JSON.parse($("#pedalier").val()).nom+'</span></div>';
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1+part2+part3+part4+part5);
         total += preu;
     } 
     if ($("#roldanes").val() != "0") {
         preu = JSON.parse($("#roldanes").val()).preu;
-        part2 = '<div class="col-7 pr-0">Segundo Portabidon: <span class="font-weight-bold">'+JSON.parse($("#roldanes").val()).nom+'</span></div>';
+        part2 = '<div class="col-7 pr-0">Roldanas CermicSpeed: <span class="font-weight-bold">'+JSON.parse($("#roldanes").val()).nom+'</span></div>';
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1+part2+part3+part4+part5);
         total += preu;
