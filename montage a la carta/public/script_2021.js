@@ -947,12 +947,25 @@ t_grup_road = [{//sense bieles
     preu: 2165
 },
 {
-    nom: "Campagnolo Super Record 12v",//
-    preu: 1943
+    nom: "Campagnolo Super Record EPS",// 
+    preu: 3632
+},
+{
+    nom: "Campagnolo Super Record",//frens direct mount o dual pivot
+    preu: 1968
+},
+{
+    nom: "Campagnolo Record",//frens direct mount
+    preu: 1561
+},
+{
+    nom: "Campagnolo Chorus",// frens direct mount
+    preu: 997
 }
 ];
 
-t_grup_disc = [{//sense bieles
+t_grup_disc = [
+{//sense bieles
     nom: "Shimano DURA-ACE Di2",//
     preu: 2795
 },
@@ -975,12 +988,34 @@ t_grup_disc = [{//sense bieles
 {
     nom: "Sram FROCE AXS 12v",//
     preu: 2165
+},
+{
+    nom: "Campagnolo Super Record EPS",//disc 140 + 160
+    preu: 3952
+},
+{
+    nom: "Campagnolo Super Record",//disc 160 + 160
+    preu: 2256
+},
+{
+    nom: "Campagnolo Record",//disc 160 + 160
+    preu: 1877
+},
+{
+    nom: "Campagnolo Chorus",//disc 160 + 160
+    preu: 1435
 }
+
 ];
 
-t_grup_gravel = [{
-    nom: "GRX Di2",//
-    preu: 2946
+t_grup_gravel = [
+{
+    nom: "GRX Di2 1x",//
+    preu: 1760
+},
+{
+    nom: "GRX Di2 2x",//
+    preu: 2166
 },
 {
     nom: "GRX 800 1x",//
@@ -1046,7 +1081,7 @@ t_grup_mtb = [{
     preu: 881
 },
 {
-    nom: "GX",//////////////////////
+    nom: "GX",//
     preu: 449
 },
 {
@@ -1312,7 +1347,7 @@ t_roldanes = [{
     preu: 503
 }];
 
-t_bieles_road = [
+t_bieles_road = [   
 { 
     nom: "Dura-Ace ",//
     preu: 495
@@ -1336,6 +1371,10 @@ t_bieles_road = [
 {
     nom: "Campagnolo Record",//
     preu: 536
+},
+{
+    nom: "Campagnolo Chorus",//
+    preu: 384
 },
 //+potenciometre
 { 
@@ -1410,9 +1449,9 @@ t_bieles_gravel = [
         preu: 1034
     },
     {
-        nom: "Quarq dzero xx1 carbon",//
-        preu: 883
-    },
+        nom: "Quarq xx1",//
+        preu: 1071
+    }
 ];
 
 t_bieles_mtb = [
