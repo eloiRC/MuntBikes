@@ -1528,45 +1528,38 @@ function modalitat() {
 
     //ROAD DISC
     if ($("#modalitat").val() == "road_disc") {
+
         //quadres disc
-        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
-        t_road_disc.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#quadre").append(t_tmp);
+        quadre(t_road_disc)
 
         //rodes disc 
-        t_tmp = '<option value="0" selected>Selecciona las Ruedas</option>';
-        t_rodes_disc.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#rodes").append(t_tmp)
+        rodes(t_rodes_disc)
 
         //grup disc
-        t_tmp = '<option value="0" selected>Selecciona un Grupo</option>';
-        t_grup_disc.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#grup").append(t_tmp);
+        grup(t_grup_disc)
+        
         //bieles
-        t_tmp = '<option value="0" selected>Selecciona las bielas</option>';
-        t_bieles_road.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#bieles").append(t_tmp);
+        bieles(t_bieles_road)
 
         //manillar
-        t_tmp = '<option value="0" selected>Selecciona el Manillar</option>';
-        t_manillars_road_disc.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#manillar").append(t_tmp);
+        manillar(t_manillars_road_disc)
 
-        portabido()
+        //portabidons
+        portabido();
+
+        //seient
         seient();
+
+        //cinta
         mostrar_cinta();
-        pneumatic_road();
+
+        //pneumatics
+        pneumatic(t_pneumatics_road);
+
+        //pedals
         mostrar_pedals_road();
+
+        //ceramicspeed
         ceramicspeed();
 
         //img
@@ -1577,46 +1570,27 @@ function modalitat() {
     //ROAD RIM BRAKE
     if ($("#modalitat").val() == "road_rim") {
         $("#info").show();
+
         //quadre road
-        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
-        t_road.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#quadre").append(t_tmp);
+        quadre(t_road);
 
         //rodes road 
-        t_tmp = '<option value="0" selected>Selecciona las Ruedas</option>';
-        t_rodes_road.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#rodes").append(t_tmp)
+        rodes(t_rodes_road)
 
-        //grup disc
-        t_tmp = '<option value="0" selected>Selecciona un Grupo</option>';
-        t_grup_road.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#grup").append(t_tmp);
+        //grup
+        grup(t_grup_road)
 
         //bieles
-        t_tmp = '<option value="0" selected>Selecciona las bielas</option>';
-        t_bieles_road.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#bieles").append(t_tmp);
+        bieles(t_bieles_road)
 
         //manillar
-        t_tmp = '<option value="0" selected>Selecciona el Manillar</option>';
-        t_manillars_road.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#manillar").append(t_tmp);
+        manillar(t_manillars_road)
 
         portabido()
         seient();
-        mostrar_tija();
+        tija(t_tijes);
         mostrar_cinta();
-        pneumatic_road();
+        pneumatic(t_pneumatics_road);
         mostrar_pedals_road();
         ceramicspeed();
 
@@ -1628,53 +1602,29 @@ function modalitat() {
     //gravel
     if ($("#modalitat").val() == "gravel") {
         $("#info").show();
+
         //quadre gravel
-        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
-        t_gravel.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#quadre").append(t_tmp);
+        quadre(t_gravel);
 
         //rodes gravel
-        t_tmp = '<option value="0" selected>Selecciona las Ruedas</option>';
-        t_rodes_gravel.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#rodes").append(t_tmp)
+        rodes(t_rodes_gravel)
       
-
         //grup gravel
-        t_tmp = '<option value="0" selected>Selecciona un Grupo</option>';
-        t_grup_gravel.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#grup").append(t_tmp);
+        grup(t_grup_gravel)
 
         //bieles
-        t_tmp = '<option value="0" selected>Selecciona las bielas</option>';
-        t_bieles_gravel.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#bieles").append(t_tmp);
+        bieles(t_bieles_gravel)
 
         //manillar gravel
-        t_tmp = '<option value="0" selected>Selecciona el Manillar</option>';
-        t_manillars_gravel.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#manillar").append(t_tmp);
+        manillar(t_manillars_gravel)
 
         seient();
-        mostrar_tija();
+        tija(t_tijes);
         mostrar_cinta();
         mostrar_pedals_mtb();
 
         //pneumatics gravel
-        t_tmp = '<option value="0" selected>Selecciona los Neumaticos</option>';
-        t_pneumatics_gravel.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#pneumatics").append(t_tmp);
+        pneumatics(t_pneumatics_gravel)
 
         portabido();
         ceramicspeed();
@@ -1686,32 +1636,19 @@ function modalitat() {
     if ($("#modalitat").val() == "mtb") {
         $("#info").show();
         //quadre
-        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
-        t_mtb.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#quadre").append(t_tmp);
+        quadre(t_mtb);
 
         //rodes 
-        t_tmp = '<option value="0" selected>Selecciona las Ruedas</option>';
-        t_rodes_mtb.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#rodes").append(t_tmp)
+        rodes(t_rodes_mtb)
 
         //grup 
-        t_tmp = '<option value="0" selected>Selecciona un Grupo</option>';
-        t_grup_mtb.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#grup").append(t_tmp);
+        grup(t_grup_mtb)
 
         //bieles
-        t_tmp = '<option value="0" selected>Selecciona las bielas</option>';
-        t_bieles_mtb.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#bieles").append(t_tmp);
+        bieles(t_bieles_mtb)
+
+        //manillars
+        manillar(t_manillars_mtb);
 
         //horquilla
         t_tmp = '<option value="0" selected>Selecciona una Horquilla</option>';
@@ -1729,12 +1666,6 @@ function modalitat() {
         $("#frens").append(t_tmp);
         $("#frens").parent().show();
 
-        //frens 
-        t_tmp = '<option value="0" selected>Selecciona un Manillar</option>';
-        t_manillars_mtb.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#manillar").append(t_tmp);
 
         seient();
         mostrar_pedals_mtb();
@@ -1748,19 +1679,11 @@ function modalitat() {
         $("#punys").parent().show();
 
         //pneumatics mtb
-        t_tmp = '<option value="0" selected>Selecciona unos Neumaticos</option>';
-        t_pneumatics_mtb.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#pneumatics").append(t_tmp);
+        pneumatics(t_pneumatics_mtb)
 
 
 
-        t_tmp = '<option value="0" selected>Selecciona la Tija</option>';
-        t_tijes_mtb.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-        });
-        $("#tija").append(t_tmp);
+       tijes(t_tijes_mtb);
         $("#tija").parent().show();
 
         portabido()
@@ -1773,6 +1696,50 @@ function modalitat() {
   
 
 };
+
+//carregar quadre
+function quadre(t_quadre){
+        t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+        t_quadre.forEach(element => {
+            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        });
+        $("#quadre").append(t_tmp);
+}
+
+//carregar rodes
+function rodes(t_rodes){
+        t_tmp = '<option value="0" selected>Selecciona las Ruedas</option>';
+        t_rodes.forEach(element => {
+            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        });
+        $("#rodes").append(t_tmp)
+}
+
+//carregar grup
+function grup(t_grup){
+    t_tmp = '<option value="0" selected>Selecciona un Grupo</option>';
+    t_grup.forEach(element => {
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+    });
+    $("#grup").append(t_tmp);
+}
+
+function bieles(t_bieles){
+    t_tmp = '<option value="0" selected>Selecciona las bielas</option>';
+        t_bieles.forEach(element => {
+            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        });
+        $("#bieles").append(t_tmp);
+}
+
+function manillar(t_manillar){
+    t_tmp = '<option value="0" selected>Selecciona el Manillar</option>';
+    t_manillar.forEach(element => {
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+    });
+    $("#manillar").append(t_tmp);
+}
+        
 
 function portabido(){
     //portabido1
@@ -1810,6 +1777,15 @@ function ceramicspeed(){
     
 }
 
+function tijes(t_tijes){
+    t_tmp = '<option value="0" selected>Selecciona la Tija</option>';
+    t_tijes.forEach(element => {
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+    });
+    $("#tija").append(t_tmp);
+    $("#tija").parent().show();
+}
+
 function seient() {
     t_tmp = '<option value="0" selected>Selecciona el Sillin</option>';
     t_seient.forEach(element => {
@@ -1818,9 +1794,9 @@ function seient() {
     $("#seient").append(t_tmp);
 };
 
-function pneumatic_road() {
+function pneumatic(t_pneumatics) {
     t_tmp = '<option value="0" selected>Selecciona los Pneumaticos</option>';
-    t_pneumatics_road.forEach(element => {
+    t_pneumatics.forEach(element => {
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
     });
     $("#pneumatics").append(t_tmp);
@@ -1836,15 +1812,6 @@ function mostrar_cinta() {
     $("#cinta").append(t_tmp);
 };
 
-function mostrar_tija() {
-    $("#tija").parent().show();
-
-    t_tmp = '<option value="0" selected>Selecciona la Tija</option>';
-    t_tijes.forEach(element => {
-        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-    });
-    $("#tija").append(t_tmp);
-};
 
 function mostrar_pedals_mtb() {
 
@@ -2412,13 +2379,10 @@ function print(){
     }
     dades_clinet=true;
     }
-    
-    
-
-
 };
 
 function dades_modificades(){
     $("#dades_client").empty();
     dades_clinet=false;
 }
+
