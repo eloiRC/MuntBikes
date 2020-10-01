@@ -38,13 +38,18 @@ $(document).ready(function () {
 });
 let darkMode = false;
 t_road_disc = [{
-        nom: "Pinarello F12",
+        nom: "Pinarello F12",//
         preu: 5595,
         marca: "pinarello"
     },
     {
-        nom: "Pinarello PRINCE FX",
-        preu: 3720,
+        nom: "Pinarello PRINCE FX",//
+        preu: 3915,
+        marca: "pinarello"
+    },
+    {
+        nom: "Pinarello Angliru",//
+        preu: 1665,
         marca: "pinarello"
     },
     {
@@ -101,8 +106,14 @@ t_road = [{
         marca: "pinarello"
     },
     {
-        nom: "Pinarello PRINCE FX",
-        preu: 3445,
+        nom: "Pinarello GAN",
+        preu: 2350,
+        info: "*tija incluida",
+        marca: "pinarello"
+    },
+    {
+        nom: "Pinarello Angliru",//
+        preu: 1495,
         info: "*tija incluida",
         marca: "pinarello"
     },
@@ -135,12 +146,6 @@ t_road = [{
 t_gravel = [{
         nom: "Pinarello Grevil",
         preu: 2895,
-        info: "*tija incluida",
-        marca: "pinarello"
-    },
-    {
-        nom: "Pinarello Crossista +",
-        preu: 4835,
         info: "*tija incluida",
         marca: "pinarello"
     },
@@ -226,13 +231,22 @@ t_mtb = [{
     }
 ];
 
-t_manillars_road_disc = [{
-        nom: "MOST TALON ULTRA f12",
-        preu: 845
+t_manillars_road_disc = [
+    {
+        nom: "MOST TALON ULTRA f12 TICR",//
+        preu: 857
     },
     {
-        nom: "MOST TALON AERO",
+        nom: "MOST TALON AERO",//
         preu: 718
+    },
+    {
+        nom: "MOST Jaguar XFC carbon TICR",//
+        preu: 668
+    },
+    {
+        nom: "MOST Jaguar XA TICR",//
+        preu: 173
     },
     {
         nom: "SYNCROS CRESTON IC SL rc", //
@@ -265,16 +279,24 @@ t_manillars_road_disc = [{
 ];
 
 t_manillars_road = [{
-        nom: "MOST TALON ULTRA f12",
+        nom: "MOST TALON ULTRA TICR",//
         preu: 845
     },
     {
-        nom: "MOST TALON AERO",
+        nom: "MOST TALON AERO",//
         preu: 718
     },
     {
-        nom: "MOST TALON UD",
+        nom: "MOST TALON UD",//
         preu: 411
+    },
+    {
+        nom: "MOST Jaguar XFC carbon TICR",//
+        preu: 668
+    },
+    {
+        nom: "MOST Jaguar XA TICR",//
+        preu: 173
     },
     {
         nom: "MOST JAGUAR 3K conjunto",
