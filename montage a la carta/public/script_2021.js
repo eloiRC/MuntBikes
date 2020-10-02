@@ -465,6 +465,10 @@ t_rodes_disc = [{
         preu: 1620
     },
     {
+        nom: "Bike Ahead Biturbo-Road tubular", //
+        preu: 3703
+    },
+    {
         nom: "Corima WS 47 tubular", //
         preu: 1449
     },
@@ -531,6 +535,10 @@ t_rodes_disc = [{
     {
         nom: "Carbon-TI  tubeless / cubierta", //
         preu: 1700
+    },
+    {
+        nom: "Bike Ahead Biturbo-Road tubeless / cubierta", //
+        preu: 3703
     },
     {
         nom: "TUNE SCHWARZBRENNER 45 2.0  tubeless / cubierta", //
@@ -657,6 +665,10 @@ t_rodes_gravel = [{
         preu: 1399
     },
     {
+        nom: "Bike Ahead Biturbo-Cross", //
+        preu: 3703
+    },    
+    {
         nom: "Fulcrum Racing Zero carbon", //
         preu: 1990
     },
@@ -692,7 +704,7 @@ t_rodes_mtb = [{
         preu: 1700
     },
     {
-        nom: "Bike Ahead Bi", //
+        nom: "Bike Ahead Biturbo", //
         preu: 3399
     },
     {
