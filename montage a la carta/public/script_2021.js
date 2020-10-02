@@ -433,11 +433,7 @@ t_manillars_mtb = [{
 ];
 
 t_rodes_disc = [{
-        nom: "Campagnolo Bora One 35 tubular", //
-        preu: 1913
-    },
-    {
-        nom: "Campagnolo Bora One 50 tubular", //
+        nom: "Campagnolo Bora One 35 / 50 tubular", //
         preu: 1913
     },
     {
@@ -475,30 +471,22 @@ t_rodes_disc = [{
     {
         nom: "ZIPP 303s tubeless / cubierta", //
         preu: 1100
-    }, ,
+    },
     {
         nom: "ZIPP 303 Firecrest tubeless / cubierta", //
         preu: 1800
     },
     {
-        nom: "Campagnolo BORA ONE 35  tubeless / cubierta", //
+        nom: "Campagnolo BORA ONE 35 / 50  tubeless / cubierta", //
         preu: 2140
     },
     {
-        nom: "Campagnolo BORA ONE 50  tubeless / cubierta", //
-        preu: 2140
-    },
-    {
-        nom: "Campagnolo WTO 33  tubeless / cubierta", //
+        nom: "Campagnolo WTO 33 / 45 / 60  tubeless / cubierta", //
         preu: 2168
     },
     {
-        nom: "Campagnolo WTO 45  tubeless / cubierta", //
-        preu: 2168
-    },
-    {
-        nom: "Campagnolo WTO 60  tubeless / cubierta", //
-        preu: 2168
+        nom: "Campagnolo Zonda tubeless / cubierta", //
+        preu: 605
     },
     {
         nom: "Dura-Ace c40  tubeless / cubierta", //
@@ -513,6 +501,18 @@ t_rodes_disc = [{
         preu: 1958
     },
     {
+        nom: "DT-1400 dicut tubeless / cubierta", //
+        preu: 827
+    },
+    {
+        nom: "DT-1600 tubeless / cubierta", //
+        preu: 559
+    },
+    {
+        nom: "DT-1800 tubeless / cubierta", //
+        preu: 338
+    },
+    {
         nom: "Fulcrum Wind 40  tubeless / cubierta", //
         preu: 1226
     },
@@ -523,6 +523,10 @@ t_rodes_disc = [{
     {
         nom: "Carbon-TI  tubeless / cubierta", //
         preu: 1700
+    },
+    {
+        nom: "TUNE SCHWARZBRENNER 45 2.0  tubeless / cubierta", //
+        preu: 2099
     },
     {
         nom: "Syncros Capital 1.0 tubeless / cubierta", //
@@ -551,19 +555,11 @@ t_rodes_road = [{
         preu: 2548
     },
     {
-        nom: "Campagnolo Bora One 35 tubular", //
+        nom: "Campagnolo Bora One 35 / 50 tubular", //
         preu: 1880
     },
     {
-        nom: "Campagnolo Bora One 50 tubular", //
-        preu: 1880
-    },
-    {
-        nom: "Campagnolo Bora Ultra 35 tubular", //
-        preu: 2830
-    },
-    {
-        nom: "Campagnolo Bora Ultra 50 tubular", //
+        nom: "Campagnolo Bora Ultra 35 / 50 tubular", //
         preu: 2830
     },
     {
@@ -583,52 +579,40 @@ t_rodes_road = [{
         preu: 1549
     },
     {
-        nom: "Dura-Ace c40  tubeless / cubierta", //
+        nom: "Dura-Ace c40 tubeless / cubierta", //
         preu: 1715
     },
     {
-        nom: "DT-1100  tubeless / cubierta", //
+        nom: "DT-1100 tubeless / cubierta", //
         preu: 2388
     },
     {
-        nom: "DT-1400  tubeless / cubierta", //
+        nom: "DT-1400 spline tubeless / cubierta", //
         preu: 1958
     },
     {
-        nom: "Fulcrum Wind 40  tubeless / cubierta", //
+        nom: "Fulcrum Wind 40 tubeless / cubierta", //
         preu: 1199
     },
     {
-        nom: "Fulcrum Speed 40 (usb)  tubeless / cubierta", //
+        nom: "Fulcrum Speed 40 (usb) tubeless / cubierta", //
         preu: 2045
     },
     {
-        nom: "Campagnolo BORA ONE 35 cubierta", //
+        nom: "Campagnolo BORA ONE 35 / 50 cubierta", //
         preu: 2115
     },
     {
-        nom: "Campagnolo BORA ONE 50 cubierta", //
-        preu: 2115
-    },
-    {
-        nom: "Campagnolo Bora Ultra 35 cubierta", //
+        nom: "Campagnolo Bora Ultra 35 / 50 cubierta", //
         preu: 3070
     },
     {
-        nom: "Campagnolo Bora Ultra 50 cubierta", //
-        preu: 3070
-    },
-    {
-        nom: "Campagnolo WTO 33 tubeless / cubierta", //
+        nom: "Campagnolo WTO 33 / 45 / 60 tubeless / cubierta", //
         preu: 2164
     },
     {
-        nom: "Campagnolo WTO 45 tubeless / cubierta", //
-        preu: 2164
-    },
-    {
-        nom: "Campagnolo WTO 60 tubeless / cubierta", //
-        preu: 2164
+        nom: "Campagnolo Zonda", //
+        preu: 498
     },
     {
         nom: "Zipp 303 firecrest tubeless / cubierta", //
@@ -691,9 +675,10 @@ t_rodes_mtb = [{
         preu: 1399
     },
     {
-        nom: "Tune BB", //
-        preu: 1996
+        nom: "Tune BLACKBURNER", //
+        preu: 2198
     },
+
     {
         nom: "Carbon-Ti", //
         preu: 1700
@@ -707,7 +692,7 @@ t_rodes_mtb = [{
         preu: 2138
     },
     {
-        nom: "DT XRC 1500", //
+        nom: "DT XRC 1500 carbon", //
         preu: 1499
     },
     {
