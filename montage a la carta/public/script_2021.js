@@ -331,6 +331,14 @@ t_manillars_road = [{
         preu: 458
     },
     {
+        nom: "PRO VIBE Alu",
+        preu: 198
+    },
+    {
+        nom: "PRO PLT", //
+        preu: 99
+    },
+    {
         nom: "Deda Alanera colnago", //
         preu: 847
     },
@@ -393,13 +401,13 @@ t_manillars_gravel = [{
         preu: 458
     },
     {
-        nom: "ZIPP SC",
-        preu: 237
-    },
-    {
         nom: "PRO VIBE Alu",
         preu: 198
     },
+    {
+        nom: "PRO PLT", //
+        preu: 99
+    }   
 ];
 
 t_manillars_mtb = [{
