@@ -2219,9 +2219,6 @@ function print() {
             case "colnago":
                 img_marca = "./images/marcas/colnago.png"
                 break;
-            default:
-                "0"
-                break;
         }
         img_html = '<img src="' + img_marca + '" alt="" class="img-fluid"></img>'
         $("#logo_marca").append(img_html);
