@@ -469,6 +469,14 @@ t_rodes_disc = [{
         preu: 3703
     },
     {
+        nom: "Corima MMC DX 32 tubular", //
+        preu: 3199
+    },
+    {
+        nom: "Corima MMC DX 47 tubular", //
+        preu: 3299
+    },
+    {
         nom: "Corima WS 47 tubular", //
         preu: 1449
     },
@@ -549,12 +557,25 @@ t_rodes_disc = [{
         preu: 1399
     },
     {
+        nom: "Corima MCC 32 cubierta", //
+        preu: 3549
+    },
+    {
+        nom: "Corima MCC 47 cubierta", //
+        preu: 3649
+    },
+    {
         nom: "Corima WS cubierta", //
         preu: 1749
     }
 ];
 
-t_rodes_road = [{
+t_rodes_road = [
+    {
+        nom: "Corima MCC 32 / 47 tubular", //
+        preu: 2999
+    },
+    {
         nom: "Corima WS+ 47 tubular", //
         preu: 1849
     },
@@ -585,6 +606,10 @@ t_rodes_road = [{
     {
         nom: "Lightweight Melnstein T 24E tubular schwarz", //
         preu: 3982
+    },
+    {
+        nom: "Corima MCC 47 cubierta", //
+        preu: 3299
     },
     {
         nom: "Corima WS+ 47 cubierta", //
@@ -667,7 +692,11 @@ t_rodes_gravel = [{
     {
         nom: "Bike Ahead Biturbo-Cross", //
         preu: 3703
-    },    
+    },   
+    {
+        nom: "CORIMA G30.5 ", //
+        preu: 2099
+    },  
     {
         nom: "Fulcrum Racing Zero carbon", //
         preu: 1990
