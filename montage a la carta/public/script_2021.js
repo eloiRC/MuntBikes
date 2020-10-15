@@ -837,6 +837,14 @@ t_seient = [{
         preu: 189
     },
     {
+        nom: "Most Lynx carbon", //
+        preu: 196
+    },
+    {
+        nom: "Most Lynx Manganeso", //
+        preu: 74
+    },
+    {
         nom: "selle italia SLR CARBON KIT", //
         preu: 219
     },
