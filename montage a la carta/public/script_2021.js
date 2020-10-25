@@ -43,19 +43,19 @@ t_road_disc = [{
         nom: "Pinarello F12",//
         preu: 5595,
         marca: "pinarello",
-        img:"f12_disc.png"
+        img:"f12_disc.jpg"
     },
     {
         nom: "Pinarello PRINCE FX",//
         preu: 3915,
         marca: "pinarello",
-        img:"prince_disc.png"
+        img:"prince_disc.jpg"
     },
     {
         nom: "Pinarello Angliru",//
         preu: 1665,
         marca: "pinarello",
-        img:"angliru_disc.png"
+        img:"angliru_disc.jpg"
     },
     {
         nom: "Bianchi XR4", //preu quadro amb vision restat -749€ del manillar
@@ -73,7 +73,7 @@ t_road_disc = [{
         nom: "Bianchi INFINITO CV", //preu quadro amb vision restat -749€ del manillar
         preu: 3690,
         marca: "bianchi",
-        img:"infinito_disc.png"
+        img:"infinito_disc.jpg"
     },
     {
         nom: "Colnago C64", //
@@ -85,19 +85,19 @@ t_road_disc = [{
         nom: "Colngao V3 RS", //
         preu: 4379,
         marca: "colnago",
-        img:"v3rs_disc.png"
+        img:"v3rs_disc.jpg"
     },
     {
         nom: "Scott ADDICT RC ULTIMATE", //
         preu: 3999,
         marca: "scott",
-        img:"addict_ultimate.png"
+        img:"addict_ultimate.jpg"
     },
     {
         nom: "Scott ADDICT RC PRO", //
         preu: 2849,
         marca: "scott",
-        img:"addict_pro.png"
+        img:"addict_pro.jpg"
     }
 ];
 
@@ -105,43 +105,50 @@ t_road = [{
         nom: "Pinarello F12",
         preu: 5395,
         info: "*tija incluida",
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"f12.jpg"
     },
     {
         nom: "Pinarello GAN",
         preu: 2350,
         info: "*tija incluida",
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"gan.jpg"
     },
     {
         nom: "Pinarello Angliru",//
         preu: 1495,
         info: "*tija incluida",
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"angliru.jpg"
     },
     {
         nom: "Bianchi XR4", //
         preu: 3690,
         info: "*tija incluida",
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"xr4.jpg"
     },
     {
         nom: "Bianchi SPECIALISSIMA", //
         preu: 3990,
         info: "",
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"specialissima.jpg"
     },
     {
         nom: "Colnago C64", //
         preu: 4087,
         info: "*tija incluida",
-        marca: "colnago"
+        marca: "colnago",
+        img:"c64.jpg"
     },
     {
         nom: "Colngao V3 RS", //
         preu: 4012,
         info: "*tija incluida",
-        marca: "colnago"
+        marca: "colnago",
+        img:"v3rs.jpg"
     }
 ];
 
@@ -1561,19 +1568,7 @@ t_bieles_mtb = [{
     },
 ];
 
-function cambi(cambiat){
-   if (cambiat=="quadre"){
-       if($("#quadre").val() != null){
-        console.log('ola')
-        text= "./images/configuracions/quadres/"+JSON.parse($("#quadre").val()).img
-        console.log(text)
-        $("#img_quadre").attr('src',text)
-        preu();
-       }
-       
-   }
-    
-    }
+
 
 function modalitat() {
     esconde();
@@ -2040,6 +2035,32 @@ function preu() {
     $('#card-desglose').show();
 
 };
+
+function cambi(cambiat){
+    switch (cambiat) {
+        case "quadre":
+            if(($("#quadre").val() != "0") ){
+                text= "./images/configuracions/quadres/"+JSON.parse($("#quadre").val()).img;
+                $("#img_quadre").attr('src',text);
+                preu();
+               }
+               else{
+                $("#img_quadre").attr('src',"./images/configuracions/quadres/blank.jpg");
+               }
+            break;
+        case "manillar":
+            if($("#manillar").val() != null){
+                text= "./images/configuracions/manillars/"+JSON.parse($("#manillar").val()).img;
+                $("#img_manillar").attr('src',text);
+                preu();
+               }
+            break;
+    
+        default:
+            break;
+    }
+    
+    }
 
 
 function esconde() {
