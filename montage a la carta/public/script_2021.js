@@ -40,62 +40,62 @@ let darkMode = false;
 t_road_disc = [{
         nom: "Pinarello F12",//
         preu: 5595,
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"f12_disc.png"
     },
     {
         nom: "Pinarello PRINCE FX",//
         preu: 3915,
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"prince_disc.png"
     },
     {
         nom: "Pinarello Angliru",//
         preu: 1665,
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"angliru_disc.png"
     },
     {
         nom: "Bianchi XR4", //preu quadro amb vision restat -749€ del manillar
         preu: 4041,
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"xr4_disc.png"
     },
     {
         nom: "Bianchi SPECIALISSIMA", //preu quadro amb vision restat -749€ del manillar
         preu: 4590,
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"spexialissima_disc.png"
     },
     {
         nom: "Bianchi INFINITO CV", //preu quadro amb vision restat -749€ del manillar
         preu: 3690,
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"infinito_disc.png"
     },
     {
         nom: "Colnago C64", //
         preu: 4637,
-        marca: "colnago"
+        marca: "colnago",
+        img:"c64_disc.png"
     },
     {
         nom: "Colngao V3 RS", //
         preu: 4379,
-        marca: "colnago"
+        marca: "colnago",
+        img:"v3rs_disc.png"
     },
     {
         nom: "Scott ADDICT RC ULTIMATE", //
         preu: 3999,
-        marca: "scott"
+        marca: "scott",
+        img:"addict_ultimate.png"
     },
     {
         nom: "Scott ADDICT RC PRO", //
         preu: 2849,
-        marca: "scott"
-    },
-    {
-        nom: "Scott FOIL SUPERSONIC EDT. HMX", //
-        preu: 3999,
-        marca: "scott"
-    },
-    {
-        nom: "Scott FOIL 10 HMF ", //
-        preu: 2649,
-        marca: "scott"
+        marca: "scott",
+        img:"addict_pro.png"
     }
 ];
 
