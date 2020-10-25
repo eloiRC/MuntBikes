@@ -1,7 +1,7 @@
 //window.location.replace("https://configurador-muntbikes.web.app");
 dades_clinet = false;
 
-$(document).ready(function () {
+$(window).on("load",function () {
     $("#invoice").hide();
 
     document.getElementById("textBtn").addEventListener("click", hidetext)
@@ -9,7 +9,7 @@ $(document).ready(function () {
     document.getElementById("darkMode").addEventListener("click", toggleDarkMode)
     document.getElementById("pdf").addEventListener("click", generatePDF)
     document.getElementById("modalitat").addEventListener("change", modalitat)
-    document.getElementById("quadre").addEventListener("change", preu);
+    $("#quadre").on("change",function(){cambi("quadre")});
     document.getElementById("rodes").addEventListener("change", preu);
     document.getElementById("pedals").addEventListener("change", preu);
     document.getElementById("grup").addEventListener("change", preu);
@@ -36,6 +36,8 @@ $(document).ready(function () {
     });
 
 });
+
+
 let darkMode = false;
 t_road_disc = [{
         nom: "Pinarello F12",//
@@ -65,7 +67,7 @@ t_road_disc = [{
         nom: "Bianchi SPECIALISSIMA", //preu quadro amb vision restat -749€ del manillar
         preu: 4590,
         marca: "bianchi",
-        img:"spexialissima_disc.png"
+        img:"specialissima_disc.png"
     },
     {
         nom: "Bianchi INFINITO CV", //preu quadro amb vision restat -749€ del manillar
@@ -1559,7 +1561,19 @@ t_bieles_mtb = [{
     },
 ];
 
-
+function cambi(cambiat){
+   if (cambiat=="quadre"){
+       if($("#quadre").val() != null){
+        console.log('ola')
+        text= "./images/configuracions/quadres/"+JSON.parse($("#quadre").val()).img
+        console.log(text)
+        $("#img_quadre").attr('src',text)
+        preu();
+       }
+       
+   }
+    
+    }
 
 function modalitat() {
     esconde();
