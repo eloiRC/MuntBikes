@@ -497,7 +497,7 @@ t_rodes_disc = [{
         preu: 1800
     },
     {
-        nom: "Campagnolo BORA ONE 35 / 50  tubeless / cubierta", //
+        nom: "Campagnolo BORA ONE 35 / 50 cubierta", //
         preu: 2140
     },
     {
