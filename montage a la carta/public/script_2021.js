@@ -61,13 +61,13 @@ t_road_disc = [{
         nom: "Bianchi XR4", //preu quadro amb vision restat -749€ del manillar
         preu: 4041,
         marca: "bianchi",
-        img:"xr4_disc.png"
+        img:"xr4_disc.jpg"
     },
     {
         nom: "Bianchi SPECIALISSIMA", //preu quadro amb vision restat -749€ del manillar
         preu: 4590,
         marca: "bianchi",
-        img:"specialissima_disc.png"
+        img:"specialissima_disc.jpg"
     },
     {
         nom: "Bianchi INFINITO CV", //preu quadro amb vision restat -749€ del manillar
@@ -79,7 +79,7 @@ t_road_disc = [{
         nom: "Colnago C64", //
         preu: 4637,
         marca: "colnago",
-        img:"c64_disc.png"
+        img:"c64_disc.jpg"
     },
     {
         nom: "Colngao V3 RS", //
@@ -156,43 +156,50 @@ t_gravel = [{
         nom: "Pinarello Grevil",
         preu: 2895,
         info: "*tija incluida",
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"grevil.jpg"
     },
     {
         nom: "Pinarello Crossista ",
         preu: 2715,
         info: "*tija incluida",
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"crossista.jpg"
     },
     {
         nom: "Bianchi Zolder Pro", //
         preu: 1990,
         info: "",
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"zolder.jpg"
     },
     {
         nom: "Bianchi ARCADEX ", //PREU CALCULAT DESCONATANT UNS 600€ DEL GRX
         preu: 2090,
         info: "",
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"arcadex.jpg"
     },
     {
         nom: "Scott Addict CX RC", //
         preu: 2249,
         info: "*tija incluida",
-        marca: "scott"
+        marca: "scott",
+        img:"addict_cx.jpg"
     },
     {
         nom: "Colango Prestige", //
         preu: 2190,
         info: "*tija NO incluida",
-        marca: "colnago"
+        marca: "colnago",
+        img:"prestige.jpg"
     },
     {
         nom: "Colango G3X", //
         preu: 2825,
         info: "*tija incluida",
-        marca: "colnago"
+        marca: "colnago",
+        img:"g3x.jpg"
     }
 ];
 
@@ -200,43 +207,50 @@ t_mtb = [{
         nom: "Scott Spark N1NO Canda", //
         preu: 5999,
         info: "*Hoquilla SID ultimate,amortiguador RockShox NUDE ,bielas xx1, frenos level ultimate, manillar fraser ic y tija incluidos ",
-        marca: "scott"
+        marca: "scott",
+        img:"spark_canada.jpg"
     },
     {
         nom: "Scott Spark N1NO SilverFish", //
         preu: 5999,
         info: "*Hoquilla SID ultimate,amortiguador RockShox NUDE ,bielas xx1, frenos lvl ultimate, manillar fraser ic y tija incluidos ",
-        marca: "scott"
+        marca: "scott",
+        img:"spark_silver.jpg"
     },
     {
         nom: "Scott Spark RC Supersonic HMX SL ", //
         preu: 5499,
         info: "*Hoquilla SID ultimate,amortiguador RockShox NUDE ,bielas xx1, frenos lvl ultimate, manillar fraser ic y tija incluidos",
-        marca: "scott"
+        marca: "scott",
+        img:"spark_supersonic.jpg"
     },
     {
         nom: "Scott Scale 910 HMF ", //
         preu: 2349,
         info: "*tija incluidos, horquilla fox sc 32 performance",
-        marca: "scott"
+        marca: "scott",
+        img:"scale_910.jpg"
     },
     {
         nom: "Scott Scale SL", //
         preu: 3499,
         info: "*Manillar fraser ic, tija, horquilla sid sl, frenos sram level ultimate incluidos",
-        marca: "scott"
+        marca: "scott",
+        img:"scale_sl.jpg"
     },
     {
         nom: "Bianchi Methanol FS",
         preu: 3590,
         info: "*Amortiguador Fox Kashima incluido",
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"methanol_fs.jpg"
     },
     {
         nom: "Bianchi Methanol RS",
         preu: 2590,
         info: "",
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"methanol_rs.jpg"
     }
 ];
 

@@ -1,3 +1,3 @@
-quadres 1024 x 768
+quadres 500 x 400
 
-manillars 1024 x 400
+manillars 500 x 200
