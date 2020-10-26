@@ -14,7 +14,7 @@ $(window).on("load",function () {
     document.getElementById("pedals").addEventListener("change", preu);
     document.getElementById("grup").addEventListener("change", preu);
     document.getElementById("frens").addEventListener("change", preu);
-    document.getElementById("manillar").addEventListener("change", preu);
+    $("#manillar").on("change",function(){cambi("manillar")});
     document.getElementById("tija").addEventListener("change", preu);
     document.getElementById("cinta").addEventListener("change", preu);
     document.getElementById("punys").addEventListener("change", preu);
@@ -257,133 +257,165 @@ t_mtb = [{
 t_manillars_road_disc = [
     {
         nom: "MOST TALON ULTRA f12 TICR",//
-        preu: 857
+        preu: 857,
+        img:"talon_ultra.jpg"
     },
     {
         nom: "MOST TALON AERO",//
-        preu: 718
+        preu: 718,
+        img:"talon_aero.jpg"
     },
     {
         nom: "MOST Jaguar XFC carbon TICR",//
-        preu: 668
+        preu: 668,
+        img:"jaguarC_ticr.jpg"
     },
     {
         nom: "MOST Jaguar XA TICR",//
-        preu: 173
+        preu: 173,
+        img:"jaguar_ticr.jpg"
     },
     {
         nom: "SYNCROS CRESTON IC SL rc", //
-        preu: 579
+        preu: 579,
+        img:"creston.jpg"
     },
     {
         nom: "VISION METRON 5D ACR Bianchi", //
-        preu: 749
+        preu: 749,
+        img:"metron.jpg"
     },
     {
         nom: "Deda Alanera colnago", //
-        preu: 847
+        preu: 847,
+        img:"alanera.jpg"
     },
     {
         nom: "Colnago sr9 + ZIPP service course ERGO ", //
-        preu: 294
+        preu: 294,
+        img:"sr9_zipp_sc.jpg"
     },
     {
-        nom: "Colnago sr9 + ZIPP SL ERGO ", //
-        preu: 477
+        nom: "Colnago sr9 + ZIPP SL ERGO Carbon ", //
+        preu: 477,
+        img:"sr9_zipp_sl.jpg"
     },
     {
         nom: "Colnago sr9 + BikeAhead ", //
-        preu: 565
+        preu: 565,
+        img:"sr9_bikeahead.jpg"
     },
     {
         nom: "Colnago sr9 + LIGHTWEIGHT RENNBÜGEL ", //
-        preu: 537
+        preu: 537,
+        img:"sr9_lightweight.jpg"
     }
 ];
 
 t_manillars_road = [{
         nom: "MOST TALON ULTRA TICR",//
-        preu: 845
+        preu: 845,
+        img:"talon_ultra.jpg"
     },
     {
         nom: "MOST TALON AERO",//
-        preu: 718
+        preu: 718,
+        img:"talon_aero.jpg"
     },
     {
         nom: "MOST TALON UD",//
-        preu: 411
+        preu: 411,
+        img:"talon_ud.jpg"
     },
     {
         nom: "MOST Jaguar XFC carbon TICR",//
-        preu: 668
+        preu: 668,
+        img:"jaguarC_ticr.jpg"
     },
     {
         nom: "MOST Jaguar XA TICR",//
-        preu: 173
+        preu: 173,
+        img:"jaguar_ticr.jpg"
     },
     {
         nom: "MOST JAGUAR 3K conjunto",
-        preu: 247
+        preu: 247,
+        img:"jaguar.jpg"
     },
     {
         nom: "VISION METRON 5D Bianchi", //
-        preu: 749
+        preu: 749,
+        img:"metron_rim.jpg"
     },
     {
         nom: "ZIPP SL AERO + SPEED conjunto", //
-        preu: 615
+        preu: 615,
+        img:"zipp_sl_aero.jpg"
     },
     {
         nom: "ZIPP SL ERGO + SPEED conjunto", //
-        preu: 590
+        preu: 590,
+        img:"zipp_sl_ergo.jpg"
     },
     {
         nom: "ZIPP service course",
-        preu: 237
+        preu: 237,
+        img:"zipp_sc.jpg"
     },
     {
         nom: "Black-inc", //
-        preu: 690
+        preu: 690,
+        img:"black_inc.jpg"
     },
     {
         nom: "Ritchey solostreem", //
-        preu: 475
+        preu: 475,
+        img:"solostreem.jpg"
     },
     {
         nom: "PRO VIVE conjunto", //
-        preu: 458
+        preu: 458,
+        img:"pro_vive.jpg"
     },
     {
         nom: "PRO VIBE Alu",
-        preu: 198
+        preu: 198,
+        img:"pro_vive_alu.jpg"
     },
     {
         nom: "PRO PLT", //
-        preu: 99
+        preu: 99,
+        img:"pro_plt.jpg"
     },
     {
         nom: "Deda Alanera colnago", //
-        preu: 847
+        preu: 847,
+        img:"alanera.jpg"
     },
     {
         nom: "Colnago sr9 + ZIPP service course ERGO ", //
-        preu: 294
+        preu: 294,
+        img:"sr9_zipp_sc.jpg"
     },
     {
         nom: "Colnago sr9 + ZIPP SL ERGO ", //
-        preu: 477
+        preu: 477,
+        img:"sr9_zipp_sc.jpg"
     },
     {
         nom: "Colnago sr9 + BikeAhead ", //
-        preu: 565
+        preu: 565,
+        img:"sr9_bikeahead.jpg"
     },
     {
         nom: "Colnago sr9 + LIGHTWEIGHT RENNBÜGEL ", //
-        preu: 537
+        preu: 537,
+        img:"sr9_lightweight.jpg"
     },
     {
         nom: "Lightweight BÜGELHALTER + LIGHTWEIGHT RENNBÜGEL", //
-        preu: 675
+        preu: 675,
+        img:"lightweight.jpg"
     }
 ];
 
@@ -2063,10 +2095,13 @@ function cambi(cambiat){
                }
             break;
         case "manillar":
-            if($("#manillar").val() != null){
+            if($("#manillar").val() != "0"){
                 text= "./images/configuracions/manillars/"+JSON.parse($("#manillar").val()).img;
                 $("#img_manillar").attr('src',text);
                 preu();
+               }
+               else{
+                $("#img_manillar").attr('src',"./images/configuracions/manillars/blank.jpg");
                }
             break;
     
