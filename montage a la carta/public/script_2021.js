@@ -9,12 +9,13 @@ $(window).on("load",function () {
     document.getElementById("darkMode").addEventListener("click", toggleDarkMode)
     document.getElementById("pdf").addEventListener("click", generatePDF)
     document.getElementById("modalitat").addEventListener("change", modalitat)
-    $("#quadre").on("change",function(){cambi("quadre")});
-    $("#rodes").on("change",function(){cambi("rodes")});
+    document.getElementById("quadre").addEventListener("change",preu);
+    document.getElementById("rodes").addEventListener("change",preu);
+    document.getElementById("manillar").addEventListener("change",preu);
     document.getElementById("pedals").addEventListener("change", preu);
     document.getElementById("grup").addEventListener("change", preu);
     document.getElementById("frens").addEventListener("change", preu);
-    $("#manillar").on("change",function(){cambi("manillar")});
+    
     document.getElementById("tija").addEventListener("change", preu);
     document.getElementById("cinta").addEventListener("change", preu);
     document.getElementById("punys").addEventListener("change", preu);
@@ -668,184 +669,223 @@ t_rodes_disc = [{
 t_rodes_road = [
     {
         nom: "Corima MCC 32 / 47 tubular", //
-        preu: 2999
+        preu: 2999,
+        img:"mcc_r.jpg"
     },
     {
         nom: "Corima WS+ 47 tubular", //
-        preu: 1849
+        preu: 1849,
+        img:"ws+_r.jpg"
     },
     {
         nom: "Corima WS 47 tubular", //
-        preu: 1249
+        preu: 1249,
+        img:"ws_r.jpg"
     },
     {
         nom: "Dura-Ace c40 tubular", //
-        preu: 2600
-    },
-    {
-        nom: "Fulcrum Speed 40 (cult) tubular", //
-        preu: 2548
+        preu: 2600,
+        img:"c40_rt.jpg"
     },
     {
         nom: "Campagnolo Bora One 35 / 50 tubular", //
-        preu: 1880
+        preu: 1880,
+        img:"bora_one_r.jpg"
     },
     {
         nom: "Campagnolo Bora Ultra 35 / 50 tubular", //
-        preu: 2830
+        preu: 2830,
+        img:"bora_ultra.jpg"
     },
     {
-        nom: "Lightweight Melnstein T 24E tubular", //
-        preu: 3582
+        nom: "Lightweight Meilenstein T 24E tubular", //
+        preu: 3582,
+        img:"melstein_r.jpg"
     },
     {
-        nom: "Lightweight Melnstein T 24E tubular schwarz", //
-        preu: 3982
+        nom: "Lightweight Meilenstein T 24E tubular schwarz", //
+        preu: 3982,
+        img:"melstein_r.jpg"
     },
     {
         nom: "Corima MCC 47 cubierta", //
-        preu: 3299
+        preu: 3299,
+        img:"mcc_r.jpg"
     },
     {
         nom: "Corima WS+ 47 cubierta", //
-        preu: 2149
+        preu: 2149,
+        img:"ws+_r.jpg"
     },
     {
         nom: "Corima WS cubierta", //
-        preu: 1549
+        preu: 1549,
+        img:"ws_r.jpg"
     },
     {
         nom: "Dura-Ace c40 tubeless / cubierta", //
-        preu: 1715
+        preu: 1715,
+        img:"c40_r.jpg"
     },
     {
         nom: "DT-1100 tubeless / cubierta", //
-        preu: 2388
+        preu: 2388,
+        img:"dt1100_r.jpg"
     },
     {
         nom: "DT-1400 spline tubeless / cubierta", //
-        preu: 1958
+        preu: 1958,
+        img:"dt1400_r.jpg"
     },
     {
         nom: "Fulcrum Wind 40 tubeless / cubierta", //
-        preu: 1199
+        preu: 1199,
+        img:"wind40_r.jpg"
     },
     {
         nom: "Fulcrum Speed 40 (usb) tubeless / cubierta", //
-        preu: 2045
+        preu: 2045,
+        img:"speed40_r.jpg"
     },
     {
         nom: "Campagnolo BORA ONE 35 / 50 cubierta", //
-        preu: 2115
+        preu: 2115,
+        img:"bora_one_r.jpg"
     },
     {
         nom: "Campagnolo Bora Ultra 35 / 50 cubierta", //
-        preu: 3070
+        preu: 3070,
+        img:"bora_ultra.jpg"
     },
     {
         nom: "Campagnolo WTO 33 / 45 / 60 tubeless / cubierta", //
-        preu: 2164
+        preu: 2164,
+        img:"wto_r.jpg"
     },
     {
         nom: "Campagnolo Zonda", //
-        preu: 498
+        preu: 498,
+        img:"zonda_r.jpg"
     },
     {
         nom: "Zipp 303 firecrest tubeless / cubierta", //
-        preu: 2200
+        preu: 2200,
+        img:"303_r.jpg"
     }
 ];
 
 t_rodes_gravel = [{
         nom: "Dura-Ace c40 ", //
-        preu: 2430
+        preu: 2430,
+        img:"c40.jpg"
     },
     {
         nom: "DT GRC 1400", //
-        preu: 1958
+        preu: 1958,
+        img:"grc1400.jpg"
     },
     {
         nom: "DT GR 1600", //
-        preu: 558
+        preu: 558,
+        img:"gr1600.jpg"
     },
     {
         nom: "DT CRC 1100", //
-        preu: 2389
+        preu: 2389,
+        img:"crc1100.jpg"
     },
     {
         nom: "DT CRC 1400 Spline", //
-        preu: 1958
+        preu: 1958,
+        img:"crc1400.jpg"
     },
     {
         nom: "DT CR 1600", //
-        preu: 558
+        preu: 558,
+        img:"cr1600.jpg"
     },
     {
         nom: "Syncros capital x40", //
-        preu: 1399
+        preu: 1399,
+        img:"capital_x40.jpg"
     },
     {
         nom: "Bike Ahead Biturbo-Cross", //
-        preu: 3703
+        preu: 3703,
+        img:"biturbo.jpg"
     },   
     {
         nom: "CORIMA G30.5 ", //
-        preu: 2099
+        preu: 2099,
+        img:"g30.jpg"
     },  
     {
         nom: "Fulcrum Racing Zero carbon", //
-        preu: 1990
+        preu: 1990,
+        img:"zeroC.jpg"
     },
     {
         nom: "Fulcrum Racing Zero", //
-        preu: 1189
+        preu: 1189,
+        img:"zero.jpg"
     },
     {
         nom: "Fulcrum Rapid Red 3 ", //
-        preu: 613
+        preu: 613,
+        img:"rr3.jpg"
     },
     {
         nom: "Fulcrum Rapid 5 ", //
-        preu: 380
+        preu: 380,
+        img:"rr5.jpg"
     }
 ];
 
 t_rodes_mtb = [{
         nom: "Syncros Silverton SL", //
-        preu: 3799
+        preu: 3799,
+        img:"silverton_sl.jpg"
     },
     {
         nom: "Syncros Silverton 1.0", //
-        preu: 1399
+        preu: 1399,
+        img:"silverton.jpg"
     },
     {
         nom: "Tune BLACKBURNER", //
-        preu: 2198
+        preu: 2198,
+        img:"tune_btt.jpg"
     },
 
     {
         nom: "Carbon-Ti", //
-        preu: 1700
+        preu: 1700,
+        img:"carbonti_btt.jpg"
     },
     {
         nom: "Bike Ahead Biturbo", //
-        preu: 3399
+        preu: 3399,
+        img:"biturbo_btt.jpg"
     },
     {
         nom: "DT XRC 1200", //
-        preu: 2138
+        preu: 2138,
+        img:"xrc1200.jpg"
     },
     {
         nom: "DT XRC 1500 carbon", //
-        preu: 1499
+        preu: 1499,
+        img:"xrc1500.jpg"
     },
     {
         nom: "DT XR 1501 spline", //
-        preu: 968
+        preu: 968,
+        img:"xr1501.jpg"
     },
     {
         nom: "DT X 1700 spline", //
-        preu: 628
+        preu: 628,
+        img:"x1700.jpg"
     }
 ];
 
@@ -2001,6 +2041,7 @@ function preu() {
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1 + part2 + part4 + part5);
         total += preu;
+        cambiQuadre();
     }
     if ($("#manillar").val() != "0") {
         preu = JSON.parse($("#manillar").val()).preu;
@@ -2008,6 +2049,7 @@ function preu() {
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1 + part2 + part4 + part5);
         total += preu;
+        cambiManillar();
     }
     if ($("#rodes").val() != "0") {
         preu = JSON.parse($("#rodes").val()).preu;
@@ -2015,6 +2057,7 @@ function preu() {
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1 + part2 + part4 + part5);
         total += preu;
+        cambiRodes();
     }
     if ($("#grup").val() != "0") {
         preu = JSON.parse($("#grup").val()).preu;
@@ -2122,45 +2165,40 @@ function preu() {
 
 };
 
-function cambi(cambiat){
-    switch (cambiat) {
-        case "quadre":
-            if(($("#quadre").val() != "0") ){
+async function cambiQuadre(){
+            if($("#quadre").val() != "0") {
                 text= "./images/configuracions/quadres/"+JSON.parse($("#quadre").val()).img;
                 $("#img_quadre").attr('src',text);
-                preu();
                }
                else{
                 $("#img_quadre").attr('src',"./images/configuracions/quadres/blank.jpg");
                }
-            break;
-        case "manillar":
-            if($("#manillar").val() != "0"){
-                text= "./images/configuracions/manillars/"+JSON.parse($("#manillar").val()).img;
-                $("#img_manillar").attr('src',text);
-                preu();
-               }
-               else{
-                $("#img_manillar").attr('src',"./images/configuracions/manillars/blank.jpg");
-               }
-            break;
-            case "rodes":
-            if($("#ruedas").val() != "0"){
-                text= "./images/configuracions/rodes/"+JSON.parse($("#rodes").val()).img;
-                $("#img_rodes").attr('src',text);
-                preu();
-               }
-               else{
-                $("#img_manillar").attr('src',"./images/configuracions/rodes/blank.jpg");
-               }
-            break;
-    
-        default:
-            break;
-    }
-    
-    }
+               
+}
 
+async function cambiManillar(){
+    if($("#manillar").val() != "0"){
+        text= "./images/configuracions/manillars/"+JSON.parse($("#manillar").val()).img;
+        $("#img_manillar").attr('src',text);
+       }
+       else{
+        $("#img_manillar").attr('src',"./images/configuracions/manillars/blank.jpg");
+       }
+      
+}
+            
+async function cambiRodes(){
+    if($("#rodes").val() != "0"){
+        text= "./images/configuracions/rodes/"+JSON.parse($("#rodes").val()).img;
+        $("#img_rodes").attr('src',text);
+       }
+       else{
+        $("#img_manillar").attr('src',"./images/configuracions/rodes/blank.jpg");
+       }
+      
+}
+            
+       
 
 function esconde() {
     $("#forquilla").parent().hide();
