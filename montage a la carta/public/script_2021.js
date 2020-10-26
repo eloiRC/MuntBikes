@@ -1,7 +1,7 @@
 //window.location.replace("https://configurador-muntbikes.web.app");
 dades_clinet = false;
 
-$(document).ready(function () {
+$(window).on("load",function () {
     $("#invoice").hide();
 
     document.getElementById("textBtn").addEventListener("click", hidetext)
@@ -9,7 +9,7 @@ $(document).ready(function () {
     document.getElementById("darkMode").addEventListener("click", toggleDarkMode)
     document.getElementById("pdf").addEventListener("click", generatePDF)
     document.getElementById("modalitat").addEventListener("change", modalitat)
-    document.getElementById("quadre").addEventListener("change", preu);
+    $("#quadre").on("change",function(){cambi("quadre")});
     document.getElementById("rodes").addEventListener("change", preu);
     document.getElementById("pedals").addEventListener("change", preu);
     document.getElementById("grup").addEventListener("change", preu);
@@ -36,66 +36,68 @@ $(document).ready(function () {
     });
 
 });
+
+
 let darkMode = false;
 t_road_disc = [{
         nom: "Pinarello F12",//
         preu: 5595,
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"f12_disc.jpg"
     },
     {
         nom: "Pinarello PRINCE FX",//
         preu: 3915,
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"prince_disc.jpg"
     },
     {
         nom: "Pinarello Angliru",//
         preu: 1665,
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"angliru_disc.jpg"
     },
     {
         nom: "Bianchi XR4", //preu quadro amb vision restat -749€ del manillar
         preu: 4041,
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"xr4_disc.png"
     },
     {
         nom: "Bianchi SPECIALISSIMA", //preu quadro amb vision restat -749€ del manillar
         preu: 4590,
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"specialissima_disc.png"
     },
     {
         nom: "Bianchi INFINITO CV", //preu quadro amb vision restat -749€ del manillar
         preu: 3690,
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"infinito_disc.jpg"
     },
     {
         nom: "Colnago C64", //
         preu: 4637,
-        marca: "colnago"
+        marca: "colnago",
+        img:"c64_disc.png"
     },
     {
         nom: "Colngao V3 RS", //
         preu: 4379,
-        marca: "colnago"
+        marca: "colnago",
+        img:"v3rs_disc.jpg"
     },
     {
         nom: "Scott ADDICT RC ULTIMATE", //
         preu: 3999,
-        marca: "scott"
+        marca: "scott",
+        img:"addict_ultimate.jpg"
     },
     {
         nom: "Scott ADDICT RC PRO", //
         preu: 2849,
-        marca: "scott"
-    },
-    {
-        nom: "Scott FOIL SUPERSONIC EDT. HMX", //
-        preu: 3999,
-        marca: "scott"
-    },
-    {
-        nom: "Scott FOIL 10 HMF ", //
-        preu: 2649,
-        marca: "scott"
+        marca: "scott",
+        img:"addict_pro.jpg"
     }
 ];
 
@@ -103,43 +105,50 @@ t_road = [{
         nom: "Pinarello F12",
         preu: 5395,
         info: "*tija incluida",
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"f12.jpg"
     },
     {
         nom: "Pinarello GAN",
         preu: 2350,
         info: "*tija incluida",
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"gan.jpg"
     },
     {
         nom: "Pinarello Angliru",//
         preu: 1495,
         info: "*tija incluida",
-        marca: "pinarello"
+        marca: "pinarello",
+        img:"angliru.jpg"
     },
     {
         nom: "Bianchi XR4", //
         preu: 3690,
         info: "*tija incluida",
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"xr4.jpg"
     },
     {
         nom: "Bianchi SPECIALISSIMA", //
         preu: 3990,
         info: "",
-        marca: "bianchi"
+        marca: "bianchi",
+        img:"specialissima.jpg"
     },
     {
         nom: "Colnago C64", //
         preu: 4087,
         info: "*tija incluida",
-        marca: "colnago"
+        marca: "colnago",
+        img:"c64.jpg"
     },
     {
         nom: "Colngao V3 RS", //
         preu: 4012,
         info: "*tija incluida",
-        marca: "colnago"
+        marca: "colnago",
+        img:"v3rs.jpg"
     }
 ];
 
@@ -2026,6 +2035,32 @@ function preu() {
     $('#card-desglose').show();
 
 };
+
+function cambi(cambiat){
+    switch (cambiat) {
+        case "quadre":
+            if(($("#quadre").val() != "0") ){
+                text= "./images/configuracions/quadres/"+JSON.parse($("#quadre").val()).img;
+                $("#img_quadre").attr('src',text);
+                preu();
+               }
+               else{
+                $("#img_quadre").attr('src',"./images/configuracions/quadres/blank.jpg");
+               }
+            break;
+        case "manillar":
+            if($("#manillar").val() != null){
+                text= "./images/configuracions/manillars/"+JSON.parse($("#manillar").val()).img;
+                $("#img_manillar").attr('src',text);
+                preu();
+               }
+            break;
+    
+        default:
+            break;
+    }
+    
+    }
 
 
 function esconde() {
