@@ -10,7 +10,7 @@ $(window).on("load",function () {
     document.getElementById("pdf").addEventListener("click", generatePDF)
     document.getElementById("modalitat").addEventListener("change", modalitat)
     $("#quadre").on("change",function(){cambi("quadre")});
-    document.getElementById("rodes").addEventListener("change", preu);
+    $("#rodes").on("change",function(){cambi("rodes")});
     document.getElementById("pedals").addEventListener("change", preu);
     document.getElementById("grup").addEventListener("change", preu);
     document.getElementById("frens").addEventListener("change", preu);
@@ -400,7 +400,7 @@ t_manillars_road = [{
     {
         nom: "Colnago sr9 + ZIPP SL ERGO ", //
         preu: 477,
-        img:"sr9_zipp_sc.jpg"
+        img:"sr9_zipp_sl.jpg"
     },
     {
         nom: "Colnago sr9 + BikeAhead ", //
@@ -420,208 +420,248 @@ t_manillars_road = [{
 ];
 
 t_manillars_gravel = [{
-        nom: "MOST TALON 1K",
-        preu: 718
+        nom: "MOST TALON Aero",
+        preu: 718,
+        img:"talon_aero.jpg"
     },
     {
         nom: "MOST TALON UD",
-        preu: 411
+        preu: 411,
+        img:"talon_ud.jpg"
     },
     {
         nom: "MOST JAGUAR 3K",
-        preu: 247
+        preu: 247,
+        img:"jaguar.jpg"
     },
     {
         nom: "ZIPP SL AERO + SPEED",
-        preu: 615
+        preu: 615,
+        img:"zipp_sl_aero.jpg"
     },
     {
         nom: "ZIPP SL ERGO + SPEED",
-        preu: 590
+        preu: 590,
+        img:"zipp_sl_ergo.jpg"
     },
     {
         nom: "ZIPP service course",
-        preu: 237
+        preu: 237,
+        img:"zipp_sc.jpg"
     },
     {
         nom: "Black-inc",
-        preu: 690
+        preu: 690,
+        img:"black_inc.jpg"
     },
     {
         nom: "Ritchey solostreem",
-        preu: 475
+        preu: 475,
+        img:"solostreem.jpg"
     },
     {
         nom: "PRO VIBE",
-        preu: 458
+        preu: 458,
+        img:"pro_vive.jpg"
     },
     {
         nom: "PRO VIBE Alu",
-        preu: 198
+        preu: 198,
+        img:"pro_vive_alu.jpg"
     },
     {
         nom: "PRO PLT", //
-        preu: 99
+        preu: 99,
+        img:"pro_plt.jpg"
     }   
 ];
 
 t_manillars_mtb = [{
         nom: "Fraser SE SL  iC",
-        preu: 474
+        preu: 474,
+        img:"fraser_se.jpg"
     },
     {
         nom: "Fraser SL iC",
-        preu: 69
+        preu: 69,
+        img:"fraser.jpg"
     },
     {
         nom: "NewUltimate Carbon + steam",
-        preu: 246
-    },
-    {
-        nom: "Alpcross Carbon",
-        preu: 229
+        preu: 246,
+        img:"newultimate.jpg"
     },
     {
         nom: "Tune ",
-        preu: 389
+        preu: 389,
+        img:"tune.jpg"
     },
     {
         nom: "Manillar BikeAhead",
-        preu: 229
+        preu: 229,
+        img:"bikeahead.jpg"
     },
     {
         nom: "OnOff He",
-        preu: 259
+        preu: 259,
+        img:"onoff.jpg"
     }
 ];
 
 t_rodes_disc = [{
         nom: "Campagnolo Bora One 35 / 50 tubular", //
-        preu: 1913
-    },
-    {
-        nom: "Zipp 202 tubular", //
-        preu: 2400
+        preu: 1913,
+        img:"bora_one.jpg"
     },
     {
         nom: "Zipp 303 tubular", //
-        preu: 2600
+        preu: 2600,
+        img:"303.jpg"
     },
     {
         nom: "Dura-Ace c40 tubular", //
-        preu: 2620
+        preu: 2620,
+        img:"c40.jpg"
     },
     {
         nom: "Fulcrum Speed 40 (cult) tubular", //
-        preu: 2548
+        preu: 2548,
+        img:"speed40.jpg"
     },
     {
         nom: "Carbon-TI tubular", //
-        preu: 1620
+        preu: 1620,
+        img:"carbonti.jpg"
     },
     {
         nom: "Bike Ahead Biturbo-Road tubular", //
-        preu: 3703
+        preu: 3703,
+        img:"biturbo.jpg"
     },
     {
         nom: "Corima MMC DX 32 tubular", //
-        preu: 3199
+        preu: 3199,
+        img:"mmc_dx.jpg"
     },
     {
         nom: "Corima MMC DX 47 tubular", //
-        preu: 3299
+        preu: 3299,
+        img:"mmc_dx_47.jpg"
     },
     {
         nom: "Corima WS 47 tubular", //
-        preu: 1449
+        preu: 1449,
+        img:"ws.jpg"
     },
     {
         nom: "Lightweight Melnstein T 24D tubular", //
-        preu: 4079
+        preu: 4079,
+        img:"melstein.jpg"
     },
     {
         nom: "Lightweight Melnstein T 24D tubular schwarz", //
-        preu: 4479
+        preu: 4479,
+        img:"melstein.jpg"
     },
     {
         nom: "ZIPP 303s tubeless / cubierta", //
-        preu: 1100
+        preu: 1100,
+        img:"303s.jpg"
     },
     {
         nom: "ZIPP 303 Firecrest tubeless / cubierta", //
-        preu: 1800
+        preu: 1800,
+        img:"303.jpg"
     },
     {
         nom: "Campagnolo BORA ONE 35 / 50 cubierta", //
-        preu: 2140
+        preu: 2140,
+        img:"bora_one.jpg"
     },
     {
         nom: "Campagnolo WTO 33 / 45 / 60  tubeless / cubierta", //
-        preu: 2168
+        preu: 2168,
+        img:"wto.jpg"
     },
     {
         nom: "Campagnolo Zonda tubeless / cubierta", //
-        preu: 605
+        preu: 605,
+        img:"zonda.jpg"
     },
     {
         nom: "Dura-Ace c40  tubeless / cubierta", //
-        preu: 2430
+        preu: 2430,
+        img:"c40.jpg"
     },
     {
         nom: "DT-1100  tubeless / cubierta", //
-        preu: 2388
+        preu: 2388,
+        img:"dt1100.jpg"
     },
     {
         nom: "DT-1400  tubeless / cubierta", //
-        preu: 1958
+        preu: 1958,
+        img:"dt1400.jpg"
     },
     {
         nom: "DT-1400 dicut tubeless / cubierta", //
-        preu: 827
+        preu: 827,
+        img:"dt1400d.jpg"
     },
     {
         nom: "DT-1600 tubeless / cubierta", //
-        preu: 559
+        preu: 559,
+        img:"dt1600.jpg"
     },
     {
         nom: "DT-1800 tubeless / cubierta", //
-        preu: 338
+        preu: 338,
+        img:"dt1800.jpg"
     },
     {
         nom: "Fulcrum Wind 40  tubeless / cubierta", //
-        preu: 1226
+        preu: 1226,
+        img:"wind_40.jpg"
     },
     {
         nom: "Fulcrum Speed 40 (usb)  tubeless / cubierta", //
-        preu: 2045
+        preu: 2045,
+        img:"speed40.jpg"
     },
     {
         nom: "Carbon-TI  tubeless / cubierta", //
-        preu: 1700
+        preu: 1700,
+        img:"carbonti.jpg"
     },
     {
         nom: "Bike Ahead Biturbo-Road tubeless / cubierta", //
-        preu: 3703
+        preu: 3703,
+        img:"biturbo.jpg"
     },
     {
         nom: "TUNE SCHWARZBRENNER 45 2.0  tubeless / cubierta", //
-        preu: 2099
+        preu: 2099,
+        img:"tune.jpg"
     },
     {
         nom: "Syncros Capital 1.0 tubeless / cubierta", //
-        preu: 1399
+        preu: 1399,
+        img:"capital.jpg"
     },
     {
         nom: "Corima MCC 32 cubierta", //
-        preu: 3549
+        preu: 3549,
+        img:"mcc_32.jpg"
     },
     {
         nom: "Corima MCC 47 cubierta", //
-        preu: 3649
+        preu: 3649,
+        img:"mcc_47.jpg"
     },
     {
         nom: "Corima WS cubierta", //
-        preu: 1749
+        preu: 1749,
+        img:"ws.jpg"
     }
 ];
 
@@ -2102,6 +2142,16 @@ function cambi(cambiat){
                }
                else{
                 $("#img_manillar").attr('src',"./images/configuracions/manillars/blank.jpg");
+               }
+            break;
+            case "rodes":
+            if($("#ruedas").val() != "0"){
+                text= "./images/configuracions/rodes/"+JSON.parse($("#rodes").val()).img;
+                $("#img_rodes").attr('src',text);
+                preu();
+               }
+               else{
+                $("#img_manillar").attr('src',"./images/configuracions/rodes/blank.jpg");
                }
             break;
     
