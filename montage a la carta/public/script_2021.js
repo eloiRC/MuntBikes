@@ -1656,7 +1656,7 @@ function modalitat() {
         ceramicspeed();
 
         //img
-        carregar_image(["c64_rim_2.jpg", "f12_rim.jpg", "xr4_rim.jpg", "f12_rim_2.jpg", "specialissima.jpg", "c64_rim.jpg", "specialissima_2.jpg", "xr4_rim_2.jpg"])
+        carregar_image(["c64_rim_wi.jpg","c64_rim_2.jpg", "f12_rim.jpg", "xr4_rim.jpg", "f12_rim_2.jpg", "specialissima.jpg", "c64_rim.jpg", "specialissima_2.jpg", "xr4_rim_2.jpg"])
 
     }
 
@@ -1691,7 +1691,7 @@ function modalitat() {
         ceramicspeed();
 
         //img
-        carregar_image(["grevil.jpg", "grevil2.jpg", "zolder.jpg"])
+        carregar_image(["grevil_2021.jpg","grevil.jpg", "grevil2.jpg", "zolder.jpg"])
     }
 
     if ($("#modalitat").val() == "mtb") {
@@ -1750,7 +1750,7 @@ function modalitat() {
 
 
         //img
-        carregar_image(["n1no.jpg", "spark_ultimate.jpg", "methanol_cv.jpg", "methanol_fs.jpg"])
+        carregar_image(["scale_nino.jpg","n1no.jpg", "spark_ultimate.jpg", "methanol_cv.jpg", "methanol_fs.jpg"])
     }
 
 
