@@ -891,27 +891,33 @@ t_rodes_mtb = [{
 
 t_tijes_road = [{
         nom: "New Ultimate Alu",
-        preu: 109
+        preu: 109,
+        img:"t_newultimate.jpg"
     },
     {
         nom: "New Ultimate Car",
-        preu: 206
+        preu: 206,
+        img:"t_newultimateC.jpg"
     },
     {
         nom: "OnOFF He Carbon",
-        preu: 139
+        preu: 139,
+        img:"t_onoff.jpg"
     },
     {
         nom: "TUNE ",
-        preu: 229
+        preu: 229,
+        img:"t_tune.jpg"
     },
     {
         nom: "ENVE SEATPOST",
-        preu: 275
+        preu: 275,
+        img:"t_enve.jpg"
     },
     {
         nom: "LIGHTWEIGHT LEISTUNGSTRÄGER",
-        preu: 308
+        preu: 308,
+        img:"t_lightweight.jpg"
     },
 ];
 
@@ -957,52 +963,69 @@ t_punys = [{
 
 t_seient = [{
         nom: "tune SKYRACER", //
-        preu: 349
+        preu: 349,
+        img:"skyracer.jpg"
     },
     {
         nom: "tune SPEEDNEEDLE", //
-        preu: 225
+        preu: 225,
+        img:"speedneedle.jpg"
     },
     {
         nom: "syncros BELCARRA", //
-        preu: 159
+        preu: 159,
+        img:"belcarra.jpg"
     },
     {
         nom: "san marco ASPIDE CARBON", //
-        preu: 189
+        preu: 189,
+        img:"aspide.jpg"
     },
     {
         nom: "Most Lynx carbon", //
-        preu: 196
+        preu: 196,
+        img:"lynxC.jpg"
     },
     {
         nom: "Most Lynx Manganeso", //
-        preu: 74
+        preu: 74,
+        img:"lynx.jpg"
     },
     {
         nom: "selle italia SLR CARBON KIT", //
-        preu: 219
+        preu: 219,
+        img:"slr.jpg"
     },
     {
         nom: "selle italia SLR C59", //
-        preu: 474
+        preu: 474,
+        img:"c59.jpg"
     },
     {
         nom: "FIZIK 00 EVO ", //
-        preu: 350
+        preu: 350,
+        img:"00evo.jpg"
     },
     {
         nom: "FIZIK R1", //
-        preu: 199
+        preu: 199,
+        img:"r1.jpg"
+    },
+    {
+        nom: "FIZIK ADAPTIVE ANTARES VS EVO 00", //
+        preu: 299,
+        img:"adaptative_00.jpg"
     },
     {
         nom: "FIZIK ADAPTIVE ANTARES VS EVO R1", //
-        preu: 299
+        preu: 299,
+        img:"adaptative_r1.jpg"
     },
     {
         nom: "FIZIK ADAPTIVE ANTARES VS EVO R3", //
-        preu: 249
-    },
+        preu: 249,
+        img:"adaptative_r3.jpg"
+    }
 
 ];
 
@@ -1122,85 +1145,105 @@ t_pneumatics_mtb = [{
 
 t_grup_road = [{ //sense bieles
         nom: "Shimano DURA-ACE Di2", //
-        preu: 2692
+        preu: 2692,
+        img:"duraacedi2.jpg"
     },
     {
         nom: "Shimano DURA-ACE", //
-        preu: 1312
+        preu: 1312,
+        img:"duraace.jpg"
     },
     {
         nom: "Shimano ULTEGRA Di2", //
-        preu: 1440
+        preu: 1440,
+        img:"ultegradi2.jpg"
     },
     {
         nom: "Shimano ULTEGRA", //
-        preu: 629
+        preu: 629,
+        img:"ultegra.jpg"
     },
     {
         nom: "Sram RED AXS 12v", //
-        preu: 2820
+        preu: 2820,
+        img:"redaxs.jpg"
     },
     {
         nom: "Sram FROCE AXS 12v", //
-        preu: 2165
+        preu: 2165,
+        img:"forceaxs.jpg"
     },
     {
         nom: "Campagnolo Super Record EPS", // 
-        preu: 3632
+        preu: 3632,
+        img:"superrecordeps.jpg"
     },
     {
         nom: "Campagnolo Super Record", //frens direct mount o dual pivot
-        preu: 1968
+        preu: 1968,
+        img:"superrecord.jpg"
     },
     {
         nom: "Campagnolo Record", //frens direct mount
-        preu: 1561
+        preu: 1561,
+        img:"record.jpg"
     },
     {
         nom: "Campagnolo Chorus", // frens direct mount
-        preu: 997
+        preu: 997,
+        img:"chorus.jpg"
     }
 ];
 
 t_grup_disc = [{ //sense bieles
         nom: "Shimano DURA-ACE Di2", //
-        preu: 2795
+        preu: 2795,
+        img:"duraacedi2.jpg"
     },
     {
         nom: "Shimano DURA-ACE", //
-        preu: 1861
+        preu: 1861,
+        img:"duraace.jpg"
     },
     {
         nom: "Shimano ULTEGRA Di2", //
-        preu: 1703
+        preu: 1703,
+        img:"ultegradi2.jpg"
     },
     {
         nom: "Shimano ULTEGRA", //
-        preu: 895
+        preu: 895,
+        img:"ultegra.jpg"
     },
     {
         nom: "Sram RED AXS 12v", //
-        preu: 2920
+        preu: 2920,
+        img:"redaxs.jpg"
     },
     {
         nom: "Sram FROCE AXS 12v", //
-        preu: 2165
+        preu: 2165,
+        img:"forceaxs.jpg"
     },
     {
         nom: "Campagnolo Super Record EPS", //disc 140 + 160
-        preu: 3952
+        preu: 3952,
+        img:"superrecordeps.jpg"
     },
     {
         nom: "Campagnolo Super Record", //disc 160 + 160
-        preu: 2256
+        preu: 2256,
+        img:"superrecord.jpg"
     },
     {
         nom: "Campagnolo Record", //disc 160 + 160
-        preu: 1877
+        preu: 1877,
+        img:"record.jpg"
     },
     {
         nom: "Campagnolo Chorus", //disc 160 + 160
-        preu: 1435
+        preu: 1435,
+        img:"chorus.jpg"
     }
 
 ];
@@ -2065,6 +2108,7 @@ function preu() {
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1 + part2 + part4 + part5);
         total += preu;
+        cambiGrup();
     }
     if ($("#bieles").val() != "0") {
         preu = JSON.parse($("#bieles").val()).preu;
@@ -2093,6 +2137,7 @@ function preu() {
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1 + part2 + part4 + part5);
         total += preu;
+        cambiSeient();
     }
     if ($("#tija").val() && $("#tija").val() != "0") {
         preu = JSON.parse($("#tija").val()).preu;
@@ -2100,6 +2145,7 @@ function preu() {
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1 + part2 + part4 + part5);
         total += preu;
+        cambiTija();
     }
     if ($("#pedals").val() != "0") {
         preu = JSON.parse($("#pedals").val()).preu;
@@ -2197,7 +2243,39 @@ async function cambiRodes(){
        }
       
 }
-            
+
+async function cambiTija(){
+    if($("#tija").val() != "0"){
+        text= "./images/configuracions/tijes/"+JSON.parse($("#tija").val()).img;
+        $("#img_tija").attr('src',text);
+       }
+       else{
+        $("#img_manillar").attr('src',"./images/configuracions/tijes/blank.jpg");
+       }
+      
+}
+ 
+async function cambiSeient(){
+    if($("#seient").val() != "0"){
+        text= "./images/configuracions/seients/"+JSON.parse($("#seient").val()).img;
+        $("#img_seient").attr('src',text);
+       }
+       else{
+        $("#img_manillar").attr('src',"./images/configuracions/seients/blank.jpg");
+       }
+      
+}
+
+async function cambiGrup(){
+    if($("#grup").val() != "0"){
+        text= "./images/configuracions/grups/"+JSON.parse($("#grup").val()).img;
+        $("#img_grup").attr('src',text);
+       }
+       else{
+        $("#img_magrup").attr('src',"./images/configuracions/grups/blank.jpg");
+       }
+      
+}
        
 
 function esconde() {
