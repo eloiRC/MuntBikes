@@ -1537,43 +1537,58 @@ t_forquilla = [{
 
 t_portabido = [{
         nom: "Tune WASSERTRÄGER 2.0", //
-        preu: 56
+        preu: 56,
+        img:"tune.jpg"
     },
     {
         nom: "Tune RECHTSTRÄGER", //
-        preu: 56
+        preu: 56,
+        img:"tune2.jpg"
     },
     {
         nom: "Most wings carbon 1k", //
-        preu: 52
+        preu: 52,
+        img:"most.jpg"
     },
     {
         nom: "Syncros Carbon 1.0", //
-        preu: 65
+        preu: 65,
+        img:"syncros.jpg"
     },
     {
         nom: "Syncros Tailor MB cage multiHerramientas", //
-        preu: 55
+        preu: 55,
+        img:"syncrostools.jpg"
     },
     {
         nom: "Elite Vico carbon", //
-        preu: 28
+        preu: 28,
+        img:"vico.jpg"
     },
     {
         nom: "Elite Rocko carbon", //
-        preu: 30
-    },
-    {
-        nom: "Pro LIGHTWEIGHT", //
-        preu: 52
+        preu: 30,
+        img:"rocko.jpg"
     },
     {
         nom: "LIGHTWEIGHT Edelhelfer", //
-        preu: 92
+        preu: 92,
+        img:"lightweight.jpg"
     },
     {
         nom: "SUPACAZ FLY CAGEZ CARBON", //
-        preu: 59
+        preu: 59,
+        img:"supacaz.jpg"
+    },
+    {
+        nom: "Bianchi Custom Race", //
+        preu: 18,
+        img:"bianchi_custom.jpg"
+    },
+    {
+        nom: "Bianchi Vico Carbon", //
+        preu: 35,
+        img:"bianchi_vico.jpg"
     }
 ];
 
@@ -1679,93 +1694,128 @@ t_bieles_road = [{
     {
         nom: "Stages Campagnolo Record L", //
         preu: 1235,
-        img:"stages_campagnolo.jpg"
+        img:"stages_record.jpg"
     }
 ];
 
 t_bieles_gravel = [{
         nom: "GRX 810 ", //
-        preu: 241
+        preu: 241,
+        img:"grx800.jpg"
     },
     {
         nom: "GRX 600", //
-        preu: 122
+        preu: 122,
+        img:"grx600.jpg"
     },
     {
         nom: "Red AXS", //
-        preu: 700
+        preu: 700,
+        img:"red.jpg"
     },
     {
         nom: "Force AXS", //
-        preu: 435
+        preu: 435,
+        img:"force.jpg"
     },
     {
         nom: "Camapgnolo Ekar", //
-        preu: 0
+        preu: 0,
+        img:"ekar.jpg"
+    },
+    {
+        nom: "XX1", //
+        preu: 571,
+        img:"xx1.jpg"
+    },
+    {
+        nom: "X01", //
+        preu: 435,
+        img:"x01.jpg"
+    },
+    {
+        nom: "GX", //
+        preu: 150,
+        img:"gx.jpg"
     },
     //+potenciometre
     {
         nom: "Stages GRX 810 L", //
-        preu: 640
+        preu: 640,
+        img:"stages_grx_800.jpg"
     },
     {
         nom: "Stages GRX 600 L", //
-        preu: 521
+        preu: 521,
+        img:"stagea_grx_600.jpg"
     },
     {
         nom: "Quarq Red AXS", //
-        preu: 1200
+        preu: 1200,
+        img:"quarq_red.jpg"
     },
     {
         nom: "Quarq Force AXS", //
-        preu: 1034
+        preu: 1034,
+        img:"quarq_force.jpg"
     },
     {
         nom: "Quarq xx1", //
-        preu: 1071
+        preu: 1071,
+        img:"quarq_xx1.jpg"
     }
 ];
 
 t_bieles_mtb = [{
         nom: "XTR", //
-        preu: 487
+        preu: 487,
+        img:"xtr.jpg"
     },
     {
         nom: "XT", //
-        preu: 185
+        preu: 185,
+        img:"xt.jpg"
     },
     {
         nom: "XX1", //
-        preu: 571
+        preu: 571,
+        img:"xx1.jpg"
     },
     {
         nom: "X01", //
-        preu: 435
+        preu: 435,
+        img:"x01.jpg"
     },
     {
         nom: "GX", //
-        preu: 150
+        preu: 150,
+        img:"gx.jpg"
     },
     //+potenciometre
     {
         nom: "Stages XTR LR", //
-        preu: 1199
+        preu: 1199,
+        img:"stages_xtr_lr.jpg"
     },
     {
         nom: "Stages XTR L", //
-        preu: 1016
+        preu: 1016,
+        img:"stages_xtr_l.jpg"
     },
     {
         nom: "Stages XT LR", //
-        preu: 749
+        preu: 749,
+        img:"stages_xt_lr.jpg"
     },
     {
         nom: "Stages XT L", //
-        preu: 584
+        preu: 584,
+        img:"stages_xt_l.jpg"
     },
     {
         nom: "Quarq xx1", //
-        preu: 1071
+        preu: 1071,
+        img:"quarq_xx1.jpg"
     },
 ];
 
@@ -2148,6 +2198,7 @@ function preu() {
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1 + part2 + part4 + part5);
         total += preu;
+        cambiBieles();
     }
     if ($("#frens").val() && $("#frens").val() != "0") {
         preu = JSON.parse($("#frens").val()).preu;
@@ -2216,6 +2267,7 @@ function preu() {
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1 + part2 + part4 + part5);
         total += preu;
+        cambiPortabido();
     }
     if ($("#portabido2").val() != "0") {
         preu = JSON.parse($("#portabido2").val()).preu;
@@ -2223,6 +2275,7 @@ function preu() {
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1 + part2 + part4 + part5);
         total += preu;
+        cambiPortabido2();
     }
     if ($("#pedalier").val() && $("#pedalier").val() != "0") {
         preu = JSON.parse($("#pedalier").val()).preu;
@@ -2344,6 +2397,39 @@ async function cambiPedals(){
        }
       
 }
+
+async function cambiBieles(){
+    if($("#bieles").val() != "0"){
+        text= "./images/configuracions/bieles/"+JSON.parse($("#bieles").val()).img;
+        $("#img_bieles").attr('src',text);
+       }
+       else{
+        $("#img_bieles").attr('src',"./images/configuracions/bieles/blank.jpg");
+       }
+      
+}
+async function cambiPortabido(){
+    if($("#portabido").val() != "0"){
+        text= "./images/configuracions/portabidons/"+JSON.parse($("#portabido").val()).img;
+        $("#img_portabidons").attr('src',text);
+       }
+       else{
+        $("#img_portabidons").attr('src',"./images/configuracions/portabidons/blank.jpg");
+       }
+      
+}
+
+async function cambiPortabido2(){
+    if($("#portabido2").val() != "0"){
+        text= "./images/configuracions/portabidons/"+JSON.parse($("#portabido2").val()).img;
+        $("#img_portabidons2").attr('src',text);
+       }
+       else{
+        $("#img_portabidons2").attr('src',"./images/configuracions/portabidons/blank.jpg");
+       }
+      
+}
+
        
 
 function esconde() {
