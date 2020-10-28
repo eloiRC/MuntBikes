@@ -15,7 +15,7 @@ $(window).on("load", function () {
     document.getElementById("pedals").addEventListener("change", preu);
     document.getElementById("grup").addEventListener("change", preu);
     document.getElementById("frens").addEventListener("change", preu);
-
+    document.getElementById("forquilla").addEventListener("change", preu);
     document.getElementById("tija").addEventListener("change", preu);
     document.getElementById("cinta").addEventListener("change", preu);
     document.getElementById("punys").addEventListener("change", preu);
@@ -281,8 +281,8 @@ t_manillars_road_disc = [{
         img: "creston.jpg"
     },
     {
-        nom: "VISION METRON 5D ACR Bianchi", //
-        preu: 749,
+        nom: "VISION METRON 5D / 6D ACR Bianchi", //
+        preu: 649,
         img: "metron.jpg"
     },
     {
@@ -343,8 +343,8 @@ t_manillars_road = [{
         img: "jaguar.jpg"
     },
     {
-        nom: "VISION METRON 5D Bianchi", //
-        preu: 749,
+        nom: "VISION METRON 5D / 6D  Bianchi", //
+        preu: 649,
         img: "metron_rim.jpg"
     },
     {
@@ -433,6 +433,11 @@ t_manillars_gravel = [{
         nom: "MOST JAGUAR 3K",
         preu: 247,
         img: "jaguar.jpg"
+    },
+    {
+        nom: "VISION METRON 5D / 6D  Bianchi", //
+        preu: 649,
+        img: "metron_rim.jpg"
     },
     {
         nom: "ZIPP SL AERO + SPEED",
@@ -921,41 +926,50 @@ t_tijes_road = [{
 
 t_cinta = [{
         nom: "SUPACAZ",
-        preu: 43
+        preu: 43,
+        img:"supacaz.jpg"
     },
     {
         nom: "LIZZARD",
-        preu: 33
+        preu: 34,
+        img:"lizzard.jpg"
     },
     {
         nom: "MOST UltraGrip EVO",
-        preu: 24
+        preu: 25,
+        img:"ultragrip.jpg"
     },
     {
         nom: "MOST UltraLight",
-        preu: 15
+        preu: 20,
+        img:"bernal.jpg"
     },
     {
         nom: "Pro",
-        preu: 14
+        preu: 14,
+        img:"pro.jpg"
     },
     {
-        nom: "Bianchi Dots",
-        preu: 25
+        nom: "Bianchi Drops",
+        preu: 25,
+        img:"drops.jpg"
     }
 ];
 
 t_punys = [{
         nom: "ESIGRIPS",
-        preu: 17
+        preu: 17,
+        img:"esi.jpg"
     },
     {
         nom: "RITCHEY WCS",
-        preu: 12
+        preu: 12,
+        img:"ritchey.jpg"
     },
     {
         nom: "MOMUM",
-        preu: 17
+        preu: 17,
+        img:"momum.jpg"
     }
 ];
 
@@ -1999,21 +2013,33 @@ function modalitat() {
 
         //pneumatics mtb
         pneumatic(t_pneumatics_mtb)
-
-
-
         tijes(t_tijes_mtb);
-
         portabido()
-
-
         //img
         carregar_image(["scale_nino.jpg", "n1no.jpg", "spark_ultimate.jpg", "methanol_cv.jpg", "methanol_fs.jpg"])
     }
 
-
-
+    blank();
 };
+
+function blank(){
+    $("#img_quadre").attr('src', "./images/configuracions/quadres/blank.jpg");
+    $("#img_manillar").attr('src', "./images/configuracions/manillars/blank.jpg");
+    $("#img_rodes").attr('src', "./images/configuracions/rodes/blank.jpg");
+    $("#img_grup").attr('src', "./images/configuracions/grups/blank.jpg");
+    $("#img_bieles").attr('src', "./images/configuracions/bieles/blank.jpg");
+    $("#img_frens").attr('src', "./images/configuracions/frens/blank.jpg");
+    $("#img_forquilla").attr('src', "./images/configuracions/forquilles/blank.jpg");
+    $("#img_seients").attr('src', "./images/configuracions/seients/blank.jpg");
+    $("#img_tija").attr('src', "./images/configuracions/tijes/blank.jpg");
+    $("#img_pedals").attr('src', "./images/configuracions/pedals/blank.jpg");
+    $("#img_cinta").attr('src', "./images/configuracions/cinta/blank.jpg");
+    $("#img_punys").attr('src', "./images/configuracions/punys/blank.jpg");
+    $("#img_portabidons").attr('src', "./images/configuracions/portabidons/blank.jpg");
+    $("#img_portabidons2").attr('src', "./images/configuracions/portabidons/blank.jpg");
+
+    
+}
 
 //carregar quadre
 function quadre(t_quadre) {
@@ -2265,6 +2291,10 @@ function preu() {
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1 + part2 + part4 + part5);
         total += preu;
+        cambiCinta();
+    }
+    else {
+        $("#img_cinta").attr('src', "./images/configuracions/cinta/blank.jpg");
     }
     if ($("#punys").val() && $("#punys").val() != "0") {
         preu = JSON.parse($("#punys").val()).preu;
@@ -2272,6 +2302,10 @@ function preu() {
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1 + part2 + part4 + part5);
         total += preu;
+        cambiPunys();
+    }
+    else {
+        $("#img_punys").attr('src', "./images/configuracions/punys/blank.jpg");
     }
     if ($("#pneumatics").val() != "0") {
         preu = JSON.parse($("#pneumatics").val()).preu;
@@ -2380,6 +2414,16 @@ async function cambiPortabido() {
 async function cambiPortabido2() {
     text = "./images/configuracions/portabidons/" + JSON.parse($("#portabido2").val()).img;
     $("#img_portabidons2").attr('src', text);
+}
+
+async function cambiCinta() {
+    text = "./images/configuracions/cinta/" + JSON.parse($("#cinta").val()).img;
+    $("#img_cinta").attr('src', text);
+}
+
+async function cambiPunys() {
+    text = "./images/configuracions/punys/" + JSON.parse($("#punys").val()).img;
+    $("#img_punys").attr('src', text);
 }
 
 
