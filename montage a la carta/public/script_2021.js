@@ -3,34 +3,66 @@ dades_clinet = false;
 
 $(window).on("load", function () {
     $("#invoice").hide();
-
-    document.getElementById("textBtn").addEventListener("click", hidetext)
     esconde();
+    document.getElementById("textBtn").addEventListener("click", hidetext)
     document.getElementById("darkMode").addEventListener("click", toggleDarkMode)
-    document.getElementById("pdf").addEventListener("click", generatePDF)
-    document.getElementById("modalitat").addEventListener("change", modalitat)
-    document.getElementById("quadre").addEventListener("change", preu);
-    document.getElementById("rodes").addEventListener("change", preu);
-    document.getElementById("manillar").addEventListener("change", preu);
-    document.getElementById("pedals").addEventListener("change", preu);
-    document.getElementById("grup").addEventListener("change", preu);
-    document.getElementById("frens").addEventListener("change", preu);
-    document.getElementById("forquilla").addEventListener("change", preu);
-    document.getElementById("tija").addEventListener("change", preu);
-    document.getElementById("cinta").addEventListener("change", preu);
-    document.getElementById("punys").addEventListener("change", preu);
-    document.getElementById("seient").addEventListener("change", preu);
-    document.getElementById("bieles").addEventListener("change", preu);
-    document.getElementById("pneumatics").addEventListener("change", preu);
-    document.getElementById("portabido").addEventListener("change", preu);
-    document.getElementById("portabido2").addEventListener("change", preu);
-    document.getElementById("pedalier").addEventListener("change", preu);
-    document.getElementById("roldanes").addEventListener("change", preu);
     document.getElementById("quadre").addEventListener("change", info);
     document.getElementById("nom").addEventListener("change", dades_modificades);
     document.getElementById("cognom").addEventListener("change", dades_modificades);
     document.getElementById("tel").addEventListener("change", dades_modificades);
     document.getElementById("mail").addEventListener("change", dades_modificades);
+    document.getElementById("modalitat").addEventListener("change", modalitat)
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const x = urlParams.get('x');
+    console.log(x)
+    if(x=="intern"){
+        $("#pdf").show();
+        document.getElementById("pdf").addEventListener("click", generatePDF)
+        document.getElementById("quadre").addEventListener("change", preu);
+        document.getElementById("rodes").addEventListener("change", preu);
+        document.getElementById("manillar").addEventListener("change", preu);
+        document.getElementById("pedals").addEventListener("change", preu);
+        document.getElementById("grup").addEventListener("change", preu);
+        document.getElementById("frens").addEventListener("change", preu);
+        document.getElementById("forquilla").addEventListener("change", preu);
+        document.getElementById("tija").addEventListener("change", preu);
+        document.getElementById("cinta").addEventListener("change", preu);
+        document.getElementById("punys").addEventListener("change", preu);
+        document.getElementById("seient").addEventListener("change", preu);
+        document.getElementById("bieles").addEventListener("change", preu);
+        document.getElementById("pneumatics").addEventListener("change", preu);
+        document.getElementById("portabido").addEventListener("change", preu);
+        document.getElementById("portabido2").addEventListener("change", preu);
+        document.getElementById("pedalier").addEventListener("change", preu);
+        document.getElementById("roldanes").addEventListener("change", preu);
+    }
+    else{
+        $("#pdf").hide();
+        $("#btn-box").removeClass("justify-content-between")
+        $("#btn-box").addClass("justify-content-end")
+        
+        document.getElementById("quadre").addEventListener("change", preu2);
+        document.getElementById("rodes").addEventListener("change", preu2);
+        document.getElementById("manillar").addEventListener("change", preu2);
+        document.getElementById("pedals").addEventListener("change", preu2);
+        document.getElementById("grup").addEventListener("change", preu2);
+        document.getElementById("frens").addEventListener("change", preu2);
+        document.getElementById("forquilla").addEventListener("change", preu2);
+        document.getElementById("tija").addEventListener("change", preu2);
+        document.getElementById("cinta").addEventListener("change", preu2);
+        document.getElementById("punys").addEventListener("change", preu2);
+        document.getElementById("seient").addEventListener("change", preu2);
+        document.getElementById("bieles").addEventListener("change", preu2);
+        document.getElementById("pneumatics").addEventListener("change", preu2);
+        document.getElementById("portabido").addEventListener("change", preu2);
+        document.getElementById("portabido2").addEventListener("change", preu2);
+        document.getElementById("pedalier").addEventListener("change", preu2);
+        document.getElementById("roldanes").addEventListener("change", preu2);
+    }
+    
+    
+    
     $("#formulari_a_la_carta").submit(function (e) {
         e.preventDefault();
         enviar();
@@ -1759,7 +1791,7 @@ t_bieles_gravel = [{
     {
         nom: "Stages GRX 600 L", //
         preu: 521,
-        img: "stagea_grx_600.jpg"
+        img: "stages_grx_600.jpg"
     },
     {
         nom: "Quarq Red AXS", //
@@ -2840,3 +2872,165 @@ function dades_modificades() {
     $("#dades_client").empty();
     dades_clinet = false;
 }
+
+function preu2() {
+    $("#desglos").empty();
+    let total = 0;
+    let part1 = '<div class="d-flex justify-content-start row px-3 py-1 l">';
+    let part2 = "";
+    let part5 = "</div>"
+
+    if ($("#quadre").val() != "0") {
+        preu = JSON.parse($("#quadre").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Cuadro: </div><div class="font-weight-bold">' + JSON.parse($("#quadre").val()).nom + '</div>';
+        $("#desglos").append(part1 + part2 + part5);
+        total += preu;
+        cambiQuadre();
+    } else {
+        $("#img_quadre").attr('src', "./images/configuracions/quadres/blank.jpg");
+    }
+
+    if ($("#manillar").val() != "0") {
+        preu = JSON.parse($("#manillar").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2" >Manillar: </div><div class="font-weight-bold">' + JSON.parse($("#manillar").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+        cambiManillar();
+    } else {
+        $("#img_manillar").attr('src', "./images/configuracions/manillars/blank.jpg");
+    }
+    if ($("#rodes").val() != "0") {
+        preu = JSON.parse($("#rodes").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Ruedas: </div><div class="font-weight-bold">'+ JSON.parse($("#rodes").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+        cambiRodes();
+    } else {
+        $("#img_rodes").attr('src', "./images/configuracions/rodes/blank.jpg");
+    }
+    if ($("#grup").val() != "0") {
+        preu = JSON.parse($("#grup").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Grupo: </div><div class="font-weight-bold">'+JSON.parse($("#grup").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+        cambiGrup();
+    } else {
+        $("#img_grup").attr('src', "./images/configuracions/grups/blank.jpg");
+    }
+    if ($("#bieles").val() != "0") {
+        preu = JSON.parse($("#bieles").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Bielas: </div><div class="font-weight-bold">'+ JSON.parse($("#bieles").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+        cambiBieles();
+    } else {
+        $("#img_bieles").attr('src', "./images/configuracions/bieles/blank.jpg");
+    }
+    if ($("#frens").val() && $("#frens").val() != "0") {
+        preu = JSON.parse($("#frens").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate">Frenos: </div><div class="font-weight-bold">'+ JSON.parse($("#frens").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+        cambiFrens();
+    } else {
+        $("#img_frens").attr('src', "./images/configuracions/frens/blank.jpg");
+    }
+    if ($("#forquilla").val() && $("#forquilla").val() != "0") {
+        preu = JSON.parse($("#forquilla").val()).preu
+        part2 = '<div class=" pr-0 text-truncate mr-2">Horquilla: </div><div class="font-weight-bold">'+ JSON.parse($("#forquilla").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+        cambiForquilla();
+    } else {
+        $("#img_forquilla").attr('src', "./images/configuracions/forquilles/blank.jpg");
+    }
+    if ($("#seient").val() != "0") {
+        preu = JSON.parse($("#seient").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Sillin: </div><div class="font-weight-bold">' +JSON.parse($("#seient").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+        cambiSeient();
+    } else {
+        $("#img_seients").attr('src', "./images/configuracions/seients/blank.jpg");
+    }
+    if ($("#tija").val() && $("#tija").val() != "0") {
+        preu = JSON.parse($("#tija").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Tija: </div><div class="font-weight-bold">' + JSON.parse($("#tija").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+        cambiTija();
+    } else {
+        $("#img_tija").attr('src', "./images/configuracions/tijes/blank.jpg");
+    }
+    if ($("#pedals").val() != "0") {
+        preu = JSON.parse($("#pedals").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Pedales: </div><div class="font-weight-bold">'+ JSON.parse($("#pedals").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+        cambiPedals();
+    } else {
+        $("#img_pedals").attr('src', "./images/configuracions/pedals/blank.jpg");
+    }
+    if ($("#cinta").val() && $("#cinta").val() != "0") {
+        preu = JSON.parse($("#cinta").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Cinta: </div><div class="font-weight-bold">'+JSON.parse($("#cinta").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+        cambiCinta();
+    }
+    else {
+        $("#img_cinta").attr('src', "./images/configuracions/cinta/blank.jpg");
+    }
+    if ($("#punys").val() && $("#punys").val() != "0") {
+        preu = JSON.parse($("#punys").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Puños: </div><div class="font-weight-bold">'+JSON.parse($("#punys").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+        cambiPunys();
+    }
+    else {
+        $("#img_punys").attr('src', "./images/configuracions/punys/blank.jpg");
+    }
+    if ($("#pneumatics").val() != "0") {
+        preu = JSON.parse($("#pneumatics").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Neumaticos: </div><div class="font-weight-bold">'+ JSON.parse($("#pneumatics").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+    }
+    if ($("#portabido").val() != "0") {
+        preu = JSON.parse($("#portabido").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Portabidon: </div><div class="font-weight-bold">' + JSON.parse($("#portabido").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+        cambiPortabido();
+    } else {
+        $("#img_portabidons").attr('src', "./images/configuracions/portabidons/blank.jpg");
+    }
+    if ($("#portabido2").val() != "0") {
+        preu = JSON.parse($("#portabido2").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Segundo Portabidon: </div><div class="font-weight-bold">' + JSON.parse($("#portabido2").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+        cambiPortabido2();
+    } else {
+        $("#img_portabidons2").attr('src', "./images/configuracions/portabidons/blank.jpg");
+    }
+    if ($("#pedalier").val() && $("#pedalier").val() != "0") {
+        preu = JSON.parse($("#pedalier").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Pedalier: </div><div class="font-weight-bold">' + JSON.parse($("#pedalier").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+    }
+    if ($("#roldanes").val() && $("#roldanes").val() != "0") {
+        preu = JSON.parse($("#roldanes").val()).preu;
+        part2 = '<div class=" pr-0 text-truncate mr-2">Roldanas: </div><div class="font-weight-bold">' + JSON.parse($("#roldanes").val()).nom + '</div>'
+        $("#desglos").append(part1 + part2  + part5);
+        total += preu;
+    }
+
+
+
+    $("#total").text(total);
+    $('#card-desglose').show();
+
+};

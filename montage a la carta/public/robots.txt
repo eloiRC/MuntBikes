@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /llibreries
+Disallow: /llibreries/*
+Disallow: x
+Disallow: x.html
+Disallow: ?x=intern
 
 Sitemap: http://configurador.muntbikes.com/sitemap.xml
