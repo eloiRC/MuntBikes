@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="configurador de bicicletas de muntbikes, monta tu propia bici pieza a pieza y contactanos para saber el mejor precio">
+    <meta name="keywords" content="configurador de bicicletas, configurador de bicis, configurador, continental, bici a medida, bici a piezas, shimano, sram, campagnolo, carbon-ti, enve, megamo, colnago, bicicleta, quadro, cuadro,a medida, a la carta, personalizada, scott, pinarello, bianchi, celeste, muntbikes, gama alta, presupuesto, vale, precio, ruedas, xr4, xr3, carbono, f12, specialissima, addict, fox, eagle, dura-ace, red, axs, e-tap, ultegra, super record, n1no, nino, ineos, lightweight, ceramic speed, jumbo "/>
+    <meta name="copyright" content="MuntBikes" />
+    <meta name="robots" content="index,follow"/>
+    <meta content="/images/muntbikes.jpg" itemprop="image">
+    <link rel="canonical" href="https://configurador.muntbikes.com"/>
+    <title>A la carta by MuntBikes</title>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+		integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
+    <link rel="stylesheet"  href="./llibrerias/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./llibrerias/fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon50x50.png">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="apple-touch-icon" type="image/png" href="/favicon50x50.png">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "https://configurador.munrbikes.com",
+          "logo": "https://configurador.munrbikes.com/images/logo.png"
+        }
+        </script>
+        <link rel="preconnect" href="https://firebaseinstallations.googleapis.com">
+        <link rel="preconnect" href="https://firebaseremoteconfig.googleapis.com">
+</head>
+
+<body>
+    <script>
+    window.location.replace(window.location.origin+"?x=intern");
+    
+    </script>
+    
+
+</body>
+
+</html>
