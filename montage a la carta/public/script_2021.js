@@ -1,6 +1,8 @@
 //window.location.replace("https://configurador-muntbikes.web.app");
 dades_clinet = false;
 
+var x;
+
 $(window).on("load", function () {
     $("#invoice").hide();
     esconde();
@@ -14,11 +16,11 @@ $(window).on("load", function () {
     document.getElementById("modalitat").addEventListener("change", modalitat)
 
     const urlParams = new URLSearchParams(window.location.search);
-    const x = urlParams.get('x');
+    x = urlParams.get('x');
     console.log(x)
     if(x=="intern"){
-        $("#pdf").show();
-        document.getElementById("pdf").addEventListener("click", generatePDF)
+        
+        document.getElementById("pdf").addEventListener("click", generatePDF);
         document.getElementById("quadre").addEventListener("change", preu);
         document.getElementById("rodes").addEventListener("change", preu);
         document.getElementById("manillar").addEventListener("change", preu);
@@ -38,10 +40,7 @@ $(window).on("load", function () {
         document.getElementById("roldanes").addEventListener("change", preu);
     }
     else{
-        $("#pdf").hide();
-        $("#btn-box").removeClass("justify-content-between")
-        $("#btn-box").addClass("justify-content-end")
-        
+        document.getElementById("pdf").addEventListener("click", generatePDF);        
         document.getElementById("quadre").addEventListener("change", preu2);
         document.getElementById("rodes").addEventListener("change", preu2);
         document.getElementById("manillar").addEventListener("change", preu2);
@@ -2653,7 +2652,13 @@ async function generatePDF() {
     $("#print").empty();
     $("#data").empty();
     $("#logo_marca").empty();
-    $("#print").append(print());
+    if(x=="intern"){
+        $("#print").append(print());
+    }
+    else{
+        $("#print").append(print2());
+    }
+    
     $("#invoice").show()
     const element = document.getElementById("invoice");
     date = new Date();
@@ -3033,4 +3038,186 @@ function preu2() {
     $("#total").text(total);
     $('#card-desglose').show();
 
+};
+
+function print2() {
+    let modalitat;
+    if ($("#modalitat").val() != null) {
+        switch ($("#modalitat").val()) {
+            case "road_disc":
+                modalitat = "Carretera disco"
+                break;
+            case "road_rim":
+                modalitat = "Carretera"
+                break;
+            case "gravel":
+                modalitat = "Gravel / CX"
+                break;
+            case "mtb":
+                modalitat = "MTB"
+                break;
+            default:
+                "0"
+                break;
+        }
+
+    }
+    //imatge al pdf
+    if ($("#quadre").val() != null || $("#quadre").val() != 0) {
+        img_marca = "";
+        switch (JSON.parse($("#quadre").val()).marca) {
+            case "scott":
+                img_marca = "./images/marcas/scott.png"
+                break;
+            case "bianchi":
+                img_marca = "./images/marcas/bianchi.png"
+                break;
+            case "pinarello":
+                img_marca = "./images/marcas/pinarello.png"
+                break;
+            case "colnago":
+                img_marca = "./images/marcas/colnago.png"
+                break;
+        }
+        img_html = '<img src="' + img_marca + '" alt="" class="img-fluid"></img>'
+        $("#logo_marca").append(img_html);
+    }
+
+    let total = 0;
+    let part1 = '<div class="d-flex justify-content-around row">';
+    let part2 = "";
+    let part3 = '.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................'
+    let part4 = "";
+    let part5 = "</div>"
+
+    date = new Date()
+    date_html = '<p class="mb-0 p2">Configuracion hecha el ' + date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + '</p>';
+    date.setMonth(date.getMonth() + 1);
+    date_html_fi = '<p class="mb-0 p2">Oferta valida hasta el ' + date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + '</p> <br>';
+    $("#data").append(date_html);
+    $("#data").append(date_html_fi);
+    modalitat_html = '<p class="h6">Modalidad:<span class="h5 float-right"> ' + modalitat + '</span></p><div class="col-12 border border-bottom border-dark"></div><br>';
+    $("#print").append(modalitat_html);
+
+    if ($("#quadre").val() != "0") {
+        preu = JSON.parse($("#quadre").val()).preu;
+        part2 = '<div class="col-12  pr-0 text-truncate">Cuadro: <span class="font-weight-bold ">' + JSON.parse($("#quadre").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+
+    if ($("#manillar").val() != "0") {
+        preu = JSON.parse($("#manillar").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate" >Manillar: <span class="font-weight-bold ">' + JSON.parse($("#manillar").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#rodes").val() != "0") {
+        preu = JSON.parse($("#rodes").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate">Ruedas: <span class="font-weight-bold ">' + JSON.parse($("#rodes").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#grup").val() != "0") {
+        preu = JSON.parse($("#grup").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate">Grupo: <span class="font-weight-bold ">' + JSON.parse($("#grup").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#bieles").val() != "0") {
+        preu = JSON.parse($("#bieles").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate">Bielas: <span class="font-weight-bold">' + JSON.parse($("#bieles").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#frens").val() && $("#frens").val() != "0") {
+        preu = JSON.parse($("#frens").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate">Frenos: <span class="font-weight-bold ">' + JSON.parse($("#frens").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#forquilla").val() && $("#forquilla").val() != "0") {
+        preu = JSON.parse($("#forquilla").val()).preu
+        part2 = '<div class="col-10 pr-0 text-truncate">Horquilla: <span class="font-weight-bold ">' + JSON.parse($("#forquilla").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#seient").val() != "0") {
+        preu = JSON.parse($("#seient").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate">Sillin: <span class="font-weight-bold ">' + JSON.parse($("#seient").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#tija").val() && $("#tija").val() != "0") {
+        preu = JSON.parse($("#tija").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate">Tija: <span class="font-weight-bold ">' + JSON.parse($("#tija").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#pedals").val() != "0") {
+        preu = JSON.parse($("#pedals").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate">Pedales: <span class="font-weight-bold ">' + JSON.parse($("#pedals").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#cinta").val() && $("#cinta").val() != "0") {
+        preu = JSON.parse($("#cinta").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate">Cinta: <span class="font-weight-bold ">' + JSON.parse($("#cinta").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#punys").val() && $("#punys").val() != "0") {
+        preu = JSON.parse($("#punys").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate">Puños: <span class="font-weight-bold ">' + JSON.parse($("#punys").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#pneumatics").val() != "0") {
+        preu = JSON.parse($("#pneumatics").val()).preu;
+        part2 = '<div class="col-10 text-truncate">Neumaticos: <span class="font-weight-bold ">' + JSON.parse($("#pneumatics").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#portabido").val() != "0") {
+        preu = JSON.parse($("#portabido").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate">Portabidon: <span class="font-weight-bold ">' + JSON.parse($("#portabido").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#portabido2").val() != "0") {
+        preu = JSON.parse($("#portabido2").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate">Segundo Portabidon: <span class="font-weight-bold ">' + JSON.parse($("#portabido2").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#pedalier").val() && $("#pedalier").val() != "0") {
+        preu = JSON.parse($("#pedalier").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate">Pedalier: <span class="font-weight-bold ">' + JSON.parse($("#pedalier").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+    if ($("#roldanes").val() && $("#roldanes").val() != "0") {
+        preu = JSON.parse($("#roldanes").val()).preu;
+        part2 = '<div class="col-10 pr-0 text-truncate">Roldanas: <span class="font-weight-bold ">' + JSON.parse($("#roldanes").val()).nom + '</span>  </div>';
+        $("#print").append(part1 + part2 + part5);
+        total += preu;
+    }
+
+    textPreu = '<br><div class=" rounded-lg px-2 py-1 bg-primary text-white float-right font-weight-bold" >Total: <span id="total2">' + total + '</span> €</div><br>'
+    $("#print").append(textPreu);
+
+    if (!dades_clinet) {
+        if ($("#nom").val() != "0" && $("#cognom").val() != "0") {
+            d = '<p>Nombre: <span class="font-weight-bold text-capitalize">' + $("#nom").val() + ' ' + $("#cognom").val() + '</span></p>' + '<p>Telefon: <span class="font-weight-bold text-capitalize">' + $("#tel").val() + '</span></p>' + '<p>Correo: <span class="font-weight-bold">' + $("#mail").val() + '</span></p>'
+            $("#dades_client").append(d);
+
+
+        } else {
+            d = '<p>Nombre: </p>' + '<p>Telefon: </p>' + '<p>Correo: </p>'
+            $("#dades_client").append(d);
+
+
+        }
+        dades_clinet = true;
+    }
 };
