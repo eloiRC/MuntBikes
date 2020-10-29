@@ -1390,17 +1390,17 @@ t_frens = [{
 
 t_pedals_road = [{
         nom: "Dura-Ace", //
-        preu: 215,
+        preu: 249,
         img: "duraace.jpg"
     },
     {
         nom: "Ultegra", //
-        preu: 135,
+        preu: 140,
         img: "ultegra.jpg"
     },
     {
         nom: "105", //
-        preu: 104,
+        preu: 110,
         img: "105.jpg"
     },
     {
@@ -1437,12 +1437,12 @@ t_pedals_road = [{
 
 t_pedals_mtb = [{
         nom: "XTR", //
-        preu: 130,
+        preu: 135,
         img: "xtr.jpg"
     },
     {
         nom: "XT", //
-        preu: 85,
+        preu: 88,
         img: "xt.jpg"
     },
     {
