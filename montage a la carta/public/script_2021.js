@@ -18,7 +18,7 @@ $(window).on("load", function () {
     const urlParams = new URLSearchParams(window.location.search);
     x = urlParams.get('x');
     console.log(x)
-    if(x=="intern"){
+    if(x=="2011d48f3f831aefd45f9f015cbbc40d"){
         
         document.getElementById("pdf").addEventListener("click", generatePDF);
         document.getElementById("quadre").addEventListener("change", preu);
@@ -2652,7 +2652,7 @@ async function generatePDF() {
     $("#print").empty();
     $("#data").empty();
     $("#logo_marca").empty();
-    if(x=="intern"){
+    if(x=="2011d48f3f831aefd45f9f015cbbc40d"){
         $("#print").append(print());
     }
     else{

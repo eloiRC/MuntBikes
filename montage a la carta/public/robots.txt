@@ -3,6 +3,6 @@ Allow: /
 Disallow: /llibreries/*
 Disallow: x
 Disallow: x.html
-Disallow: ?x=intern
+Disallow: ?x=2011d48f3f831aefd45f9f015cbbc40d
 
 Sitemap: http://configurador.muntbikes.com/sitemap.xml
