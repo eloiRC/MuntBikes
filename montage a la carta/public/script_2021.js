@@ -953,6 +953,11 @@ t_tijes_road = [{
         preu: 308,
         img: "t_lightweight.jpg"
     },
+    {
+        nom: "Bike Ahead TheSeatPost",
+        preu: 299,
+        img: "theseatpost.jpg"
+    },
 ];
 
 t_cinta = [{
@@ -1512,6 +1517,11 @@ t_tijes_mtb = [{
         nom: "TUNE", //
         preu: 229,
         img: "t_tune.jpg"
+    },
+    {
+        nom: "Bike Ahead TheSeatPost",
+        preu: 299,
+        img: "theseatpost.jpg"
     },
     {
         nom: "OnOff Peak", //
