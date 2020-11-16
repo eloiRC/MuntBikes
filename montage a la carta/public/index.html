@@ -391,12 +391,27 @@
     // Get the Analytics service for the default app
     const analytics = firebase.analytics();
 
-    $("#enviar").click(function(){
-        analytics.logEvent('click', {
-    name: 'enviar correo',
-    content_id: 'correo'
-});
+    document.getElementById("quadre").addEventListener("change", function(){
+        analytics.logEvent('quadre', { name: JSON.parse($("#quadre").val()).nom});
+    });
+    document.getElementById("rodes").addEventListener("change", function(){
+        analytics.logEvent('rodes', { name: JSON.parse($("#rodes").val()).nom});
+    });
+    document.getElementById("grup").addEventListener("change", function(){
+        analytics.logEvent('grup', { name: JSON.parse($("#grup").val()).nom});
+    });
+    document.getElementById("modalitat").addEventListener("change", function(){
+        analytics.logEvent('modalitat', { name: $("#modalitat").val()});
     })
+
+    window.onbeforeunload = function(){
+        if ($("#total").html()>0) {
+            analytics.logEvent('total', { name: $("#total").html()});
+        }
+   
+}
+
+    
 
 </script>
     
