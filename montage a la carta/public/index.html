@@ -309,7 +309,7 @@
                                 placeholder="666777666">
                         </div>
                         <div class="float-right">
-                            <button type="submit" class="btn btn-lg btn-success" aria-label="Enviar Correo" id="enviar" >Enviar</button>
+                            <button class="btn btn-lg btn-success" aria-label="Enviar Correo" id="enviar" >Enviar</button>
                         </div>
                         
                     </div>
@@ -403,12 +403,18 @@
     document.getElementById("modalitat").addEventListener("change", function(){
         analytics.logEvent('modalitat', { name: $("#modalitat").val()});
     })
+    $("#enivar").click( function(){
+        analytics.logEvent('enviat');
+    })
+    $("#pdf").click(function(){
+        analytics.logEvent('pdf_generate');
+    })
 
     window.onbeforeunload = function(){
-        if ($("#total").html()>0) {
+        if (parseInt($("#total").html())>0) {
             analytics.logEvent('total', { name: $("#total").html()});
         }
-   
+  
 }
 
     
