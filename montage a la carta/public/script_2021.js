@@ -1,7 +1,7 @@
 //window.location.replace("https://configurador-muntbikes.web.app");
 dades_clinet = false;
 
-var x;
+let x;
 
 $(window).on("load", function () {
     $("#invoice").hide();
@@ -2494,15 +2494,17 @@ function info() {
 
 
 
-function enviar() {
+ function enviar() {
+
     if ($("#quadre").val() != "0" && $("#quadre").val() != null) {
         quadre = JSON.parse($("#quadre").val()).nom
     }
+    correus=["comercial@muntbikes.com"]
     Email.send({
         SecureToken: "e73157c6-e8cb-4301-8f40-838dc3f6e2b4",
-        To: 'comercial@muntbikes.com',
+        To: correus,
         From: "configurador.muntbikes@gmail.com",
-        Subject: "Configuracio " + quadre + "",
+        Subject:  $("#nom").val()+' '+$("#cognom").val() +" - Configuracio "+ quadre + "",
         Body: configuracio()
     }).then(function (message) {
         alert('Correo Enviado')
@@ -2513,103 +2515,107 @@ function enviar() {
 
 
 function configuracio() {
-    let modallitat;
+    let modalitat;
     if ($("#modalitat").val() != null) {
         modalitat = $("#modalitat").val()
     }
-
+    bold1="<span style='font-weight: bold;'>"
+    bold2="</span>"
     tx = '<html><body><style>table, th, td {border: 1px solid black;border-collapse: collapse;}th, td {padding: 15px;}</style>'
     tx += '<table style="width:100%">';
-    tx += "<tr><td>Nom: " + $("#nom").val() +
-        "</td></tr><tr><td>Cognom: " +
+    tx += "<tr style='font-size:150%'><td>Nom: " + $("#nom").val() +
+        "</td></tr><tr style='font-size:150%'><td>Cognom: " +
         $("#cognom").val() +
-        "</td></tr><tr><td>Email: " +
+        "</td></tr><tr style='font-size:150%'><td>Email: " +
         $("#mail").val() +
-        "</td></tr><tr><td>Telefon:" +
+        "</td></tr><tr style='font-size:150%'><td>Telefon:" +
         $("#tel").val() +
-        "</td></tr><tr><td>Comentaris: " +
+        "</td></tr><tr style='font-size:150%'><td>Comentaris: " +
         $("#comentaris").val() +
-        "</td></tr><tr><td>Estatura: " +
+        "</td></tr><tr style='font-size:150%'><td>Estatura: " +
         $("#estatura").val() +
         "</td></tr>";
 
 
 
     tx += "<tr><td></td></tr>"
-    tx += "<tr><td>Modalitat: " + modalitat;
-    tx += "</td></tr><tr><td>Quadre: "
+    tx += "<tr><td>Modalitat: "+bold1 + modalitat;
     if ($("#quadre").val() && $("#quadre").val() != null) {
-        tx += JSON.parse($("#quadre").val()).nom
-        quadre = JSON.parse($("#quadre").val()).nom
+    tx +=bold2+ "</td></tr><tr><td>Quadre: "+bold1   
+        tx += JSON.parse($("#quadre").val()).nom+bold2;
+        
     }
-    tx += "</td></tr><tr><td>Rodes: "
     if ($("#rodes").val() && $("#rodes").val() != "0") {
-        tx += JSON.parse($("#rodes").val()).nom
+    tx += "</td></tr><tr><td>Rodes: "+bold1    
+        tx += JSON.parse($("#rodes").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Grup: "
     if ($("#grup").val() && $("#grup").val() != "0") {
-        tx += JSON.parse($("#grup").val()).nom
+    tx += "</td></tr><tr><td>Grup: "+bold1    
+        tx += JSON.parse($("#grup").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Bieles: "
     if ($("#bieles").val() && $("#bieles").val() != "0") {
-        tx += JSON.parse($("#bieles").val()).nom
+    tx += "</td></tr><tr><td>Bieles: "+bold1    
+        tx += JSON.parse($("#bieles").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Manillar: "
     if ($("#manillar").val() && $("#manillar").val() != "0") {
-        tx += JSON.parse($("#manillar").val()).nom
+    tx += "</td></tr><tr><td>Manillar: "+bold1    
+        tx += JSON.parse($("#manillar").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Seient: "
     if ($("#seient").val() && $("#seient").val() != "0") {
-        tx += JSON.parse($("#seient").val()).nom
+    tx += "</td></tr><tr><td>Seient: "+bold1    
+        tx += JSON.parse($("#seient").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Pneumatics: "
     if ($("#pneumatics").val() && $("#pneumatics").val() != "0") {
-        tx += JSON.parse($("#pneumatics").val()).nom
+    tx += "</td></tr><tr><td>Pneumatics: "+bold1    
+        tx += JSON.parse($("#pneumatics").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Pedals: "
     if ($("#pedals").val() && $("#pedals").val() != "0") {
-        tx += JSON.parse($("#pedals").val()).nom
+    tx += "</td></tr><tr><td>Pedals: "+bold1    
+        tx += JSON.parse($("#pedals").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Frens: "
     if ($("#frens").val() && $("#frens").val() != "0") {
-        tx += JSON.parse($("#frens").val()).nom
+    tx += "</td></tr><tr><td>Frens: "+bold1    
+        tx += JSON.parse($("#frens").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Tija: "
     if ($("#tija").val() && $("#tija").val() != "0") {
-        tx += JSON.parse($("#tija").val()).nom
+    tx += "</td></tr><tr><td>Tija: "+bold1    
+        tx += JSON.parse($("#tija").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Cinta: "
     if ($("#cinta").val() && $("#cinta").val() != "0") {
-        tx += JSON.parse($("#cinta").val()).nom
+    tx += "</td></tr><tr><td>Cinta: "+bold1   
+        tx += JSON.parse($("#cinta").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Punys: "
     if ($("#punys").val() && $("#punys").val() != "0") {
-        tx += JSON.parse($("#punys").val()).nom
+    tx += "</td></tr><tr><td>Punys: "+bold1    
+        tx += JSON.parse($("#punys").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Forquilla: "
     if ($("#forquilla").val() && $("#forquilla").val() != "0") {
-        tx += JSON.parse($("#forquilla").val()).nom
+    tx += "</td></tr><tr><td>Forquilla: "+bold1    
+        tx += JSON.parse($("#forquilla").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Portabido: "
     if ($("#portabido").val() && $("#portabido").val() != "0") {
-        tx += JSON.parse($("#portabido").val()).nom
+    tx += "</td></tr><tr><td>Portabido: "+bold1    
+        tx += JSON.parse($("#portabido").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Portabido 2: "
     if ($("#portabido2").val() && $("#portabido2").val() != "0") {
-        tx += JSON.parse($("#portabido2").val()).nom
+    tx += "</td></tr><tr><td>Portabido 2: "+bold1    
+        tx += JSON.parse($("#portabido2").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Pedalier: "
     if ($("#pedalier").val() && $("#pedalier").val() != "0") {
-        tx += JSON.parse($("#pedalier").val()).nom
+    tx += "</td></tr><tr><td>Pedalier: "+bold1    
+        tx += JSON.parse($("#pedalier").val()).nom+bold2
     }
-    tx += "</td></tr><tr><td>Roldanes: "
-    if ($("#roldanes").val() && $("#roldanes").val() != "0") {
-        tx += JSON.parse($("#roldanes").val()).nom
+    if ($("#roldanes").val() && $("#roldanes").val() != "0") {    
+        tx += "</td></tr><tr><td>Roldanes: "+bold1    
+        tx += JSON.parse($("#roldanes").val()).nom+bold2
     }
+
+    tx += "</td></tr><tr><td>Preu: "+bold1    
+        tx += $("#total").html()+'€'+bold2
+
     tx += "</td></tr>"
     tx += '</table>'
     tx += "<br><br>"
-    tx += $("#desglos").html();
     tx += "</body></html>"
     return tx;
 
@@ -2673,15 +2679,16 @@ async function generatePDF() {
     const element = document.getElementById("invoice");
     date = new Date();
     var opt = {
-        filename: 'configurador_muntbikes' + date.getTime() + '.pdf'
+        filename: 'configuracion_muntbikes' + date.getTime() + '.pdf'
     };
-    // Choose the element and save the PDF for our user.
+    // Choose the element and save the PDF for our user.   
 
-    await html2pdf().set(opt).from(element).save();
 
+        await html2pdf.set(opt).from(element).save();
+    
+    
+    
     $("#invoice").hide()
-
-
 
 }
 
