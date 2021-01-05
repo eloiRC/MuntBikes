@@ -220,14 +220,14 @@ t_gravel = [{
         img: "addict_cx.jpg"
     },
     {
-        nom: "Colango Prestige", //
+        nom: "Colnago Prestige", //
         preu: 2190,
         info: "*tija NO incluida",
         marca: "colnago",
         img: "prestige.jpg"
     },
     {
-        nom: "Colango G3X", //
+        nom: "Colnago G3X", //
         preu: 2825,
         info: "*tija incluida",
         marca: "colnago",
@@ -2684,7 +2684,7 @@ async function generatePDF() {
     // Choose the element and save the PDF for our user.   
 
 
-        await html2pdf.set(opt).from(element).save();
+        await html2pdf().set(opt).from(element).save();
     
     
     
