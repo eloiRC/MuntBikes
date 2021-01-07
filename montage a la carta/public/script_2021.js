@@ -687,12 +687,12 @@ t_rodes_disc = [{
     {
         nom: "Corima MCC 32 cubierta", //
         preu: 3549,
-        img: "mcc_32.jpg"
+        img: "mcc_dx_32.jpg"
     },
     {
         nom: "Corima MCC 47 cubierta", //
         preu: 3649,
-        img: "mcc_47.jpg"
+        img: "mcc_dx.jpg"
     },
     {
         nom: "Corima WS cubierta", //
@@ -2510,6 +2510,7 @@ function info() {
         alert('Correo Enviado')
     });
 
+
 }
 
 
@@ -2523,17 +2524,18 @@ function configuracio() {
     bold2="</span>"
     tx = '<html><body><style>table, th, td {border: 1px solid black;border-collapse: collapse;}th, td {padding: 15px;}</style>'
     tx += '<table style="width:100%">';
-    tx += "<tr style='font-size:150%'><td>Nom: " + $("#nom").val() +
+    tx += "<tr style='font-size:150%'><td>Nom: " + 
+        bold1+$("#nom").val() +bold2+
         "</td></tr><tr style='font-size:150%'><td>Cognom: " +
-        $("#cognom").val() +
+        bold1+$("#cognom").val() +bold2+
         "</td></tr><tr style='font-size:150%'><td>Email: " +
-        $("#mail").val() +
+        bold1+$("#mail").val() +bold2+
         "</td></tr><tr style='font-size:150%'><td>Telefon:" +
-        $("#tel").val() +
+        bold1+$("#tel").val() +bold2+
         "</td></tr><tr style='font-size:150%'><td>Comentaris: " +
-        $("#comentaris").val() +
+        bold1+$("#comentaris").val() +bold2+
         "</td></tr><tr style='font-size:150%'><td>Estatura: " +
-        $("#estatura").val() +
+        bold1+$("#estatura").val() +bold2+
         "</td></tr>";
 
 
@@ -2668,6 +2670,7 @@ async function generatePDF() {
     $("#print").empty();
     $("#data").empty();
     $("#logo_marca").empty();
+    $("#imatges_pdf").empty();
     if(x=="2011d48f3f831aefd45f9f015cbbc40d"){
         $("#print").append(print());
     }
@@ -2756,6 +2759,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_quadre").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
 
     if ($("#manillar").val() != "0") {
@@ -2764,6 +2770,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_manillar").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#rodes").val() != "0") {
         preu = JSON.parse($("#rodes").val()).preu;
@@ -2771,6 +2780,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'> "+$("#img_rodes").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#grup").val() != "0") {
         preu = JSON.parse($("#grup").val()).preu;
@@ -2778,6 +2790,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_grup").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#bieles").val() != "0") {
         preu = JSON.parse($("#bieles").val()).preu;
@@ -2785,6 +2800,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_bieles").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#frens").val() && $("#frens").val() != "0") {
         preu = JSON.parse($("#frens").val()).preu;
@@ -2792,6 +2810,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_frens").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#forquilla").val() && $("#forquilla").val() != "0") {
         preu = JSON.parse($("#forquilla").val()).preu
@@ -2799,6 +2820,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_forquilla").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#seient").val() != "0") {
         preu = JSON.parse($("#seient").val()).preu;
@@ -2806,6 +2830,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_seient").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#tija").val() && $("#tija").val() != "0") {
         preu = JSON.parse($("#tija").val()).preu;
@@ -2813,6 +2840,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_tija").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#pedals").val() != "0") {
         preu = JSON.parse($("#pedals").val()).preu;
@@ -2820,6 +2850,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_pedals").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#cinta").val() && $("#cinta").val() != "0") {
         preu = JSON.parse($("#cinta").val()).preu;
@@ -2827,6 +2860,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'"+$("#img_cinta").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#punys").val() && $("#punys").val() != "0") {
         preu = JSON.parse($("#punys").val()).preu;
@@ -2834,6 +2870,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px' >"+$("#img_punys").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#pneumatics").val() != "0") {
         preu = JSON.parse($("#pneumatics").val()).preu;
@@ -2848,6 +2887,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'"+$("#img_portabidons").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#portabido2").val() != "0") {
         preu = JSON.parse($("#portabido2").val()).preu;
@@ -2855,6 +2897,9 @@ function print() {
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_portabidons2").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#pedalier").val() && $("#pedalier").val() != "0") {
         preu = JSON.parse($("#pedalier").val()).preu;
@@ -2888,6 +2933,9 @@ function print() {
         }
         dades_clinet = true;
     }
+    
+
+    
 };
 
 function dades_modificades() {

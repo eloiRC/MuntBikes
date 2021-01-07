@@ -21,3 +21,5 @@ portabidons 500 x 200
 punys 500 x 300
 
 cinta 500 x 200
+
+pedals 500 x 200
