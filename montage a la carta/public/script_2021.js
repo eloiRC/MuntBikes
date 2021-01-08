@@ -2861,7 +2861,7 @@ function print() {
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
 
-        div_img="<div style='width:250px'"+$("#img_cinta").parent().html()+"</div>"
+        div_img="<div style='width:250px'>"+$("#img_cinta").parent().html()+"</div>"
         $("#imatges_pdf").append(div_img);
     }
     if ($("#punys").val() && $("#punys").val() != "0") {
@@ -2888,7 +2888,7 @@ function print() {
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
 
-        div_img="<div style='width:250px'"+$("#img_portabidons").parent().html()+"</div>"
+        div_img="<div style='width:250px'>"+$("#img_portabidons").parent().html()+"</div>"
         $("#imatges_pdf").append(div_img);
     }
     if ($("#portabido2").val() != "0") {
@@ -3105,7 +3105,7 @@ function preu2() {
 
 };
 
-function print2() {
+function print2() {// print sense preus
     let modalitat;
     if ($("#modalitat").val() != null) {
         switch ($("#modalitat").val()) {
@@ -3169,6 +3169,9 @@ function print2() {
         part2 = '<div class="col-12  pr-0 text-truncate">Cuadro: <span class="font-weight-bold ">' + JSON.parse($("#quadre").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_quadre").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
 
     if ($("#manillar").val() != "0") {
@@ -3176,66 +3179,99 @@ function print2() {
         part2 = '<div class="col-12 pr-0 text-truncate" >Manillar: <span class="font-weight-bold ">' + JSON.parse($("#manillar").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_manillar").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#rodes").val() != "0") {
         preu = JSON.parse($("#rodes").val()).preu;
         part2 = '<div class="col-12 pr-0 text-truncate">Ruedas: <span class="font-weight-bold ">' + JSON.parse($("#rodes").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'> "+$("#img_rodes").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#grup").val() != "0") {
         preu = JSON.parse($("#grup").val()).preu;
         part2 = '<div class="col-12 pr-0 text-truncate">Grupo: <span class="font-weight-bold ">' + JSON.parse($("#grup").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_grup").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#bieles").val() != "0") {
         preu = JSON.parse($("#bieles").val()).preu;
         part2 = '<div class="col-12 pr-0 text-truncate">Bielas: <span class="font-weight-bold">' + JSON.parse($("#bieles").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_bieles").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#frens").val() && $("#frens").val() != "0") {
         preu = JSON.parse($("#frens").val()).preu;
         part2 = '<div class="col-12 pr-0 text-truncate">Frenos: <span class="font-weight-bold ">' + JSON.parse($("#frens").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_frens").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#forquilla").val() && $("#forquilla").val() != "0") {
         preu = JSON.parse($("#forquilla").val()).preu
         part2 = '<div class="col-12 pr-0 text-truncate">Horquilla: <span class="font-weight-bold ">' + JSON.parse($("#forquilla").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_forquilla").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#seient").val() != "0") {
         preu = JSON.parse($("#seient").val()).preu;
         part2 = '<div class="col-12 pr-0 text-truncate">Sillin: <span class="font-weight-bold ">' + JSON.parse($("#seient").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_seient").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);        
     }
     if ($("#tija").val() && $("#tija").val() != "0") {
         preu = JSON.parse($("#tija").val()).preu;
         part2 = '<div class="col-12 pr-0 text-truncate">Tija: <span class="font-weight-bold ">' + JSON.parse($("#tija").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_tija").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#pedals").val() != "0") {
         preu = JSON.parse($("#pedals").val()).preu;
         part2 = '<div class="col-12 pr-0 text-truncate">Pedales: <span class="font-weight-bold ">' + JSON.parse($("#pedals").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_pedals").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#cinta").val() && $("#cinta").val() != "0") {
         preu = JSON.parse($("#cinta").val()).preu;
         part2 = '<div class="col-12 pr-0 text-truncate">Cinta: <span class="font-weight-bold ">' + JSON.parse($("#cinta").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_cinta").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#punys").val() && $("#punys").val() != "0") {
         preu = JSON.parse($("#punys").val()).preu;
         part2 = '<div class="col-12 pr-0 text-truncate">Puños: <span class="font-weight-bold ">' + JSON.parse($("#punys").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px' >"+$("#img_punys").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#pneumatics").val() != "0") {
         preu = JSON.parse($("#pneumatics").val()).preu;
@@ -3248,12 +3284,18 @@ function print2() {
         part2 = '<div class="col-12 pr-0 text-truncate">Portabidon: <span class="font-weight-bold ">' + JSON.parse($("#portabido").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_portabidons").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#portabido2").val() != "0") {
         preu = JSON.parse($("#portabido2").val()).preu;
         part2 = '<div class="col-12 pr-0 text-truncate">Segundo Portabidon: <span class="font-weight-bold ">' + JSON.parse($("#portabido2").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
+
+        div_img="<div style='width:250px'>"+$("#img_portabidons2").parent().html()+"</div>"
+        $("#imatges_pdf").append(div_img);
     }
     if ($("#pedalier").val() && $("#pedalier").val() != "0") {
         preu = JSON.parse($("#pedalier").val()).preu;
