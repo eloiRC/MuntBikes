@@ -251,7 +251,7 @@ t_mtb = [{
     },
     {
         nom: "Scott Spark RC Supersonic HMX SL ", //
-        preu: 5499,
+        preu: 7549,
         info: "*Hoquilla SID ultimate,amortiguador RockShox NUDE ,bielas xx1, frenos lvl ultimate, manillar fraser ic y tija incluidos",
         marca: "scott",
         img: "spark_supersonic.jpg"
