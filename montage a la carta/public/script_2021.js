@@ -1193,22 +1193,22 @@ t_pneumatics_mtb = [{
 
 t_grup_road = [{ //sense bieles
         nom: "Shimano DURA-ACE Di2", //
-        preu: 2692,
+        preu: 3370, //antic 2692                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
         img: "duraacedi2.jpg"
     },
     {
         nom: "Shimano DURA-ACE", //
-        preu: 1312,
+        preu: 1700, //antic 1312
         img: "duraace.jpg"
     },
     {
         nom: "Shimano ULTEGRA Di2", //
-        preu: 1440,
+        preu: 2041, //anterior 1440
         img: "ultegradi2.jpg"
     },
     {
         nom: "Shimano ULTEGRA", //
-        preu: 629,
+        preu: 859,//anterior 629
         img: "ultegra.jpg"
     },
     {
@@ -1245,22 +1245,22 @@ t_grup_road = [{ //sense bieles
 
 t_grup_disc = [{ //sense bieles
         nom: "Shimano DURA-ACE Di2", //
-        preu: 2795,
+        preu: 3659, //anterior 2795
         img: "duraacedi2.jpg"
     },
     {
         nom: "Shimano DURA-ACE", //
-        preu: 1861,
+        preu: 1985, //anterior 1861
         img: "duraace.jpg"
     },
     {
         nom: "Shimano ULTEGRA Di2", //
-        preu: 1703,
+        preu: 2380, //anterior 1703
         img: "ultegradi2.jpg"
     },
     {
         nom: "Shimano ULTEGRA", //
-        preu: 895,
+        preu: 1188,//anterior 895
         img: "ultegra.jpg"
     },
     {
@@ -1298,32 +1298,32 @@ t_grup_disc = [{ //sense bieles
 
 t_grup_gravel = [{
         nom: "GRX Di2 1x", //
-        preu: 1760,
+        preu: 2211, //anterior 1760
         img: "grxdi2.jpg"
     },
     {
         nom: "GRX Di2 2x", //
-        preu: 2166,
+        preu: 2450, //anterior 2166
         img: "grxdi2.jpg"
     },
     {
         nom: "GRX 800 1x", //
-        preu: 987,
+        preu: 1153,//anterior 987
         img: "grx800.jpg"
     },
     {
         nom: "GRX 800 2x", //
-        preu: 1106,
+        preu: 1239,//anterior 1106
         img: "grx800.jpg"
     },
     {
         nom: "GRX 600 1x", //
-        preu: 875,
+        preu: 946,//anterior 875
         img: "grx600.jpg"
     },
     {
         nom: "GRX 600 2x", //
-        preu: 953,
+        preu: 1023,//anterior 953
         img: "grx600.jpg"
     },
     {
@@ -1358,7 +1358,7 @@ t_grup_gravel = [{
     },
     {
         nom: "Campagnolo Ekar", //
-        preu: 1696,
+        preu: 1349,
         img: "ekar.jpg"
     },
 
@@ -1391,12 +1391,12 @@ t_grup_mtb = [{
     },
     {
         nom: "XTR", //
-        preu: 718,
+        preu: 930,//anterior 718
         img: "xtr.jpg"
     },
     {
         nom: "XT", //
-        preu: 337,
+        preu: 440,//anterior 337
         img: "xt.jpg"
     }
 ];
@@ -1413,12 +1413,22 @@ t_frens = [{
     },
     {
         nom: "XTR", //
-        preu: 549,
+        preu: 695,//anterior 549
+        img: "xtr.jpg"
+    },
+    {
+        nom: "XTR 4 pistones", //
+        preu: 735,
         img: "xtr.jpg"
     },
     {
         nom: "XT", //
-        preu: 313,
+        preu: 390,//anterior 313
+        img: "xt.jpg"
+    },
+    {
+        nom: "XT 4 pistones", //
+        preu: 498,
         img: "xt.jpg"
     }
 
@@ -1426,12 +1436,12 @@ t_frens = [{
 
 t_pedals_road = [{
         nom: "Dura-Ace", //
-        preu: 249,
+        preu: 250,
         img: "duraace.jpg"
     },
     {
         nom: "Ultegra", //
-        preu: 140,
+        preu: 150,
         img: "ultegra.jpg"
     },
     {
@@ -1473,12 +1483,12 @@ t_pedals_road = [{
 
 t_pedals_mtb = [{
         nom: "XTR", //
-        preu: 135,
+        preu: 150,
         img: "xtr.jpg"
     },
     {
         nom: "XT", //
-        preu: 88,
+        preu: 98,
         img: "xt.jpg"
     },
     {
@@ -1540,7 +1550,7 @@ t_tijes_mtb = [{
     },
     {
         nom: "Telescopica Koryak", //
-        preu: 240,
+        preu: 270,
         img: "koryak.jpg"
     },
     {
@@ -1675,12 +1685,12 @@ t_roldanes = [{
 
 t_bieles_road = [{
         nom: "Dura-Ace ", //
-        preu: 495,
+        preu: 589, //anterior 495
         img: "duraace.jpg"
     },
     {
         nom: "Ultegra", //
-        preu: 238,
+        preu: 279, //anterior 238
         img: "ultegra.jpg"
     },
     {
@@ -1711,7 +1721,7 @@ t_bieles_road = [{
     //+potenciometre
     {
         nom: "Dura-Ace Potenciometro", //
-        preu: 1366,
+        preu: 1778,//anterior 1366
         img: "duraacep.jpg"
     },
     {
@@ -1753,12 +1763,12 @@ t_bieles_road = [{
 
 t_bieles_gravel = [{
         nom: "GRX 810 ", //
-        preu: 241,
+        preu: 280, //anterior 241
         img: "grx800.jpg"
     },
     {
         nom: "GRX 600", //
-        preu: 122,
+        preu: 159, //anterior 122
         img: "grx600.jpg"
     },
     {
@@ -1773,7 +1783,7 @@ t_bieles_gravel = [{
     },
     {
         nom: "Camapgnolo Ekar", //
-        preu: 0,
+        preu: 347,
         img: "ekar.jpg"
     },
     {
@@ -1821,12 +1831,12 @@ t_bieles_gravel = [{
 
 t_bieles_mtb = [{
         nom: "XTR", //
-        preu: 487,
+        preu: 570,//anterior 487
         img: "xtr.jpg"
     },
     {
         nom: "XT", //
-        preu: 185,
+        preu: 239, // anterior 185
         img: "xt.jpg"
     },
     {
@@ -2135,7 +2145,7 @@ function portabido() {
     $("#portabido").append(t_tmp);
 
     //portabido2
-    t_tmp = '<option value="0" selected>Selecciona el segundo Portabidon</option>';
+    t_tmp = '<option value="0" selected>Selecciona el 2o Portabidon</option>';
     t_portabido.forEach(element => {
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
     });
@@ -2367,7 +2377,7 @@ function preu() {
     }
     if ($("#portabido2").val() != "0") {
         preu = JSON.parse($("#portabido2").val()).preu;
-        part2 = '<div class="col-9 col-sm-10 col-md-10 col-lg-10 col-xl-11 pr-0 text-truncate">Segundo Portabidon: <span class="font-weight-bold text-truncate">' + JSON.parse($("#portabido2").val()).nom + '</span>  ' + part3 + '</div>';
+        part2 = '<div class="col-9 col-sm-10 col-md-10 col-lg-10 col-xl-11 pr-0 text-truncate">2o Portabidon: <span class="font-weight-bold text-truncate">' + JSON.parse($("#portabido2").val()).nom + '</span>  ' + part3 + '</div>';
         part4 = '<div class="col-3 col-sm-2 col-md-2 col-lg-2 col-xl-1 text-right pl-0">' + preu + ' €</div>';
         $("#desglos").append(part1 + part2 + part4 + part5);
         total += preu;
@@ -2893,7 +2903,7 @@ function print() {
     }
     if ($("#portabido2").val() != "0") {
         preu = JSON.parse($("#portabido2").val()).preu;
-        part2 = '<div class="col-10 pr-0 text-truncate">Segundo Portabidon: <span class="font-weight-bold ">' + JSON.parse($("#portabido2").val()).nom + '</span>  ' + part3 + '</div>';
+        part2 = '<div class="col-10 pr-0 text-truncate">2o Portabidon: <span class="font-weight-bold ">' + JSON.parse($("#portabido2").val()).nom + '</span>  ' + part3 + '</div>';
         part4 = '<div class="col-2 text-right pl-0">' + preu + ' €</div>';
         $("#print").append(part1 + part2 + part4 + part5);
         total += preu;
@@ -3078,7 +3088,7 @@ function preu2() {
     }
     if ($("#portabido2").val() != "0") {
         preu = JSON.parse($("#portabido2").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Segundo Portabidon: </div><div class="font-weight-bold text-truncate">' + JSON.parse($("#portabido2").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">2o Portabidon: </div><div class="font-weight-bold text-truncate">' + JSON.parse($("#portabido2").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiPortabido2();
@@ -3290,7 +3300,7 @@ function print2() {// print sense preus
     }
     if ($("#portabido2").val() != "0") {
         preu = JSON.parse($("#portabido2").val()).preu;
-        part2 = '<div class="col-12 pr-0 text-truncate">Segundo Portabidon: <span class="font-weight-bold ">' + JSON.parse($("#portabido2").val()).nom + '</span>  </div>';
+        part2 = '<div class="col-12 pr-0 text-truncate">2o Portabidon: <span class="font-weight-bold ">' + JSON.parse($("#portabido2").val()).nom + '</span>  </div>';
         $("#print").append(part1 + part2 + part5);
         total += preu;
 
