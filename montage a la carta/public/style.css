@@ -68,12 +68,7 @@ z-index: 0;
     
 }
 
-@media only screen and (max-width: 600px) {
-  
-    .navbar-brand {
-        text-align: center;
-    }
-}
+
 
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
@@ -107,3 +102,33 @@ z-index: 0;
     font-size: large;
       }
 
+.btn-trucar{
+    position:fixed;
+	width:60px;
+	height:60px;
+	bottom:3%;
+	right:7%;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+   font-size: 150%;
+   z-index: 9998;
+}
+
+.error{
+    border-color: red;
+}
+
+
+@media only screen and (max-width: 600px) {
+  
+    .navbar-brand {
+        text-align: center;
+    }
+
+    .btn-trucar{
+        bottom:1%;
+       
+    }
+}

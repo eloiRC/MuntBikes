@@ -13,7 +13,10 @@ $(window).on("load", function () {
     document.getElementById("cognom").addEventListener("change", dades_modificades);
     document.getElementById("tel").addEventListener("change", dades_modificades);
     document.getElementById("mail").addEventListener("change", dades_modificades);
-    document.getElementById("modalitat").addEventListener("change", modalitat)
+    document.getElementById("modalitat").addEventListener("change", modalitat);
+    document.getElementById("mensualitats").addEventListener("change", maxim24);
+
+    
 
     const urlParams = new URLSearchParams(window.location.search);
     x = urlParams.get('x');
@@ -68,6 +71,16 @@ $(window).on("load", function () {
     });
 
 });
+
+function maxim24(){
+    if ($("#mensualitats").val()>24) {
+        $("#mensualitats").val(24);
+        $("#mensualitats").addClass("error");
+    }
+    else{
+        $("#mensualitats").parent().removeClass("error");
+    }
+}
 
 
 let darkMode = false;
@@ -2190,7 +2203,7 @@ function seient() {
 };
 
 function pneumatic(t_pneumatics) {
-    t_tmp = '<option value="0" selected>Selecciona los Pneumaticos</option>';
+    t_tmp = '<option value="0" selected>Selecciona los Neumaticos</option>';
     t_pneumatics.forEach(element => {
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
     });
@@ -2545,8 +2558,13 @@ function configuracio() {
         "</td></tr><tr style='font-size:150%'><td>Comentaris: " +
         bold1+$("#comentaris").val() +bold2+
         "</td></tr><tr style='font-size:150%'><td>Estatura: " +
-        bold1+$("#estatura").val() +bold2+
-        "</td></tr>";
+        bold1+$("#estatura").val()+"cm" +bold2+
+        "</td></tr><tr style='font-size:150%'><td>Quantitat a financiar: " +
+        bold1+$("#financiacio").val() +"€"+bold2+
+        "</td></tr><tr style='font-size:150%'><td>Mensualitats: " +
+        bold1+$("#mensualitats").val() +"mesos"+bold2+
+        "</td></tr>"
+        
 
 
 
@@ -2578,7 +2596,7 @@ function configuracio() {
         tx += JSON.parse($("#seient").val()).nom+bold2
     }
     if ($("#pneumatics").val() && $("#pneumatics").val() != "0") {
-    tx += "</td></tr><tr><td>Pneumatics: "+bold1    
+    tx += "</td></tr><tr><td>Neumaticos: "+bold1    
         tx += JSON.parse($("#pneumatics").val()).nom+bold2
     }
     if ($("#pedals").val() && $("#pedals").val() != "0") {
