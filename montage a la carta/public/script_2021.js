@@ -143,6 +143,24 @@ t_road_disc = [{
         preu: 2849,
         marca: "scott",
         img: "addict_pro.jpg"
+    },
+    {
+        nom: "De Rosa SK PINIFARINA", //
+        preu: 4290,
+        marca: "derosa",
+        img: "sk_pinifarina.jpg"
+    },
+    {
+        nom: "De Rosa MERAK", 
+        preu: 4355,
+        marca: "derosa",
+        img: "merak.jpg"
+    },
+    {
+        nom: "De Rosa Protos", 
+        preu: 4655,
+        marca: "derosa",
+        img: "protos_disc.jpg"
     }
 ];
 
@@ -194,6 +212,19 @@ t_road = [{
         info: "*tija incluida",
         marca: "colnago",
         img: "v3rs.jpg"
+    },
+    {
+        nom: "De Rosa Protos", 
+        preu: 4565,
+        info: "*tija incluida",
+        marca: "derosa",
+        img: "protos.jpg"
+    },
+    {
+        nom: "De Rosa nuovo classico", 
+        preu: 3235,
+        marca: "derosa",
+        img: "nuovoclassico.jpg"
     }
 ];
 
@@ -245,6 +276,12 @@ t_gravel = [{
         info: "*tija incluida",
         marca: "colnago",
         img: "g3x.jpg"
+    },
+    {
+        nom: "De Rosa Gravel", 
+        preu: 1977,
+        marca: "derosa",
+        img: "derosa_gravel.jpg"
     }
 ];
 
@@ -325,8 +362,18 @@ t_manillars_road_disc = [{
         img: "creston.jpg"
     },
     {
-        nom: "VISION METRON 5D / 6D ACR Bianchi", //
+        nom: "VISION METRON 5D / 6D ACR", //
         preu: 649,
+        img: "metron.jpg"
+    },
+    {
+        nom: "VISION METRON 5D / 6D ACR DeROSA", //
+        preu: 540,
+        img: "metron.jpg"
+    },
+    {
+        nom: "VISION METRON 5D / 6D ACR DeROSA Pintado en color del cuadro", //
+        preu: 680,
         img: "metron.jpg"
     },
     {
@@ -670,7 +717,7 @@ t_rodes_disc = [{
     {
         nom: "Fulcrum Wind 40  tubeless / cubierta", //
         preu: 1226,
-        img: "wind_40.jpg"
+        img: "wind.jpg"
     },
     {
         nom: "Fulcrum Speed 40 (usb)  tubeless / cubierta", //
@@ -2761,6 +2808,9 @@ function print() {
             case "colnago":
                 img_marca = "./images/marcas/colnago.png"
                 break;
+            case "derosa":
+                img_marca = "./images/marcas/derosa.png"
+                break;
         }
         img_html = '<img src="' + img_marca + '" alt="" class="img-fluid"></img>'
         $("#logo_marca").append(img_html);
@@ -3170,6 +3220,9 @@ function print2() {// print sense preus
                 break;
             case "colnago":
                 img_marca = "./images/marcas/colnago.png"
+                break;
+            case "derosa":
+                img_marca = "./images/marcas/derosa.png"
                 break;
         }
         img_html = '<img src="' + img_marca + '" alt="" class="img-fluid"></img>'
