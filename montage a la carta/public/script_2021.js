@@ -103,20 +103,20 @@ t_road_disc = [{
         img: "angliru_disc.jpg"
     },
     {
-        nom: "Bianchi XR4", //preu quadro amb vision restat -749€ del manillar
-        preu: 4041,
+        nom: "Bianchi XR4", //preu quadro amb vision restat -649€ del manillar
+        preu: 4516,
         marca: "bianchi",
         img: "xr4_disc.jpg"
     },
     {
-        nom: "Bianchi SPECIALISSIMA", //preu quadro amb vision restat -749€ del manillar
-        preu: 4590,
+        nom: "Bianchi SPECIALISSIMA", //preu quadro restat 200€ potencia manillar carbon
+        preu: 5140,
         marca: "bianchi",
         img: "specialissima_disc.jpg"
     },
     {
-        nom: "Bianchi INFINITO CV", //preu quadro amb vision restat -749€ del manillar
-        preu: 3690,
+        nom: "Bianchi INFINITO CV", //preu quadro amb vision restat -649€ del manillar
+        preu: 3709,
         marca: "bianchi",
         img: "infinito_disc.jpg"
     },
@@ -187,13 +187,13 @@ t_road = [{
     },
     {
         nom: "Bianchi XR4", //
-        preu: 3690,
+        preu: 3959,
         info: "*tija incluida",
         marca: "bianchi",
         img: "xr4.jpg"
     },
     {
-        nom: "Bianchi SPECIALISSIMA", //
+        nom: "Bianchi SPECIALISSIMA 2020", //
         preu: 3990,
         info: "",
         marca: "bianchi",
@@ -244,14 +244,14 @@ t_gravel = [{
     },
     {
         nom: "Bianchi Zolder Pro", //
-        preu: 1990,
+        preu: 2387,
         info: "",
         marca: "bianchi",
         img: "zolder.jpg"
     },
     {
         nom: "Bianchi ARCADEX ", //PREU CALCULAT DESCONATANT UNS 600€ DEL GRX
-        preu: 2090,
+        preu: 2500,
         info: "",
         marca: "bianchi",
         img: "arcadex.jpg"
@@ -322,14 +322,14 @@ t_mtb = [{
     },
     {
         nom: "Bianchi Methanol FS",
-        preu: 3590,
-        info: "*Amortiguador Fox Kashima incluido",
+        preu: 3300,
+        info: "*sin horquilla y sin amortiguador",
         marca: "bianchi",
         img: "methanol_fs.jpg"
     },
     {
         nom: "Bianchi Methanol RS",
-        preu: 2590,
+        preu: 3590,
         info: "",
         marca: "bianchi",
         img: "methanol_rs.jpg"
@@ -660,9 +660,9 @@ t_rodes_disc = [{
         img: "melstein.jpg"
     },
     {
-        nom: "ZIPP 303s tubeless / cubierta", //
-        preu: 1100,
-        img: "303s.jpg"
+        nom: "ZIPP 353 NSW tubeless / cubierta", //
+        preu: 3600,
+        img: "ZIPP_353_NSW.JPG"
     },
     {
         nom: "ZIPP 303 Firecrest tubeless / cubierta", //
@@ -670,14 +670,30 @@ t_rodes_disc = [{
         img: "303.jpg"
     },
     {
+        nom: "ZIPP 303s tubeless / cubierta", //
+        preu: 1100,
+        img: "303s.jpg"
+    },
+    
+    {
         nom: "Campagnolo BORA ONE 35 / 50 cubierta", //
         preu: 2140,
         img: "bora_one.jpg"
     },
     {
+        nom: "Campagnolo WTO ULTRA 33 / 45 / 60  tubeless / cubierta", //
+        preu: 3150,
+        img: "WTO_ULTRA.JPG"
+    },
+    {
         nom: "Campagnolo WTO 33 / 45 / 60  tubeless / cubierta", //
         preu: 2168,
         img: "wto.jpg"
+    },
+    {
+        nom: "Campagnolo SHAMAL CARBON  tubeless / cubierta", //
+        preu: 1299,
+        img: "SHAMAL_CARBON.JPG"
     },
     {
         nom: "Campagnolo Zonda tubeless / cubierta", //
@@ -1184,7 +1200,20 @@ t_pneumatics_road = [{
     {
         nom: "Pirelli P-Zero Cubierta", //
         preu: 86
+    },
+    {
+        nom: "Good Year F1 SuperSport", //
+        preu: 100
+    },
+    {
+        nom: "Good Year F1 TL", //
+        preu: 110
+    },
+    {
+        nom: "Good Year Eagle Sport", //
+        preu: 50
     }
+
 ];
 
 t_pneumatics_gravel = [{
@@ -1194,6 +1223,10 @@ t_pneumatics_gravel = [{
     {
         nom: "WTB Cross Wolf", //
         preu: 92
+    },
+    {
+        nom: "WTB Venture", //
+        preu: 104
     },
     {
         nom: "Vittoria Terreno Dry G", //
@@ -1218,6 +1251,10 @@ t_pneumatics_gravel = [{
     {
         nom: "Pirelli Cinturato Gravel", //
         preu: 120
+    },
+    {
+        nom: "Good Year Connector", //
+        preu: 92
     }
 ];
 
@@ -1248,7 +1285,11 @@ t_pneumatics_mtb = [{
     {
         nom: "Contintntal RACE KING", //
         preu: 64
-    }
+    },
+    {
+        nom: "Good Year Peak", //
+        preu: 92
+    },
 ];
 
 t_grup_road = [{ //sense bieles
@@ -1334,6 +1375,11 @@ t_grup_disc = [{ //sense bieles
         img: "forceaxs.jpg"
     },
     {
+        nom: "Sram RIVAL AXS 12v", //
+        preu: 1296,
+        img: "rival_axs.jpg"
+    },
+    {
         nom: "Campagnolo Super Record EPS", //disc 140 + 160
         preu: 3952,
         img: "superrecordeps.jpg"
@@ -1397,24 +1443,39 @@ t_grup_gravel = [{
         img: "redaxs.jpg"
     },
     {
-        nom: "FORCE AXS 2x wide", //
-        preu: 2165,
-        img: "forceaxs.jpg"
-    },
-    {
-        nom: "FROCE AXS 1x wide", //
-        preu: 1765,
-        img: "forceaxs.jpg"
-    },
-    {
-        nom: "RED AXS 1x *eagle 10-52*", //
+        nom: "RED AXS 1x + eagle 10-52 ", //
         preu: 2715,
         img: "xx1axs.jpg"
     },
     {
-        nom: "FORCE AXS 1x *eagle gx/xx1 10-52*", //
-        preu: 2000,
-        img: "xx1axs.jpg"
+        nom: "FORCE AXS 2x", //
+        preu: 2165,
+        img: "forceaxs.jpg"
+    },
+    {
+        nom: "FROCE AXS 1x", //
+        preu: 1765,
+        img: "forceaxs.jpg"
+    },
+    {
+        nom: "FORCE AXS 1x + eagle gx 10-52", //
+        preu: 1526,
+        img: "gxaxs.jpg"
+    },
+    {
+        nom: "Sram RIVAL AXS 12v 2x", //
+        preu: 1296,
+        img: "rival_axs.jpg"
+    },
+    {
+        nom: "Sram RIVAL AXS 12v 1x", //
+        preu: 1061,
+        img: "rival_axs.jpg"
+    },
+    {
+        nom: "Sram RIVAL AXS + eagle gx 10-52", //
+        preu: 1277,
+        img: "gxaxs.jpg"
     },
     {
         nom: "Campagnolo Ekar", //
@@ -1443,6 +1504,11 @@ t_grup_mtb = [{
         nom: "X01", //
         preu: 881,
         img: "x01.jpg"
+    },
+    {
+        nom: "GX AXS", //
+        preu: 881,
+        img: "gxaxs.jpg"
     },
     {
         nom: "GX", //
@@ -1764,6 +1830,11 @@ t_bieles_road = [{
         img: "force.jpg"
     },
     {
+        nom: "RIVAL AXS", //
+        preu: 135,
+        img: "rival_axs.jpg"
+    },
+    {
         nom: "Campagnolo Super Record", //
         preu: 962,
         img: "superrecord.jpg"
@@ -1810,6 +1881,11 @@ t_bieles_road = [{
         img: "quarq_force.jpg"
     },
     {
+        nom: "Quarq RIVAL AXS", //
+        preu: 360,
+        img: "quarq_rival.jpg"
+    },
+    {
         nom: "Stages Campagnolo Super Record L", //
         preu: 1861,
         img: "stages_superrecord.jpg"
@@ -1842,9 +1918,9 @@ t_bieles_gravel = [{
         img: "force.jpg"
     },
     {
-        nom: "Camapgnolo Ekar", //
-        preu: 347,
-        img: "ekar.jpg"
+        nom: "RIVAL AXS", //
+        preu: 135,
+        img: "rival_axs.jpg"
     },
     {
         nom: "XX1", //
@@ -1860,6 +1936,11 @@ t_bieles_gravel = [{
         nom: "GX", //
         preu: 150,
         img: "gx.jpg"
+    },
+    {
+        nom: "Camapgnolo Ekar", //
+        preu: 347,
+        img: "ekar.jpg"
     },
     //+potenciometre
     {
@@ -1881,6 +1962,11 @@ t_bieles_gravel = [{
         nom: "Quarq Force AXS", //
         preu: 1034,
         img: "quarq_force.jpg"
+    },
+    {
+        nom: "Quarq RIVAL AXS", //
+        preu: 360,
+        img: "quarq_rival.jpg"
     },
     {
         nom: "Quarq xx1", //
@@ -2141,7 +2227,7 @@ function blank(){
     $("#img_bieles").attr('src', "./images/configuracions/bieles/blank.jpg");
     $("#img_frens").attr('src', "./images/configuracions/frens/blank.jpg");
     $("#img_forquilla").attr('src', "./images/configuracions/forquilles/blank.jpg");
-    $("#img_seients").attr('src', "./images/configuracions/seients/blank.jpg");
+    $("#img_seient").attr('src', "./images/configuracions/seients/blank.jpg");
     $("#img_tija").attr('src', "./images/configuracions/tijes/blank.jpg");
     $("#img_pedals").attr('src', "./images/configuracions/pedals/blank.jpg");
     $("#img_cinta").attr('src', "./images/configuracions/cinta/blank.jpg");
@@ -2374,7 +2460,7 @@ function preu() {
         total += preu;
         cambiSeient();
     } else {
-        $("#img_seients").attr('src', "./images/configuracions/seients/blank.jpg");
+        $("#img_seient").attr('src', "./images/configuracions/seients/blank.jpg");
     }
     if ($("#tija").val() && $("#tija").val() != "0") {
         preu = JSON.parse($("#tija").val()).preu;
@@ -3099,7 +3185,7 @@ function preu2() {
         total += preu;
         cambiSeient();
     } else {
-        $("#img_seients").attr('src', "./images/configuracions/seients/blank.jpg");
+        $("#img_seient").attr('src', "./images/configuracions/seients/blank.jpg");
     }
     if ($("#tija").val() && $("#tija").val() != "0") {
         preu = JSON.parse($("#tija").val()).preu;

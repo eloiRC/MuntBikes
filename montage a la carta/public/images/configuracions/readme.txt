@@ -14,7 +14,7 @@ frens 500 x 200
 
 forquilles 500 x 400
 
-bieles 500 x 200
+bieles 500 x 400
 
 portabidons 500 x 200
 
