@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="configurador de bicicletas de muntbikes, monta tu propia bici pieza a pieza y contactanos para saber el mejor precio">
-    <meta name="keywords" content="configurador de bicicletas, configurador de bicis, configurador, continental, bici a medida, bici a piezas, shimano, sram, campagnolo, carbon-ti, enve, megamo, colnago, bicicleta, quadro, cuadro,a medida, a la carta, personalizada, scott, pinarello, bianchi, celeste, muntbikes, gama alta, presupuesto, vale, precio, ruedas, xr4, xr3, carbono, f12, specialissima, addict, fox, eagle, dura-ace, red, axs, e-tap, ultegra, super record, n1no, nino, ineos, lightweight, ceramic speed, jumbo "/>
+    <meta name="keywords" content="configurador de bicicletas, configurador de bicis, configurador, continental, bici a medida, bici a piezas, shimano, sram, campagnolo,derosa, de rosa, carbon-ti, enve, megamo, colnago, bicicleta, quadro, cuadro,a medida, a la carta, personalizada, scott, pinarello, bianchi, celeste, muntbikes, gama alta, presupuesto, vale, precio, ruedas, xr4, xr3, carbono, f12, specialissima, addict, fox, eagle, dura-ace, red, axs, e-tap, ultegra, super record, n1no, nino, ineos, lightweight, ceramic speed, jumbo "/>
     <meta name="copyright" content="MuntBikes" />
     <meta name="robots" content="index,follow"/>
     <meta content="/images/muntbikes.jpg" itemprop="image">
@@ -59,6 +59,11 @@
             
             
         </nav>
+
+        <a href="tel:+34937939135">
+            <button type="button" class="btn btn-success btn-trucar"><i class="fas fa-phone text-white"></i></button>
+        </a>
+        
         
 <main id="maincontent">
     <div class="mt-4">
@@ -81,7 +86,7 @@
                             <select class="custom-select" id="quadre" >
                               
                             </select>
-                            <p class="text-muted small" id="info"></p>
+                            <p class="text-success small" id="info"></p>
                             <div class="text-center mt-1"><img src="./images/configuracions/quadres/blank.jpg" alt="cuadro bicicleta carretera grabel btt mtb" class="img img-fluid rounded-lg" id="img_quadre">
                             </div>
 
@@ -295,7 +300,7 @@
                             <input type="text" class="form-control" id="nom" placeholder="juan" required>
                         </div>
                         <div class="form-group">
-                            <label for="cognom">Apellido:</label>
+                            <label for="cognom">Apellidos:</label>
                             <input type="text" class="form-control" id="cognom" placeholder="martinez">
                         </div>
                         <div class="form-group">
@@ -308,8 +313,30 @@
                             <input type="text" class="form-control" id="tel" pattern="[0-9]{9}" required
                                 placeholder="666777666">
                         </div>
-                        <div class="float-right">
-                            <button class="btn btn-lg btn-success" aria-label="Enviar Correo" id="enviar" >Enviar</button>
+                        <div class="form-row">      
+                            <div class="form-group col-6">                                                                  
+                                <label for="financiat">Financiación:</label>
+                                <div class="input-group ">
+                                   
+                                    <input type="number" class="form-control" id="financiacio"  placeholder="3000">
+                                    <div class="input-group-append ">
+                                        <div class="input-group-text">€</div>
+                                      </div>
+                                  </div>
+                            </div>                      
+                            <div class="form-group col-6">
+                                <label for="mensualitats">Mensualidades:</label>
+                                <div class="input-group">
+                                    
+                                <input type="number" class="form-control" id="mensualitats" max="24" placeholder="12">
+                                <div class="input-group-append">
+                                    <div class="input-group-text">Meses</div>
+                                  </div>
+                                </div>
+                            </div>                           
+                        </div>
+                        <div class="mt-3">
+                            <button class="btn btn-lg btn-success mx-auto w-100 py-1" aria-label="Enviar Correo" id="enviar" >Enviar</button>
                         </div>
                         
                     </div>
@@ -361,6 +388,15 @@
         <div id="dades_client" class="mx-5 mt-2">
             
         </div>
+        <br>
+        <div class="mx-5">
+        <div class="col-12 border border-bottom border-dark"></div>
+        </div>
+        <br>
+        <div class="html2pdf__page-break"></div>
+        <div id="imatges_pdf" class="px-5 mt-2 d-flex flex-wrap justify-content-between mx-auto">
+            
+        </div>
         
 
     </div>
@@ -404,8 +440,9 @@
     document.getElementById("modalitat").addEventListener("change", function(){
         analytics.logEvent('modalitat', { name: $("#modalitat").val()});
     })
-    $("#enivar").click( function(){
+    $("#enviar").click( function(){
         analytics.logEvent('enviat');
+        analytics.logEvent('purchase', { value:1});
     })
     $("#pdf").click(function(){
         analytics.logEvent('pdf_generate');
@@ -420,6 +457,17 @@
 
     
 
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-183956388-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-183956388-1');
 </script>
     
 

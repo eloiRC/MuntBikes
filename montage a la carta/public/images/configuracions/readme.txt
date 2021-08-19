@@ -14,10 +14,12 @@ frens 500 x 200
 
 forquilles 500 x 400
 
-bieles 500 x 200
+bieles 500 x 400
 
 portabidons 500 x 200
 
 punys 500 x 300
 
 cinta 500 x 200
+
+pedals 500 x 200
