@@ -2662,7 +2662,7 @@ function modalitat() {
                 if(brand!=""){
                     t_tmp+='</optgroup>'
                 }
-                t_tmp += '<optgroup label='+ element.brand+'>'
+                t_tmp += '<optgroup label="'+ element.brand+'">'
             
             }
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
@@ -2679,7 +2679,7 @@ function modalitat() {
                 if(brand!=""){
                     t_tmp+='</optgroup>'
                 }
-                t_tmp += '<optgroup label='+ element.brand+'>'
+                t_tmp += '<optgroup label="'+ element.brand+'">'
             
             }
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
@@ -2697,16 +2697,8 @@ function modalitat() {
         brand="";
 
         t_punys.forEach(element => {
-            if(element.brand!=brand){
-                if(brand!=""){
-                    t_tmp+='</optgroup>'
-                }
-                t_tmp += '<optgroup label='+ element.brand+'>'
-            
-            }
-            
             t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
-            brand=element.brand;
+            
         });
         $("#punys").append(t_tmp);
         $("#punys").parent().show();
@@ -2750,7 +2742,7 @@ function quadre(t_quadre) {
             if(brand!=""){
                 t_tmp+='</optgroup>'
             }
-            t_tmp += '<optgroup label='+ element.brand+'>'
+            t_tmp += '<optgroup label="'+ element.brand+'">'
 
         }
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
@@ -2768,7 +2760,7 @@ function rodes(t_rodes) {
             if(brand!=""){
                 t_tmp+='</optgroup>'
             }
-            t_tmp += '<optgroup label='+ element.brand+'>'
+            t_tmp += '<optgroup label="'+ element.brand+'">'
 
         }
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
@@ -2787,7 +2779,7 @@ function grup(t_grup) {
             if(brand!=""){
                 t_tmp+='</optgroup>'
             }
-            t_tmp += '<optgroup label='+ element.brand+'>'
+            t_tmp += '<optgroup label="'+ element.brand+'">'
 
         }
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
@@ -2805,7 +2797,7 @@ function bieles(t_bieles) {
             if(brand!=""){
                 t_tmp+='</optgroup>'
             }
-            t_tmp += '<optgroup label='+ element.brand+'>'
+            t_tmp += '<optgroup label="'+ element.brand+'">'
 
         }
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
@@ -2823,7 +2815,7 @@ function manillar(t_manillar) {
             if(brand!=""){
                 t_tmp+='</optgroup>'
             }
-            t_tmp += '<optgroup label='+ element.brand+'>'
+            t_tmp += '<optgroup label="'+ element.brand+'">';
 
         }
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
@@ -2835,19 +2827,25 @@ function manillar(t_manillar) {
 
 function portabido() {
     //portabido1
-    t_tmp = '<option value="0" selected>Selecciona el Portabidon</option>';
+    t_tmp1 = '<option value="0" selected>Selecciona el Portabidon</option>';
+    t_tmp="";
     brand="";
     t_portabido.forEach(element => {
-        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        if(element.brand!=brand){
+            if(brand!=""){
+                t_tmp+='</optgroup>'
+            }
+            t_tmp += '<optgroup label="'+ element.brand+'">'
+
+        }
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
+        brand=element.brand;
     });
-    $("#portabido").append(t_tmp);
+    $("#portabido").append(t_tmp1+t_tmp);
 
     //portabido2
-    t_tmp = '<option value="0" selected>Selecciona el 2o Portabidon</option>';
-    t_portabido.forEach(element => {
-        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
-    });
-    $("#portabido2").append(t_tmp);
+    t_tmp2 = '<option value="0" selected>Selecciona el 2o Portabidon</option>';
+    $("#portabido2").append(t_tmp2+t_tmp);
 }
 
 function ceramicspeed() {
@@ -2872,8 +2870,17 @@ function ceramicspeed() {
 
 function tijes(t_tijes) {
     t_tmp = '<option value="0" selected>Selecciona la Tija</option>';
+    brand="";
     t_tijes.forEach(element => {
-        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        if(element.brand!=brand){
+            if(brand!=""){
+                t_tmp+='</optgroup>'
+            }
+            t_tmp += '<optgroup label="'+ element.brand+'">'
+
+        }
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
+        brand=element.brand;
     });
     $("#tija").append(t_tmp);
     $("#tija").parent().show();
@@ -2887,7 +2894,7 @@ function seient() {
             if(brand!=""){
                 t_tmp+='</optgroup>'
             }
-            t_tmp += '<optgroup label='+ element.brand+'>'
+            t_tmp += '<optgroup label="'+ element.brand+'">'
 
         }
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
@@ -2905,13 +2912,13 @@ function pneumatic(t_pneumatics) {
             if(brand!=""){
                 t_tmp+='</optgroup>'
             }
-            t_tmp += '<optgroup label='+ element.brand+'>'
+            t_tmp += '<optgroup label="'+ element.brand+'">'
 
         }
-        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
+        brand=element.brand;
     });
     $("#pneumatics").append(t_tmp);
-    brand=element.brand;
 };
 
 function mostrar_cinta() {
@@ -2928,8 +2935,17 @@ function mostrar_cinta() {
 function pedals(t_pedals) {
 
     t_tmp = '<option value="0" selected>Selecciona el Pedales</option>';
+    brand="";
     t_pedals.forEach(element => {
-        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        if(element.brand!=brand){
+            if(brand!=""){
+                t_tmp+='</optgroup>'
+            }
+            t_tmp += '<optgroup label="'+ element.brand+'">'
+
+        }
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
+        brand=element.brand;
     });
     $("#pedals").append(t_tmp);
 };
