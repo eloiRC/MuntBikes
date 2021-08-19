@@ -1,0 +1,22 @@
+{
+  "name": "muntbikes",
+  "version": "1.0.0",
+  "description": "MuntBikes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eloiRC/MuntBikes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eloiRC/MuntBikes/issues"
+  },
+  "homepage": "https://github.com/eloiRC/MuntBikes#readme",
+  "dependencies": {
+    "firebase": "^8.7.0"
+  }
+}

@@ -87,79 +87,85 @@ let darkMode = false;
 t_road_disc = [{
         nom: "Pinarello F12", //
         preu: 5595,
-        marca: "pinarello",
+        brand: "Pinarello",
         img: "f12_disc.jpg"
     },
     {
         nom: "Pinarello PRINCE FX", //
         preu: 3915,
-        marca: "pinarello",
+        brand: "Pinarello",
         img: "prince_disc.jpg"
     },
     {
         nom: "Pinarello Angliru", //
         preu: 1665,
-        marca: "pinarello",
+        brand: "Pinarello",
         img: "angliru_disc.jpg"
     },
     {
         nom: "Bianchi XR4", //preu quadro amb vision restat -649€ del manillar
         preu: 4516,
-        marca: "bianchi",
+        brand: "Bianchi",
         img: "xr4_disc.jpg"
     },
     {
-        nom: "Bianchi SPECIALISSIMA", //preu quadro restat 200€ potencia manillar carbon
-        preu: 5140,
-        marca: "bianchi",
+        nom: "Bianchi SPECIALISSIMA", //preu quadro restat fsa potencia manillar carbon
+        preu: 4912,
+        brand: "Bianchi",
         img: "specialissima_disc.jpg"
     },
     {
         nom: "Bianchi INFINITO CV", //preu quadro amb vision restat -649€ del manillar
         preu: 3709,
-        marca: "bianchi",
+        brand: "Bianchi",
         img: "infinito_disc.jpg"
     },
     {
         nom: "Colnago C64", //
         preu: 4637,
-        marca: "colnago",
+        brand: "Colnago",
         img: "c64_disc.jpg"
     },
     {
         nom: "Colngao V3 RS", //
         preu: 4379,
-        marca: "colnago",
+        brand: "Colnago",
         img: "v3rs_disc.jpg"
     },
     {
-        nom: "Scott ADDICT RC ULTIMATE", //
-        preu: 3999,
-        marca: "scott",
-        img: "addict_ultimate.jpg"
+        nom: "Scott ADDICT RC SL ULTIMATE", //
+        preu: 4499,
+        brand: "Scott",
+        img: "addict_sl_22.jpg"
+    },
+    {
+        nom: "Scott ADDICT RC SL SUPERSONIC", //
+        preu: 4499,
+        brand: "Scott",
+        img: "addict_super_22.jpg"
     },
     {
         nom: "Scott ADDICT RC PRO", //
-        preu: 2849,
-        marca: "scott",
-        img: "addict_pro.jpg"
+        preu: 2999,
+        brand: "Scott",
+        img: "addict_pro_22.jpg"
     },
     {
         nom: "De Rosa SK PINIFARINA", //
         preu: 4290,
-        marca: "derosa",
+        brand: "Derosa",
         img: "sk_pinifarina.jpg"
     },
     {
         nom: "De Rosa MERAK", 
         preu: 4355,
-        marca: "derosa",
+        brand: "Derosa",
         img: "merak.jpg"
     },
     {
         nom: "De Rosa Protos", 
         preu: 4655,
-        marca: "derosa",
+        brand: "Derosa",
         img: "protos_disc.jpg"
     }
 ];
@@ -168,62 +174,62 @@ t_road = [{
         nom: "Pinarello F12",
         preu: 5395,
         info: "*tija incluida",
-        marca: "pinarello",
+        brand: "Pinarello",
         img: "f12.jpg"
     },
     {
         nom: "Pinarello GAN",
         preu: 2350,
         info: "*tija incluida",
-        marca: "pinarello",
+        brand: "Pinarello",
         img: "gan.jpg"
     },
     {
         nom: "Pinarello Angliru", //
         preu: 1495,
         info: "*tija incluida",
-        marca: "pinarello",
+        brand: "Pinarello",
         img: "angliru.jpg"
     },
     {
         nom: "Bianchi XR4", //
         preu: 3959,
         info: "*tija incluida",
-        marca: "bianchi",
+        brand: "Bianchi",
         img: "xr4.jpg"
     },
     {
         nom: "Bianchi SPECIALISSIMA 2020", //
         preu: 3990,
         info: "",
-        marca: "bianchi",
+        brand: "Bianchi",
         img: "specialissima.jpg"
     },
     {
         nom: "Colnago C64", //
         preu: 4087,
         info: "*tija incluida",
-        marca: "colnago",
+        brand: "Colnago",
         img: "c64.jpg"
     },
     {
         nom: "Colngao V3 RS", //
         preu: 4012,
         info: "*tija incluida",
-        marca: "colnago",
+        brand: "Colnago",
         img: "v3rs.jpg"
     },
     {
         nom: "De Rosa Protos", 
         preu: 4565,
         info: "*tija incluida",
-        marca: "derosa",
+        brand: "Derosa",
         img: "protos.jpg"
     },
     {
         nom: "De Rosa nuovo classico", 
         preu: 3235,
-        marca: "derosa",
+        brand: "Derosa",
         img: "nuovoclassico.jpg"
     }
 ];
@@ -232,807 +238,1066 @@ t_gravel = [{
         nom: "Pinarello Grevil",
         preu: 2895,
         info: "*tija incluida",
-        marca: "pinarello",
+        brand: "Pinarello",
         img: "grevil.jpg"
     },
     {
         nom: "Pinarello Crossista ",
         preu: 2715,
         info: "*tija incluida",
-        marca: "pinarello",
+        brand: "Pinarello",
         img: "crossista.jpg"
     },
     {
         nom: "Bianchi Zolder Pro", //
         preu: 2387,
         info: "",
-        marca: "bianchi",
+        brand: "Bianchi",
         img: "zolder.jpg"
     },
     {
         nom: "Bianchi ARCADEX ", //PREU CALCULAT DESCONATANT UNS 600€ DEL GRX
         preu: 2500,
         info: "",
-        marca: "bianchi",
+        brand: "Bianchi",
         img: "arcadex.jpg"
     },
     {
-        nom: "Scott Addict CX RC", //
+        nom: "Scott Addict GRAVEL TUNED HMX", //
         preu: 2249,
         info: "*tija incluida",
-        marca: "scott",
-        img: "addict_cx.jpg"
+        brand: "Scott",
+        img: "addict_gravel.jpg"
     },
     {
         nom: "Colnago Prestige", //
         preu: 2190,
         info: "*tija NO incluida",
-        marca: "colnago",
+        brand: "Colnago",
         img: "prestige.jpg"
     },
     {
         nom: "Colnago G3X", //
         preu: 2825,
         info: "*tija incluida",
-        marca: "colnago",
+        brand: "Colnago",
         img: "g3x.jpg"
     },
     {
         nom: "De Rosa Gravel", 
         preu: 1977,
-        marca: "derosa",
+        brand: "Derosa",
         img: "derosa_gravel.jpg"
     }
 ];
 
-t_mtb = [{
-        nom: "Scott Spark N1NO Canda", //
+t_mtb = [
+    {
+        nom: "Scott Spark RC HMX SL ", //
         preu: 5999,
-        info: "*Hoquilla SID ultimate,amortiguador RockShox NUDE ,bielas xx1, frenos level ultimate, manillar fraser ic y tija incluidos ",
-        marca: "scott",
-        img: "spark_canada.jpg"
+        info: "*Hoquilla FOX 34 SC kashima,amortiguador FOX NUDE 5 ,manillar fraser ic y tija incluidos",
+        brand: "Scott",
+        img: "spark_sl_22.jpg"
     },
     {
-        nom: "Scott Spark N1NO SilverFish", //
-        preu: 5999,
-        info: "*Hoquilla SID ultimate,amortiguador RockShox NUDE ,bielas xx1, frenos lvl ultimate, manillar fraser ic y tija incluidos ",
-        marca: "scott",
-        img: "spark_silver.jpg"
+        nom: "Scott Spark RC WC HMX", //
+        preu: 4999,
+        info: "*Hoquilla SID ultimate RACE DAY ,amortiguador RockShox NUDE 5, manillar fraser ic, tija y sillin syncros incluidos ",
+        brand: "Scott",
+        img: "spark_wc_22.jpg"
     },
     {
-        nom: "Scott Spark RC Supersonic HMX SL ", //
-        preu: 7549,
-        info: "*Hoquilla SID ultimate,amortiguador RockShox NUDE ,bielas xx1, frenos lvl ultimate, manillar fraser ic y tija incluidos",
-        marca: "scott",
-        img: "spark_supersonic.jpg"
+        nom: "Scott Spark RC SUPERSONIC HMX", //
+        preu: 4999,
+        info: "*Hoquilla SID ultimate RACE DAY ,amortiguador RockShox NUDE 5, manillar fraser ic, tija incluidos ",
+        brand: "Scott",
+        img: "spark_super_22.jpg"
     },
     {
-        nom: "Scott Scale 910 HMF ", //
-        preu: 2349,
-        info: "*tija incluidos, horquilla fox sc 32 performance",
-        marca: "scott",
-        img: "scale_910.jpg"
+        nom: "Scott Spark 900 TUNED HMX", //
+        preu: 4999,
+        info: "*Hoquilla FOX factory 34 kashima,amortiguador FOX NUDE 5, manillar fraser ic",
+        brand: "Scott",
+        img: "spark_tuned_22.jpg"
     },
     {
-        nom: "Scott Scale SL", //
+        nom: "Scott Scale 900 HMX ", //
         preu: 3499,
-        info: "*Manillar fraser ic, tija, horquilla sid sl, frenos sram level ultimate incluidos",
-        marca: "scott",
-        img: "scale_sl.jpg"
+        info: "*tija incluido, horquilla SID SL ULTIMATE RACE DAY, Fraser IC",
+        brand: "Scott",
+        img: "scale_wc_22.jpg"
     },
     {
         nom: "Bianchi Methanol FS",
         preu: 3300,
         info: "*sin horquilla y sin amortiguador",
-        marca: "bianchi",
+        brand: "Bianchi",
         img: "methanol_fs.jpg"
     },
     {
         nom: "Bianchi Methanol RS",
         preu: 3590,
         info: "",
-        marca: "bianchi",
+        brand: "Bianchi",
         img: "methanol_rs.jpg"
     }
 ];
 
 t_manillars_road_disc = [{
-        nom: "MOST TALON ULTRA f12 TICR", //
+        nom: "TALON ULTRA f12 TICR", //
         preu: 857,
-        img: "talon_ultra.jpg"
+        img: "talon_ultra.jpg",
+        brand:"Most"
     },
     {
-        nom: "MOST TALON AERO", //
+        nom: "TALON AERO", //
         preu: 718,
-        img: "talon_aero.jpg"
+        img: "talon_aero.jpg",
+        brand:"Most"
     },
     {
-        nom: "MOST Jaguar XFC carbon TICR", //
+        nom: "Jaguar XFC carbon TICR", //
         preu: 668,
-        img: "jaguarC_ticr.jpg"
+        img: "jaguarC_ticr.jpg",
+        brand:"Most"
     },
     {
-        nom: "MOST Jaguar XA TICR", //
+        nom: "Jaguar XA TICR", //
         preu: 173,
-        img: "jaguar_ticr.jpg"
+        img: "jaguar_ticr.jpg",
+        brand:"Most"
     },
     {
-        nom: "SYNCROS CRESTON IC SL rc", //
-        preu: 579,
-        img: "creston.jpg"
+        nom: "CRESTON IC SL rc", //
+        preu: 599,
+        img: "creston.jpg",
+        brand:"Syncros"
     },
     {
-        nom: "VISION METRON 5D / 6D ACR", //
+        nom: "Conjunto K-force + NS ACR SPECIALISSIMA", //
+        preu: 429,
+        img: "FSA_ACR.jpg",
+        brand:"FSA"
+    },
+    {
+        nom: "METRON 5D / 6D ACR", //
         preu: 649,
-        img: "metron.jpg"
+        img: "metron.jpg",
+        brand:"Vision"
     },
     {
-        nom: "VISION METRON 5D / 6D ACR DeROSA", //
+        nom: "METRON 5D / 6D ACR DeROSA", //
         preu: 540,
-        img: "metron.jpg"
+        img: "metron.jpg",
+        brand:"Vision"
     },
     {
-        nom: "VISION METRON 5D / 6D ACR DeROSA Pintado en color del cuadro", //
+        nom: "METRON 5D / 6D ACR DeROSA Pintado en color del cuadro", //
         preu: 680,
-        img: "metron.jpg"
+        img: "metron.jpg",
+        brand:"Vision"
     },
     {
-        nom: "Deda Alanera colnago", //
+        nom: "Alanera colnago", //
         preu: 847,
-        img: "alanera.jpg"
+        img: "alanera.jpg",
+        brand:"Deda"
     },
     {
         nom: "Colnago sr9 + ZIPP service course ERGO ", //
         preu: 294,
-        img: "sr9_zipp_sc.jpg"
+        img: "sr9_zipp_sc.jpg",
+        brand:"Colnago - Zipp"
     },
     {
         nom: "Colnago sr9 + ZIPP SL ERGO Carbon ", //
         preu: 477,
-        img: "sr9_zipp_sl.jpg"
+        img: "sr9_zipp_sl.jpg",
+        brand:"Colnago - Zipp"
     },
     {
         nom: "Colnago sr9 + BikeAhead ", //
         preu: 565,
-        img: "sr9_bikeahead.jpg"
+        img: "sr9_bikeahead.jpg",
+        brand:"Colnago - Bike Ahead"
     },
     {
         nom: "Colnago sr9 + LIGHTWEIGHT RENNBÜGEL ", //
         preu: 537,
-        img: "sr9_lightweight.jpg"
+        img: "sr9_lightweight.jpg",
+        brand:"Colnago - LightWeight"
     }
 ];
 
 t_manillars_road = [{
-        nom: "MOST TALON ULTRA TICR", //
+        nom: "TALON ULTRA TICR", //
         preu: 845,
-        img: "talon_ultra.jpg"
+        img: "talon_ultra.jpg",
+        brand:"Most"
     },
     {
-        nom: "MOST TALON AERO", //
+        nom: "TALON AERO", //
         preu: 718,
-        img: "talon_aero.jpg"
+        img: "talon_aero.jpg",
+        brand:"Most"
     },
     {
-        nom: "MOST TALON UD", //
+        nom: "TALON UD", //
         preu: 411,
-        img: "talon_ud.jpg"
+        img: "talon_ud.jpg",
+        brand:"Most"
     },
     {
-        nom: "MOST Jaguar XFC carbon TICR", //
+        nom: "Jaguar XFC carbon TICR", //
         preu: 668,
-        img: "jaguarC_ticr.jpg"
+        img: "jaguarC_ticr.jpg",
+        brand:"Most"
     },
     {
-        nom: "MOST Jaguar XA TICR", //
+        nom: "Jaguar XA TICR", //
         preu: 173,
-        img: "jaguar_ticr.jpg"
+        img: "jaguar_ticr.jpg",
+        brand:"Most"
     },
     {
-        nom: "MOST JAGUAR 3K conjunto",
+        nom: "JAGUAR 3K conjunto",
         preu: 247,
-        img: "jaguar.jpg"
+        img: "jaguar.jpg",
+        brand:"Most"
     },
+    
     {
-        nom: "VISION METRON 5D / 6D  Bianchi", //
+        nom: "METRON 5D / 6D  Bianchi", //
         preu: 649,
-        img: "metron_rim.jpg"
+        img: "metron_rim.jpg",
+        brand:"Vision"
     },
     {
-        nom: "ZIPP SL AERO + SPEED conjunto", //
+        nom: "SL AERO + SPEED conjunto", //
         preu: 615,
-        img: "zipp_sl_aero.jpg"
+        img: "zipp_sl_aero.jpg",
+        brand:"Zipp"
     },
     {
-        nom: "ZIPP SL ERGO + SPEED conjunto", //
+        nom: "SL ERGO + SPEED conjunto", //
         preu: 590,
-        img: "zipp_sl_ergo.jpg"
+        img: "zipp_sl_ergo.jpg",
+        brand:"Zipp"
     },
     {
-        nom: "ZIPP service course",
+        nom: "Service course",
         preu: 237,
-        img: "zipp_sc.jpg"
+        img: "zipp_sc.jpg",
+        brand:"Zipp"
     },
     {
-        nom: "Black-inc", //
+        nom: "BarStem", //
         preu: 690,
-        img: "black_inc.jpg"
+        img: "black_inc.jpg",
+        brand:"Black-inc"
     },
     {
-        nom: "Ritchey solostreem", //
+        nom: "Solostreem", //
         preu: 475,
-        img: "solostreem.jpg"
+        img: "solostreem.jpg",
+        brand:"Ritchey"
     },
     {
-        nom: "PRO VIVE conjunto", //
+        nom: "VIVE conjunto", //
         preu: 458,
-        img: "pro_vive.jpg"
+        img: "pro_vive.jpg",
+        brand:"Pro"
     },
     {
-        nom: "PRO VIBE Alu",
+        nom: "VIBE Alu",
         preu: 198,
-        img: "pro_vive_alu.jpg"
+        img: "pro_vive_alu.jpg",
+        brand:"Pro"
     },
     {
-        nom: "PRO PLT", //
+        nom: "PLT", //
         preu: 99,
-        img: "pro_plt.jpg"
+        img: "pro_plt.jpg",
+        brand:"Pro"
     },
     {
-        nom: "Deda Alanera colnago", //
+        nom: "Alanera colnago", //
         preu: 847,
-        img: "alanera.jpg"
+        img: "alanera.jpg",
+        brand:"Deda"
     },
     {
         nom: "Colnago sr9 + ZIPP service course ERGO ", //
         preu: 294,
-        img: "sr9_zipp_sc.jpg"
+        img: "sr9_zipp_sc.jpg",
+        brand:"Colnago - Zipp"
     },
     {
         nom: "Colnago sr9 + ZIPP SL ERGO ", //
         preu: 477,
-        img: "sr9_zipp_sl.jpg"
+        img: "sr9_zipp_sl.jpg",
+        brand:"Colnago - Zipp"
     },
     {
         nom: "Colnago sr9 + BikeAhead ", //
         preu: 565,
-        img: "sr9_bikeahead.jpg"
+        img: "sr9_bikeahead.jpg",
+        brand:"Colnago - Bike Ahead"
     },
     {
         nom: "Colnago sr9 + LIGHTWEIGHT RENNBÜGEL ", //
         preu: 537,
-        img: "sr9_lightweight.jpg"
+        img: "sr9_lightweight.jpg",
+        brand:"Colnago - LightWeight"
     },
     {
         nom: "Lightweight BÜGELHALTER + LIGHTWEIGHT RENNBÜGEL", //
         preu: 675,
-        img: "lightweight.jpg"
+        img: "lightweight.jpg",
+        brand:"Colnago - Lightweight"
     }
 ];
 
 t_manillars_gravel = [{
         nom: "MOST TALON Aero",
         preu: 718,
-        img: "talon_aero.jpg"
+        img: "talon_aero.jpg",
+        brand:"Most"
     },
     {
         nom: "MOST TALON UD",
         preu: 411,
-        img: "talon_ud.jpg"
+        img: "talon_ud.jpg",
+        brand:"Most"
     },
     {
         nom: "MOST JAGUAR 3K",
         preu: 247,
-        img: "jaguar.jpg"
+        img: "jaguar.jpg",
+        brand:"Most"
     },
     {
-        nom: "VISION METRON 5D / 6D  Bianchi", //
+        nom: "METRON 5D / 6D  Bianchi", //
         preu: 649,
-        img: "metron_rim.jpg"
+        img: "metron_rim.jpg",
+        brand:"Vision"
     },
     {
-        nom: "ZIPP SL AERO + SPEED",
+        nom: "SYNCROS CRESTON IC SL X", //
+        preu: 599,
+        img: "creston.jpg",
+        brand:"Syncros"
+    },
+    {
+        nom: "SL AERO + SPEED",
         preu: 615,
-        img: "zipp_sl_aero.jpg"
+        img: "zipp_sl_aero.jpg",
+        brand:"Zipp"
     },
     {
-        nom: "ZIPP SL ERGO + SPEED",
+        nom: "SL ERGO + SPEED",
         preu: 590,
-        img: "zipp_sl_ergo.jpg"
+        img: "zipp_sl_ergo.jpg",
+        brand:"Zipp"
     },
     {
-        nom: "ZIPP service course",
+        nom: "Service course",
         preu: 237,
-        img: "zipp_sc.jpg"
+        img: "zipp_sc.jpg",
+        brand:"Zipp"
     },
     {
-        nom: "Black-inc",
+        nom: "BarStem",
         preu: 690,
-        img: "black_inc.jpg"
+        img: "black_inc.jpg",
+        brand:"Black-inc"
     },
     {
-        nom: "Ritchey solostreem",
+        nom: "Solostreem",
         preu: 475,
-        img: "solostreem.jpg"
+        img: "solostreem.jpg",
+        brand:"Ritchey"
     },
     {
-        nom: "PRO VIBE",
+        nom: "VIBE",
         preu: 458,
-        img: "pro_vive.jpg"
+        img: "pro_vive.jpg",
+        brand:"Pro"
     },
     {
-        nom: "PRO VIBE Alu",
+        nom: "VIBE Alu",
         preu: 198,
-        img: "pro_vive_alu.jpg"
+        img: "pro_vive_alu.jpg",
+        brand:"Pro"
     },
     {
-        nom: "PRO PLT", //
+        nom: "PLT", //
         preu: 99,
-        img: "pro_plt.jpg"
+        img: "pro_plt.jpg",
+        brand:"Pro"
     }
 ];
 
-t_manillars_mtb = [{
-        nom: "Fraser SE SL  iC",
-        preu: 474,
-        img: "fraser_se.jpg"
-    },
+t_manillars_mtb = [
     {
-        nom: "Fraser SL iC",
-        preu: 69,
-        img: "fraser.jpg"
+        nom: "Fraser SL iC WC",
+        preu: 349,
+        img: "fraser.jpg",
+        brand:"Syncros"
     },
     {
         nom: "NewUltimate Carbon + steam",
         preu: 246,
-        img: "newultimate.jpg"
+        img: "newultimate.jpg",
+        brand:"New Ultimate"
     },
     {
-        nom: "Tune ",
+        nom: "Turnstange Flatbar 2.0 + Geiles Teil 4.0",
         preu: 389,
-        img: "tune.jpg"
+        img: "tune.jpg",
+        brand:"Tune"
     },
     {
-        nom: "Manillar BikeAhead",
+        nom: "THE FLATBAR manillar",
         preu: 229,
-        img: "bikeahead.jpg"
+        img: "bikeahead.jpg",
+        brand:"Bike Ahead"
     },
     {
-        nom: "OnOff He",
+        nom: "He",
         preu: 259,
-        img: "onoff.jpg"
+        img: "onoff.jpg",
+        brand:"OnOff"
     }
 ];
 
 t_rodes_disc = [{
-        nom: "Campagnolo Bora One 35 / 50 tubular", //
+        nom: "Bora One 35 / 50 tubular", //
         preu: 1913,
-        img: "bora_one.jpg"
+        img: "bora_one.jpg",
+        brand:"Campagnolo"
     },
     {
-        nom: "Zipp 303 tubular", //
-        preu: 2600,
-        img: "303.jpg"
+        nom: "BORA ONE 35 / 50 cubierta", //
+        preu: 2140,
+        img: "bora_one.jpg",
+        brand:"Campagnolo"
+    },
+    {
+        nom: "WTO ULTRA 33 / 45 / 60  tubeless / cubierta", //
+        preu: 3150,
+        img: "WTO_ULTRA.JPG",
+        brand:"Campagnolo"
+    },
+    {
+        nom: "WTO 33 / 45 / 60  tubeless / cubierta", //
+        preu: 2168,
+        img: "wto.jpg",
+        brand:"Campagnolo"
+    },
+    {
+        nom: "SHAMAL CARBON  tubeless / cubierta", //
+        preu: 1299,
+        img: "SHAMAL_CARBON.JPG",
+        brand:"Campagnolo"
+    },
+    {
+        nom: "Zonda tubeless / cubierta", //
+        preu: 605,
+        img: "zonda.jpg",
+        brand:"Campagnolo"
+    },
+    {
+        nom: "Speed 40 (cult) tubular", //
+        preu: 2548,
+        img: "speed40.jpg",
+        brand:"Fulcrum"
+    },
+    {
+        nom: "Wind 40  tubeless / cubierta", //
+        preu: 1226,
+        img: "wind.jpg",
+        brand:"Fulcrum"
+    },
+    {
+        nom: "Speed 40 (usb)  tubeless / cubierta", //
+        preu: 2045,
+        img: "speed40.jpg",
+        brand:"Fulcrum"
+    },
+    {
+        nom: "Peak 4550 (tune) tubular", //
+        preu: 3050,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "Peak 4550 (carbon-ti) tubular", //
+        preu: 3200,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "Peak 4550 (dt-240) tubular", //
+        preu: 3300,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "Peak 4550 (dt-180) tubular", //
+        preu: 3950,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "Grid 4540 (tune) cubierta", //
+        preu: 2850,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "Peak 4550 (tune) cubierta", //
+        preu: 3050,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "Peak 4550 (carbon-ti) cubierta", //
+        preu: 3200,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "Peak 4550 (dt-240) cubierta", //
+        preu: 3300,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "Peak 4550 (dt-180) cubierta", //
+        preu: 3950,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "MMC DX 32 tubular", //
+        preu: 3199,
+        img: "mmc_dx.jpg",
+        brand:"Corima"
+    },
+    {
+        nom: "MMC DX 47 tubular", //
+        preu: 3299,
+        img: "mmc_dx_47.jpg",
+        brand:"Corima"
+    },
+    {
+        nom: "WS 47 tubular", //
+        preu: 1449,
+        img: "ws.jpg",
+        brand:"Corima"
+    },
+    {
+        nom: "MCC 32 cubierta", //
+        preu: 3549,
+        img: "mcc_dx_32.jpg",
+        brand:"Corima"
+    },
+    {
+        nom: "MCC 47 cubierta", //
+        preu: 3649,
+        img: "mcc_dx.jpg",
+        brand:"Corima"
+    },
+    {
+        nom: "WS cubierta", //
+        preu: 1749,
+        img: "ws.jpg",
+        brand:"Corima"
     },
     {
         nom: "Dura-Ace c40 tubular", //
         preu: 2620,
-        img: "c40.jpg"
-    },
-    {
-        nom: "Fulcrum Speed 40 (cult) tubular", //
-        preu: 2548,
-        img: "speed40.jpg"
-    },
-    {
-        nom: "Carbon-TI tubular", //
-        preu: 1620,
-        img: "carbonti.jpg"
-    },
-    {
-        nom: "Bike Ahead Biturbo-Road tubular", //
-        preu: 3703,
-        img: "biturbo.jpg"
-    },
-    {
-        nom: "Corima MMC DX 32 tubular", //
-        preu: 3199,
-        img: "mmc_dx.jpg"
-    },
-    {
-        nom: "Corima MMC DX 47 tubular", //
-        preu: 3299,
-        img: "mmc_dx_47.jpg"
-    },
-    {
-        nom: "Corima WS 47 tubular", //
-        preu: 1449,
-        img: "ws.jpg"
-    },
-    {
-        nom: "Lightweight Melnstein T 24D tubular", //
-        preu: 4079,
-        img: "melstein.jpg"
-    },
-    {
-        nom: "Lightweight Melnstein T 24D tubular schwarz", //
-        preu: 4479,
-        img: "melstein.jpg"
-    },
-    {
-        nom: "ZIPP 353 NSW tubeless / cubierta", //
-        preu: 3600,
-        img: "ZIPP_353_NSW.JPG"
-    },
-    {
-        nom: "ZIPP 303 Firecrest tubeless / cubierta", //
-        preu: 1800,
-        img: "303.jpg"
-    },
-    {
-        nom: "ZIPP 303s tubeless / cubierta", //
-        preu: 1100,
-        img: "303s.jpg"
-    },
-    
-    {
-        nom: "Campagnolo BORA ONE 35 / 50 cubierta", //
-        preu: 2140,
-        img: "bora_one.jpg"
-    },
-    {
-        nom: "Campagnolo WTO ULTRA 33 / 45 / 60  tubeless / cubierta", //
-        preu: 3150,
-        img: "WTO_ULTRA.JPG"
-    },
-    {
-        nom: "Campagnolo WTO 33 / 45 / 60  tubeless / cubierta", //
-        preu: 2168,
-        img: "wto.jpg"
-    },
-    {
-        nom: "Campagnolo SHAMAL CARBON  tubeless / cubierta", //
-        preu: 1299,
-        img: "SHAMAL_CARBON.JPG"
-    },
-    {
-        nom: "Campagnolo Zonda tubeless / cubierta", //
-        preu: 605,
-        img: "zonda.jpg"
+        img: "c40.jpg",
+        brand:"Shimano"
     },
     {
         nom: "Dura-Ace c40  tubeless / cubierta", //
         preu: 2430,
-        img: "c40.jpg"
+        img: "c40.jpg",
+        brand:"Shimano"
     },
     {
-        nom: "DT-1100  tubeless / cubierta", //
+        nom: "Melnstein T 24D tubular", //
+        preu: 4079,
+        img: "melstein.jpg",
+        brand:"LightWeight"
+    },
+    {
+        nom: "Melnstein T 24D tubular schwarz", //
+        preu: 4479,
+        img: "melstein.jpg",
+        brand:"LightWeight"
+    },
+    {
+        nom: "Melnstein C 24D Cubierta", //
+        preu: 4703,
+        img: "melstein.jpg",
+        brand:"LightWeight"
+    },
+    {
+        nom: "Melnstein C 24D Cubireta schwarz", //
+        preu: 5105,
+        img: "melstein.jpg",
+        brand:"LightWeight"
+    },
+    {
+        nom: "CRC-1100 T Tubular", //
         preu: 2388,
-        img: "dt1100.jpg"
+        img: "dt1100_r.jpg",
+        brand:"DT-SWISS"
     },
     {
-        nom: "DT-1400  tubeless / cubierta", //
+        nom: "ARC-1100 / PRC-1100  tubeless / cubierta", //
+        preu: 2388,
+        img: "dt1100.jpg",
+        brand:"DT-SWISS"
+    },
+    {
+        nom: "ARC-1400 / PRC-1400  tubeless / cubierta", //
         preu: 1958,
-        img: "dt1400.jpg"
+        img: "dt1400.jpg",
+        brand:"DT-SWISS"
     },
     {
-        nom: "DT-1400 dicut tubeless / cubierta", //
+        nom: "PR-1400 dicut tubeless / cubierta", //
         preu: 827,
-        img: "dt1400d.jpg"
+        img: "dt1400d.jpg",
+        brand:"DT-SWISS"
     },
     {
-        nom: "DT-1600 tubeless / cubierta", //
+        nom: "PR-1600 tubeless / cubierta", //
         preu: 559,
-        img: "dt1600.jpg"
+        img: "dt1600.jpg",
+        brand:"DT-SWISS"
     },
     {
-        nom: "DT-1800 tubeless / cubierta", //
+        nom: "P-1800 tubeless / cubierta", //
         preu: 338,
-        img: "dt1800.jpg"
+        img: "dt1800.jpg",
+        brand:"DT-SWISS"
     },
     {
-        nom: "Fulcrum Wind 40  tubeless / cubierta", //
-        preu: 1226,
-        img: "wind.jpg"
+        nom: "303 Firecrest tubeless / cubierta", //
+        preu: 1800,
+        img: "303.jpg",
+        brand:"Zipp"
     },
     {
-        nom: "Fulcrum Speed 40 (usb)  tubeless / cubierta", //
-        preu: 2045,
-        img: "speed40.jpg"
+        nom: "303 tubular", //
+        preu: 2600,
+        img: "303.jpg",
+        brand:"Zipp"
     },
     {
-        nom: "Carbon-TI  tubeless / cubierta", //
+        nom: "404 tubeless / cubierta", //
+        preu: 1800,
+        img: "404.jpg",
+        brand:"Zipp"
+    },    
+    {
+        nom: "303s tubeless / cubierta", //
+        preu: 1100,
+        img: "303s.jpg",
+        brand:"Zipp"
+    },    
+    {
+        nom: "SpeedCarbon tubular", //
+        preu: 1620,
+        img: "carbonti.jpg",
+        brand:"Carbon-ti"
+    },
+    {
+        nom: "SpeedCarbon  tubeless / cubierta", //
         preu: 1700,
-        img: "carbonti.jpg"
+        img: "carbonti.jpg",
+        brand:"Carbon-ti"
     },
     {
-        nom: "Bike Ahead Biturbo-Road tubeless / cubierta", //
+        nom: "Biturbo-Road tubular", //
         preu: 3703,
-        img: "biturbo.jpg"
+        img: "biturbo.jpg",
+        brand:"Bike Ahead"
     },
     {
-        nom: "TUNE SCHWARZBRENNER 45 2.0  tubeless / cubierta", //
+        nom: "Biturbo-Road tubeless / cubierta", //
+        preu: 3703,
+        img: "biturbo.jpg",
+        brand:"Bike Ahead"
+    },
+    {
+        nom: "SCHWARZBRENNER 45 2.0  tubeless / cubierta", //
         preu: 2099,
-        img: "tune.jpg"
+        img: "tune.jpg",
+        brand:"Tune"
     },
     {
-        nom: "Syncros Capital 1.0 tubeless / cubierta", //
-        preu: 1399,
-        img: "capital.jpg"
+        nom: "Capital 1.0 tubeless / cubierta", //
+        preu: 1299,
+        img: "capital.jpg",
+        brand:"Syncros"
     },
-    {
-        nom: "Corima MCC 32 cubierta", //
-        preu: 3549,
-        img: "mcc_dx_32.jpg"
-    },
-    {
-        nom: "Corima MCC 47 cubierta", //
-        preu: 3649,
-        img: "mcc_dx.jpg"
-    },
-    {
-        nom: "Corima WS cubierta", //
-        preu: 1749,
-        img: "ws.jpg"
-    }
+   
 ];
 
-t_rodes_road = [{
-        nom: "Corima MCC 32 / 47 tubular", //
+t_rodes_road = [
+    {
+        nom: "Bora One 35 / 50 tubular", //
+        preu: 1880,
+        img: "bora_one_r.jpg",
+        brand:"Campagnolo"
+    },
+    {
+        nom: "Bora Ultra 35 / 50 tubular", //
+        preu: 2830,
+        img: "bora_ultra.jpg",
+        brand:"Campagnolo"
+    },
+    {
+        nom: "Bora One 35 / 50 cubierta", //
+        preu: 2115,
+        img: "bora_one_r.jpg",
+        brand:"Campagnolo"
+    },
+    {
+        nom: "Bora Ultra 35 / 50 cubierta", //
+        preu: 3070,
+        img: "bora_ultra.jpg",
+        brand:"Campagnolo"
+    },
+    {
+        nom: "WTO 33 / 45 / 60 tubeless / cubierta", //
+        preu: 2164,
+        img: "wto_r.jpg",
+        brand:"Campagnolo"
+    },
+    {
+        nom: "Zonda Cubierta", //
+        preu: 498,
+        img: "zonda_r.jpg",
+        brand:"Campagnolo"
+    },
+    {
+        nom: "Wind 40 tubeless / cubierta", //
+        preu: 1199,
+        img: "wind40_r.jpg",
+        brand:"Fulcrum"
+    },
+    {
+        nom: "Speed 40 (usb) tubeless / cubierta", //
+        preu: 2045,
+        img: "speed40_r.jpg",
+        brand:"Fulcrum"
+    },
+    {
+        nom: "Peak 4550 (tune) tubular", //
+        preu: 3050,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "Peak 4550 (carbon-ti) tubular", //
+        preu: 3200,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "Grid 4540 (tune) cubierta", //
+        preu: 2850,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "Peak 4550 (tune) cubierta", //
+        preu: 3050,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "Peak 4550 (carbon-ti) cubierta", //
+        preu: 3200,
+        img: "peak4550.jpg",
+        brand:"Princeton"
+    },
+    {
+        nom: "MCC 32 / 47 tubular", //
         preu: 2999,
-        img: "mcc_r.jpg"
+        img: "mcc_r.jpg",
+        brand:"Corima"
     },
     {
-        nom: "Corima WS+ 47 tubular", //
+        nom: "WS+ 47 tubular", //
         preu: 1849,
-        img: "ws+_r.jpg"
+        img: "ws+_r.jpg",
+        brand:"Corima"
     },
     {
-        nom: "Corima WS 47 tubular", //
+        nom: "WS 47 tubular", //
         preu: 1249,
-        img: "ws_r.jpg"
+        img: "ws_r.jpg",
+        brand:"Corima"
+    },
+    {
+        nom: "MCC 47 cubierta", //
+        preu: 3299,
+        img: "mcc_r.jpg",
+        brand:"Corima"
+    },
+    {
+        nom: "WS+ 47 cubierta", //
+        preu: 2149,
+        img: "ws+_r.jpg",
+        brand:"Corima"
+    },
+    {
+        nom: "WS cubierta", //
+        preu: 1549,
+        img: "ws_r.jpg",
+        brand:"Corima"
     },
     {
         nom: "Dura-Ace c40 tubular", //
         preu: 2600,
-        img: "c40_rt.jpg"
-    },
-    {
-        nom: "Campagnolo Bora One 35 / 50 tubular", //
-        preu: 1880,
-        img: "bora_one_r.jpg"
-    },
-    {
-        nom: "Campagnolo Bora Ultra 35 / 50 tubular", //
-        preu: 2830,
-        img: "bora_ultra.jpg"
-    },
-    {
-        nom: "Lightweight Meilenstein T 24E tubular", //
-        preu: 3582,
-        img: "melstein_r.jpg"
-    },
-    {
-        nom: "Lightweight Meilenstein T 24E tubular schwarz", //
-        preu: 3982,
-        img: "melstein_r.jpg"
-    },
-    {
-        nom: "Corima MCC 47 cubierta", //
-        preu: 3299,
-        img: "mcc_r.jpg"
-    },
-    {
-        nom: "Corima WS+ 47 cubierta", //
-        preu: 2149,
-        img: "ws+_r.jpg"
-    },
-    {
-        nom: "Corima WS cubierta", //
-        preu: 1549,
-        img: "ws_r.jpg"
+        img: "c40_rt.jpg",
+        brand:"Shimano"
     },
     {
         nom: "Dura-Ace c40 tubeless / cubierta", //
         preu: 1715,
-        img: "c40_r.jpg"
+        img: "c40_r.jpg",
+        brand:"Shimano"
     },
     {
-        nom: "DT-1100 tubeless / cubierta", //
+        nom: "Meilenstein T 24E tubular", //
+        preu: 3587,
+        img: "melstein_r.jpg",
+        brand:"LightWeight"
+    },
+    {
+        nom: "Meilenstein T 24E tubular schwarz", //
+        preu: 3982,
+        img: "melstein_r.jpg",
+        brand:"LightWeight"
+    },
+    {
+        nom: "Meilenstein C 24E Cubierta", //
+        preu: 4269,
+        img: "melstein_r.jpg",
+        brand:"LightWeight"
+    },
+    {
+        nom: "ARC-1100 / PRC-1100 tubeless / cubierta", //
         preu: 2388,
-        img: "dt1100_r.jpg"
+        img: "dt1100_r.jpg",
+        brand:"DT-SWISS"
     },
     {
-        nom: "DT-1400 spline tubeless / cubierta", //
+        nom: "PR-1400 dicut tubeless / cubierta", //
         preu: 1958,
-        img: "dt1400_r.jpg"
+        img: "dt1400_r.jpg",
+        brand:"DT-SWISS"
     },
     {
-        nom: "Fulcrum Wind 40 tubeless / cubierta", //
-        preu: 1199,
-        img: "wind40_r.jpg"
-    },
-    {
-        nom: "Fulcrum Speed 40 (usb) tubeless / cubierta", //
-        preu: 2045,
-        img: "speed40_r.jpg"
-    },
-    {
-        nom: "Campagnolo BORA ONE 35 / 50 cubierta", //
-        preu: 2115,
-        img: "bora_one_r.jpg"
-    },
-    {
-        nom: "Campagnolo Bora Ultra 35 / 50 cubierta", //
-        preu: 3070,
-        img: "bora_ultra.jpg"
-    },
-    {
-        nom: "Campagnolo WTO 33 / 45 / 60 tubeless / cubierta", //
-        preu: 2164,
-        img: "wto_r.jpg"
-    },
-    {
-        nom: "Campagnolo Zonda", //
-        preu: 498,
-        img: "zonda_r.jpg"
-    },
-    {
-        nom: "Zipp 303 firecrest tubeless / cubierta", //
+        nom: "303 firecrest tubeless / cubierta", //
         preu: 2200,
-        img: "303_r.jpg"
-    }
+        img: "303_r.jpg",
+        brand:"Zipp"
+    },
 ];
 
 t_rodes_gravel = [{
         nom: "Dura-Ace c40 ", //
         preu: 2430,
-        img: "c40.jpg"
+        img: "c40.jpg",
+        brand:"Shimano"
     },
     {
-        nom: "DT GRC 1400", //
+        nom: "GRC 1400", //
         preu: 1958,
-        img: "grc1400.jpg"
+        img: "grc1400.jpg",
+        brand:"DT-SWISS"
     },
     {
-        nom: "DT GR 1600", //
+        nom: "GR 1600", //
         preu: 558,
-        img: "gr1600.jpg"
+        img: "gr1600.jpg",
+        brand:"DT-SWISS"
     },
     {
-        nom: "DT CRC 1100", //
+        nom: "CRC 1100", //
         preu: 2389,
-        img: "crc1100.jpg"
+        img: "crc1100.jpg",
+        brand:"DT-SWISS"
     },
     {
-        nom: "DT CRC 1400 Spline", //
+        nom: "CRC 1400 Spline", //
         preu: 1958,
-        img: "crc1400.jpg"
+        img: "crc1400.jpg",
+        brand:"DT-SWISS"
     },
     {
-        nom: "DT CR 1600", //
+        nom: "CR 1600", //
         preu: 558,
-        img: "cr1600.jpg"
+        img: "cr1600.jpg",
+        brand:"DT-SWISS"
     },
     {
-        nom: "Syncros capital x40", //
-        preu: 1399,
-        img: "capital_x40.jpg"
+        nom: "Capital x40", //
+        preu: 1299,
+        img: "capital_x40.jpg",
+        brand:"Syncros"
     },
     {
-        nom: "Bike Ahead Biturbo-Cross", //
+        nom: "Biturbo-Cross", //
         preu: 3703,
-        img: "biturbo.jpg"
+        img: "biturbo.jpg",
+        brand:"Bike Ahead"
     },
     {
-        nom: "CORIMA G30.5 ", //
+        nom: "G30.5 ", //
         preu: 2099,
-        img: "g30.jpg"
+        img: "g30.jpg",
+        brand:"Corima"
     },
     {
-        nom: "Fulcrum Racing Zero carbon", //
+        nom: "Racing Zero carbon", //
         preu: 1990,
-        img: "zeroC.jpg"
+        img: "zeroC.jpg",
+        brand:"Fulcrum"
     },
     {
-        nom: "Fulcrum Racing Zero", //
+        nom: "Racing Zero", //
         preu: 1189,
-        img: "zero.jpg"
+        img: "zero.jpg",
+        brand:"Fulcrum"
     },
     {
-        nom: "Fulcrum Rapid Red 3 ", //
+        nom: "Rapid Red 3 ", //
         preu: 613,
-        img: "rr3.jpg"
+        img: "rr3.jpg",
+        brand:"Fulcrum"
     },
     {
-        nom: "Fulcrum Rapid 5 ", //
+        nom: "Rapid 5 ", //
         preu: 380,
-        img: "rr5.jpg"
+        img: "rr5.jpg",
+        brand:"Fulcrum"
     }
 ];
 
 t_rodes_mtb = [{
-        nom: "Syncros Silverton SL", //
+        nom: "Silverton SL", //
         preu: 3799,
-        img: "silverton_sl.jpg"
+        img: "silverton_sl.jpg",
+        brand:"Syncros"
     },
     {
-        nom: "Syncros Silverton 1.0", //
-        preu: 1399,
-        img: "silverton.jpg"
+        nom: "Silverton 1.0 s", //
+        preu: 1999,
+        img: "silverton1s.jpg",
+        brand:"Syncros"
     },
     {
-        nom: "Tune BLACKBURNER", //
-        preu: 2198,
-        img: "tune_btt.jpg"
-    },
-
-    {
-        nom: "Carbon-Ti", //
-        preu: 1700,
-        img: "carbonti_btt.jpg"
-    },
-    {
-        nom: "Bike Ahead Biturbo", //
-        preu: 3399,
-        img: "biturbo_btt.jpg"
-    },
-    {
-        nom: "DT XRC 1200", //
-        preu: 2138,
-        img: "xrc1200.jpg"
-    },
-    {
-        nom: "DT XRC 1500 carbon", //
+        nom: "Silverton 1.0", //
         preu: 1499,
-        img: "xrc1500.jpg"
+        img: "silverton1.jpg",
+        brand:"Syncros"
     },
     {
-        nom: "DT XR 1501 spline", //
+        nom: "BLACKBURNER", //
+        preu: 2198,
+        img: "tune_btt.jpg",
+        brand:"Tune"
+    },
+    {
+        nom: "MountainCarbon", //
+        preu: 1700,
+        img: "carbonti_btt.jpg",
+        brand:"Carbon-Ti"
+    },
+    {
+        nom: "Biturbo", //
+        preu: 3399,
+        img: "biturbo_btt.jpg",
+        brand:"Bike Ahead"
+    },
+    {
+        nom: "XRC 1200", //
+        preu: 2138,
+        img: "xrc1200.jpg",
+        brand:"DT-SWISS"
+    },
+    {
+        nom: "XRC 1500 carbon", //
+        preu: 1499,
+        img: "xrc1500.jpg",
+        brand:"DT-SWISS"
+    },
+    {
+        nom: "XR 1501 spline", //
         preu: 968,
-        img: "xr1501.jpg"
+        img: "xr1501.jpg",
+        brand:"DT-SWISS"
     },
     {
-        nom: "DT X 1700 spline", //
+        nom: "X 1700 spline", //
         preu: 628,
-        img: "x1700.jpg"
+        img: "x1700.jpg",
+        brand:"DT-SWISS"
     }
 ];
 
 t_tijes_road = [{
-        nom: "New Ultimate Alu",
+        nom: "Aluminio",
         preu: 109,
-        img: "t_newultimate.jpg"
+        img: "t_newultimate.jpg",
+        brand:"New Ultimate"
     },
     {
-        nom: "New Ultimate Car",
+        nom: "Carbon",
         preu: 206,
-        img: "t_newultimateC.jpg"
+        img: "t_newultimateC.jpg",
+        brand:"New Ultimate"
     },
     {
         nom: "OnOFF He Carbon",
         preu: 139,
-        img: "t_onoff.jpg"
+        img: "t_onoff.jpg",
+        brand:"OnOff"
     },
     {
-        nom: "TUNE ",
+        nom: "Leichtes Stück",
         preu: 229,
-        img: "t_tune.jpg"
+        img: "t_tune.jpg",
+        brand:"Tune"
     },
     {
-        nom: "ENVE SEATPOST",
+        nom: "SEATPOST",
         preu: 275,
-        img: "t_enve.jpg"
+        img: "t_enve.jpg",
+        brand:"Enve"
     },
     {
-        nom: "LIGHTWEIGHT LEISTUNGSTRÄGER",
+        nom: "LEISTUNGSTRÄGER",
         preu: 308,
-        img: "t_lightweight.jpg"
+        img: "t_lightweight.jpg",
+        brand:"LIGHTWEIGHT"
     },
     {
-        nom: "Bike Ahead TheSeatPost",
+        nom: "TheSeatPost",
         preu: 299,
-        img: "theseatpost.jpg"
+        img: "theseatpost.jpg",
+        brand:"Bike Ahead"
     },
 ];
 
@@ -1086,318 +1351,367 @@ t_punys = [{
 ];
 
 t_seient = [{
-        nom: "tune SKYRACER", //
+        nom: "SKYRACER", //
         preu: 349,
-        img: "skyracer.jpg"
+        img: "skyracer.jpg",
+        brand:"Tune"
     },
     {
-        nom: "tune SPEEDNEEDLE", //
+        nom: "SPEEDNEEDLE", //
         preu: 225,
-        img: "speedneedle.jpg"
+        img: "speedneedle.jpg",
+        brand:"Tune"
     },
     {
-        nom: "syncros BELCARRA", //
-        preu: 159,
-        img: "belcarra.jpg"
-    },
-    {
-        nom: "san marco ASPIDE CARBON", //
-        preu: 189,
-        img: "aspide.jpg"
-    },
-    {
-        nom: "Most Lynx carbon", //
-        preu: 196,
-        img: "lynxC.jpg"
-    },
-    {
-        nom: "Most Lynx Manganeso", //
-        preu: 74,
-        img: "lynx.jpg"
-    },
-    {
-        nom: "selle italia SLR CARBON KIT", //
-        preu: 219,
-        img: "slr.jpg"
-    },
-    {
-        nom: "selle italia SLR C59", //
-        preu: 474,
-        img: "c59.jpg"
-    },
-    {
-        nom: "FIZIK 00 EVO ", //
-        preu: 350,
-        img: "00evo.jpg"
-    },
-    {
-        nom: "FIZIK R1", //
-        preu: 199,
-        img: "r1.jpg"
-    },
-    {
-        nom: "FIZIK ADAPTIVE ANTARES VS EVO 00", //
-        preu: 299,
-        img: "adaptative_00.jpg"
-    },
-    {
-        nom: "FIZIK ADAPTIVE ANTARES VS EVO R1", //
-        preu: 299,
-        img: "adaptative_r1.jpg"
-    },
-    {
-        nom: "FIZIK ADAPTIVE ANTARES VS EVO R3", //
+        nom: "BELCARRA R SL", //
         preu: 249,
-        img: "adaptative_r3.jpg"
+        img: "belcarraSL.jpg",
+        brand:"Syncros"
+    },
+    {
+        nom: "BELCARRA", //
+        preu: 149,
+        img: "belcarra.jpg",
+        brand:"Syncros"
+    },
+    {
+        nom: "ASPIDE CARBON", //
+        preu: 189,
+        img: "aspide.jpg",
+        brand:"San Marco"
+    },
+    {
+        nom: "Lynx carbon", //
+        preu: 196,
+        img: "lynxC.jpg",
+        brand:"Most"
+    },
+    {
+        nom: "Lynx Manganeso", //
+        preu: 74,
+        img: "lynx.jpg",
+        brand:"Most"
+    },
+    {
+        nom: "SLR CARBON KIT", //
+        preu: 219,
+        img: "slr.jpg",
+        brand:"Selle Italia"
+    },
+    {
+        nom: "SLR C59", //
+        preu: 474,
+        img: "c59.jpg",
+        brand:"Selle Italia"
+    },
+    {
+        nom: "00 EVO ", //
+        preu: 350,
+        img: "00evo.jpg",
+        brand:"Fizik"
+    },
+    {
+        nom: "R1", //
+        preu: 199,
+        img: "r1.jpg",
+        brand:"Fizik"
+    },
+    {
+        nom: "ADAPTIVE ANTARES VS EVO 00", //
+        preu: 299,
+        img: "adaptative_00.jpg",
+        brand:"Fizik"
+    },
+    {
+        nom: "ADAPTIVE ANTARES VS EVO R1", //
+        preu: 299,
+        img: "adaptative_r1.jpg",
+        brand:"Fizik"
+    },
+    {
+        nom: "ADAPTIVE ANTARES VS EVO R3", //
+        preu: 249,
+        img: "adaptative_r3.jpg",
+        brand:"Fizik"
     }
 
 ];
 
-t_pneumatics_road = [{
-        nom: "Veloflex ProTour Race Tubular", //
-        preu: 150
+t_pneumatics_road = [
+    {
+        nom: "COMPETITION TUBULAR", //
+        preu: 238,
+        brand:"Continental"
     },
     {
-        nom: "Veloflex ProTour Tubular", //
-        preu: 130
+        nom: "SPRINTER TUBULAR", //
+        preu: 132,
+        brand:"Continental"
     },
     {
-        nom: "Veloflex Corsa Race", //
-        preu: 84
+        nom: "GP5000 TUBELESS", //
+        preu: 150,
+        brand:"Continental"
     },
     {
-        nom: "Continental COMPETITION TUBULAR", //
-        preu: 238
+        nom: "GP5000", //
+        preu: 126,
+        brand:"Continental"
     },
     {
-        nom: "Continental SPRINTER TUBULAR", //
-        preu: 132
+        nom: "CORSA Tubluar", //
+        preu: 190,
+        brand:"Vittoria"
     },
     {
-        nom: "Continental GP5000 TUBELESS", //
-        preu: 150
+        nom: "CORSA Cubierta", //
+        preu: 120,
+        brand:"Vittoria"
     },
     {
-        nom: "Continental GP5000", //
-        preu: 126
+        nom: "P-Zero Cubierta", //
+        preu: 86,
+        brand:"Pirelli"
     },
     {
-        nom: "Verdestein FORTEZZA TUBULAR", //
-        preu: 200
+        nom: "F1 SuperSport", //
+        preu: 100,
+        brand:"GoodYear"
     },
     {
-        nom: "Verdestein FORTEZZA", //
-        preu: 144
+        nom: "F1 TL", //
+        preu: 110,
+        brand:"GoodYear"
     },
     {
-        nom: "Vittoria CORSA Tubluar", //
-        preu: 210
-    },
-    {
-        nom: "Vittoria CORSA Cubierta", //
-        preu: 120
-    },
-    {
-        nom: "Pirelli P-Zero Cubierta", //
-        preu: 86
-    },
-    {
-        nom: "Good Year F1 SuperSport", //
-        preu: 100
-    },
-    {
-        nom: "Good Year F1 TL", //
-        preu: 110
-    },
-    {
-        nom: "Good Year Eagle Sport", //
-        preu: 50
+        nom: "Eagle Sport", //
+        preu: 50,
+        brand:"GoodYear"
     }
 
 ];
 
 t_pneumatics_gravel = [{
-        nom: "WTB Cross Boss", //
-        preu: 92
+        nom: "Cross Boss", //
+        preu: 92,
+        brand:"WTB"
     },
     {
-        nom: "WTB Cross Wolf", //
-        preu: 92
+        nom: "Cross Wolf", //
+        preu: 92,
+        brand:"WTB"
     },
     {
-        nom: "WTB Venture", //
-        preu: 104
+        nom: "Venture", //
+        preu: 104,
+        brand:"WTB"
     },
     {
-        nom: "Vittoria Terreno Dry G", //
-        preu: 98
+        nom: "Terreno Dry G", //
+        preu: 98,
+        brand:"Vittoria"
     },
     {
-        nom: "Vittoria Terreno Wet G", //
-        preu: 98
+        nom: "Terreno Wet G", //
+        preu: 98,
+        brand:"Vittoria"
     },
     {
-        nom: "Schwalbe G-One", //
-        preu: 120
+        nom: "G-One", //
+        preu: 120,
+        brand:"Schualbe"
     },
     {
-        nom: "Schwalbe X-One", //
-        preu: 120
+        nom: "X-One", //
+        preu: 120,
+        brand:"Schualbe"
     },
     {
-        nom: "Huchiston Piranha 2", //
-        preu: 78
+        nom: "Piranha 2", //
+        preu: 78,
+        brand:"Huchiston"
     },
     {
-        nom: "Pirelli Cinturato Gravel", //
-        preu: 120
+        nom: "Cinturato Gravel", //
+        preu: 120,
+        brand:"Pirelli"
     },
     {
-        nom: "Good Year Connector", //
-        preu: 92
+        nom: "Connector", //
+        preu: 92,
+        brand:"GoodYear"
     }
 ];
 
 t_pneumatics_mtb = [{
-        nom: "MAXXIS IKON 3C", //
-        preu: 118
+        nom: "IKON 3C", //
+        preu: 118,
+        brand:"Maxxis"
     },
     {
-        nom: "MAXXIS IKON", //
-        preu: 108
+        nom: "IKON", //
+        preu: 108,
+        brand:"Maxxis"
     },
     {
-        nom: "MAXXIS REKON RACE", //
-        preu: 118
+        nom: "REKON RACE", //
+        preu: 118,
+        brand:"Maxxis"
     },
     {
-        nom: "Vittoria BARZO", //
-        preu: 120
+        nom: "BARZO", //
+        preu: 120,
+        brand:"Vittoria"
     },
     {
-        nom: "Vittoria MEZCAL III", //
-        preu: 120
+        nom: "MEZCAL III", //
+        preu: 120,
+        brand:"Vittoria"
     },
     {
-        nom: "Schwalbe ROCKET RON", //
-        preu: 116
+        nom: "ROCKET RON", //
+        preu: 116,
+        brand:"Schwalbe"
     },
     {
-        nom: "Contintntal RACE KING", //
-        preu: 64
+        nom: "RACE KING", //
+        preu: 64,
+        brand:"Continental"
     },
     {
-        nom: "Good Year Peak", //
-        preu: 92
+        nom: "Peak", //
+        preu: 92,
+        brand:"GoodYear"
     },
 ];
 
 t_grup_road = [{ //sense bieles
-        nom: "Shimano DURA-ACE Di2", //
+        nom: "DURA-ACE Di2", //
         preu: 3370, //antic 2692                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-        img: "duraacedi2.jpg"
+        img: "duraacedi2.jpg",
+        brand:"Shimano"
     },
     {
-        nom: "Shimano DURA-ACE", //
+        nom: "DURA-ACE", //
         preu: 1700, //antic 1312
-        img: "duraace.jpg"
+        img: "duraace.jpg",
+        brand:"Shimano"
     },
     {
-        nom: "Shimano ULTEGRA Di2", //
+        nom: "ULTEGRA Di2", //
         preu: 2041, //anterior 1440
-        img: "ultegradi2.jpg"
+        img: "ultegradi2.jpg",
+        brand:"Shimano"
     },
     {
-        nom: "Shimano ULTEGRA", //
+        nom: "ULTEGRA", //
         preu: 859,//anterior 629
-        img: "ultegra.jpg"
+        img: "ultegra.jpg",
+        brand:"Shimano"
     },
     {
-        nom: "Sram RED AXS 12v", //
+        nom: "RED AXS 12v", //
         preu: 2820,
-        img: "redaxs.jpg"
+        img: "redaxs.jpg",
+        brand:"Sram"
     },
     {
-        nom: "Sram FROCE AXS 12v", //
+        nom: "FROCE AXS 12v", //
         preu: 2165,
-        img: "forceaxs.jpg"
+        img: "forceaxs.jpg",
+        brand:"Sram"
     },
     {
-        nom: "Campagnolo Super Record EPS", // 
+        nom: "Super Record EPS", // 
         preu: 3632,
-        img: "superrecordeps.jpg"
+        img: "superrecordeps.jpg",
+        brand:"Campagnolo"
     },
     {
-        nom: "Campagnolo Super Record", //frens direct mount o dual pivot
+        nom: "Super Record", //frens direct mount o dual pivot
         preu: 1968,
-        img: "superrecord.jpg"
+        img: "superrecord.jpg",
+        brand:"Campagnolo"
     },
     {
-        nom: "Campagnolo Record", //frens direct mount
+        nom: "Record", //frens direct mount
         preu: 1561,
-        img: "record.jpg"
+        img: "record.jpg",
+        brand:"Campagnolo"
     },
     {
-        nom: "Campagnolo Chorus", // frens direct mount
+        nom: "Chorus", // frens direct mount
         preu: 997,
-        img: "chorus.jpg"
+        img: "chorus.jpg",
+        brand:"Campagnolo"
     }
 ];
 
 t_grup_disc = [{ //sense bieles
-        nom: "Shimano DURA-ACE Di2", //
+        nom: "DURA-ACE Di2", //
         preu: 3659, //anterior 2795
-        img: "duraacedi2.jpg"
+        img: "duraacedi2.jpg",
+        brand:"Shimano"
     },
     {
-        nom: "Shimano DURA-ACE", //
+        nom: "DURA-ACE", //
         preu: 1985, //anterior 1861
-        img: "duraace.jpg"
+        img: "duraace.jpg",
+        brand:"Shimano"
     },
     {
-        nom: "Shimano ULTEGRA Di2", //
+        nom: "ULTEGRA Di2", //
         preu: 2380, //anterior 1703
-        img: "ultegradi2.jpg"
+        img: "ultegradi2.jpg",
+        brand:"Shimano"
     },
     {
-        nom: "Shimano ULTEGRA", //
+        nom: "ULTEGRA", //
         preu: 1188,//anterior 895
-        img: "ultegra.jpg"
+        img: "ultegra.jpg",
+        brand:"Shimano"
     },
     {
-        nom: "Sram RED AXS 12v", //
+        nom: "RED AXS 12v", //
         preu: 2920,
-        img: "redaxs.jpg"
+        img: "redaxs.jpg",
+        brand:"Sram"
     },
     {
-        nom: "Sram FROCE AXS 12v", //
+        nom: "FROCE AXS 12v", //
         preu: 2165,
-        img: "forceaxs.jpg"
+        img: "forceaxs.jpg",
+        brand:"Sram"
     },
     {
-        nom: "Sram RIVAL AXS 12v", //
+        nom: "RIVAL AXS 12v", //
         preu: 1296,
-        img: "rival_axs.jpg"
+        img: "rival_axs.jpg",
+        brand:"Sram"
     },
     {
-        nom: "Campagnolo Super Record EPS", //disc 140 + 160
+        nom: "Super Record EPS", //disc 140 + 160
         preu: 3952,
-        img: "superrecordeps.jpg"
+        img: "superrecordeps.jpg",
+        brand:"Campagnolo"
     },
     {
-        nom: "Campagnolo Super Record", //disc 160 + 160
+        nom: "Super Record", //disc 160 + 160
         preu: 2256,
-        img: "superrecord.jpg"
+        img: "superrecord.jpg",
+        brand:"Campagnolo"
     },
     {
-        nom: "Campagnolo Record", //disc 160 + 160
+        nom: "Record", //disc 160 + 160
         preu: 1877,
-        img: "record.jpg"
+        img: "record.jpg",
+        brand:"Campagnolo"
     },
     {
-        nom: "Campagnolo Chorus", //disc 160 + 160
+        nom: "Chorus", //disc 160 + 160
         preu: 1435,
-        img: "chorus.jpg"
+        img: "chorus.jpg",
+        brand:"Campagnolo"
     }
 
 ];
@@ -1405,82 +1719,116 @@ t_grup_disc = [{ //sense bieles
 t_grup_gravel = [{
         nom: "GRX Di2 1x", //
         preu: 2211, //anterior 1760
-        img: "grxdi2.jpg"
+        img: "grxdi2.jpg",
+        brand:"Shimano"
     },
     {
         nom: "GRX Di2 2x", //
         preu: 2450, //anterior 2166
-        img: "grxdi2.jpg"
+        img: "grxdi2.jpg",
+        brand:"Shimano"
     },
     {
         nom: "GRX 800 1x", //
         preu: 1153,//anterior 987
-        img: "grx800.jpg"
+        img: "grx800.jpg",
+        brand:"Shimano"
     },
     {
         nom: "GRX 800 2x", //
         preu: 1239,//anterior 1106
-        img: "grx800.jpg"
+        img: "grx800.jpg",
+        brand:"Shimano"
     },
     {
         nom: "GRX 600 1x", //
         preu: 946,//anterior 875
-        img: "grx600.jpg"
+        img: "grx600.jpg",
+        brand:"Shimano"
     },
     {
         nom: "GRX 600 2x", //
         preu: 1023,//anterior 953
-        img: "grx600.jpg"
+        img: "grx600.jpg",
+        brand:"Shimano"
     },
     {
         nom: "RED AXS 2x", //
         preu: 2920,
-        img: "redaxs.jpg"
+        img: "redaxs.jpg",
+        brand:"Sram"
     },
     {
         nom: "RED AXS 1x", //
         preu: 2470,
-        img: "redaxs.jpg"
+        img: "redaxs.jpg",
+        brand:"Sram"
+    },
+    {
+        nom: "RED AXS XPLR", //
+        preu: 2335,
+        img: "red xplr.jpg",
+        brand:"Sram"
     },
     {
         nom: "RED AXS 1x + eagle 10-52 ", //
         preu: 2715,
-        img: "xx1axs.jpg"
+        img: "xx1axs.jpg",
+        brand:"Sram"
     },
     {
         nom: "FORCE AXS 2x", //
         preu: 2165,
-        img: "forceaxs.jpg"
+        img: "forceaxs.jpg",
+        brand:"Sram"
     },
     {
         nom: "FROCE AXS 1x", //
         preu: 1765,
-        img: "forceaxs.jpg"
+        img: "forceaxs.jpg",
+        brand:"Sram"
+    },
+    {
+        nom: "FROCE AXS XPLR", //
+        preu: 1800,
+        img: "force xplr.jpg",
+        brand:"Sram"
     },
     {
         nom: "FORCE AXS 1x + eagle gx 10-52", //
         preu: 1526,
-        img: "gxaxs.jpg"
+        img: "gxaxs.jpg",
+        brand:"Sram"
     },
     {
-        nom: "Sram RIVAL AXS 12v 2x", //
+        nom: "Sram RIVAL AXS 2x", //
         preu: 1296,
-        img: "rival_axs.jpg"
+        img: "rival_axs.jpg",
+        brand:"Sram"
     },
     {
-        nom: "Sram RIVAL AXS 12v 1x", //
+        nom: "Sram RIVAL AXS 1x", //
         preu: 1061,
-        img: "rival_axs.jpg"
+        img: "rival_axs.jpg",
+        brand:"Sram"
+    },
+    {
+        nom: "Sram RIVAL AXS  XPLR", //
+        preu: 1061,
+        img: "rival xplr.jpg",
+        brand:"Sram"
     },
     {
         nom: "Sram RIVAL AXS + eagle gx 10-52", //
         preu: 1277,
-        img: "gxaxs.jpg"
+        img: "gxaxs.jpg",
+        brand:"Sram"
     },
     {
         nom: "Campagnolo Ekar", //
         preu: 1349,
-        img: "ekar.jpg"
+        img: "ekar.jpg",
+        brand:"Campagnolo"
     },
 
 ];
@@ -1488,74 +1836,88 @@ t_grup_gravel = [{
 t_grup_mtb = [{
         nom: "XX1 AXS", //
         preu: 1573,
-        img: "xx1axs.jpg"
+        img: "xx1axs.jpg",
+        brand:"Sram"
     },
     {
         nom: "X01 AXS", //
         preu: 1506,
-        img: "x01axs.jpg"
+        img: "x01axs.jpg",
+        brand:"Sram"
     },
     {
         nom: "XX1", //
         preu: 1048,
-        img: "xx1.jpg"
+        img: "xx1.jpg",
+        brand:"Sram"
     },
     {
         nom: "X01", //
         preu: 881,
-        img: "x01.jpg"
+        img: "x01.jpg",
+        brand:"Sram"
     },
     {
         nom: "GX AXS", //
         preu: 881,
-        img: "gxaxs.jpg"
+        img: "gxaxs.jpg",
+        brand:"Sram"
     },
     {
         nom: "GX", //
         preu: 449,
-        img: "gx.jpg"
+        img: "gx.jpg",
+        brand:"Sram"
     },
     {
         nom: "XTR", //
         preu: 930,//anterior 718
-        img: "xtr.jpg"
+        img: "xtr.jpg",
+        brand:"Shimano"
     },
     {
         nom: "XT", //
         preu: 440,//anterior 337
-        img: "xt.jpg"
+        img: "xt.jpg",
+        brand:"Shimano"
     }
 ];
 
 t_frens = [{
         nom: "LEVEL ULTIMATE", //
         preu: 714,
-        img: "ult.jpg"
+        img: "ult.jpg",
+        brand:"Sram"
     },
     {
         nom: "LEVEL TLM", //
         preu: 468,
-        img: "tlm.jpg"
+        img: "tlm.jpg",
+        brand:"Sram"
     },
     {
         nom: "XTR", //
         preu: 695,//anterior 549
-        img: "xtr.jpg"
+        img: "xtr.jpg",
+        brand:"Shimano"
     },
     {
         nom: "XTR 4 pistones", //
         preu: 735,
-        img: "xtr.jpg"
+        img: "xtr.jpg",
+        brand:"Shimano"
     },
     {
         nom: "XT", //
         preu: 390,//anterior 313
-        img: "xt.jpg"
+        img: "xt.jpg",
+        brand:"Shimano"
     },
     {
         nom: "XT 4 pistones", //
         preu: 498,
-        img: "xt.jpg"
+        img: "xt.jpg",
+        brand:"Shimano"
     }
 
 ];
@@ -1563,221 +1925,289 @@ t_frens = [{
 t_pedals_road = [{
         nom: "Dura-Ace", //
         preu: 250,
-        img: "duraace.jpg"
+        img: "duraace.jpg",
+        brand:"Shimano"
     },
     {
         nom: "Ultegra", //
         preu: 150,
-        img: "ultegra.jpg"
+        img: "ultegra.jpg",
+        brand:"Shimano"
     },
     {
         nom: "105", //
         preu: 110,
-        img: "105.jpg"
+        img: "105.jpg",
+        brand:"Shimano"
     },
     {
-        nom: "LOOK TITANIUM", //
+        nom: "keo Carbon Titanium", //
         preu: 285,
-        img: "lookti.jpg"
+        img: "lookti.jpg",
+        brand:"Look"
     },
     {
-        nom: "LOOK CARBON", //
+        nom: "Keo Carbon", //
         preu: 160,
-        img: "lookcarbon.jpg"
+        img: "lookcarbon.jpg",
+        brand:"Look"
     },
     {
-        nom: "LOOK keo 2 max", //
+        nom: "keo 2 max", //
         preu: 80,
-        img: "keo.jpg"
+        img: "keo.jpg",
+        brand:"Look"
     },
     {
         nom: "XPRESSO 15", //
         preu: 450,
-        img: "xpresso15.jpg"
+        img: "xpresso15.jpg",
+        brand:"Time"
     },
     {
         nom: "XPRESSO 12", //
         preu: 290,
-        img: "xpresso12.jpg"
+        img: "xpresso12.jpg",
+        brand:"Time"
     },
     {
         nom: "XPRESSO 10", //
         preu: 160,
-        img: "xpresso10.jpg"
-    }
+        img: "xpresso10.jpg",
+        brand:"Time"
+    },
+    /**{ Afegir Speedplay
+        nom: "Look Carbon Ti", //
+        preu: 199,
+        img: "lookcarbonti.jpg",
+        brand:"Look"
+    },
+    {
+        nom: "Look Carbon", //
+        preu: 110,
+        img: "lookcarbonx.jpg",
+        brand:"Look"
+    },
+    {
+        nom: "Look Race", //
+        preu: 70,
+        img: "lookrace.jpg",
+        brand:"Look"
+    }*/
 ];
 
 t_pedals_mtb = [{
         nom: "XTR", //
         preu: 150,
-        img: "xtr.jpg"
+        img: "xtr.jpg",
+        brand:"Shimano"
     },
     {
         nom: "XT", //
         preu: 98,
-        img: "xt.jpg"
+        img: "xt.jpg",
+        brand:"Shimano"
     },
     {
-        nom: "Look Carbon Ti", //
+        nom: "X-track Carbon Ti", //
         preu: 199,
-        img: "lookcarbonti.jpg"
+        img: "lookcarbonti.jpg",
+        brand:"Look"
     },
     {
-        nom: "Look Carbon", //
+        nom: "X-track Carbon", //
         preu: 110,
-        img: "lookcarbonx.jpg"
+        img: "lookcarbonx.jpg",
+        brand:"Look"
     },
     {
-        nom: "Look Race", //
+        nom: "X-track Race", //
         preu: 70,
-        img: "lookrace.jpg"
+        img: "lookrace.jpg",
+        brand:"Look"
     },
+    
 ];
 
 t_tijes_mtb = [{
-        nom: "New Ultimate Alu", //
+        nom: "Aluminio", //
         preu: 109,
-        img: "t_newultimate.jpg"
+        img: "t_newultimate.jpg",
+        brand:"New Ultimate"
     },
     {
-        nom: "New Ultimate Car", //
+        nom: "Carbon", //
         preu: 206,
-        img: "t_newultimateC.jpg"
+        img: "t_newultimateC.jpg",
+        brand:"New Ultimate"
     },
     {
-        nom: "OnOFF He Carbon", //
+        nom: "He Carbon", //
         preu: 139,
-        img: "t_onoff.jpg"
+        img: "t_onoff.jpg",
+        brand:"OnOff"
     },
     {
-        nom: "TUNE", //
-        preu: 229,
-        img: "t_tune.jpg"
-    },
-    {
-        nom: "Bike Ahead TheSeatPost",
-        preu: 299,
-        img: "theseatpost.jpg"
-    },
-    {
-        nom: "OnOff Peak", //
+        nom: "Peak", //
         preu: 60,
-        img: "peak.jpg"
+        img: "peak.jpg",
+        brand:"OnOff"
     },
+    {
+        nom: "Leichtes Stück", //
+        preu: 229,
+        img: "t_tune.jpg",
+        brand:"Tune"
+    },
+    {
+        nom: "TheSeatPost",
+        preu: 299,
+        img: "theseatpost.jpg",
+        brand:"Bike Ahead"
+    },
+    
     {
         nom: "Telescopica REVERB AXS", //
         preu: 800,
-        img: "reverb.jpg"
+        img: "reverb.jpg",
+        brand:"RockShox"
     },
     {
         nom: "Telescopica Transfer kashima", //
         preu: 489,
-        img: "transfer.jpg"
+        img: "transfer.jpg",
+        brand:"Fox"
     },
     {
         nom: "Telescopica Koryak", //
         preu: 270,
-        img: "koryak.jpg"
+        img: "koryak.jpg",
+        brand:"Pro"
     },
     {
-        nom: "Telescopica Syncros Telescopica", //
+        nom: "Telescopica", //
         preu: 229,
-        img: "syncros.jpg"
+        img: "syncros.jpg",
+        brand:"Syncros"
     },
     {
         nom: "Telescopica DT 232 one", //
         preu: 498,
-        img: "232.jpg"
+        img: "232.jpg",
+        brand:"DT-SWISS"
     },
 ];
 
 t_forquilla = [{
-        nom: "Fox 32 kashima", //
-        preu: 1279,
-        img: "fox32.jpg"
+        nom: "SC 32 kashima", //
+        preu: 1425,
+        img: "fox32.jpg",
+        brand:"Fox"
     },
     {
-        nom: "Fox 34 kashima", //
-        preu: 1369,
-        img: "fox34.jpg"
+        nom: "SC 34 kashima 100mm", //
+        preu: 1499,
+        img: "fox34.jpg",
+        brand:"Fox"
     },
     {
-        nom: "Fox 32 anoditzat", //
+        nom: "SC 34 kashima 120mm", //
+        preu: 1399,
+        img: "fox34.jpg",
+        brand:"Fox"
+    },
+    {
+        nom: "SC 32 anoditzat", //
         preu: 959,
-        img: "fox32a.jpg"
+        img: "fox32a.jpg",
+        brand:"Fox"
     },
     {
-        nom: "Fox 34 anoditzat", //
+        nom: "SC 34 anoditzat", //
         preu: 1059,
-        img: "fox34a.jpg"
+        img: "fox34a.jpg",
+        brand:"Fox"
     },
     {
-        nom: "SID 35 ultimate", //
+        nom: "SID 35 120mm ultimate Race Day", //
         preu: 1059,
-        img: "sid35.jpg"
+        img: "sid35.jpg",
+        brand:"RockShox"
     },
     {
-        nom: "SID 32 sl ultimate ", //
+        nom: "SID 32 100mm sl ultimate Race Day", //
         preu: 949,
-        img: "sidsl.jpg"
+        img: "sidsl.jpg",
+        brand:"RockShox"
     }
 ];
 
 
 t_portabido = [{
-        nom: "Tune WASSERTRÄGER 2.0", //
+        nom: "WASSERTRÄGER 2.0", //
         preu: 56,
-        img: "tune.jpg"
+        img: "tune.jpg",
+        brand:"Tune"
+   },
+    {
+        nom: "RECHTSTRÄGER", //
+        preu: 56,
+        img: "tune2.jpg",
+        brand:"Tune"
     },
     {
-        nom: "Tune RECHTSTRÄGER", //
-        preu: 56,
-        img: "tune2.jpg"
-    },
-    {
-        nom: "Most wings carbon 1k", //
+        nom: "Wings carbon 1k", //
         preu: 52,
-        img: "most.jpg"
+        img: "most.jpg",
+        brand:"Most"
     },
     {
-        nom: "Syncros Carbon 1.0", //
+        nom: "Carbon 1.0", //
         preu: 65,
-        img: "syncros.jpg"
+        img: "syncros.jpg",
+        brand:"Syncros"
     },
     {
-        nom: "Syncros Tailor MB cage multiHerramientas", //
+        nom: "Tailor MB cage multiHerramientas", //
         preu: 55,
-        img: "syncrostools.jpg"
+        img: "syncrostools.jpg",
+        brand:"Syncros"
     },
     {
-        nom: "Elite Vico carbon", //
+        nom: "Vico carbon", //
         preu: 28,
-        img: "vico.jpg"
+        img: "vico.jpg",
+        brand:"Elite"
     },
     {
-        nom: "Elite Rocko carbon", //
+        nom: "Rocko carbon", //
         preu: 30,
-        img: "rocko.jpg"
+        img: "rocko.jpg",
+        brand:"Elite"
     },
     {
-        nom: "LIGHTWEIGHT Edelhelfer", //
+        nom: "Edelhelfer", //
         preu: 92,
-        img: "lightweight.jpg"
+        img: "lightweight.jpg",
+        brand:"LIGHTWEIGHT"
     },
     {
-        nom: "SUPACAZ FLY CAGEZ CARBON", //
+        nom: "FLY CAGEZ CARBON", //
         preu: 59,
-        img: "supacaz.jpg"
+        img: "supacaz.jpg",
+        brand:"Supacaz"
     },
     {
-        nom: "Bianchi Custom Race", //
+        nom: "Custom Race", //
         preu: 18,
-        img: "bianchi_custom.jpg"
+        img: "bianchi_custom.jpg",
+        brand:"Bianchi"
     },
     {
-        nom: "Bianchi Vico Carbon", //
+        nom: "Vico Carbon", //
         preu: 35,
-        img: "bianchi_vico.jpg"
+        img: "bianchi_vico.jpg",
+        brand:"Bianchi"
     }
 ];
 
@@ -1812,219 +2242,263 @@ t_roldanes = [{
 t_bieles_road = [{
         nom: "Dura-Ace ", //
         preu: 589, //anterior 495
-        img: "duraace.jpg"
+        img: "duraace.jpg",
+        brand:"Shimano"
     },
     {
         nom: "Ultegra", //
         preu: 279, //anterior 238
-        img: "ultegra.jpg"
+        img: "ultegra.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Dura-Ace con Potenciometro", //
+        preu: 1778,//anterior 1366
+        img: "duraacep.jpg",
+        brand:"Shimano"
     },
     {
         nom: "Red AXS", //
         preu: 700,
-        img: "red.jpg"
+        img: "red.jpg",
+        brand:"Sram"
     },
     {
         nom: "Force AXS", //
         preu: 435,
-        img: "force.jpg"
+        img: "force.jpg",
+        brand:"Sram"
     },
     {
         nom: "RIVAL AXS", //
         preu: 135,
-        img: "rival_axs.jpg"
+        img: "rival_axs.jpg",
+        brand:"Sram"
     },
     {
-        nom: "Campagnolo Super Record", //
+        nom: "Super Record", //
         preu: 962,
-        img: "superrecord.jpg"
+        img: "superrecord.jpg",
+        brand:"Campagnolo"
     },
     {
-        nom: "Campagnolo Record", //
+        nom: "Record", //
         preu: 536,
-        img: "record.jpg"
+        img: "record.jpg",
+        brand:"Campagnolo"
     },
     {
-        nom: "Campagnolo Chorus", //
+        nom: "Chorus", //
         preu: 384,
-        img: "chorus.jpg"
+        img: "chorus.jpg",
+        brand:"Campagnolo"
     },
     //+potenciometre
+   
     {
-        nom: "Dura-Ace Potenciometro", //
-        preu: 1778,//anterior 1366
-        img: "duraacep.jpg"
-    },
-    {
-        nom: "Stages Dura-Ace LR", //
+        nom: "Dura-Ace LR", //
         preu: 999,
-        img: "stages_duraace_lr.jpg"
+        img: "stages_duraace_lr.jpg",
+        brand:"Stages"
     },
     {
-        nom: "Stages Ultegra Potenciometro LR", //
+        nom: "Ultegra Potenciometro LR", //
         preu: 749,
-        img: "stages_ultegra_lr.jpg"
+        img: "stages_ultegra_lr.jpg",
+        brand:"Stages"
     },
     {
-        nom: "Stages Ultegra Potenciometro L", //
+        nom: "Ultegra Potenciometro L", //
         preu: 638,
-        img: "stages_ultegra_l.jpg"
+        img: "stages_ultegra_l.jpg",
+        brand:"Stages"
     },
     {
-        nom: "Quarq Red AXS", //
-        preu: 1200,
-        img: "quarq_red.jpg"
-    },
-    {
-        nom: "Quarq Force AXS", //
-        preu: 1034,
-        img: "quarq_force.jpg"
-    },
-    {
-        nom: "Quarq RIVAL AXS", //
-        preu: 360,
-        img: "quarq_rival.jpg"
-    },
-    {
-        nom: "Stages Campagnolo Super Record L", //
+        nom: "Campagnolo Super Record L", //
         preu: 1861,
-        img: "stages_superrecord.jpg"
+        img: "stages_superrecord.jpg",
+        brand:"Stages"
     },
     {
-        nom: "Stages Campagnolo Record L", //
+        nom: "Campagnolo Record L", //
         preu: 1235,
-        img: "stages_record.jpg"
-    }
+        img: "stages_record.jpg",
+        brand:"Stages"
+    },
+    {
+        nom: "Red AXS", //
+        preu: 1200,
+        img: "quarq_red.jpg",
+        brand:"Quarq"
+    },
+    {
+        nom: "Force AXS", //
+        preu: 1034,
+        img: "quarq_force.jpg",
+        brand:"Quarq"
+    },
+    {
+        nom: "RIVAL AXS", //
+        preu: 360,
+        img: "quarq_rival.jpg",
+        brand:"Quarq"
+    },
+    
 ];
 
 t_bieles_gravel = [{
         nom: "GRX 810 ", //
         preu: 280, //anterior 241
-        img: "grx800.jpg"
+        img: "grx800.jpg",
+        brand:"Shimano"
     },
     {
         nom: "GRX 600", //
         preu: 159, //anterior 122
-        img: "grx600.jpg"
+        img: "grx600.jpg",
+        brand:"Shimano"
     },
     {
         nom: "Red AXS", //
         preu: 700,
-        img: "red.jpg"
+        img: "red.jpg",
+        brand:"Sram"
     },
     {
         nom: "Force AXS", //
         preu: 435,
-        img: "force.jpg"
+        img: "force.jpg",
+        brand:"Sram"
     },
     {
         nom: "RIVAL AXS", //
         preu: 135,
-        img: "rival_axs.jpg"
+        img: "rival_axs.jpg",
+        brand:"Sram"
     },
     {
         nom: "XX1", //
         preu: 571,
-        img: "xx1.jpg"
+        img: "xx1.jpg",
+        brand:"Sram"
     },
     {
         nom: "X01", //
         preu: 435,
-        img: "x01.jpg"
+        img: "x01.jpg",
+        brand:"Sram"
     },
     {
         nom: "GX", //
         preu: 150,
-        img: "gx.jpg"
+        img: "gx.jpg",
+        brand:"Sram"
     },
     {
-        nom: "Camapgnolo Ekar", //
+        nom: "Ekar", //
         preu: 347,
-        img: "ekar.jpg"
+        img: "ekar.jpg",
+        brand:"Campagnolo"
     },
     //+potenciometre
     {
-        nom: "Stages GRX 810 L", //
+        nom: "GRX 810 L", //
         preu: 640,
-        img: "stages_grx_800.jpg"
+        img: "stages_grx_800.jpg",
+        brand:"Stages"
     },
     {
-        nom: "Stages GRX 600 L", //
+        nom: "GRX 600 L", //
         preu: 521,
-        img: "stages_grx_600.jpg"
+        img: "stages_grx_600.jpg",
+        brand:"Stages"
     },
     {
-        nom: "Quarq Red AXS", //
+        nom: "Red AXS", //
         preu: 1200,
-        img: "quarq_red.jpg"
+        img: "quarq_red.jpg",
+        brand:"Quarq"
     },
     {
-        nom: "Quarq Force AXS", //
+        nom: "Force AXS", //
         preu: 1034,
-        img: "quarq_force.jpg"
+        img: "quarq_force.jpg",
+        brand:"Quarq"
     },
     {
-        nom: "Quarq RIVAL AXS", //
+        nom: "RIVAL AXS", //
         preu: 360,
-        img: "quarq_rival.jpg"
+        img: "quarq_rival.jpg",
+        brand:"Quarq"
     },
     {
-        nom: "Quarq xx1", //
+        nom: "xx1", //
         preu: 1071,
-        img: "quarq_xx1.jpg"
+        img: "quarq_xx1.jpg",
+        brand:"Quarq"
     }
 ];
 
 t_bieles_mtb = [{
         nom: "XTR", //
         preu: 570,//anterior 487
-        img: "xtr.jpg"
+        img: "xtr.jpg",
+        brand:"Shimano"
     },
     {
         nom: "XT", //
         preu: 239, // anterior 185
-        img: "xt.jpg"
+        img: "xt.jpg",
+        brand:"Shimano"
     },
     {
         nom: "XX1", //
         preu: 571,
-        img: "xx1.jpg"
+        img: "xx1.jpg",
+        brand:"Sram"
     },
     {
         nom: "X01", //
         preu: 435,
-        img: "x01.jpg"
+        img: "x01.jpg",
+        brand:"Sram"
     },
     {
         nom: "GX", //
         preu: 150,
-        img: "gx.jpg"
+        img: "gx.jpg",
+        brand:"Sram"
     },
     //+potenciometre
     {
-        nom: "Stages XTR LR", //
+        nom: "XTR LR", //
         preu: 1199,
-        img: "stages_xtr_lr.jpg"
+        img: "stages_xtr_lr.jpg",
+        brand:"Stages"
     },
     {
-        nom: "Stages XTR L", //
+        nom: "XTR L", //
         preu: 1016,
-        img: "stages_xtr_l.jpg"
+        img: "stages_xtr_l.jpg",
+        brand:"Stages"
     },
     {
-        nom: "Stages XT LR", //
+        nom: "XT LR", //
         preu: 749,
-        img: "stages_xt_lr.jpg"
+        img: "stages_xt_lr.jpg",
+        brand:"Stages"
     },
     {
-        nom: "Stages XT L", //
+        nom: "XT L", //
         preu: 584,
-        img: "stages_xt_l.jpg"
+        img: "stages_xt_l.jpg",
+        brand:"Stages"
     },
     {
-        nom: "Quarq xx1", //
+        nom: "xx1", //
         preu: 1071,
-        img: "quarq_xx1.jpg"
+        img: "quarq_xx1.jpg",
+        brand:"Quarq"
     },
 ];
 
@@ -2182,16 +2656,34 @@ function modalitat() {
 
         //horquilla
         t_tmp = '<option value="0" selected>Selecciona una Horquilla</option>';
+        brand="";
         t_forquilla.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+            if(element.brand!=brand){
+                if(brand!=""){
+                    t_tmp+='</optgroup>'
+                }
+                t_tmp += '<optgroup label='+ element.brand+'>'
+            
+            }
+            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
+            brand=element.brand;
         });
         $("#forquilla").append(t_tmp);
         $("#forquilla").parent().show();
 
         //frens mtb
         t_tmp = '<option value="0" selected>Selecciona unos Frenos</option>';
+        brand="";
         t_frens.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+            if(element.brand!=brand){
+                if(brand!=""){
+                    t_tmp+='</optgroup>'
+                }
+                t_tmp += '<optgroup label='+ element.brand+'>'
+            
+            }
+            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
+            brand=element.brand;
         });
         $("#frens").append(t_tmp);
         $("#frens").parent().show();
@@ -2202,8 +2694,19 @@ function modalitat() {
 
         //punys mtb
         t_tmp = '<option value="0" selected>Selecciona unos Puños</option>';
+        brand="";
+
         t_punys.forEach(element => {
-            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+            if(element.brand!=brand){
+                if(brand!=""){
+                    t_tmp+='</optgroup>'
+                }
+                t_tmp += '<optgroup label='+ element.brand+'>'
+            
+            }
+            
+            t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
+            brand=element.brand;
         });
         $("#punys").append(t_tmp);
         $("#punys").parent().show();
@@ -2241,8 +2744,17 @@ function blank(){
 //carregar quadre
 function quadre(t_quadre) {
     t_tmp = '<option value="0" selected>Selecciona el Cuadro</option>';
+    brand="";
     t_quadre.forEach(element => {
-        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        if(element.brand!=brand){
+            if(brand!=""){
+                t_tmp+='</optgroup>'
+            }
+            t_tmp += '<optgroup label='+ element.brand+'>'
+
+        }
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
+        brand=element.brand;
     });
     $("#quadre").append(t_tmp);
 }
@@ -2250,8 +2762,18 @@ function quadre(t_quadre) {
 //carregar rodes
 function rodes(t_rodes) {
     t_tmp = '<option value="0" selected>Selecciona las Ruedas</option>';
+    brand="";
     t_rodes.forEach(element => {
-        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        if(element.brand!=brand){
+            if(brand!=""){
+                t_tmp+='</optgroup>'
+            }
+            t_tmp += '<optgroup label='+ element.brand+'>'
+
+        }
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
+
+        brand=element.brand;
     });
     $("#rodes").append(t_tmp)
 }
@@ -2259,24 +2781,53 @@ function rodes(t_rodes) {
 //carregar grup
 function grup(t_grup) {
     t_tmp = '<option value="0" selected>Selecciona un Grupo</option>';
+    brand="";
     t_grup.forEach(element => {
-        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        if(element.brand!=brand){
+            if(brand!=""){
+                t_tmp+='</optgroup>'
+            }
+            t_tmp += '<optgroup label='+ element.brand+'>'
+
+        }
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
+
+        brand=element.brand;
     });
     $("#grup").append(t_tmp);
 }
 
 function bieles(t_bieles) {
     t_tmp = '<option value="0" selected>Selecciona las bielas</option>';
+    brand="";
     t_bieles.forEach(element => {
-        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        if(element.brand!=brand){
+            if(brand!=""){
+                t_tmp+='</optgroup>'
+            }
+            t_tmp += '<optgroup label='+ element.brand+'>'
+
+        }
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
+
+        brand=element.brand;
     });
     $("#bieles").append(t_tmp);
 }
 
 function manillar(t_manillar) {
     t_tmp = '<option value="0" selected>Selecciona el Manillar</option>';
+    brand="";
     t_manillar.forEach(element => {
-        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        if(element.brand!=brand){
+            if(brand!=""){
+                t_tmp+='</optgroup>'
+            }
+            t_tmp += '<optgroup label='+ element.brand+'>'
+
+        }
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
+        brand=element.brand;
     });
     $("#manillar").append(t_tmp);
 }
@@ -2285,6 +2836,7 @@ function manillar(t_manillar) {
 function portabido() {
     //portabido1
     t_tmp = '<option value="0" selected>Selecciona el Portabidon</option>';
+    brand="";
     t_portabido.forEach(element => {
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
     });
@@ -2329,18 +2881,37 @@ function tijes(t_tijes) {
 
 function seient() {
     t_tmp = '<option value="0" selected>Selecciona el Sillin</option>';
+    brand="";
     t_seient.forEach(element => {
-        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
+        if(element.brand!=brand){
+            if(brand!=""){
+                t_tmp+='</optgroup>'
+            }
+            t_tmp += '<optgroup label='+ element.brand+'>'
+
+        }
+        t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>';
+
+        brand=element.brand;
     });
     $("#seient").append(t_tmp);
 };
 
 function pneumatic(t_pneumatics) {
     t_tmp = '<option value="0" selected>Selecciona los Neumaticos</option>';
+    brand="";
     t_pneumatics.forEach(element => {
+        if(element.brand!=brand){
+            if(brand!=""){
+                t_tmp+='</optgroup>'
+            }
+            t_tmp += '<optgroup label='+ element.brand+'>'
+
+        }
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
     });
     $("#pneumatics").append(t_tmp);
+    brand=element.brand;
 };
 
 function mostrar_cinta() {
@@ -2880,25 +3451,25 @@ function print() {
     }
     //imatge al pdf
     if ($("#quadre").val() != null || $("#quadre").val() != 0) {
-        img_marca = "";
-        switch (JSON.parse($("#quadre").val()).marca) {
+        img_brand = "";
+        switch (JSON.parse($("#quadre").val()).brand) {
             case "scott":
-                img_marca = "./images/marcas/scott.png"
+                img_brand = "./images/brands/scott.png"
                 break;
             case "bianchi":
-                img_marca = "./images/marcas/bianchi.png"
+                img_brand = "./images/brands/bianchi.png"
                 break;
             case "pinarello":
-                img_marca = "./images/marcas/pinarello.png"
+                img_brand = "./images/brands/pinarello.png"
                 break;
             case "colnago":
-                img_marca = "./images/marcas/colnago.png"
+                img_brand = "./images/brands/colnago.png"
                 break;
             case "derosa":
-                img_marca = "./images/marcas/derosa.png"
+                img_brand = "./images/brands/derosa.png"
                 break;
         }
-        img_html = '<img src="' + img_marca + '" alt="" class="img-fluid"></img>'
+        img_html = '<img src="' + img_brand + '" alt="" class="img-fluid"></img>'
         $("#logo_marca").append(img_html);
     }
 
@@ -3293,25 +3864,25 @@ function print2() {// print sense preus
     }
     //imatge al pdf
     if ($("#quadre").val() != null || $("#quadre").val() != 0) {
-        img_marca = "";
-        switch (JSON.parse($("#quadre").val()).marca) {
+        img_brand = "";
+        switch (JSON.parse($("#quadre").val()).brand) {
             case "scott":
-                img_marca = "./images/marcas/scott.png"
+                img_brand = "./images/brands/scott.png"
                 break;
             case "bianchi":
-                img_marca = "./images/marcas/bianchi.png"
+                img_brand = "./images/brands/bianchi.png"
                 break;
             case "pinarello":
-                img_marca = "./images/marcas/pinarello.png"
+                img_brand = "./images/brands/pinarello.png"
                 break;
             case "colnago":
-                img_marca = "./images/marcas/colnago.png"
+                img_brand = "./images/brands/colnago.png"
                 break;
             case "derosa":
-                img_marca = "./images/marcas/derosa.png"
+                img_brand = "./images/brands/derosa.png"
                 break;
         }
-        img_html = '<img src="' + img_marca + '" alt="" class="img-fluid"></img>'
+        img_html = '<img src="' + img_brand + '" alt="" class="img-fluid"></img>'
         $("#logo_marca").append(img_html);
     }
 
