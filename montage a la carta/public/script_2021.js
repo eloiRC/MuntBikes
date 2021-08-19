@@ -2684,7 +2684,7 @@ async function generatePDF() {
     // Choose the element and save the PDF for our user.   
 
 
-        await html2pdf.set(opt).from(element).save();
+        await html2pdf().set(opt).from(element).save();
     
     
     
