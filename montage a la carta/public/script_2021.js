@@ -127,7 +127,7 @@ t_road_disc = [{
         img: "c64_disc.jpg"
     },
     {
-        nom: "Colngao V3 RS", //
+        nom: "Colnago V3 RS", //
         preu: 4379,
         brand: "Colnago",
         img: "v3rs_disc.jpg"
@@ -213,7 +213,7 @@ t_road = [{
         img: "c64.jpg"
     },
     {
-        nom: "Colngao V3 RS", //
+        nom: "Colnago V3 RS", //
         preu: 4012,
         info: "*tija incluida",
         brand: "Colnago",
@@ -702,7 +702,7 @@ t_rodes_disc = [{
         brand:"Campagnolo"
     },
     {
-        nom: "Zonda tubeless / cubierta", //
+        nom: "ZONDA tubeless / cubierta", //
         preu: 605,
         img: "zonda.jpg",
         brand:"Campagnolo"
@@ -3469,20 +3469,20 @@ function print() {
     if ($("#quadre").val() != null || $("#quadre").val() != 0) {
         img_brand = "";
         switch (JSON.parse($("#quadre").val()).brand) {
-            case "scott":
-                img_brand = "./images/brands/scott.png"
+            case "Scott":
+                img_brand = "./images/marcas/scott.png"
                 break;
-            case "bianchi":
-                img_brand = "./images/brands/bianchi.png"
+            case "Bianchi":
+                img_brand = "./images/marcas/bianchi.png"
                 break;
-            case "pinarello":
-                img_brand = "./images/brands/pinarello.png"
+            case "Pinarello":
+                img_brand = "./images/marcas/pinarello.png"
                 break;
-            case "colnago":
-                img_brand = "./images/brands/colnago.png"
+            case "Colnago":
+                img_brand = "./images/marcas/colnago.png"
                 break;
-            case "derosa":
-                img_brand = "./images/brands/derosa.png"
+            case "Derosa":
+                img_brand = "./images/marcas/derosa.png"
                 break;
         }
         img_html = '<img src="' + img_brand + '" alt="" class="img-fluid"></img>'
@@ -3503,7 +3503,7 @@ function print() {
         date_html_fi = '<p class="mb-0 p2">Oferta valida hasta el ' + date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + '</p> <br>';
         $("#data").append(date_html);
         $("#data").append(date_html_fi);
-        modalitat_html = '<p class="h6">Modalidad:<span class="h5 float-right"> ' + modalitat + '</span></p><div class="col-12 border border-bottom border-dark"></div><br>';
+        modalitat_html = '<p class="h6">Modalidad:<span class="h5 float-end"> ' + modalitat + '</span></p><div class="col-12 border border-bottom border-dark"></div><br>';
         $("#print").append(modalitat_html);
         preu = JSON.parse($("#quadre").val()).preu;
         part2 = '<div class="col-10  pr-0 text-truncate">Cuadro: <span class="font-weight-bold ">' + JSON.parse($("#quadre").val()).nom + '</span>  ' + part3 + '</div>';
@@ -3667,7 +3667,7 @@ function print() {
         total += preu;
     }
 
-    textPreu = '<br><div class=" rounded-lg px-2 py-1 bg-primary text-white float-right font-weight-bold" >Total: <span id="total2">' + total + '</span> €</div><br>'
+    textPreu = '<br><div class=" rounded px-2 py-1 bg-primary text-white float-end font-weight-bold" >Total: <span id="total2">' + total + '</span> €</div><br>'
     $("#print").append(textPreu);
 
     if (!dades_clinet) {
@@ -3882,20 +3882,20 @@ function print2() {// print sense preus
     if ($("#quadre").val() != null || $("#quadre").val() != 0) {
         img_brand = "";
         switch (JSON.parse($("#quadre").val()).brand) {
-            case "scott":
-                img_brand = "./images/brands/scott.png"
+            case "Scott":
+                img_brand = "./images/marcas/scott.png"
                 break;
-            case "bianchi":
-                img_brand = "./images/brands/bianchi.png"
+            case "Bianchi":
+                img_brand = "./images/marcas/bianchi.png"
                 break;
-            case "pinarello":
-                img_brand = "./images/brands/pinarello.png"
+            case "Pinarello":
+                img_brand = "./images/marcas/pinarello.png"
                 break;
-            case "colnago":
-                img_brand = "./images/brands/colnago.png"
+            case "Colnago":
+                img_brand = "./images/marcas/colnago.png"
                 break;
-            case "derosa":
-                img_brand = "./images/brands/derosa.png"
+            case "Derosa":
+                img_brand = "./images/marcas/derosa.png"
                 break;
         }
         img_html = '<img src="' + img_brand + '" alt="" class="img-fluid"></img>'
@@ -3915,7 +3915,7 @@ function print2() {// print sense preus
     date_html_fi = '<p class="mb-0 p2">Oferta valida hasta el ' + date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + '</p> <br>';
     $("#data").append(date_html);
     $("#data").append(date_html_fi);
-    modalitat_html = '<p class="h6">Modalidad:<span class="h5 float-right"> ' + modalitat + '</span></p><div class="col-12 border border-bottom border-dark"></div><br>';
+    modalitat_html = '<p class="h6">Modalidad:<span class="h5 float-end"> ' + modalitat + '</span></p><div class="col-12 border border-bottom border-dark"></div><br>';
     $("#print").append(modalitat_html);
 
     if ($("#quadre").val() != "0") {
@@ -4064,7 +4064,7 @@ function print2() {// print sense preus
         total += preu;
     }
 
-    textPreu = '<br><div class=" rounded-lg px-2 py-1 bg-primary text-white float-right font-weight-bold" >Total: <span id="total2">' + total + '</span> €</div><br>'
+    textPreu = '<br><div class="rounded px-2 py-1 bg-primary text-white float-end font-weight-bold" >Total: <span id="total2">' + total + '</span> €</div><br>'
     $("#print").append(textPreu);
 
     if (!dades_clinet) {
