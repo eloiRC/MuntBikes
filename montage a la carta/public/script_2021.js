@@ -3,6 +3,20 @@ dades_clinet = false;
 
 let x;
 
+t_opcions=["Modalidad","Cuadro","Manillar","Ruedas"]
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  });
+
 $(window).on("load", function () {
     $("#invoice").hide();
     esconde();
