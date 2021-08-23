@@ -2684,7 +2684,7 @@ function modalitat() {
             brand=element.brand;
         });
         $("#forquilla").append(t_tmp);
-        $("#forquilla").parent().show();
+        $("#slide-forquilla").parent().show();
 
         //frens mtb
         t_tmp = '<option value="0" selected>Selecciona unos Frenos</option>';
@@ -2701,7 +2701,7 @@ function modalitat() {
             brand=element.brand;
         });
         $("#frens").append(t_tmp);
-        $("#frens").parent().show();
+        $("#slide-frens").parent().show();
 
 
         seient();
@@ -2716,7 +2716,7 @@ function modalitat() {
             
         });
         $("#punys").append(t_tmp);
-        $("#punys").parent().show();
+        $("#slide-punys").parent().show();
 
         //pneumatics mtb
         pneumatic(t_pneumatics_mtb)
@@ -2878,7 +2878,7 @@ function ceramicspeed() {
     t_roldanes.forEach(element => {
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
     });
-    $("#roldanes").parent().show();
+    $("#slide-roldanes").parent().show();
     $("#roldanes").append(t_tmp);
 
 }
@@ -2898,7 +2898,7 @@ function tijes(t_tijes) {
         brand=element.brand;
     });
     $("#tija").append(t_tmp);
-    $("#tija").parent().show();
+    $("#slide-tija").parent().show();
 }
 
 function seient() {
@@ -2937,7 +2937,7 @@ function pneumatic(t_pneumatics) {
 };
 
 function mostrar_cinta() {
-    $("#cinta").parent().show();
+    $("#slide-cinta").show();
 
     t_tmp = '<option value="0" selected>Selecciona la Cinta</option>';
     t_cinta.forEach(element => {
@@ -3228,13 +3228,13 @@ async function cambiPunys() {
 
 
 function esconde() {
-    $("#forquilla").parent().hide();
-    $("#frens").parent().hide();
-    $("#tija").parent().hide();
-    $("#punys").parent().hide();
-    $("#cinta").parent().hide();
-    $("#pedalier").parent().hide();
-    $("#roldanes").parent().hide();
+    $("#slide-forquilla").hide();
+    $("#slide-frens").hide();
+    $("#slide-tija").hide();
+    $("#slide-punys").hide();
+    $("#slide-cinta").hide();
+    $("#slide-pedalier").hide();
+    $("#slide-roldanes").hide();
     $("#info").hide();
 };
 
