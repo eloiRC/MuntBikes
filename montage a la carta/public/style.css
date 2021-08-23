@@ -167,20 +167,25 @@ z-index: 0;
 }
 
 .swiper-slide   {
-    height: 600px;
+    height: 650px;
 }
   
 .swiper-slide > .card{
     height: 95%;
 }
 
-.swiper-slide:first-child > .card {
+.swiper-slide > .card-min-slide {
         height: auto;
       }
   
 .text-s{
     font-size: x-small;
 }
+
+#comentaris{
+    height: 140px;
+}
+
 
   @media only screen and (max-width: 600px) {
   
@@ -193,10 +198,17 @@ z-index: 0;
        
     }
     .swiper-slide {
-        width: 85%;
+        width: 90%;
         margin-right: 3%;
         margin-left: 3%;
         height: 450px;
       }
+      .text-presupost{
+        font-size:small;
+      }
+
+    #comentaris{
+        height: 110px;
+    }
 
 }

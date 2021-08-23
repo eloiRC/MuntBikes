@@ -81,7 +81,7 @@
                     <br>
                     <div class="swiper-wrapper ">
                       <div class="swiper-slide" value="Modalidad">
-                        <div class=" card shadow rounded-lg col-12 mb-3 ">
+                        <div class=" card shadow rounded-lg col-12 mb-3 card-min-slide ">
                             <div class="card-body d-flex align-items-center">
                                 <div class="mb-3 mt-3 form-floating w-100">
                                     <select class="form-select " id="modalitat">
@@ -98,14 +98,15 @@
                       </div>
                       <div class="swiper-slide" value="Cuadro">
                         <div class=" card shadow rounded-lg col-12 mb-3 ">
-                            <div class="card-body d-flex align-items-center">
+                            <div class="card-body d-flex flex-column py-auto">
                                 
                                     <div class="text-center mt-1 w-100"><img src="./images/configuracions/quadres/blank.jpg"
                                         alt="cuadro bicicleta carretera grabel btt mtb" class="img img-fluid rounded-lg"
                                         id="img_quadre">
                                 </div>
-                                <p class="text-success small" id="info"></p>
+                                <p class="text-success small text-s" id="info"></p>
                             </div>
+                            
                                 <div class="card-footer">
                                     <div class=" form-floating ">
                                         <select class="form-select " id="quadre">
@@ -274,19 +275,25 @@
                       </div>
                       <div class="swiper-slide" >
                         <div class=" card shadow rounded-lg col-12 mb-3">
-                            <div class="card-body d-flex align-items-center">
+                            <div class="card-body d-flex align-items-center py-auto">
                                 
-                                    <div class="text-center mt-1 w1-100"><img src="./images/configuracions/tijes/blank.jpg"
+                                    <div class="text-center mt-1 w-100"><img src="./images/configuracions/tijes/blank.jpg"
                                             alt="tijas bicicleta carretera grabel btt mtb " class="img img-fluid rounded-lg"
                                             id="img_tija">
                                     </div>
+                                    
                             </div>
                             <div class="card-footer">
+                                <p class="text-s ">
+                                    *algunos cuadros pueden incluir tija*
+                                </p>
+                                
                                 <div class="mb-0 form-floating">
                                     <select class="form-select" id="tija">
     
                                     </select>
-                                    <label class="" for="tija">Tija: *algunos cuadros la pueden tener incluida*</label>
+                                    <label class="" for="tija">Tija:
+                                    </label>
                                 
                             </div>
                         </div>
@@ -404,25 +411,113 @@
                       </div>
                       <div class="swiper-slide" >
                         <div class=" card shadow rounded-lg col-12 mb-3">
-                            <div class="card-body d-flex align-items-center">
-                                <div class="mb-0 form-floating mt-2 w-100">
-                                    <select class="form-select" id="pedalier">
-    
-                                    </select>
-                                    <label class="" for="pedalier">Pedalier CeramicSpeed:</label>
-                                </div>
+                            <div class="card-body d-flex flex-column">
+                                <div class="col-12 my-auto">
+                                    <div class="form-floating mb-4 col-12">
+                                        <select class="form-select" id="pedalier">
+        
+                                        </select>
+                                        <label class="" for="pedalier">Pedalier CeramicSpeed:</label>
+                                    </div>
+                                    <div class="mt-4 form-floating col-12 ">
+                                        <select class="form-select" id="roldanes">
+        
+                                        </select>
+                                        <label class="" for="roldanes">Pata de Cambio CeramicSpeed:</label>
+                                    </div>
+                                </div>                               
                             </div>
                         </div>
                       </div>
                       <div class="swiper-slide" >
                         <div class=" card shadow rounded-lg col-12 mb-3">
-                            <div class="card-body d-flex align-items-center">
-                                <div class="mb-0 form-floating mt-2 w-100">
-                                    <select class="form-select" id="roldanes">
-    
-                                    </select>
-                                    <label class="" for="roldanes">Pata de Cambio CeramicSpeed:</label>
+                            <div class="card-body">
+                                <div class="text-right text-s">
+                                    <p>*Precio P.V.P solo orientativo, nos pondremos en contatco contigo para hacerte una
+                                        oferta personalizada. </p>
+        
                                 </div>
+                                <div id="desglos" class="d-flex flex-column">
+        
+        
+                                </div>
+                            </div>
+                                <div class="card-footer d-flex justify-content-between" id="btn-outline-box">
+                                    <div class=" rounded-lg px-2 py-1 btn btn-lg btn-outline-success " id="pdf">
+                                        Imprimir <i class="fas fa-print"></i>
+                                    </div>
+                                    <div class=" rounded-lg px-2 py-1 btn btn-lg btn-outline-primary ">
+                                        Total: <span id="total">0</span> €
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        
+                      </div>
+                      <div class="swiper-slide" >
+                        <div class=" card shadow rounded-lg col-12 mb-3">
+                            <div class="card-body d-flex flex-column">
+                                        <div class="mb-3 form-floating">
+                                            <textarea class="form-control" id="comentaris" rows="4"
+                                                placeholder="medida del manillar, talla del cuadro,dientes del desarrollo...."
+                                               ></textarea>
+                                            <label for="comentaris">Comentarios y extras:</label>
+                                        </div>
+                
+                                        <div>
+                                            <div class="form-floating col-6 col-lg-12 pe-1 pe-lg-0 float-start mb-3">
+                                                <input type="text" class="form-control" id="nom" placeholder="juan" required>
+                                                <label for="nom">Nombre:</label>
+                                            </div>
+                                            <div class="form-floating col-6 col-lg-12 ps-1 ps-lg-0 float-start mb-3">
+                                                <input type="text" class="form-control" id="cognom" placeholder="martinez">
+                                                <label for="cognom">Apellido:</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <div class="form-floating col-6 col-lg-12 pe-1 pe-lg-0 float-start mb-3">
+                                                <input type="email" class="form-control" id="mail" placeholder="Email"
+                                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                                <label for="mail">Email</label>
+                                            </div>
+                                            <div class="form-floating col-6 col-lg-12 ps-1 ps-lg-0 float-start mb-3">
+                                                <input type="text" class="form-control" id="tel" pattern="[0-9]{9}" required
+                                                    placeholder="666777666">
+                                                <label for="tel">Telefono:</label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="">
+                                            <div class=" form-floating col-6 pe-1 float-start">
+                
+                
+                
+                                                <input type="number" class="form-control" id="financiacio" placeholder="3000">
+                                                <label for="financiat">Financiación:</label>
+                
+                                            </div>
+                                            <div class=" form-floating col-6 ps-1 float-start ">
+                                                <input type="number" class="form-control" id="mensualitats" max="24" placeholder="12">
+                                                <label for="mensualitats">Mensualidades:</label>
+                
+                                            </div>
+                                        </div>
+                            </div>
+                                        <div class="card-footer">
+                                            <button class="btn btn-lg btn-outline-success mx-auto w-lg-25 w-50  py-1" aria-label="Enviar Correo"
+                                                id="enviar">Enviar</button>
+                                        </div>
+                
+                                    
+                            </div>
+                            
+                        </div>
+                      </div>
+                      <div class="swiper-slide" >
+                        <div class=" card shadow rounded-lg col-12 mb-3">
+                            <div class="card-body d-flex align-items-center">
+                                
                             </div>
                             
                         </div>
@@ -778,7 +873,7 @@
     <script src="./llibrerias/popperjs2.0.6/popper.min.js"></script>
     <script src="./llibrerias/bootstrap-5.1.0-dist/js/bootstrap.min.js"></script>
     <script src="./llibrerias/swiper/swiper-bundle.min.js"></script>
-    <script src="./script_2021.js"></script>
+    <script src="./script_v2.js"></script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/7.4.0/firebase-app.js"></script>
