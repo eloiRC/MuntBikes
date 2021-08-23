@@ -2543,6 +2543,7 @@ function modalitat() {
     $("#imgs").empty();
     $("#info").text("");
 
+    
     cometa = "''"
 
     //ROAD DISC
@@ -2726,7 +2727,9 @@ function modalitat() {
         carregar_image(["scale_nino.jpg", "n1no.jpg", "spark_ultimate.jpg", "methanol_cv.jpg", "methanol_fs.jpg"])
     }
 
+    
     blank();
+    swiper.update()
 };
 
 function blank(){
@@ -3236,6 +3239,7 @@ function esconde() {
     $("#slide-pedalier").hide();
     $("#slide-roldanes").hide();
     $("#info").hide();
+    swiper.update()
 };
 
 
