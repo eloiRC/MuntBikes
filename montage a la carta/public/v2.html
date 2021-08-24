@@ -50,6 +50,21 @@
 
     </div>
 
+    <div id="img-modal" class="h-100 w-100 d-flex txt px-3">
+       
+        <div class="align-self-center col-12 px-lg-0 px-0 my-5" id="outside-img">
+            <div class="offset-md-9 offset-11">
+                <button class="btn btn-lg btn-outline-primary mx-auto btn-block " id="textBtn" onclick="closeImg()">X</button>
+            </div>            
+            <div class="card shadow rounded-lg col-12 col-md-6 offset-md-3 mt-1 p-4 " id="img-card">
+                
+                
+            </div>
+        </div>
+       
+
+    </div>
+
 
     <nav class="d-flex justify-content-between flex-wrap col-12 navbar navbar-dark bg-black shadow">
         <a class="col-12 col-md-2 text-center text-md-left navbar-brand img-fluid" href="http://muntbikes.com" id="logo"
@@ -98,13 +113,14 @@
                       </div>
                       <div class="swiper-slide" value="Cuadro">
                         <div class=" card shadow rounded-lg col-12 mb-3 ">
-                            <div class="card-body d-flex flex-column py-auto">
+                            <div class="card-body d-flex align-items-center">
                                 
                                     <div class="text-center mt-1 w-100"><img src="./images/configuracions/quadres/blank.jpg"
                                         alt="cuadro bicicleta carretera grabel btt mtb" class="img img-fluid rounded-lg"
                                         id="img_quadre">
+                                        <p class="text-success small text-s" id="info"></p>
                                 </div>
-                                <p class="text-success small text-s" id="info"></p>
+                                
                             </div>
                             
                                 <div class="card-footer">
@@ -505,7 +521,7 @@
                                         </div>
                             </div>
                                         <div class="card-footer">
-                                            <button class="btn btn-lg btn-outline-success mx-auto w-lg-25 w-50  py-1" aria-label="Enviar Correo"
+                                            <button class="btn btn-lg btn-outline-success mx-auto   py-1" aria-label="Enviar Correo"
                                                 id="enviar">Enviar</button>
                                         </div>
                 
@@ -522,279 +538,13 @@
 
             </div>
 
-            <div class="col-12 col-lg-8 offset-lg-2 px-lg-0 px-3 d-none">
-                <div class="card shadow rounded-lg mb-4">
-                    <div class="card-body">
-                        <form method="post" id="formulari_a_la_carta">
-                            <div class="mb-2 form-floating">
-                                <select class="form-select " id="modalitat">
-                                    <option selected>Selecciona una modalidad</option>
-                                    <option value="road_disc">Carretera Disco</option>
-                                    <option value="road_rim">Carretera</option>
-                                    <option value="gravel">Gravel & CX</option>
-                                    <option value="mtb">MTB</option>
-                                </select>
-                                <label class="" for="modalitat">Modalidad:</label>
-                            </div>
-                            <div class="mb-2 mt-2 mb-0 form-floating ">
-
-                                <select class="form-select" id="quadre">
-
-                                </select>
-                                <label class="" for="quadre">Cuadro:</label>
-                                <p class="text-success small" id="info"></p>
-                                <div class="text-center mt-1"><img src="./images/configuracions/quadres/blank.jpg"
-                                        alt="cuadro bicicleta carretera grabel btt mtb" class="img img-fluid rounded-lg"
-                                        id="img_quadre">
-                                </div>
-
-                            </div>
-                            <div class="mb-0 form-floating">
-                                <select class="form-select" id="manillar">
-
-                                </select>
-                                <label class="" for="manillar">Manillar:</label>
-                                <p class="text-muted small">*Todos los manillares son de una pieza Manillar/Potencia o
-                                    son
-                                    conjuntos de manillar y potencia de la misma marca y misma gama</p>
-                                <div class="text-center mt-1"><img src="./images/configuracions/manillars/blank.jpg"
-                                        alt="manillar bicicleta carretera grabel btt mtb "
-                                        class="img img-fluid rounded-lg" id="img_manillar">
-                                </div>
-                            </div>
-                            <div class="mb-0 form-floating">
-                                <select class="form-select" id="rodes">
-
-                                </select>
-                                <label class="" for="rodes">Ruedas:</label>
-                                <div class=" text-center mt-1"><img src="./images/configuracions/rodes/blank.jpg"
-                                        alt="ruedas bicicleta carretera grabel btt mtb "
-                                        class="img img-fluid rounded-lg" id="img_rodes">
-                                </div>
-                            </div>
-                            <div class="mb-0 form-floating">
-
-                                <select class="form-select" id="grup">
-
-                                </select>
-                                <label class="" for="grup">Grupo:</label>
-                                <div class="text-center mt-1"><img src="./images/configuracions/grups/blank.jpg"
-                                        alt="grupo bicicleta carretera grabel btt mtb " class="img img-fluid rounded-lg"
-                                        id="img_grup">
-                                </div>
-                            </div>
-                            <div class="mb-0 form-floating">
-
-                                <select class="form-select" id="bieles">
-
-                                </select>
-                                <label class="" for="bieles">Bielas:</label>
-                                <div class="text-center mt-1"><img src="./images/configuracions/bieles/blank.jpg"
-                                        alt="bielas bicicleta carretera grabel btt mtb "
-                                        class="img img-fluid rounded-lg" id="img_bieles">
-                                </div>
-                            </div>
-                            <div class="mb-0 form-floating">
-
-                                <select class="form-select" id="frens">
-
-                                </select>
-                                <label class="" for="frens">Frenos:</label>
-                                <p class="text-muted small">*Los kits de freno incluyen los discos</p>
-                                <div class="text-center mt-1"><img src="./images/configuracions/frens/blank.jpg"
-                                        alt="frenos bicicleta carretera grabel btt mtb "
-                                        class="img img-fluid rounded-lg" id="img_frens">
-                                </div>
-                            </div>
-                            <div class="mb-2  mb-0">
-                                <select class="form-select" id="forquilla">
-
-                                </select>
-                                <label class="" for="forquilla">Horquilla:</label>
-                                <div class="text-center mt-1"><img src="./images/configuracions/forquilles/blank.jpg"
-                                        alt="forquilles bicicleta carretera grabel btt mtb "
-                                        class="img img-fluid rounded-lg" id="img_forquilla">
-                                </div>
-                            </div>
-                            <div class="mb-0 form-floating">
-                                <select class="form-select" id="seient">
-
-                                </select>
-                                <label class="" for="seient">Sillin:</label>
-                                <div class="text-center mt-1"><img src="./images/configuracions/seients/blank.jpg"
-                                        alt="sillin bicicleta carretera grabel btt mtb "
-                                        class="img img-fluid rounded-lg" id="img_seient">
-                                </div>
-                            </div>
-                            <div class="mb-0 form-floating">
-                                <select class="form-select" id="tija">
-
-                                </select>
-                                <label class="" for="tija">Tija: *algunos cuadros la pueden tener incluida*</label>
-                                <div class="text-center mt-1"><img src="./images/configuracions/tijes/blank.jpg"
-                                        alt="tijas bicicleta carretera grabel btt mtb " class="img img-fluid rounded-lg"
-                                        id="img_tija">
-                                </div>
-                            </div>
-                            <div class="mb-0 form-floating">
-                                <select class="form-select" id="pedals">
-
-                                </select>
-                                <label class="" for="pedals">Pedales:</label>
-                                <div class="text-center mt-1"><img src="./images/configuracions/pedals/blank.jpg"
-                                        alt="pedales bicicleta carretera grabel btt mtb "
-                                        class="img img-fluid rounded-lg" id="img_pedals">
-                                </div>
-                            </div>
-                            <div class="mb-0 form-floating">
-                                <select class="form-select" id="portabido">
-
-                                </select>
-                                <label class="" for="portabido">Portabidon:</label>
-                                <div class="text-center mt-1"><img src="./images/configuracions/portabidons/blank.jpg"
-                                        alt="portabidons bicicleta carretera grabel btt mtb "
-                                        class="img img-fluid rounded-lg" id="img_portabidons">
-                                </div>
-                            </div>
-                            <div class="mb-0 form-floating">
-                                <select class="form-select" id="portabido2">
-
-                                </select>
-                                <label class="" for="portabido2">2o Portabidon:</label>
-                                <div class="text-center mt-1"><img src="./images/configuracions/portabidons/blank.jpg"
-                                        alt="portabidons bicicleta carretera grabel btt mtb "
-                                        class="img img-fluid rounded-lg" id="img_portabidons2">
-                                </div>
-                            </div>
-                            <div class="mb-0 form-floating">
-                                <select class="form-select" id="cinta">
-
-                                </select>
-                                <label class="" for="cinta">Cinta:</label>
-                                <div class="text-center mt-1"><img src="./images/configuracions/cinta/blank.jpg"
-                                        alt="cinta bicicleta carretera grabel " class="img img-fluid rounded-lg"
-                                        id="img_cinta">
-                                </div>
-                            </div>
-                            <div class="mb-0 form-floating mt-2">
-                                <select class="form-select" id="punys">
-
-                                </select>
-                                <label class="" for="punys">Puños:</label>
-                                <div class="text-center mt-1"><img src="./images/configuracions/punys/blank.jpg"
-                                        alt="manguitos bicicleta btt mtb " class="img img-fluid rounded-lg"
-                                        id="img_punys">
-                                </div>
-                            </div>
-                            <div class="mb-0 form-floating mt-2">
-                                <select class="form-select" id="pneumatics">
-
-                                </select>
-                                <label class="" for="pneumatics">Neumaticos:</label>
-
-                            </div>
-                            <div class="mb-0 form-floating mt-2">
-                                <select class="form-select" id="pedalier">
-
-                                </select>
-                                <label class="" for="pedalier">Pedalier CeramicSpeed:</label>
-                            </div>
-                            <div class="mb-0 form-floating mt-2">
-                                <select class="form-select" id="roldanes">
-
-                                </select>
-                                <label class="" for="roldanes">Pata de Cambio CeramicSpeed:</label>
-                            </div>
-
+            <div class="col-12 col-lg-10 offset-lg-1 px-lg-0 px-3">
+               
+                <div class="card shadow rounded-lg">
+                    <div class="d-flex flex-wrap ps-2 pt-2 pe-1" id="imgs">
 
 
                     </div>
-
-                </div>
-                <div class="card shadow rounded-lg mb-4" style="display: none;" id="card-desglose">
-                    <div class="card-body">
-                        <div class="text-right">
-                            <p>*Precios P.V.P solo orientativo, nos pondremos en contatco contigo para hacerte una
-                                oferta personalizada. </p>
-
-                        </div>
-                        <div id="desglos" class="d-flex flex-column">
-
-
-                        </div>
-                        <br>
-                        <div class="d-flex justify-content-between" id="btn-outline-box">
-                            <div class=" rounded-lg px-2 py-1 btn btn-lg btn-outline-success " id="pdf">
-                                Imprimir <i class="fas fa-print"></i>
-                            </div>
-                            <div class=" rounded-lg px-2 py-1 btn btn-lg btn-outline-primary ">
-                                Total: <span id="total">0</span> €
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card shadow rounded-lg mb-4">
-                    <div class="card-body">
-                        <div class="mb-2 form-floating">
-                            <textarea class="form-control" id="comentaris" rows="4"
-                                placeholder="medida del manillar, talla del cuadro,dientes del desarrollo...."
-                                style="height: 140px;"></textarea>
-                            <label for="comentaris">Comentarios y extras:</label>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="estatura">Estatura:</label>
-                            <div class="input-group">
-                                <input type="number" class="form-control" id="estatura" pattern="[0-9]{9}" required
-                                    placeholder="175">
-                                <div class="input-group-append">
-                                    <span class="input-group-text" id="basic-addon2">cm</span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="mb-3 form-floating">
-                            <input type="text" class="form-control" id="nom" placeholder="juan" required>
-                            <label for="nom">Nombre:</label>
-                        </div>
-                        <div class="mb-3 form-floating">
-                            <input type="text" class="form-control" id="cognom" placeholder="martinez">
-                            <label for="cognom">Apellidos:</label>
-                        </div>
-                        <div class="mb-3 form-floating">
-                            <input type="email" class="form-control" id="mail" placeholder="Email"
-                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                            <label for="mail">Email</label>
-                        </div>
-                        <div class="mb-3 form-floating">
-                            <input type="text" class="form-control" id="tel" pattern="[0-9]{9}" required
-                                placeholder="666777666">
-                            <label for="tel">Telefono:</label>
-                        </div>
-                        <div class="">
-                            <div class=" form-floating col-6  pe-1 float-start mb-4">
-
-
-
-                                <input type="number" class="form-control" id="financiacio" placeholder="3000">
-                                <label for="financiat">Financiación:</label>
-
-                            </div>
-                            <div class=" form-floating col-6  ps-1 float-start mb-4">
-                                <input type="number" class="form-control" id="mensualitats" max="24" placeholder="12">
-                                <label for="mensualitats">Mensualidades:</label>
-
-                            </div>
-                        </div>
-                        <div class="mt-3">
-                            <button class="btn btn-lg btn-outline-success mx-auto w-100 py-1" aria-label="Enviar Correo"
-                                id="enviar">Enviar</button>
-                        </div>
-
-                    </div>
-                </div>
-                <div id="imgs">
 
                 </div>
 

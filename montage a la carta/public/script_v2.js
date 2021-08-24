@@ -2,6 +2,7 @@
 dades_clinet = false;
 
 let x;
+let img_modal=false;
 
 t_opcions=["Modalidad","Cuadro","Manillar","Ruedas"]
 var swiper = new Swiper(".mySwiper", {
@@ -16,11 +17,16 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      keyboard: {
+        enabled: true,
+        
+      },
   });
 
 $(window).on("load", function () {
     $("#invoice").hide();
     esconde();
+    closeImg();
     document.getElementById("textBtn").addEventListener("click", hidetext)
     document.getElementById("darkMode").addEventListener("click", toggleDarkMode)
     document.getElementById("quadre").addEventListener("change", info);
@@ -2583,7 +2589,7 @@ function modalitat() {
         ceramicspeed();
 
         //img
-        carregar_image(["xr4.jpg", "f12_3.jpg", "c64.jpg", "v3rs.jpg", "rc_pro2.jpg", "rc_ultimate3.jpg", "f12_2.jpg", "xr4_2.jpg", "rc_pro.jpg", "rc_ultimate.jpg", "rc_ultimate2.jpg", "fun.jpg", "f12.jpg"])
+        carregar_image(["xr4.jpg", "f12_3.jpg", "c64.jpg", "v3rs.jpg", "rc_pro2.jpg", "rc_ultimate3.jpg", "f12_2.jpg", "xr4_2.jpg", "rc_pro.jpg", "rc_ultimate.jpg", "rc_ultimate2.jpg", "f12.jpg"])
 
     }
 
@@ -2970,12 +2976,25 @@ function pedals(t_pedals) {
 
 
 function carregar_image(img) {
-    $("#imgs").show();
+    $("#imgs").parent().show();
     img.forEach(element => {
-        htm = '<div class="card shadow rounded-lg mb-4"><div class="card-body text-center"><img src="./images/' + element + '" alt="' + element + '" srcset="" class="img-fluid rounded-lg"></div></div>'
+        str="'"+element+"'";
+        htm = '<a onClick="imgZoom('+str+')" class="pe-1 col-6 col-md-4 col-lg-3 text-center" target="_blank"><img src="./images/' + element + '" alt="' + element + '" srcset=""  class="img-fluid rounded mb-3 bike-img"></a>'
         $("#imgs").append(htm)
     });
 }
+
+function imgZoom(img){
+    console.log(img);
+    $("#img-modal").show();
+    $('#img-modal').children().show();
+    $('#img-modal').addClass('txt');
+    htm = '<img src="./images/' + img + '" alt="' + img + '" srcset="" class=" rounded "></a>'
+    $("#img-card").append(htm);
+    
+}
+
+
 
 function preu() {
     $("#desglos").empty();
@@ -3238,9 +3257,41 @@ function esconde() {
     $("#slide-cinta").hide();
     $("#slide-pedalier").hide();
     $("#slide-roldanes").hide();
+    $("#imgs").parent().hide();
     $("#info").hide();
     swiper.update()
 };
+
+document.addEventListener("click", (evt) => {
+    const flyoutElement = document.getElementById("img-card");
+    const flyoutElement2 = document.getElementById("outside-img");
+    const flyoutElement3 = document.getElementById("img-modal");
+    let targetElement = evt.target; // clicked element
+    console.log(targetElement)
+    
+       
+            if (targetElement == flyoutElement ) {
+                // This is a click inside. Do nothing, just return.
+                
+            }
+            else{
+                if(targetElement == flyoutElement2 || targetElement == flyoutElement3 ){
+                    console.log(targetElement)
+                    // This is a click outside.
+                    closeImg();
+                }
+
+            }
+            }       
+);
+
+function closeImg(){
+    $('#img-modal').hide();
+    $('#img-modal').children().hide();
+    $('#img-modal').removeClass('txt');
+    $('#img-card').text(" ");
+    img_modal=false;
+}
 
 
 function info() {
@@ -3396,6 +3447,7 @@ function toggleDarkMode() {
         $('div').removeClass('bg-white')
         $('body').addClass('text-white bg-dark2')
         $('div.card').addClass('dark')
+        
         $('input').addClass('bg-dark2 text-white')
         $('select').addClass('bg-dark2 text-white')
         $('textarea').addClass('bg-dark2 text-white')
@@ -3429,6 +3481,7 @@ function hidetext() {
     $('#txt').hide();
     $('#txt').children().hide();
     $('#txt').removeClass('txt')
+    
 }
 
 async function generatePDF() {
@@ -3722,7 +3775,7 @@ function preu2() {
 
     if ($("#quadre").val() != "0") {
         preu = JSON.parse($("#quadre").val()).preu;
-        part2 = '<div class=" pr-0 mr-2">Cuadro: </div><div class="font-weight-bold text-truncate">' + JSON.parse($("#quadre").val()).nom + '</div>';
+        part2 = '<div class=" pr-0 mr-2">Cuadro: </div><div class="font-weight-bold text-truncate"> &nbsp' + JSON.parse($("#quadre").val()).nom + '</div>';
         $("#desglos").append(part1 + part2 + part5);
         total += preu;
         cambiQuadre();
@@ -3732,7 +3785,7 @@ function preu2() {
 
     if ($("#manillar").val() != "0") {
         preu = JSON.parse($("#manillar").val()).preu;
-        part2 = '<div class=" pr-0 mr-2" >Manillar: </div><div class="font-weight-bold text-truncate">' + JSON.parse($("#manillar").val()).nom + '</div>'
+        part2 = '<div class=" pr-0 mr-2" >Manillar: </div><div class="font-weight-bold text-truncate"> &nbsp' + JSON.parse($("#manillar").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiManillar();
@@ -3741,7 +3794,7 @@ function preu2() {
     }
     if ($("#rodes").val() != "0") {
         preu = JSON.parse($("#rodes").val()).preu;
-        part2 = '<div class=" pr-0 mr-2">Ruedas: </div><div class="font-weight-bold text-truncate">'+ JSON.parse($("#rodes").val()).nom + '</div>'
+        part2 = '<div class=" pr-0 mr-2">Ruedas: </div><div class="font-weight-bold text-truncate"> &nbsp'+ JSON.parse($("#rodes").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiRodes();
@@ -3750,7 +3803,7 @@ function preu2() {
     }
     if ($("#grup").val() != "0") {
         preu = JSON.parse($("#grup").val()).preu;
-        part2 = '<div class=" pr-0 mr-2">Grupo: </div><div class="font-weight-bold text-truncate">'+JSON.parse($("#grup").val()).nom + '</div>'
+        part2 = '<div class=" pr-0 mr-2">Grupo: </div><div class="font-weight-bold text-truncate"> &nbsp'+JSON.parse($("#grup").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiGrup();
@@ -3759,7 +3812,7 @@ function preu2() {
     }
     if ($("#bieles").val() != "0") {
         preu = JSON.parse($("#bieles").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Bielas: </div><div class="font-weight-bold text-truncate">'+ JSON.parse($("#bieles").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Bielas: </div><div class="font-weight-bold text-truncate"> &nbsp'+ JSON.parse($("#bieles").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiBieles();
@@ -3768,7 +3821,7 @@ function preu2() {
     }
     if ($("#frens").val() && $("#frens").val() != "0") {
         preu = JSON.parse($("#frens").val()).preu;
-        part2 = '<div class=" pr-0 mr-2 ">Frenos: </div><div class="font-weight-bold text-truncate">'+ JSON.parse($("#frens").val()).nom + '</div>'
+        part2 = '<div class=" pr-0 mr-2 ">Frenos: </div><div class="font-weight-bold text-truncate"> &nbsp'+ JSON.parse($("#frens").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiFrens();
@@ -3777,7 +3830,7 @@ function preu2() {
     }
     if ($("#forquilla").val() && $("#forquilla").val() != "0") {
         preu = JSON.parse($("#forquilla").val()).preu
-        part2 = '<div class=" pr-0  mr-2">Horquilla: </div><div class="font-weight-bold text-truncate">'+ JSON.parse($("#forquilla").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Horquilla: </div><div class="font-weight-bold text-truncate"> &nbsp'+ JSON.parse($("#forquilla").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiForquilla();
@@ -3786,7 +3839,7 @@ function preu2() {
     }
     if ($("#seient").val() != "0") {
         preu = JSON.parse($("#seient").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Sillin: </div><div class="font-weight-bold text-truncate">' +JSON.parse($("#seient").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Sillin: </div><div class="font-weight-bold text-truncate"> '&nbsp +JSON.parse($("#seient").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiSeient();
@@ -3795,7 +3848,7 @@ function preu2() {
     }
     if ($("#tija").val() && $("#tija").val() != "0") {
         preu = JSON.parse($("#tija").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Tija: </div><div class="font-weight-bold text-truncate">' + JSON.parse($("#tija").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Tija: </div><div class="font-weight-bold text-truncate"> '&nbsp + JSON.parse($("#tija").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiTija();
@@ -3804,7 +3857,7 @@ function preu2() {
     }
     if ($("#pedals").val() != "0") {
         preu = JSON.parse($("#pedals").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Pedales: </div><div class="font-weight-bold text-truncate">'+ JSON.parse($("#pedals").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Pedales: </div><div class="font-weight-bold text-truncate"> &nbsp'+ JSON.parse($("#pedals").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiPedals();
@@ -3813,7 +3866,7 @@ function preu2() {
     }
     if ($("#cinta").val() && $("#cinta").val() != "0") {
         preu = JSON.parse($("#cinta").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Cinta: </div><div class="font-weight-bold text-truncate">'+JSON.parse($("#cinta").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Cinta: </div><div class="font-weight-bold text-truncate"> &nbsp'+JSON.parse($("#cinta").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiCinta();
@@ -3823,7 +3876,7 @@ function preu2() {
     }
     if ($("#punys").val() && $("#punys").val() != "0") {
         preu = JSON.parse($("#punys").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Puños: </div><div class="font-weight-bold text-truncate">'+JSON.parse($("#punys").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Puños: </div><div class="font-weight-bold text-truncate"> &nbsp'+JSON.parse($("#punys").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiPunys();
@@ -3833,13 +3886,13 @@ function preu2() {
     }
     if ($("#pneumatics").val() != "0") {
         preu = JSON.parse($("#pneumatics").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Neumaticos: </div><div class="font-weight-bold text-truncate">'+ JSON.parse($("#pneumatics").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Neumaticos: </div><div class="font-weight-bold text-truncate"> &nbsp'+ JSON.parse($("#pneumatics").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
     }
     if ($("#portabido").val() != "0") {
         preu = JSON.parse($("#portabido").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Portabidon: </div><div class="font-weight-bold text-truncate">' + JSON.parse($("#portabido").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Portabidon: </div><div class="font-weight-bold text-truncate"> '&nbsp + JSON.parse($("#portabido").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiPortabido();
@@ -3848,7 +3901,7 @@ function preu2() {
     }
     if ($("#portabido2").val() != "0") {
         preu = JSON.parse($("#portabido2").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">2o Portabidon: </div><div class="font-weight-bold text-truncate">' + JSON.parse($("#portabido2").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">2o Portabidon: </div><div class="font-weight-bold text-truncate"> '&nbsp + JSON.parse($("#portabido2").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiPortabido2();
@@ -3857,13 +3910,13 @@ function preu2() {
     }
     if ($("#pedalier").val() && $("#pedalier").val() != "0") {
         preu = JSON.parse($("#pedalier").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Pedalier: </div><div class="font-weight-bold text-truncate">' + JSON.parse($("#pedalier").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Pedalier: </div><div class="font-weight-bold text-truncate"> '&nbsp + JSON.parse($("#pedalier").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
     }
     if ($("#roldanes").val() && $("#roldanes").val() != "0") {
         preu = JSON.parse($("#roldanes").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Roldanas: </div><div class="font-weight-bold text-truncate">' + JSON.parse($("#roldanes").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Roldanas: </div><div class="font-weight-bold text-truncate"> '&nbsp + JSON.parse($("#roldanes").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
     }
