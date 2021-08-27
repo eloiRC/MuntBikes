@@ -4,7 +4,6 @@ dades_clinet = false;
 let x;
 let img_modal=false;
 
-t_opcions=["Modalidad","Cuadro","Manillar","Ruedas"]
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     centeredSlides: true,
@@ -35,7 +34,6 @@ $(window).on("load", function () {
     document.getElementById("tel").addEventListener("change", dades_modificades);
     document.getElementById("mail").addEventListener("change", dades_modificades);
     document.getElementById("modalitat").addEventListener("change", modalitat);
-    document.getElementById("mensualitats").addEventListener("change", maxim24);
 
     
 
@@ -93,19 +91,16 @@ $(window).on("load", function () {
 
 });
 
-function maxim24(){
-    if ($("#mensualitats").val()>24) {
-        $("#mensualitats").val(24);
-        $("#mensualitats").addClass("error");
-    }
-    else{
-        $("#mensualitats").parent().removeClass("error");
-    }
-}
 
 
 let darkMode = false;
-t_road_disc = [{
+t_road_disc = [
+    {
+        nom: "Pinarello F", //
+        preu: 6950,
+        brand: "Pinarello",
+        img: "pinarello f disc.jpg"
+    },{
         nom: "Pinarello F12", //
         preu: 5595,
         brand: "Pinarello",
@@ -1454,6 +1449,24 @@ t_seient = [{
         preu: 249,
         img: "adaptative_r3.jpg",
         brand:"Fizik"
+    },
+    {
+        nom: "M5 NACK PAS", //
+        preu: 209,
+        img: "m5 carbon.jpg",
+        brand:"Prologo"
+    },
+    {
+        nom: "M5 TRIOX PAS", //
+        preu: 142,
+        img: "m5 triox.jpg",
+        brand:"Prologo"
+    },    
+    {
+        nom: "k-3", //
+        preu: 495,
+        img: "gelu k3.jpg",
+        brand:"Gelu"
     }
 
 ];
@@ -1997,24 +2010,37 @@ t_pedals_road = [{
         img: "xpresso10.jpg",
         brand:"Time"
     },
-    /**{ Afegir Speedplay
-        nom: "Look Carbon Ti", //
-        preu: 199,
-        img: "lookcarbonti.jpg",
-        brand:"Look"
+    { 
+        nom: "Nano", //
+        preu: 449,
+        img: "speedplay nano.jpg",
+        brand:"SpeedPlay"
     },
-    {
-        nom: "Look Carbon", //
-        preu: 110,
-        img: "lookcarbonx.jpg",
-        brand:"Look"
+    { 
+        nom: "Zero", //
+        preu: 229,
+        img: "speedplay zero.jpg",
+        brand:"SpeedPlay"
     },
-    {
-        nom: "Look Race", //
-        preu: 70,
-        img: "lookrace.jpg",
-        brand:"Look"
-    }*/
+    { 
+        nom: "Aero", //
+        preu: 279,
+        img: "speedplay aero.jpg",
+        brand:"SpeedPlay"
+    },
+    { 
+        nom: "Rally RK200 LOOK / SPD-SL 2 piernas", //
+        preu: 1099,
+        img: "rally road.jpg",
+        brand:"Garmin"
+    },
+    { 
+        nom: "Rally RK200 LOOK / SPD-SL 1 pierna", //
+        preu: 649,
+        img: "rally road.jpg",
+        brand:"Garmin"
+    },
+    
 ];
 
 t_pedals_mtb = [{
@@ -2046,6 +2072,30 @@ t_pedals_mtb = [{
         preu: 70,
         img: "lookrace.jpg",
         brand:"Look"
+    },
+    {
+        nom: "Leopard M1T", //
+        preu: 234,
+        img: "m1t.jpg",
+        brand:"HT"
+    },
+    {
+        nom: "Leopard M1", //
+        preu: 117    ,
+        img: "m1.jpg",
+        brand:"HT"
+    },
+    { 
+        nom: "Rally XC200 SPD 2 piernas", //
+        preu: 1199,
+        img: "rally xc.jpg",
+        brand:"Garmin"
+    },
+    { 
+        nom: "Rally XC200 SPD 1 pierna ", //
+        preu: 699,
+        img: "rally xc.jpg",
+        brand:"Garmin"
     },
     
 ];
@@ -2095,8 +2145,14 @@ t_tijes_mtb = [{
     },
     {
         nom: "Telescopica Transfer kashima", //
-        preu: 489,
+        preu: 599,
         img: "transfer.jpg",
+        brand:"Fox"
+    },
+    {
+        nom: "Telescopica Transfer SL Kashima", //
+        preu: 649,
+        img: "transfer sl.jpg",
         brand:"Fox"
     },
     {
@@ -2691,7 +2747,7 @@ function modalitat() {
             brand=element.brand;
         });
         $("#forquilla").append(t_tmp);
-        $("#slide-forquilla").parent().show();
+        $("#slide-forquilla").show();
 
         //frens mtb
         t_tmp = '<option value="0" selected>Selecciona unos Frenos</option>';
@@ -2708,7 +2764,7 @@ function modalitat() {
             brand=element.brand;
         });
         $("#frens").append(t_tmp);
-        $("#slide-frens").parent().show();
+        $("#slide-frens").show();
 
 
         seient();
@@ -2723,7 +2779,7 @@ function modalitat() {
             
         });
         $("#punys").append(t_tmp);
-        $("#slide-punys").parent().show();
+        $("#slide-punys").show();
 
         //pneumatics mtb
         pneumatic(t_pneumatics_mtb)
@@ -2878,7 +2934,7 @@ function ceramicspeed() {
     t_pedalier.forEach(element => {
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
     });
-    $("#pedalier").parent().show();
+    $("#pedalier").show();
     $("#pedalier").append(t_tmp);
 
 
@@ -2887,7 +2943,7 @@ function ceramicspeed() {
     t_roldanes.forEach(element => {
         t_tmp += '<option value=\'' + JSON.stringify(element) + '\'>' + element.nom + '</option>'
     });
-    $("#slide-roldanes").parent().show();
+    $("#slide-roldanes").show();
     $("#roldanes").append(t_tmp);
 
 }
@@ -2907,7 +2963,7 @@ function tijes(t_tijes) {
         brand=element.brand;
     });
     $("#tija").append(t_tmp);
-    $("#slide-tija").parent().show();
+    $("#slide-tija").show();
 }
 
 function seient() {
@@ -2985,7 +3041,6 @@ function carregar_image(img) {
 }
 
 function imgZoom(img){
-    console.log(img);
     $("#img-modal").show();
     $('#img-modal').children().show();
     $('#img-modal').addClass('txt');
@@ -3267,7 +3322,7 @@ document.addEventListener("click", (evt) => {
     const flyoutElement2 = document.getElementById("outside-img");
     const flyoutElement3 = document.getElementById("img-modal");
     let targetElement = evt.target; // clicked element
-    console.log(targetElement)
+   
     
        
             if (targetElement == flyoutElement ) {
@@ -3276,7 +3331,7 @@ document.addEventListener("click", (evt) => {
             }
             else{
                 if(targetElement == flyoutElement2 || targetElement == flyoutElement3 ){
-                    console.log(targetElement)
+                    
                     // This is a click outside.
                     closeImg();
                 }
@@ -3299,7 +3354,6 @@ function info() {
         if ($("#quadre").val() != "0") {
             text = JSON.parse($("#quadre").val()).info;
             $("#info").text(text);
-            console.log(text)
         }
     }
 
@@ -3347,8 +3401,6 @@ function configuracio() {
         bold1+$("#tel").val() +bold2+
         "</td></tr><tr style='font-size:150%'><td>Comentaris: " +
         bold1+$("#comentaris").val() +bold2+
-        "</td></tr><tr style='font-size:150%'><td>Estatura: " +
-        bold1+$("#estatura").val()+"cm" +bold2+
         "</td></tr><tr style='font-size:150%'><td>Quantitat a financiar: " +
         bold1+$("#financiacio").val() +"€"+bold2+
         "</td></tr><tr style='font-size:150%'><td>Mensualitats: " +
@@ -3839,7 +3891,7 @@ function preu2() {
     }
     if ($("#seient").val() != "0") {
         preu = JSON.parse($("#seient").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Sillin: </div><div class="font-weight-bold text-truncate"> '&nbsp +JSON.parse($("#seient").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Sillin: </div><div class="font-weight-bold text-truncate"> &nbsp' +JSON.parse($("#seient").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiSeient();
@@ -3848,7 +3900,7 @@ function preu2() {
     }
     if ($("#tija").val() && $("#tija").val() != "0") {
         preu = JSON.parse($("#tija").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Tija: </div><div class="font-weight-bold text-truncate"> '&nbsp + JSON.parse($("#tija").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Tija: </div><div class="font-weight-bold text-truncate"> &nbsp' + JSON.parse($("#tija").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiTija();
@@ -3892,7 +3944,7 @@ function preu2() {
     }
     if ($("#portabido").val() != "0") {
         preu = JSON.parse($("#portabido").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Portabidon: </div><div class="font-weight-bold text-truncate"> '&nbsp + JSON.parse($("#portabido").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Portabidon: </div><div class="font-weight-bold text-truncate"> &nbsp' + JSON.parse($("#portabido").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiPortabido();
@@ -3901,7 +3953,7 @@ function preu2() {
     }
     if ($("#portabido2").val() != "0") {
         preu = JSON.parse($("#portabido2").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">2o Portabidon: </div><div class="font-weight-bold text-truncate"> '&nbsp + JSON.parse($("#portabido2").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">2o Portabidon: </div><div class="font-weight-bold text-truncate"> &nbsp' + JSON.parse($("#portabido2").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
         cambiPortabido2();
@@ -3910,13 +3962,13 @@ function preu2() {
     }
     if ($("#pedalier").val() && $("#pedalier").val() != "0") {
         preu = JSON.parse($("#pedalier").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Pedalier: </div><div class="font-weight-bold text-truncate"> '&nbsp + JSON.parse($("#pedalier").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Pedalier: </div><div class="font-weight-bold text-truncate"> &nbsp '+ JSON.parse($("#pedalier").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
     }
     if ($("#roldanes").val() && $("#roldanes").val() != "0") {
         preu = JSON.parse($("#roldanes").val()).preu;
-        part2 = '<div class=" pr-0  mr-2">Roldanas: </div><div class="font-weight-bold text-truncate"> '&nbsp + JSON.parse($("#roldanes").val()).nom + '</div>'
+        part2 = '<div class=" pr-0  mr-2">Roldanas: </div><div class="font-weight-bold text-truncate"> &nbsp' + JSON.parse($("#roldanes").val()).nom + '</div>'
         $("#desglos").append(part1 + part2  + part5);
         total += preu;
     }
