@@ -1,0 +1,88 @@
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+
+html::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+    scroll-behavior: smooth;
+}
+
+#cover{
+    height: 100vh;
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./images/laports1.jpg");
+}
+
+#info{
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+#route{
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+#maillot{
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+#inscription{
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+#galery{
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+#sponsors{
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+.section {
+    padding: 1rem;
+    height: 100vh;
+    scroll-snap-align: start;
+    text-align: center;
+    position: relative;
+    scroll-behavior: smooth;
+  }
+
+  nav{
+      z-index: 9999;
+  }
+
+nav > div {
+    background-color: black;
+    height: 10vh;
+   
+}
+ 
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.my-shadow{
+    box-shadow:
+  0px 1.2px 1.7px rgba(0, 0, 0, 0.052),
+  0px 2.7px 3.9px rgba(0, 0, 0, 0.075),
+  0px 4.8px 7px rgba(0, 0, 0, 0.092),
+  0px 8px 11.6px rgba(0, 0, 0, 0.108),
+  0px 13.2px 19px rgba(0, 0, 0, 0.125),
+  0px 23.1px 33.3px rgba(0, 0, 0, 0.148),
+  0px 50px 72px rgba(0, 0, 0, 0.2)
+;
+}
