@@ -138,13 +138,13 @@ t_road_disc = [
     },
     {
         nom: "Colnago C64", //
-        preu: 4637,
+        preu: 4912,
         brand: "Colnago",
         img: "c64_disc.jpg"
     },
     {
         nom: "Colnago V3 RS", //
-        preu: 4379,
+        preu: 4638,
         brand: "Colnago",
         img: "v3rs_disc.jpg"
     },
@@ -223,14 +223,14 @@ t_road = [{
     },
     {
         nom: "Colnago C64", //
-        preu: 4087,
+        preu: 4329,
         info: "*tija incluida",
         brand: "Colnago",
         img: "c64.jpg"
     },
     {
         nom: "Colnago V3 RS", //
-        preu: 4012,
+        preu: 4250,
         info: "*tija incluida",
         brand: "Colnago",
         img: "v3rs.jpg"
@@ -286,15 +286,8 @@ t_gravel = [{
         img: "addict_gravel.jpg"
     },
     {
-        nom: "Colnago Prestige", //
-        preu: 2190,
-        info: "*tija NO incluida",
-        brand: "Colnago",
-        img: "prestige.jpg"
-    },
-    {
         nom: "Colnago G3X", //
-        preu: 2825,
+        preu: 2992,
         info: "*tija incluida",
         brand: "Colnago",
         img: "g3x.jpg"
@@ -388,6 +381,12 @@ t_manillars_road_disc = [{
         preu: 599,
         img: "creston.jpg",
         brand:"Syncros"
+    },
+    {
+        nom: "Vibe EVO", //
+        preu: 600,
+        img: "pro_vibe_evo.jpg",
+        brand:"Pro"  
     },
     {
         nom: "Conjunto K-force + NS ACR SPECIALISSIMA", //
@@ -742,6 +741,60 @@ t_rodes_disc = [{
         brand:"Fulcrum"
     },
     {
+        nom: "Dura-ace C36 tubular", //
+        preu: 2160,
+        img: "duraace36.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Dura-ace C50 tubular", //
+        preu: 2160,
+        img: "duraace50.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Dura-ace C60 tubular", //
+        preu: 2160,
+        img: "duraace60.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Dura-ace C36 tubeless / cubierta", //
+        preu: 2160,
+        img: "duraace36.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Dura-ace C50 tubeless / cubierta", //
+        preu: 2160,
+        img: "duraace50.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Dura-ace C60 tubeless / cubierta", //
+        preu: 2160,
+        img: "duraace60.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Ultegra C36 tubeless / cubierta", //
+        preu: 1500,
+        img: "ultegra36.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Ultegra C50 tubeless / cubierta", //
+        preu: 1500,
+        img: "ultegra50.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Ultegra C60 tubeless / cubierta", //
+        preu: 1500,
+        img: "ultegra60.jpg",
+        brand:"Shimano"
+    },
+    {
         nom: "Peak 4550 (tune) tubular", //
         preu: 3050,
         img: "peak4550.jpg",
@@ -830,18 +883,6 @@ t_rodes_disc = [{
         preu: 1749,
         img: "ws.jpg",
         brand:"Corima"
-    },
-    {
-        nom: "Dura-Ace c40 tubular", //
-        preu: 2620,
-        img: "c40.jpg",
-        brand:"Shimano"
-    },
-    {
-        nom: "Dura-Ace c40  tubeless / cubierta", //
-        preu: 2430,
-        img: "c40.jpg",
-        brand:"Shimano"
     },
     {
         nom: "Melnstein T 24D tubular", //
@@ -1016,6 +1057,24 @@ t_rodes_road = [
         brand:"Fulcrum"
     },
     {
+        nom: "Dura-ace C36 tubular", //
+        preu: 2160,
+        img: "duraace36rim.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Dura-ace C50 tubular", //
+        preu: 2160,
+        img: "duraace50rim.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Dura-ace C60 tubular", //
+        preu: 2160,
+        img: "duraace60rim.jpg",
+        brand:"Shimano"
+    },
+    {
         nom: "Peak 4550 (tune) tubular", //
         preu: 3050,
         img: "peak4550.jpg",
@@ -1132,9 +1191,39 @@ t_rodes_road = [
 ];
 
 t_rodes_gravel = [{
-        nom: "Dura-Ace c40 ", //
-        preu: 2430,
-        img: "c40.jpg",
+        nom: "Dura-ace C36 tubeless / cubierta", //
+        preu: 2045,
+        img: "duraace36.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Dura-ace C50 tubeless / cubierta", //
+        preu: 2045,
+        img: "duraace50.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Dura-ace C60 tubeless / cubierta", //
+        preu: 2045,
+        img: "duraace60.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Ultegra C36 tubeless / cubierta", //
+        preu: 2045,
+        img: "ultegrac36.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Ultegra C50 tubeless / cubierta", //
+        preu: 2045,
+        img: "ultegrac50.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Ultegra C60 tubeless / cubierta", //
+        preu: 2045,
+        img: "ultegrac60.jpg",
         brand:"Shimano"
     },
     {
@@ -1619,10 +1708,16 @@ t_pneumatics_mtb = [{
     },
 ];
 
-t_grup_road = [{ //sense bieles
-        nom: "DURA-ACE Di2", //
-        preu: 3370, //antic 2692                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-        img: "duraacedi2.jpg",
+t_grup_road = [//{ //sense bieles
+       // nom: "DURA-ACE Di2", //
+       // preu: 3370, //antic 2692                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+       // img: "duraacedi2.jpg",
+       // brand:"Shimano"
+    //},
+    { 
+        nom: "DURA-ACE 9200", //
+        preu: 3451,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+        img: "duraace9200.jpg",
         brand:"Shimano"
     },
     {
@@ -1631,10 +1726,16 @@ t_grup_road = [{ //sense bieles
         img: "duraace.jpg",
         brand:"Shimano"
     },
+    //{
+     //   nom: "ULTEGRA Di2", //
+     //   preu: 2041, //anterior 1440
+     //   img: "ultegradi2.jpg",
+    //    brand:"Shimano"
+   // },
     {
-        nom: "ULTEGRA Di2", //
-        preu: 2041, //anterior 1440
-        img: "ultegradi2.jpg",
+        nom: "ULTEGRA 8100", //
+        preu: 2000, //anterior 1440
+        img: "ultegra8100.jpg",
         brand:"Shimano"
     },
     {
@@ -1681,10 +1782,17 @@ t_grup_road = [{ //sense bieles
     }
 ];
 
-t_grup_disc = [{ //sense bieles
-        nom: "DURA-ACE Di2", //
-        preu: 3659, //anterior 2795
-        img: "duraacedi2.jpg",
+t_grup_disc = [
+    //{ //sense bieles
+    //    nom: "DURA-ACE Di2", //
+    //    preu: 3659, //anterior 2795
+    //    img: "duraacedi2.jpg",
+    //    brand:"Shimano"
+    //},
+    { //sense bieles
+        nom: "DURA-ACE 9200", //
+        preu: 3701, //anterior 2795
+        img: "duraace9200.jpg",
         brand:"Shimano"
     },
     {
@@ -1694,11 +1802,17 @@ t_grup_disc = [{ //sense bieles
         brand:"Shimano"
     },
     {
-        nom: "ULTEGRA Di2", //
-        preu: 2380, //anterior 1703
-        img: "ultegradi2.jpg",
+        nom: "ULTEGRA 8100", //
+        preu: 2494, //anterior 1703
+        img: "ultegra8100.jpg",
         brand:"Shimano"
     },
+    //{
+      //  nom: "ULTEGRA Di2", //
+        //preu: 2380, //anterior 1703
+        //img: "ultegradi2.jpg",
+        //brand:"Shimano"
+    //},    
     {
         nom: "ULTEGRA", //
         preu: 1188,//anterior 895
@@ -2317,9 +2431,21 @@ t_roldanes = [{
 ];
 
 t_bieles_road = [{
+    
+        nom: "Dura-Ace 9200", //
+        preu: 629,
+        img: "duraace9200.jpg",
+        brand:"Shimano"
+    },{
         nom: "Dura-Ace ", //
         preu: 589, //anterior 495
         img: "duraace.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Ultegra 8100", //
+        preu: 329, 
+        img: "ultegra8100.jpg",
         brand:"Shimano"
     },
     {
@@ -2328,10 +2454,23 @@ t_bieles_road = [{
         img: "ultegra.jpg",
         brand:"Shimano"
     },
+   
     {
         nom: "Dura-Ace con Potenciometro", //
         preu: 1778,//anterior 1366
         img: "duraacep.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Dura-Ace 9200 con Potenciometro", //
+        preu: 1938,//anterior 1366
+        img: "duraace9200p.jpg",
+        brand:"Shimano"
+    },
+    {
+        nom: "Ultegra 8100 con Potenciometro SIN PLATOS", //
+        preu: 1199,//anterior 1366
+        img: "ultegra8100p.jpg",
         brand:"Shimano"
     },
     {
