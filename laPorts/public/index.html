@@ -14,7 +14,7 @@
     <meta content="/images/logo.jpg" itemprop="image"><!--ToDo-->
     <link rel="canonical" href="https://laports.muntbikes.com" />
     <title>La Ports</title>
-    <link rel="stylesheet" href="./llibrerias/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./llibrerias/fontawesome-free-5.13.0-web/css/all.min.css">
     <link rel="icon" type="image/png" href="favicon50x50.png"> <!--ToDo-->
@@ -29,19 +29,46 @@
     </script>
     <link rel="preconnect" href="https://firebaseinstallations.googleapis.com">
     <link rel="preconnect" href="https://firebaseremoteconfig.googleapis.com">
+  
 </head>
 
 <body >
   <nav class="fixed-top pt-5">
-    <div class="col-8  col-lg-6 float-end my-shadow white px-2" >
-      <img src="./images/la ports.png" alt="" class="img-fluid p-2" >
+    <div class="col-8  col-lg-3 float-end my-shadow black " id="navbar">
+      <a href="#cover"><img src="./images/la ports negra.png" alt="" class="img-fluid p-3 float-start"  ></a>
+      <div class="dropdown float-end h-100">
+        <button class="dropbtn me-4 h-100" id="menuBtn">
+            <i class="fas fa-bars fa-2x" id="hamburger"></i>
+            <i class="fas fa-times fa-2x me-1" id="cross" style="display: none;"></i>
+        </button>
+        
+      </div>
+      <div class="dropdown-content float-end col-12 bg-white text-center " style="display: none;" id="dropDown">
+        <a href="#info" class="">Informacion</a>
+        <br>
+        <a href="#route" class="">Recorrido</a>
+        <br>
+        <a href="#maillot" class="">Maillot</a>
+        <br>
+        <a href="#inscripcion" class="">Inscripcion</a>
+        <br>
+        <a href="#galery" class="">Galeria</a>
+        <br>
+        <a href="./news.html" class="">Novedades</a>
+        <br>
+        <a href="#sponsors" class="">Sponsors</a>
+
+        <div id="social-btns"  class="d-flex align-content-between w-100 mt-5 px-5">
+            <a href="https://www.instagram.com/portsdelmaresme/?hl=es" class="mx-auto" id="instagram"><i class="fab fa-instagram fa-2x" target="_blank"></i></a>
+            <a href="https://www.instagram.com/portsdelmaresme/?hl=es" class="mx-auto" id="youtube"><i class="fab fa-youtube fa-2x" target="_blank"></i></a>
+            <a href="https://www.instagram.com/portsdelmaresme/?hl=es" class="mx-auto" id="facebook"><i class="fab fa-facebook fa-2x" target="_blank"></i></a>
+        </div>
+      </div>
     </div>
-    <!--ToDo-->
+    
   </nav>
 
-  <div id="social-btns" >
-      <!--ToDo-->
-  </div>
+  
 
 
  <div id="main">
@@ -75,11 +102,11 @@
 </div>
     
 
-    <script src="./llibrerias/jquery-ui-1.12.1/jquery-3.5.1.min.js"></script>
-    <script src="./llibrerias/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-    <script src="./llibrerias/popperjs2.0.6/popper.min.js"></script>
-    <script src="./llibrerias/bootstrap-5.1.0-dist/js/bootstrap.min.js"></script>
-    <script src="./script_v2.js"></script>
+<script src="./llibrerias/jquery-ui-1.12.1/jquery-3.5.1.min.js"></script>
+<script src="./llibrerias/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="./llibrerias/bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="./llibrerias/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+<script src="./script.js"></script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/7.4.0/firebase-app.js"></script>
