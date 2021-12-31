@@ -1,78 +1,11 @@
-(function($) {
-    var selector = ".section";
+
   
-    var $slides = $(selector);
-  
-    var currentSlide = 0;
-    var isAnimating = false;
-  
-    var stopAnimation = function() {
-      setTimeout(function() {
-        isAnimating = false;
-      }, 200);
-    };
-  
-    var bottomIsReached = function($elem) {
-      var rect = $elem[0].getBoundingClientRect();
-      return rect.bottom <= $(window).height();
-    };
-  
-    var topIsReached = function($elem) {
-      var rect = $elem[0].getBoundingClientRect();
-      return rect.top >= 0;
-    };
-  
-    document.addEventListener(
-      "wheel",
-      function(event) {
-        var $currentSlide = $($slides[currentSlide]);
-  
-        if (isAnimating) {
-          event.preventDefault();
-          return;
-        }
-  
-        var direction = -event.deltaY;
-  
-        if (direction < 0) {
-          // next
-          if (currentSlide + 1 >= $slides.length) return;
-          if (!bottomIsReached($currentSlide)) return;
-          event.preventDefault();
-          currentSlide++;
-          var $slide = $($slides[currentSlide]);
-          var offsetTop = $slide.offset().top;
-          isAnimating = true;
-          $("html, body").animate(
-            {
-              scrollTop: offsetTop
-            },
-            "slow","linear",
-            stopAnimation
-          );
-        } else {
-          // back
-          if (currentSlide - 1 < 0) return;
-          if (!topIsReached($currentSlide)) return;
-          event.preventDefault();
-          currentSlide--;
-          var $slide = $($slides[currentSlide]);
-          var offsetTop = $slide.offset().top;
-          isAnimating = true;
-          $("html, body").animate(
-            {
-              scrollTop: offsetTop
-            },
-            "slow","linear",
-            stopAnimation
-          );
-        }
-      },
-      { passive: false }
-    );
-  })(jQuery);
-  
-  document.getElementById("menuBtn").addEventListener("click",menu);
+  //document.getElementById("menuBtn").addEventListener("click",menu,{passive: true});
+
+  $(".link").click(function() {
+    $(".link").removeClass("activeA")
+    $(this).addClass("activeA");
+  })
 
   var menuOpen = false;
 
@@ -100,11 +33,58 @@
 
     }
   }
-
+  
   $(document).ready(function() {
-    
-    $("a").click(function() {
-      $("a").removeClass("activeA")
-      $(this).addClass("activeA");
-  })});
+    video();
+  $('#iframeMaillot').attr('src','./maillot.html');
+ 
+  
+  
+  });
+  
+
+  function video(){
+    var width=$( window ).width()
+    var min=2
+    var max=4
+    random=Math.floor(Math.random() * (max - min + 1) ) + min;
+    var vidH
+    var vidW
+    switch (random) {
+      case 2:
+        vidW='<source src="https://storage.googleapis.com/images-laports/laports_2.webm" type="video/webm"><source src="https://storage.googleapis.com/images-laports/laports_2.mp4" type="video/mp4">'
+        vidH='<source src="https://storage.googleapis.com/images-laports/laports_2H.webm" type="video/webm"><source src="https://storage.googleapis.com/images-laports/laports_2H.mp4" type="video/mp4">'
+        imgH="./images/laports_2H_H.webp";
+        imgW="./images/laports_2_W.webp";
+        break;
+      case 3:
+        vidW='<source src="https://storage.googleapis.com/images-laports/laports_3.webm" type="video/webm"><source src="https://storage.googleapis.com/images-laports/laports_3.mp4" type="video/mp4">'
+        vidH='<source src="https://storage.googleapis.com/images-laports/laports_3H.webm" type="video/webm"><source src="https://storage.googleapis.com/images-laports/laports_3H.mp4" type="video/mp4">'
+        imgH="./images/laports_3H_H.webp";
+        imgW="./images/laports_3_W.webp";
+        break;
+      case 4:
+        vidW='<source src="https://storage.googleapis.com/images-laports/laports_4.webm" type="video/webm"><source src="https://storage.googleapis.com/images-laports/laports_4.mp4" type="video/mp4">'
+        vidH='<source src="https://storage.googleapis.com/images-laports/laports_4H.webm" type="video/webm"><source src="https://storage.googleapis.com/images-laports/laports_4H.mp4" type="video/mp4">'
+        imgH="./images/laports_4H_H.webp";
+        imgW="./images/laports_4_W.webp";
+        break;
+      default:
+        break;
+    }
+
+    if(width<900){
+      $("#bgvid").empty();
+      $("#bgvid").append(vidH);
+      $("#bgvid").attr('poster',imgH);
+    };
+    if(width>900){
+     
+      $("#bgvid").empty();
+      $("#bgvid").append(vidW);
+      $("#bgvid").attr('poster',imgW);
+    }
+  }
+
+
   

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /*
+Allow: /es
+Allow: /en
+Allow: /maillot.html
+Allow: /sitemap.xml
+
+Sitemap: https://laports.cat/sitemap.xml

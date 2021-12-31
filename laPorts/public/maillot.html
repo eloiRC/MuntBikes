@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maillot la ports del maresme 2022</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://laports.cat/" />
+    <link type="text/plain" rel="author" href="http://www.tecnologiasdim.es">
+		<meta name="keywords" content="TecnologiasDIM, Visor DIM3D, Customización, diseño tiempo real, editor 3D, prototipos en tiempo real, herramienta prototipos, 3D desde patrones, diseño de colecciones, ambientes 3D personalizados, productos customizados 3D">
+		
+        <script src="./llibrerias/gobik/three.min.js" defer></script>
+		<script src="./llibrerias/gobik/LegacyJSONLoader.js" defer></script>
+        <script src="./llibrerias/gobik/OrbitControls.js" defer></script>
+		<script src="./llibrerias/gobik/jquery.min.js" defer></script>
+		<script src="./llibrerias/gobik/luces.js" defer></script>
+		<script src="./llibrerias/gobik/cargamodelo.js" defer></script>
+        <style>
+            .cursorActualizacion {
+                    border: 8px solid #f3f3f3;
+                    border-radius: 50%;
+                    border-top: 8px solid #9a9a9a;
+                    width: 50px;
+                    height: 50px;
+                    position: absolute; 
+                    top: calc(50% - 25px); 
+                    left: calc(50% - 25px); 
+                    text-align: center;
+                    margin: 25px auto;
+                    -webkit-animation: spin 0.5s linear infinite; /* Safari */
+                    animation: spin 0.5s linear infinite;
+                    z-index: 99000;
+                    }
+                    
+    
+                html, body, select, button, a, table, input, textarea {
+                   
+                    font-size: 12px;
+                    line-height: 24px;
+                    }
+        
+                html {
+                    background-color: rgba(0, 0, 0, 0);
+                    margin: 0px;
+                    padding: 0;
+                    
+                    }
+        
+                body {
+                    margin: 0;
+                    padding: 0;
+                    font-family: 'Oswald', sans-serif;
+                    color: #000;
+                    }	
+                    
+                /* Safari */
+                @-webkit-keyframes spin {
+                    0% { -webkit-transform: rotate(0deg); }
+                    100% { -webkit-transform: rotate(360deg); }
+                    }
+        
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                    }
+                    
+                .arribacentro {
+                    position: fixed;
+                    top: 0px;
+                    left: 50%;
+                    transform: translate(-50%, 0%);
+                    }
+                
+                .arribaizquierda {
+                    position: fixed;
+                    top: 0px;
+                    float: left;
+                    }			
+                    
+                .arribaderecha {
+                    position: fixed;
+                    top: 0px;
+                    float: right;
+                    }	
+            .cabecera {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 41px;
+                text-align: center;
+                z-index: 100;
+                border-bottom: 1px solid #dedede;
+                background: #fff;
+                }
+                
+            .titulo {
+                position: fixed;
+                top: 42px;
+                left: 0px;
+                width: 100%;
+                height:	 41px;
+                text-align: left;
+                z-index: 100;
+                border-bottom: 1px solid #dedede;
+                background: #fff;
+                }
+                
+            </style>
+</head>
+<body>
+    <div id="cursorActualizacion" class="cursorActualizacion"></div>
+    <div style="position: absolute; left: 0px; top: 41px; height: calc(100% - 41px); overflow: hidden; z-index: 20;" id="canvas" ondblclick="reiniciarCamara();">
+		<script src="./llibrerias/gobik/escena.js" defer>
+        </script>
+	</div>
+    <script defer>
+        
+        var config_ficha = {};
+        
+        
+        function cursorProgress()
+            {
+            $("*").css("cursor", "wait");
+            }
+    
+            
+        function cursorDefault()
+            {
+            $("*").css("cursor", "default");
+            }
+            
+        
+        // Para eliminar el indicador de carga cuando todo esta cargado y visualizado
+        function PararIndicadorDeCarga()
+            {
+            // Elimina el icono de carga
+            var iconocarga = document.getElementById("cursorActualizacion");
+            if (iconocarga) iconocarga.remove();
+        
+            }
+            
+        
+        </script>
+    
+    
+</body>
+</html>

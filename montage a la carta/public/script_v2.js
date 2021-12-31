@@ -97,42 +97,37 @@ let darkMode = false;
 t_road_disc = [
     {
         nom: "Pinarello F", //
-        preu: 6950,
+        preu: 6472,
         brand: "Pinarello",
         img: "pinarello f disc.jpg"
-    },{
-        nom: "Pinarello F12", //
-        preu: 5595,
-        brand: "Pinarello",
-        img: "f12_disc.jpg"
     },
     {
-        nom: "Pinarello PRINCE FX", //
-        preu: 3915,
+        nom: "Pinarello PRINCE", //
+        preu: 3723,
         brand: "Pinarello",
         img: "prince_disc.jpg"
     },
     {
         nom: "Pinarello Angliru", //
-        preu: 1665,
+        preu: 1986,
         brand: "Pinarello",
         img: "angliru_disc.jpg"
     },
     {
         nom: "Bianchi XR4", //preu quadro amb vision restat -649€ del manillar
-        preu: 4516,
+        preu: 4774,
         brand: "Bianchi",
         img: "xr4_disc.jpg"
     },
     {
-        nom: "Bianchi SPECIALISSIMA", //preu quadro restat fsa potencia manillar carbon
-        preu: 4912,
+        nom: "Bianchi SPECIALISSIMA", //preu quadro restat fsa potencia manillar carbon -250€
+        preu: 5358,
         brand: "Bianchi",
         img: "specialissima_disc.jpg"
     },
     {
         nom: "Bianchi INFINITO CV", //preu quadro amb vision restat -649€ del manillar
-        preu: 3709,
+        preu: 3895,
         brand: "Bianchi",
         img: "infinito_disc.jpg"
     },
@@ -187,29 +182,15 @@ t_road_disc = [
 ];
 
 t_road = [{
-        nom: "Pinarello F12",
-        preu: 5395,
-        info: "*tija incluida",
-        brand: "Pinarello",
-        img: "f12.jpg"
-    },
-    {
-        nom: "Pinarello GAN",
-        preu: 2350,
-        info: "*tija incluida",
-        brand: "Pinarello",
-        img: "gan.jpg"
-    },
-    {
-        nom: "Pinarello Angliru", //
-        preu: 1495,
-        info: "*tija incluida",
-        brand: "Pinarello",
-        img: "angliru.jpg"
-    },
+    nom: "Pinarello F", //
+    preu: 6472,
+    info: "*tija incluida",
+    brand: "Pinarello",
+    img: "pinarello f disc.jpg"
+},
     {
         nom: "Bianchi XR4", //
-        preu: 3959,
+        preu: 4158,
         info: "*tija incluida",
         brand: "Bianchi",
         img: "xr4.jpg"
@@ -258,8 +239,15 @@ t_gravel = [{
         img: "grevil.jpg"
     },
     {
-        nom: "Pinarello Crossista ",
-        preu: 2715,
+        nom: "Pinarello Crossista +",
+        preu: 5215,
+        info: "*tija incluida",
+        brand: "Pinarello",
+        img: "crossista.jpg"
+    },
+    {
+        nom: "Pinarello Crossista",
+        preu: 3026,
         info: "*tija incluida",
         brand: "Pinarello",
         img: "crossista.jpg"
@@ -352,27 +340,22 @@ t_mtb = [
     }
 ];
 
-t_manillars_road_disc = [{
-        nom: "TALON ULTRA f12 TICR", //
-        preu: 857,
+t_manillars_road_disc = [
+    {
+        nom: "TALON ULTRA Light TICR", //
+        preu: 967,
         img: "talon_ultra.jpg",
         brand:"Most"
     },
     {
-        nom: "TALON AERO", //
-        preu: 718,
-        img: "talon_aero.jpg",
-        brand:"Most"
-    },
-    {
         nom: "Jaguar XFC carbon TICR", //
-        preu: 668,
+        preu: 713,
         img: "jaguarC_ticr.jpg",
         brand:"Most"
     },
     {
         nom: "Jaguar XA TICR", //
-        preu: 173,
+        preu: 197,
         img: "jaguar_ticr.jpg",
         brand:"Most"
     },
@@ -414,7 +397,7 @@ t_manillars_road_disc = [{
     },
     {
         nom: "Alanera colnago", //
-        preu: 847,
+        preu: 907,
         img: "alanera.jpg",
         brand:"Deda"
     },
@@ -445,32 +428,26 @@ t_manillars_road_disc = [{
 ];
 
 t_manillars_road = [{
-        nom: "TALON ULTRA TICR", //
-        preu: 845,
-        img: "talon_ultra.jpg",
-        brand:"Most"
-    },
-    {
-        nom: "TALON AERO", //
-        preu: 718,
-        img: "talon_aero.jpg",
-        brand:"Most"
-    },
+    nom: "TALON ULTRA Light TICR", //
+    preu: 967,
+    img: "talon_ultra.jpg",
+    brand:"Most"
+},
     {
         nom: "TALON UD", //
-        preu: 411,
+        preu: 427,
         img: "talon_ud.jpg",
         brand:"Most"
     },
     {
         nom: "Jaguar XFC carbon TICR", //
-        preu: 668,
+        preu: 713,
         img: "jaguarC_ticr.jpg",
         brand:"Most"
     },
     {
         nom: "Jaguar XA TICR", //
-        preu: 173,
+        preu: 197,
         img: "jaguar_ticr.jpg",
         brand:"Most"
     },
@@ -537,7 +514,7 @@ t_manillars_road = [{
     },
     {
         nom: "Alanera colnago", //
-        preu: 847,
+        preu: 907,
         img: "alanera.jpg",
         brand:"Deda"
     },

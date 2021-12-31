@@ -1,183 +1,729 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content=""><!--ToDo-->
-    <meta name="keywords"
-        content=" " /><!--ToDo-->
-    <meta name="copyright" content="MuntBikes" />
-    <meta name="robots" content="index,follow" />
-    <meta content="/images/logo.jpg" itemprop="image"><!--ToDo-->
-    <link rel="canonical" href="https://laports.muntbikes.com" />
-    <title>La Ports</title>
-    
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./llibrerias/fontawesome-free-5.13.0-web/css/all.min.css">
-    <link rel="icon" type="image/png" href="favicon50x50.png"> <!--ToDo-->
-    <link rel="apple-touch-icon" type="image/png" href="/favicon50x50.png">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "url": "https://laports.munrbikes.com",
-            "logo": "https://laports.muntbikes.com/images/logo.png"<!--ToDo-->
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>9a edicio La Ports del Maresme - Marxa Cicloturista 22 de Maig</title>
+
+  <link rel="preconnect" href="https://www.storage.googleapis.com">
+  <link rel="preconnect" href="https://www.gstatic.com">
+  <link rel="preconnect" href="https://firebaseremoteconfig.googleapis.com">
+
+  <link rel="icon" type="image/png" href="favicon50x50.png">
+  <link rel="apple-touch-icon" type="image/png" href="/favicon50x50.png">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsOrganization",
+      "name": "La Ports Del Maresme",
+      "alternateName": "La Ports",
+      "url": "https://laports.cat",
+      "logo": "https://laports.cat/images/logo_negra.png",
+      "sameAs": [
+        "https://www.youtube.com/user/muntbikes",
+        "https://www.instagram.com/portsdelmaresme/?hl=es",
+        "https://es-es.facebook.com/Portsdelmaresme/"
+      ]
+    }
     </script>
-    <link rel="preconnect" href="https://firebaseinstallations.googleapis.com">
-    <link rel="preconnect" href="https://firebaseremoteconfig.googleapis.com">
-  
+
+  <style>a{color:white}</style>
+  <link rel="stylesheet" href="./style.css">
+
+  <meta name="description" content="9a edicio La ports del Maresme 22 de maig 2022, la emblematica marxa del maresme organitzada per Muntbikes CC. Surtin d'arenys de munt i arribant a la cima del montseny.organitzada per MuntBikes">
+  <meta name="keywords" content="la ports,la ports del maresme,ports del maresme,marxa, ciclista, marxa ciclista, muntbikes,on velo,onvelo, marxa onvelo marxa on velo,gran fondo onvelo,granfondo mataro, gran fondo, marcha mataro, marxa mataro, marxa barcelona, marxa maig, gran fondo onvelo, bianchi , pinarello, gobik, mallot gobik, mallot ciclisme, club ciclista, bicicleta, montseny, arenys de munt, arenys de mar, sant pol, calella, mataro, maresme, komoot, premium,millor marxa,cicloturista,2022, catalunya, barcelona,remences, terra de remences, qh, quebrantahuesos, quebranta,onvelo, amer , marxa amer,terra d'aigua,costa brava, calella, lloret,rutes del montesny,la mussara, marxa la mussara, scott,trek , spesialitzed,cannondale,preparacio,marxa preparacio, 2022, marxa 2022, primavera, castelli, colnago, de rosa, turo de l'home,tres nacions, 3 nacions, andorra, puigcerda, pirineu,gran fondo,gf,gcn,bcn,orbea,scott  " />
+  <meta name="copyright" content="MuntBikes" />
+  <meta name="robots" content="index, follow" />
+  <meta name="google-site-verification" content="a8Kkdj1GJjdqcJrEAV8cfrLFd-CKeMUUnu6mKE4qExw" />
+  <meta content="./images/logo_negra.png" itemprop="image">
+  <link rel="canonical" href="https://laports.cat/" />  
+
 </head>
 
-<body >
-  <nav class="fixed-top pt-5">
-    <div class="col-8  col-lg-3 float-end my-shadow black " id="navbar">
-      <a href="#cover"><img src="./images/la ports negra.png" alt="" class="img-fluid p-3 float-start"  ></a>
-      <div class="dropdown float-end h-100">
-        <button class="dropbtn me-4 h-100" id="menuBtn">
-            <i class="fas fa-bars fa-2x" id="hamburger"></i>
-            <i class="fas fa-times fa-2x me-1" id="cross" style="display: none;"></i>
-        </button>
-        
-      </div>
-      <div class="dropdown-content float-end col-12 bg-white text-center " style="display: none;" id="dropDown">
-        <a href="#info" class="">Informacion</a>
-        <br>
-        <a href="#route" class="">Recorrido</a>
-        <br>
-        <a href="#maillot" class="">Maillot</a>
-        <br>
-        <a href="#inscripcion" class="">Inscripcion</a>
-        <br>
-        <a href="#galery" class="">Galeria</a>
-        <br>
-        <a href="./news.html" class="">Novedades</a>
-        <br>
-        <a href="#sponsors" class="">Sponsors</a>
+<body>
+  <!--
+    Made by Eloi Rebollo Canela @eloi.rc
+  -->
 
-        <div id="social-btns"  class="d-flex align-content-between w-100 mt-5 px-5">
-            <a href="https://www.instagram.com/portsdelmaresme/?hl=es" class="mx-auto" id="instagram"><i class="fab fa-instagram fa-2x" target="_blank"></i></a>
-            <a href="https://www.instagram.com/portsdelmaresme/?hl=es" class="mx-auto" id="youtube"><i class="fab fa-youtube fa-2x" target="_blank"></i></a>
-            <a href="https://www.instagram.com/portsdelmaresme/?hl=es" class="mx-auto" id="facebook"><i class="fab fa-facebook fa-2x" target="_blank"></i></a>
+  <nav class="fixed-top pt-4 pt-lg-5">
+    <div class="col-7  col-xl-3 col-md-5 float-end my-shadow black" id="navbar">
+      <a href="#cover"><img src="./images/la ports negra.png" alt="logo la ports del maresme" height="auto" width="auto"
+          class="logo-nav p-3 pe-lg-3 pe-2 float-start"></a>
+      <div class="dropdown float-end h-100">
+        <button class="dropbtn me-lg-4 me-3 h-100 p-0" id="menuBtn" aria-label="abrir o cerrar menu" onclick="menu()">
+          <i class="fas fa-bars fa-2x" id="hamburger"></i>
+          <i class="fas fa-times fa-2x me-1" id="cross" style="display: none;"></i>
+        </button>
+
+      </div>
+      <div class="dropdown-content float-end col-12 text-center " style="display: none;" id="dropDown">
+        <a href="#info" class="link">Informació</a>
+        <br>
+        <a href="#route" class="link">Recorregut</a>
+        <br>
+        <a href="#maillot" class="link">Mallot</a>
+        <br>
+        <a href="#inscription" class="link">Inscripció</a>
+        <br>
+        <a href="#contact" class="link">Contacte</a>
+        <br>
+        <a href="#rules" class="link">Normativa</a>
+        <br>
+        <a href="#sponsors" class="link">Espònsors</a>
+
+        <div id="social-btns" class="d-flex align-content-between w-100 mt-5 px-2">
+          <a href="https://www.instagram.com/portsdelmaresme/?hl=es" class="mx-auto" id="instagram"><i
+              class="fab fa-instagram fa-2x" target="_blank"></i></a>
+          <a href="https://www.youtube.com/c/muntbikesarenys/featured" class="mx-auto" id="youtube"><i
+              class="fab fa-youtube fa-2x" target="_blank"></i></a>
+          <a href="https://www.facebook.com/Portsdelmaresme" class="mx-auto" id="facebook"><i
+              class="fab fa-facebook fa-2x" target="_blank"></i></a>
+          <a href="https://www.strava.com/clubs/la-ports-del-maresme-261085?hl=es-ES" class="mx-auto" id="strava"><i
+              class="fab fa-strava fa-2x"></i></a>
+        </div>
+        <div id="idioma" class="mt-5">
+          <a href="./es" class="link-dark bold me-2">Castellano</a>
+          <i class="fas fa-language"></i>
+         <!-- <a href="./en" class="link-dark bold ms-2">English</a>-->
         </div>
       </div>
     </div>
-    
+
   </nav>
 
-  
 
 
- <div id="main">
-  <div id="cover" class=" container-fluid section" >
 
-  </div>
+  <div id="main">
+    <div id="cover" class=" container-fluid section m-0 d-flex justify-content-center">
+      <video aplaysinline playsinline autoplay muted loop preload="auto" id="bgvid" class="lozad" loading="lazy">
+      </video>
+      <div class="cover-div white">
+        <h1 class="bold">22 de Maig</h1>
+        <br>
+        <a href="#inscription" class="btn btn-lg btn-outline-light " id="inscribete"> 
+          <span class="bold ">Inscriu-te</span>
+         </a>
+         
+      </div>
 
-  <div id="info" class=" container-fluid section">
-    <!--ToDo-->
-  </div>
+    </div>
 
-  <div id="route" class=" container-fluid section">
-    <!--ToDo-->
-  </div>
+    <div id="info" class="container-fluid section px-0 pt-0 m-0">
+      <div class="col white my-shadow d-flex align-items-center ps-3 pe-3 mt-4 mt-lg-5" id="section-title">
+        <div class="w-100">
+          Informació:
+        </div>
+      </div>
+      <div id="div-imgs" class=" pt-4 pt-lg-5">
+        <div id="div-img" class="pt-2">
 
-  <div id="maillot" class=" container-fluid section">
-    <!--ToDo-->
-  </div>
+          <img loading="lazy" src="./images/img1-min.webp"
+            alt="imagen la ports del maresme campo de flores amarillas marcha ciclista" class="my-shadow2 img1 ">
+          <div class="img-space mobil"></div>
 
-  <div id="inscription" class=" container-fluid section">
-    <!--ToDo-->
-  </div>
 
-  <div id="galery" class=" container-fluid section">
-    <!--ToDo-->
-  </div>
 
-  <div id="sponsors" class=" container-fluid section">
-    <!--ToDo-->
-  </div>
-</div>
+
+          <img loading="lazy" src="./images/img2-min.webp" alt="imagen la ports del maresme ciclistas en el montseny"
+            class="my-shadow2 img2 ">
+
+
+          <p class="" id="info-text">
+            Dos anys després tornem més forts que mai! Arriba de nou <span class="mt">La Ports del Maresme !</span>
+            La marxa cicloturista de referència, torna a néixer per despertar aquelles ganes de redescobrir cada racó
+            del nostre meravellós entorn de la millor manera que sabem, rodant!
+            Benvinguts a la novena edició de <span class="mt"> La Ports!</span>
+          </p>
+          <p class="" id="info-text">
+            La marxa disposa de dos recorreguts circulars, ambdós s'inicien a la població d'Arenys de Munt.
+             Hi haurà dues opcions a escollir per als participants, el recorregut curt de <span
+              class="bold">96 km i el llarg
+              de 140 km</span> , tant un com l'altre amb unes vistes que no us deixaran indiferents.
+            Es donarà <span class="bold">la sortida a les 8:00 a.m del dia 22 de Maig del 2022</span> des de Can Sala
+            de
+            Baix, on es troba el polígon industrial, a l'inici del poble i molt a prop de la botiga <span
+              class="bold">Muntbikes</span> , zona de
+            fàcil accés i on l'aparcament tampoc és un problema, podeu venir amb tota la família!
+            La ruta passa per gran diversitat de paisatges tant de platja com de muntanya, passant per una de les zones
+            més populars del maresme per les seves costes paradisíaques, fins a un dels punts de muntanya amb gran
+            altitud com és el coll de Santa Helena amb <span class="bold">1233 m d'altura</span> , només uns 400 m de
+            diferència amb el Turó de
+            l'Home, cosa que no està gens malament tenint en compte que es tracta de la muntanya més alta del massís del
+            Montseny.
+          </p>
+          <p class="p-info-space" id="info-text">
+            Pedalar i veure paisatges està molt bé, però sabem que tot i que la bici és la vostra vida, també us agrada
+            la bona vida, que us tractin com a reis i reines per això tenim tot un desplegament pensat per a tots
+            vosaltres.
+            Avituallament durant tota la ruta ubicats en diferents punts, amb menjar de tota mena com fruits secs,
+            fruita, xocolata, entre d'altres i beguda a dojo.
+            <br>
+            A la zona de meta us hi esperarem amb els braços oberts, impacients per veure les vostres cares de felicitat
+            i satisfacció i sobretot per veure com us cau la bava en veure tota la teca que tenim preparada incloent-hi
+            un pernil Los Santos, Iogurts de la granja del Montesny, Fideua de Can Dani y cervesa que no en falti.
+            <br>
+            <span style="display: none;">
+              Per si encara no en teniu prou, no patiu, tenim un parell d'asos sota la màniga. Esperem estar a l'altura de
+              les vostres expectatives sortejant una bici, una Bianchi Sprint entre tots els participants i obsequiant-vos
+              amb un mallot commemoratiu de la marxa de la marca Gobik, per a cadascun de vosaltres sense excepció.
+            </span>
+            
+          </p>
+          <p class="" id="info-text">
+            T'esperem amb gran il·lusió!
+            Torna a formar part d'aquesta gran experiència!
+          </p>
+
+          <img loading="lazy" src="./images/laports1-min.webp"
+            alt=" imagen la ports del maresme ciclistas subiendo santa fe al amanecer " class="my-shadow2 img3 ">
+          <div class="col-12 pt-2">
+            <div class=" text-white info-text text-start list-info">
+              <h3>Inclòs en la Inscripció:</h3>
+              <i class="fas fa-circle fa-xs"></i> Dret als <span class="bold">Avituallaments.</span>
+              <br>
+              <i class="fas fa-circle fa-xs"></i> Servei de <span class="bold">Crono</span> amb xip.
+              <br>
+              <!--
+              <i class="fas fa-circle fa-xs"></i> Sorteig d'una <span class="bold" style="color:#57B6B1 ;">Bianchi
+                Sprint</span> entre els participants.
+              <br>
+              -->
+              <i class="fas fa-circle fa-xs"></i><span class="bold "> Mallot <span class="mt">La Ports</span></span>by
+              Gobik.
+              <br>
+              <i class="fas fa-circle fa-xs"></i><span class="bold "> Culotte <span class="mt">La Ports</span> </span>by
+              Gobik *opcional*.
+              <br>
+              <i class="fas fa-circle fa-xs"></i> Servei <span class="bold"> d'Assistència Sanitaria</span> durant i
+              en finalitzar el recorregut.
+              <br>
+              <i class="fas fa-circle fa-xs"></i> Servei de <span class="bold">vestuari i banys</span> a la sortida i
+              arribada.
+              <br>
+              <i class="fas fa-circle fa-xs"></i> Servei de<span class="bold"> banys</span> Avituallament al cim de sant
+              Elena.
+              <br>
+              <i class="fas fa-circle fa-xs"></i> Servei <span class="bold"> d'Assistència Mecànica</span> durant el
+              recorregut i previ a la sortida.
+              <br>
+              <i class="fas fa-circle fa-xs"></i><span class="bold"> Cafè Expresso Italià </span><span class="bold"
+                style="color:red ;">Illy</span> abans de la sortida i durant la recollida de dorsals.
+              <br>
+              <i class="fas fa-circle fa-xs"></i> <span class="bold"> Pernil Los Santos Ibèrics</span>
+              a l'arribada i durant la recollida de dorsals
+              <br>
+              <i class="fas fa-circle fa-xs"></i><span class="bold"> Iogurts Artesanals de la Granja del
+                Montseny</span> a l'arribada i durant la recollida de dorsals.
+              <br>
+              <i class="fas fa-circle fa-xs"></i><span class="bold"> Fideua cuinada insitu per Can Dani</span> a
+              l'arribada.
+            </div>
+            <div class="">
+              <a href="https://www.google.es/maps/place/Carrer+Roca,+Rellotgers,+08358+Arenys+de+Munt,+Barcelona/@41.6044294,2.5392429,19z/data=!3m1!4b1!4m5!3m4!1s0x12bb367874d1965d:0xa558bcf88e2ad45c!8m2!3d41.6044284!4d2.5397902?hl=es"
+                class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 mt-3" rel="noopener" target="_blank"
+                id="sortida"><i class="fas fa-map-marker-alt"></i> Sortida</a>
+              <a href="https://www.google.es/maps/place/Munt+Bikes+Arenys/@41.6044867,2.5419574,17z/data=!3m1!5s0x12bb36788af85705:0xe4f11b0778d50a0b!4m5!3m4!1s0x0:0xbd13857c535ff446!8m2!3d41.6058058!4d2.540584?hl=es"
+                class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 mt-3" rel="noopener" target="_blank"
+                id="dorsal_divendres"><i class="fas fa-map-marker-alt"></i> Recollida de Dorsal (divendres i dissabte)</a>
+              <a href="https://www.google.es/maps/place/41%C2%B036'20.0%22N+2%C2%B032'14.2%22E/@41.605565,2.5367338,19z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d41.6055636!4d2.5372814"
+                class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 mt-3" rel="noopener" target="_blank"
+                id="dorsal_diumenge"><i class="fas fa-map-marker-alt"></i> Recollida de Dorsal (diumenge)</a>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <div id="route" class=" container-fluid section px-0 pt-0 m-0">
+      <div class="col white my-shadow d-flex align-items-center ps-3 pe-3 mt-4 mt-lg-5" id="section-title">
+        <div class="w-100">
+          Recorregut:
+        </div>
+      </div>
+      <div class="col-12 d-flex justify-content-around flex-wrap align-content-start" id="div-ruta">
+        <div class="col-12 pt-3 px-2 mb-0">
+          <h3 class=" text-white">Recorregut Llarg:</h3>
+          <img  src="./images/altimetria_llarga.webp" alt="altimetria recorrido largo la ports del maresme"
+            class="">
+        </div>
+        <div class="col-12 ">
+          <p id="info-text" class="text-white">
+            Si has escollit aquesta opció, és que ets BOIG!
+          </p>
+          <p id="info-text" class="">
+            Prepara't per un recorregut amb un total de <span class="bold">140 km i 2700 m</span> d'ascens acumulat. La
+            sortida arrenca a Arenys
+            de Munt i creua inicialment diferents poblacions del maresme.
+          </p>
+          <p id="info-text" class="">
+            Comencem direcció Arenys de Mar seguint per canet i St.Pol, tot pobles costaners, molt populars pel seu
+            atractiu turístic i on podràs gaudir de les millors vistes del mar mediterrani, això, si pots deixar de
+            mirar la roda del de davant. Seguim i comencem pujant per St.Iscle i St.Cebrià de Vallalta on podrem gaudir
+            d'una passarel·la de plataners que ens dibuixen un paisatge màgic amb els primers rajos de llum que
+            aconsegueixen accedir d'entre les seves fulles. Un cop superada aquesta primera pujada baixem a
+            Vallgorguina, vall de bruixes i encanteris i tot seguit ens dirigim cap a Sta. Maria de Palautordera i St.
+            Esteve amb els seus camps de blat infinits.
+          </p>
+          <p id="info-text" class="">
+            La costa del Montseny serà la següent etapa, aquí tocarà patir,
+            però també tocarà gaudir, serà doncs en aquest punt on podrem veure una de les zones amb més diversitat de
+            flora que hi ha per aquestes terres, conseqüència, de la gran diferència de nivell que hi ha d'un punt a
+            l'altre d'aquest paratge natural.
+            Baixem passant per Santa Fe de Montseny direcció Sant Marçal, on una de
+            les fagedes més imponents del territori ens marca el camí d'una manera quasi hipnòtica. Seguirem per les
+            poblacions d'Arbúcies i Breda, poblets de muntanya amb un encant personal que destaquen per la seva història
+            i les seves destreses amb l'artesania.
+            <br>
+            Gualba és el poble que trobem a continuació i que a molts us farà despertar sentiments contradictoris. Amor,
+            amor per un paisatge idíl·lic i un asfalt que sembla creat
+            expressament per rodar amb bicicleta, llis, negre, pràcticament sense vehicles i odi, odi per unes pujades
+            impossibles, d'una duresa extrema i infinites, que us faran descobrir que el vostre límit no era on creieu.
+            Passem per Campins zona del Baix Montseny que us ajudarà a recuperar totes aquelles forces que necessiteu
+            per acabar, arribats a aquest punt pensa que ja ho tens!
+          </p>
+          <p id="info-text" class="">
+            Tornem a recórrer el que havíem fet en un inici i
+            anem des de sant Celoni cap a Vallgorguina i pugem Collsacreu, és una part que va pujant i pujant, serà dur,
+            però no defalliu que ara ja sí que som a la recta final!
+            <br>
+            Baixada en picat per corbes fins a la zona de meta, on ja tan sols ens quedarà fer l'última etapa d'aquesta
+            marxa, on serà d'obligat compliment menjar, beure, descansar, compartir anècdotes del viatge i sobretot...
+            passar-s'ho bé!
+          </p>
+          <div class="col-12 d-flex justify-content-lg-center justify-content-around flex-wrap mt-lg-2 mb-4 mt-lg-4 ">
+            <a href="./files/mapa_la_ports_llarga.jpg" class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 m-3"
+              target="_blank" id="dw_mapa" rel="noopener">Mapa <i class="fas fa-map"></i></a>
+            <a href="./files/la_ports_llarga_2022.gpx" class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 m-3"
+              target="_blank" id="track" rel="noopener">Track <i class="fas fa-file-download"></i></a>
+            <a href="./images/altimetria_llarga.jpg" class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 m-3"
+              target="_blank" id="dw_altimetria" rel="noopener">Altimetria <i class="fas fa-chart-area"></i></a>
+            <a href="https://www.komoot.es/tour/501200964" rel="noreferrer"
+              class="btn btn-success bold mx-1 mx-lg-2 my-shadow2 m-3" target="_blank" id="komoot">Komoot</a>
+          </div>
+        </div>
+
+        <div class="col-12 pt-lg-3">
+          <h3 class=" text-white">Recorregut Curt:</h3>
+          <img src="./images/altimetria_curta.webp" alt="altimetria recorrido corto la ports del maresme">
+        </div>
+        <div class="col-12 ">
+          <p id="info-text" class="">
+            Si has escollit aquesta opció i et penses que serà fàcil, t'equivoques!
+          </p>
+          <p id="info-text" class="">
+            Aquest recorregut consta d'un total de <span class="bold">96 km i 1800 m</span> d'ascens acumulat. La
+            sortida arrenca a Arenys de Munt
+            i creua inicialment diferents poblacions del maresme.
+          </p>
+          <p id="info-text" class="">
+            Comencem direcció Arenys de Mar seguint per canet i
+            st.Pol, tot pobles costaners, molt populars pel seu atractiu turístic i on podràs gaudir de les millors
+            vistes del mar mediterrani, això si pots deixar de mirar la roda del de davant. Seguim pujant per St.Iscle i
+            St.Cebrià de Vallalta on podrem gaudir d'una passarel·la de plataners que ens dibuixen un paisatge màgic amb
+            els primers rajos de llum que aconsegueixen accedir d'entre les seves fulles. Un cop superada aquesta
+            primera pujada baixem a Vallgorguina, vall de bruixes i misteris i tot seguit ens dirigim cap a Sta. Maria
+            de Palautordera i St. Esteve amb els seus camps de blat infinits. La costa del Montseny serà la següent
+            etapa, aquí tocarà patir, però també tocarà gaudir, serà doncs en aquest punt on podreu observar una de les
+            zones amb més diversitat de flora que hi ha per aquestes terres, conseqüència, de la gran diferència de
+            nivell que hi ha des d'un punt a l'altre d'aquest paratge natural. Quan arribem a St. Helena s'apoderarà de
+            nosaltres la sensació de ser Déu i poder observar la terra des de dalt, menyspreant la resta de mortals (no
+            apte per a persones que pateixin vertigen).
+          </p>
+          <p id="info-text" class="">
+            A continuació agafem bona posició aerodinàmica que ens esperen
+            15 km de baixada fins a Campins, no pareu al bar a fer la cervesa que ja en tenim a la meta i ens coneixem.
+            Tornem a recórrer el que havíem fet en un inici i anem des de sant Celoni cap a Vallgorguina pujant
+            Collsacreu, és una part que va pujant i pujant, serà dur, però no defalliu que ara ja sí que som a la recta
+            final!
+            Baixada en picat per corbes fins a la zona de meta on ja tan sols ens quedarà fer l'última etapa d'aquesta
+            marxa on serà d'obligat compliment menjar, beure, descansar, compartir anècdotes del viatge i sobretot...
+            passar-s'ho bé!
+          </p>
+          <div class="col-12 d-flex justify-content-lg-center justify-content-around flex-wrap mt-lg-4 ">
+            <a href="./files/mapa_la_ports_curta.jpg" class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 m-3"
+              target="_blank" id="dw_mapa" rel="noopener">Mapa <i class="fas fa-map"></i></a>
+            <a href="./files/la_ports_curta_2022.gpx" class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 m-3"
+              target="_blank" id="track" rel="noopener">Track <i class="fas fa-file-download"></i></a>
+            <a href="./images/altimetria_curta.jpg" rel="noopener" class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 m-3"
+              target="_blank" id="dw_altimetria">Altimetria <i class="fas fa-chart-area"></i></a>
+            <a href="https://www.komoot.es/tour/501177143" rel="noreferrer"
+              class="btn btn-success bold mx-1 mx-lg-2 my-shadow2 m-3" target="_blank" id="komoot">Komoot
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div id="maillot" class=" container-fluid section px-0 pt-0 m-0">
+      <div class="col white my-shadow d-flex align-items-center ps-3 pe-3 mt-4 mt-lg-5" id="section-title">
+        <div class="w-100">
+          Mallot:
+        </div>
+      </div>
+      <div id="maillotFrame" class="mx-auto col-12 offset-1 col-lg-8 offset-lg-2">
+        <iframe title="vista maillot 3d" loading="lazy" src="" frameborder="0" class="lozad" id="iframeMaillot"></iframe>
+      </div>
+      <div class="info-text text-white">
+        <h4>Maillot Gobik CX SuperLight by <span class="mt">La Ports</span></h4>
+        <p>
+          Un mallot amb un ajust perfecte.
+          <br>
+          Es tracta d'un mallot ultralleuger, molt cenyit i altament transpirable que fa efecte segona pell. La seva
+          combinació de 4 teixits diferents fan del CX SuperLight una peça tècnicament molt completa. Amb un ajust
+          perfecte, està dissenyat per a adoptar una postura agressiva sobre la bicicleta i aconseguir el màxim
+          rendiment aerodinàmic.
+        </p>
+      
+          <div class="col-12 d-flex justify-content-lg-center justify-content-around flex-wrap mt-lg-4 ">
+            <a href="./images/gobik superlight.jpg" class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 m-4"
+              target="_blank" id="talla_maillot" rel="noopener">Guia de Tallas Maillot</a>
+              <a href="./images/culotte_home.jpg" class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 m-4"
+              target="_blank" id="talla_culotte_home" rel="noopener">Guia de Tallas Culotte Home</a>
+              <a href="./images/culotte_dona.jpg" class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 m-4"
+              target="_blank" id="talla_culotte_dona" rel="noopener">Guia de Tallas Culotte Dona</a>
+          </div>
+
+      </div>
+
+
+    </div>
     
+    <div id="inscription" class=" container-fluid section px-0 pt-0 m-0">
+      <div class="col white my-shadow d-flex align-items-center ps-3 pe-3 mt-4 mt-lg-5" id="section-title">
+        <div class="w-100 text-end">
+          Inscripció:
+        </div>
+      </div>
+      <div class="col-12" id="iframe-rock">
+        <h4 class="text-white bold">Preus Per Ordre d'Accés:</h4>
+       <div class="d-flex justify-content-center px-3 col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3 mb-4">
+         
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Inscrits</th>
+              <th scope="col" id="preu_t">Preu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Del 0 al 500</th>
+              <td class="bold">45€</td>
+            </tr>
+            <tr>
+              <th scope="row">Del 500 al 750</th>
+              <td class="bold">50€</td>
+            </tr>
+            <tr>
+              <th scope="row">Del 750 fins a esgotar places</th>
+              <td class="bold">55€</td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+        <div id="rockSports">
+          
+          <div id ='dframe' style='width:100%; max-width:100%'></div>
+<script type='text/javascript' src='https://rockthesportv2.blob.core.windows.net/scripts/pym.js'></script>
+<script>
+var pymParent = new pym.Parent('dframe', 'https://www.rockthesport.com/es/evento/portsdelmaresme2022/inscripcion/selecciona-tarifa?frm=1&men=0&tit=1', {});
+</script>
 
-<script src="./llibrerias/jquery-ui-1.12.1/jquery-3.5.1.min.js"></script>
-<script src="./llibrerias/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-<script src="./llibrerias/bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="./llibrerias/bootstrap-5.1.0-dist/css/bootstrap.min.css">
-<script src="./script.js"></script>
+        </div>
+        <div class="col-12 d-flex justify-content-lg-center justify-content-around flex-wrap mt-lg-2 ">
+          <a href="https://www.rockthesport.com/es/evento/portsdelmaresme2022/inscripcion/selecciona-tarifa" class="btn btn-light bold mx-1 mx-lg-2 my-shadow2 m-3"
+            target="_blank" id="rocksport_extern" rel="noopener" >Si no pots inscriure't premi aquí <i class="fas fa-exclamation-triangle text-danger"></i></a>
+            <a href="https://www.rockthesport.com/es/evento/portsdelmaresme2022/my-registration" class="btn btn-light bold mx-1 mx-lg-2 my-shadow2 m-3"
+            target="_blank" id="ja_inscrit" rel="noopener">Ja estic inscrit <i class="far fa-address-card fa-lg text-primary"></i></a>
+        </div>
+        
+      </div>
+    </div>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="/__/firebase/7.4.0/firebase-app.js"></script>
+    <div id="contact" class=" container-fluid section px-0 pt-0 m-0">
+      <div class="col white my-shadow d-flex align-items-center ps-3 pe-3 mt-4 mt-lg-5" id="section-title">
+        <div class="w-100 text-end">
+          Contacte:
+        </div>
+      </div>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="/__/firebase/7.4.0/firebase-analytics.js"></script>
+      <div class="col-12 d-flex justify-content-around flex-wrap pt-5 px-3">
+        <div class=" py-4 mt-5 mx-auto col-lg-6 offset-lg-3">
+          <a href="https://us20.list-manage.com/contact-form?u=ac714c36d9f4fa85ce1332035&form_id=456aba9a8a80ebf1c17749e5b66354ea"
+            target="_blank" rel="noopener noreferrer" class="btn btn-light btn-lg bold mt-5 btn-contacto my-shadow2"
+            id="contactar">Contactar <i class="far fa-envelope"></i></a>
+          <!-- Begin Mailchimp Signup Form -->
+          <style type="text/css">
+            #mc_embed_signup {
+              background: #181818;
+              clear: left;
+              color: white;
+              font-size: larger;
 
-    <script src="/__/firebase/7.4.0/firebase-performance.js"></script>
-
-    <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
-    
-    <!-- TO DO    
-    <script>
-        // Get the Analytics service for the default app
-        const analytics = firebase.analytics();
-
-        document.getElementById("quadre").addEventListener("change", function () {
-            analytics.logEvent('quadre', {
-                name: JSON.parse($("#quadre").val()).nom
-            });
-        });
-        document.getElementById("rodes").addEventListener("change", function () {
-            analytics.logEvent('rodes', {
-                name: JSON.parse($("#rodes").val()).nom
-            });
-        });
-        document.getElementById("grup").addEventListener("change", function () {
-            analytics.logEvent('grup', {
-                name: JSON.parse($("#grup").val()).nom
-            });
-        });
-        document.getElementById("modalitat").addEventListener("change", function () {
-            analytics.logEvent('modalitat', {
-                name: $("#modalitat").val()
-            });
-        })
-        $("#enviar").click(function () {
-            analytics.logEvent('enviat');
-            analytics.logEvent('purchase', {
-                value: 1
-            });
-        })
-        $("#pdf").click(function () {
-            analytics.logEvent('pdf_generate');
-        })
-
-        window.onbeforeunload = function () {
-            if (parseInt($("#total").html()) > 0) {
-                analytics.logEvent('total', {
-                    name: $("#total").html()
-                });
             }
 
-        }
-    </script>
+            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+          </style>
+          <div id="mc_embed_signup" class="mt-5 pt-5">
+            <form
+              action="https://muntbikes.us20.list-manage.com/subscribe/post?u=ac714c36d9f4fa85ce1332035&amp;id=07cda3f4e3"
+              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+              target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <h2 class="">Subscriu-te per a rebre totes les novetats</h2>
+                <br>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-183956388-1">
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+                <div class="mc-field-group ">
+                  <label for="mce-EMAIL" class="form-label float-start">Correu Electronic
+                  </label>
+                  <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+                </div>
+                <div class="mc-field-group mt-2">
+                  <label for="mce-FNAME" class="form-label float-start">Nom
+                  </label>
+                  <input type="text" value="" name="FNAME" class="required form-control" id="mce-FNAME">
+                </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                    name="b_ac714c36d9f4fa85ce1332035_07cda3f4e3" tabindex="-1" value=""></div>
+                <div class="clear"><button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                    class="btn btn-primary btn-lg bold mt-3 my-shadow2" aria-label="enviar para guardar correo para newslatter">Enviar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+          <!--End mc_embed_signup-->
+        </div>
+      </div>
+    </div>
 
-        gtag('config', 'UA-183956388-1');
-    </script>
--->
+    <div id="rules" class=" container-fluid section px-0 pt-0 m-0">
+      <div class="col white my-shadow d-flex align-items-center ps-3 pe-3 mt-4 mt-lg-5" id="section-title">
+        <div class="w-100 text-end">
+          Normativa:
+        </div>
+      </div>
+      <div class="pt-5 h-50">
+        <div class="pt-5 mt-4 mt-lg-5 text-white bold px-2 large">
+          <a href="./files/Reglament Ports del Maresme 2022.pdf" class="btn btn-primary btn-lg my-shadow2 mt-2"
+            target="_blank" rel="" class="mt-lg-2" id="reglament"><i class="fas fa-file-pdf "></i> Reglament la Ports
+            del Maresme 2022.pdf</a>
+          <br>
+          <br>
+          <a href="./files/Declaracio del Cicloturista 2022.pdf" class="btn btn-primary btn-lg my-shadow2 mt-2"
+            target="_blank" rel=""><i class="fas fa-file-pdf"></i>
+            Declaració Cicloturista.pdf</a>
+          <br>
+          <br>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="sponsors" class=" container-fluid section px-0 pt-0 m-0">
+      <div class="col white my-shadow d-flex align-items-center ps-3 pe-3 mt-4 mt-lg-5" id="section-title">
+        <div class="w-100 text-end">
+          Esponsors:
+        </div>
+      </div>
+      <div id="sponsors-div">
+        <div class=" h-50 d-flex justify-content-around flex-wrap pt-4 bg">
+          <a href="https://www.muntbikes.com" rel="noreferrer" class="my-auto mx-auto" id="muntbikes"><img
+              loading="lazy" src="./images/logo muntbikes.png" alt="logo muntbikes" class=" logo my-auto mx-auto"></a>
+            
+          <a href="https://www.bianchistore.es" rel="noreferrer" class="my-auto mx-auto " id="bianchi"><img loading="lazy"
+              src="./images/bianchiStoreEs.png" alt="logo bianchistorees bianchi" class=" logo my-auto mx-auto"></a>
+        </div>
+        <div class=" d-flex justify-content-around flex-wrap align-content-around bg">
+          <a href="https://www.hyundai.es/concesionarios/motorprim" rel="noreferrer" class="my-auto mx-auto pb-3"
+            id="hyundai"><img src="./images/hyundai.png" alt="logo gobik" class=" logo2 "></a>
+          <a href="https://www.gobik.com" rel="noreferrer" class="my-auto mx-auto pb-3 bg" id="gobik"><img loading="lazy"
+              src="./images/gobik.png" alt="logo gobik" class=" logo2 "></a>
+          <a href="https://lossantosibericos.com/" rel="noreferrer" class="my-auto mx-auto pb-3 bg" id="losSantos"><img
+              loading="lazy" src="./images/los-santos.png" alt="logo los santos ibericos"
+              class=" logo2 my-auto mx-auto"></a>
+          <a href="https://illy.com/" rel="noreferrer" class="my-auto mx-auto pb-3" id="illy"><img loading="lazy"
+              src="./images/illy.png" alt="logo illy coffe" class=" logo2 my-auto mx-auto"></a>
+          <a href="https://www.islabonitatropicalfruit.com/es/" rel="noreferrer" class="my-auto mx-auto pb-3 " bg
+            id="islaBonita"><img loading="lazy" src="./images/isla-bonita-1.png" alt="logo isla bonita"
+              class=" logo2 my-auto mx-auto"></a>
+          <a href="https://www.facebook.com/granjadelmontsenyoficial/" rel="noreferrer" class="my-auto mx-auto pb-3"
+            id="granja"><img loading="lazy" src="./images/granja-montseny.png" alt="logo la granja del montseny"
+              class=" logo2 my-auto mx-auto"></a>
+
+          <div id="copy" class="col-12 align-center mx-auto bg px-2 text-white">
+            © Tots els drets reservats 2021 | La Ports del Maresme
+          </div>
+        </div>
+      </div>
+
+
+      <!--ToDo-->
+    </div>
+  </div>
+
+
+  <script src="./llibrerias/jquery-ui-1.12.1/jquery-3.5.1.min.js" defer ></script>
+  <script src="./llibrerias/jquery-ui-1.12.1/jquery-ui.min.js" defer ></script>
+  <script defer  src="./llibrerias/bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js"></script>
+  <link defer rel="stylesheet" href="./llibrerias/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./llibrerias/fontawesome-free-5.13.0-web/css/all.min.css" defer >
+
+  <script src="./script.js" defer ></script>
+
+<script async type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+  import { getAnalytics,logEvent } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-analytics.js";
+
+  modules();
+
+
+  function modules(){
+      console.log("analitics set up")
+      // Import the functions you need from the SDKs you need
+      
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyB3wj5Fv98BNVitQAQAUZ5CHryoXByJT0w",
+        authDomain: "la-ports.firebaseapp.com",
+        projectId: "la-ports",
+        storageBucket: "la-ports.appspot.com",
+        messagingSenderId: "505198467712",
+        appId: "1:505198467712:web:817cf772974c06eae7e465",
+        measurementId: "G-WN40DQR2ZH"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    
+      document.getElementById("komoot").addEventListener("click", function () {
+        logEvent(analytics,'komoot');
+      },{passive: true});
+      document.getElementById("track").addEventListener("click", function () {
+        logEvent(analytics,'track');
+      },{passive: true});
+      document.getElementById("dw_mapa").addEventListener("click", function () {
+        logEvent(analytics,'dw_mapa');
+      },{passive: true});
+      document.getElementById("dw_altimetria").addEventListener("click", function () {
+        logEvent(analytics,'dw_alrimetria');
+      },{passive: true});
+      document.getElementById("instagram").addEventListener("click", function () {
+        logEvent(analytics,'instagram');
+      },{passive: true});
+      document.getElementById("facebook").addEventListener("click", function () {
+        logEvent(analytics,'facebook');
+      },{passive: true});
+      document.getElementById("youtube").addEventListener("click", function () {
+        logEvent(analytics,'youtube');
+      },{passive: true});
+      document.getElementById("sortida").addEventListener("click", function () {
+        logEvent(analytics,'sortida');
+      },{passive: true});
+      document.getElementById("dorsal_divendres").addEventListener("click", function () {
+        logEvent(analytics,'dorsal_divendres');
+      },{passive: true});
+      document.getElementById("dorsal_diumenge").addEventListener("click", function () {
+        logEvent(analytics,'dorsal_diumenge');
+      },{passive: true});
+      document.getElementById("img_culotte").addEventListener("click", function () {
+        logEvent(analytics,'img_culotte');
+      },{passive: true});
+      document.getElementById("talla_maillot").addEventListener("click", function () {
+          logEvent(analytics,'talla_maillot');
+        },{passive: true});
+        document.getElementById("talla_culotte_home").addEventListener("click", function () {
+          logEvent(analytics,'talla_culotte_home');
+        },{passive: true});
+        document.getElementById("talla_culotte_dona").addEventListener("click", function () {
+          logEvent(analytics,'talla_culotte_dona');
+        },{passive: true});
+        document.getElementById("rocksport_extern").addEventListener("click", function () {
+          logEvent(analytics,'link_inscripcio_externa_rocksports');
+        },{passive: true});
+        document.getElementById("ja_inscrit").addEventListener("click", function () {
+          logEvent(analytics,'boto ja inscrit');
+        },{passive: true});
+      document.getElementById("muntbikes").addEventListener("click", function () {
+        logEvent(analytics,'sponsor', {
+          name: 'muntbikes'
+        });
+      },{passive: true});
+      document.getElementById("bianchi").addEventListener("click", function () {
+        logEvent(analytics,'sponsor', {
+          name: 'bianchi'
+        });
+      },{passive: true});
+      document.getElementById("hyundai").addEventListener("click", function () {
+        logEvent(analytics,'sponsor', {
+          name: 'hyundai'
+        });
+      },{passive: true});
+      document.getElementById("gobik").addEventListener("click", function () {
+        logEvent(analytics,'sponsor', {
+          name: 'gobik'
+        });
+      },{passive: true});
+      document.getElementById("islaBonita").addEventListener("click", function () {
+        logEvent(analytics,'sponsor', {
+          name: 'isla bonita'
+        });
+      },{passive: true});
+      document.getElementById("losSantos").addEventListener("click", function () {
+        logEvent(analytics,'sponsor', {
+          name: 'los santos'
+        });
+      },{passive: true});
+      document.getElementById("illy").addEventListener("click", function () {
+        logEvent(analytics,'sponsor', {
+          name: 'illy'
+        });
+      },{passive: true});
+      document.getElementById("granja").addEventListener("click", function () {
+        logEvent(analytics,'sponsor', {
+          name: 'la granja del montseny'
+        });
+      },{passive: true});
+      document.getElementById("inscribete").addEventListener("click", function () {
+        logEvent(analytics,'btn inscribete');
+      },{passive: true});
+      document.getElementById("reglament").addEventListener("click", function () {
+        logEvent(analytics,'reglament');
+      },{passive: true});
+      document.getElementById("contactar").addEventListener("click", function () {
+        logEvent(analytics,'contactar btn');
+      },{passive: true});
+
+    }
+</script>
+
 
 </body>
 
