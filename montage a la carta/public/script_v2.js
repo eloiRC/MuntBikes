@@ -538,13 +538,13 @@ t_manillars_road = [{
     },
     {
         nom: "Colnago sr9 + LIGHTWEIGHT RENNBÜGEL ", //
-        preu: 537,
+        preu: 585,
         img: "sr9_lightweight.jpg",
         brand:"Colnago - LightWeight"
     },
     {
-        nom: "Lightweight BÜGELHALTER + LIGHTWEIGHT RENNBÜGEL", //
-        preu: 675,
+        nom: "Lightweight BÜGELHALTER + LIGHTWEIGHT KOMPAKTBÜGEL", //
+        preu: 735,
         img: "lightweight.jpg",
         brand:"Colnago - Lightweight"
     }
@@ -863,25 +863,25 @@ t_rodes_disc = [{
     },
     {
         nom: "Melnstein T 24D tubular", //
-        preu: 4079,
+        preu: 4490,
         img: "melstein.jpg",
         brand:"LightWeight"
     },
     {
         nom: "Melnstein T 24D tubular schwarz", //
-        preu: 4479,
+        preu: 4989,
         img: "melstein.jpg",
         brand:"LightWeight"
     },
     {
-        nom: "Melnstein C 24D Cubierta", //
-        preu: 4703,
+        nom: "Melnstein evo 24D Cubierta", //
+        preu: 5190,
         img: "melstein.jpg",
         brand:"LightWeight"
     },
     {
-        nom: "Melnstein C 24D Cubireta schwarz", //
-        preu: 5105,
+        nom: "Melnstein evo 24D Cubireta schwarz", //
+        preu: 5689,
         img: "melstein.jpg",
         brand:"LightWeight"
     },
@@ -1131,19 +1131,19 @@ t_rodes_road = [
     },
     {
         nom: "Meilenstein T 24E tubular", //
-        preu: 3587,
+        preu: 3690,
         img: "melstein_r.jpg",
         brand:"LightWeight"
     },
     {
         nom: "Meilenstein T 24E tubular schwarz", //
-        preu: 3982,
+        preu: 4189,
         img: "melstein_r.jpg",
         brand:"LightWeight"
     },
     {
         nom: "Meilenstein C 24E Cubierta", //
-        preu: 4269,
+        preu: 4480,
         img: "melstein_r.jpg",
         brand:"LightWeight"
     },
@@ -1371,7 +1371,7 @@ t_tijes_road = [{
     },
     {
         nom: "LEISTUNGSTRÄGER",
-        preu: 308,
+        preu: 300,
         img: "t_lightweight.jpg",
         brand:"LIGHTWEIGHT"
     },
