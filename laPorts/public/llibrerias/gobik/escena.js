@@ -100,9 +100,11 @@ var propiedad = {	};
 var propiedades_escena = [];
 
 
+
 	// Carga el json con la configuración de la escena y llama a la función que monta la escena
-	$.getJSON('./llibrerias/gobik/json/escena.json'
-			).done(function (json) {
+	/*$.ajax({url: 'php/creajsonescena.php',
+			type: 'post'
+			}).done(function (json) {
 					// transforma el json de la escena
 					propiedades_escena = json;
 					
@@ -115,23 +117,8 @@ var propiedades_escena = [];
 					}).fail(function () {
 						alert("Error al llamar a la función para crear la escena!");
 						}).always(function () {
-							});
+							});*/
 							
-	/*$.getJSON('escena.json', function () {
-      }).done(function(json) {
-			// transforma el json de la escena
-					propiedades_escena = json;
-					
-					// Configura el render
-					init();
-			
-					// Crea la escena
-					montarEscena(propiedades_escena);
-		}).fail(function() {    
-			alert("Error al llamar obtener escena!");
-			});*/
-							
-	
 						
    
  // fracción para convertir grados a radianes

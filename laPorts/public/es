@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -69,7 +70,8 @@
         
         <a href="#inscription" class="link">Inscripción</a>
         <br>
-        
+        <a href="#resultats" class="link">Resultados</a>
+        <br>
         <a href="#contact" class="link">Contacto</a>
         <br>
         <a href="#rules" class="link">Normativa</a>
@@ -106,9 +108,10 @@
       <video aplaysinline playsinline autoplay muted loop preload="auto" id="bgvid" class="lozad">
       </video>
       <div class="cover-div white">
+      <!--
         <h1 class="bold">22 de Mayo</h1>
-        <br>
-        <a href="#inscription" class="btn btn-lg btn-outline-light " id="inscribete"> <span class="bold ">Inscríbete</span> </a>
+        <br>-->
+        <a href="#resultats" class="btn btn-lg btn-outline-light " id="btn_resultados"> <span class="bold ">Resultados</span> </a>
 
       </div>
 
@@ -166,12 +169,22 @@
             y satisfacción y sobretodo para ver como os cae la bava al ver toda la comida que tenemos preparada incluyendo
              jamón Los Santos, Yogures de la granja del Montesny, Fideua de Can Dani y cerveza que tampoco falte.
             <br>
+           
             <!--
             Por si todavía no tenéis bastante, no sufráis, tenemos un par de ases bajo la manga. Esperamos estar a la altura de vuestras
             expectativas sorteando una bici, Bianchi Sprint entre todos los participantes y obsequiándoos
             con un maillot conmemorativo de la marcha by Gobik, para cada uno de vosotros sin excepción.
             -->
             </p>
+             <p class="p-info-space" id="info-text">
+              <span style="font-size: x-large; font-weight: bold;">Aviso:</span>
+              <br>
+              <span class="">
+                Este año ampliamos los días para recoger dorsales hasta 1 semana antes de la marcha, se podrán recoger en Muntbikes el viernes 13 de mayo de 17:00h a 20:00h,
+                asi como el sábado 14 de 10:00h hasta 13:30h. También se podrán recoger la misma semana de <span class="mt">La Ports</span> el viernes 20 de 17:00h a 20:00h y el sábado 21 de 10:00h a 13:30h y de 17:00h a 20:00h, y el mismo día, 22 de mayo, se podrán recoger dorsales de 6:00h a 7:30h.           
+  
+              </span>
+           </p>
             <p class="info-text" id="">
             Te esperamos con gran ilusión!
             Vuelve a formar parte de esta gran experiencia!
@@ -226,7 +239,7 @@
                   class="fas fa-map-marker-alt" ></i> Salida</a>
               <a href="https://www.google.es/maps/place/Munt+Bikes+Arenys/@41.6044867,2.5419574,17z/data=!3m1!5s0x12bb36788af85705:0xe4f11b0778d50a0b!4m5!3m4!1s0x0:0xbd13857c535ff446!8m2!3d41.6058058!4d2.540584?hl=es"
                 class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 mt-3" rel="noopener" target="_blank" id="boto_botiga"><i
-                  class="fas fa-map-marker-alt" ></i> Recogida de Dorsal (viernes y sábado)</a>
+                  class="fas fa-map-marker-alt" ></i> Recogida de Dorsal (13, 14, 20 y 21 de mayo)</a>
               <a href="https://www.google.es/maps/place/41%C2%B036'20.0%22N+2%C2%B032'14.2%22E/@41.605565,2.5367338,19z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d41.6055636!4d2.5372814"
                 class="btn btn-primary bold mx-1 mx-lg-2 my-shadow2 mt-3" rel="noopener" target="_blank" id="boto_botiga"><i
                   class="fas fa-map-marker-alt" ></i> Recogida de Dorsal (Domingo)</a>
@@ -403,10 +416,11 @@
           Inscripción:
         </div>
       </div>
+       <!--
       <div class="col-12" id="iframe-rock">
         <h4 class="text-white bold">Precio Por Orden De Acceso:</h4>
        <div class="d-flex justify-content-center px-3 col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3 mb-4">
-         
+        
         <table class="table">
           <thead>
             <tr>
@@ -429,6 +443,7 @@
             </tr>
           </tbody>
         </table>
+      
        </div>
         <div id="rockSports">
           <div id ='dframe' style='width:100%; max-width:100%'></div>
@@ -445,6 +460,45 @@ var pymParent = new pym.Parent('dframe', 'https://www.rockthesport.com/es/evento
             target="_blank" id="ja_inscrit" rel="noopener">Ya estoy inscrito <i class="far fa-address-card fa-lg text-primary"></i></a>
         </div>
       </div>
+      -->
+    </div>
+    <div id="resultats" class=" container-fluid section px-0 pt-0 m-0">
+      <div class="col white my-shadow d-flex align-items-center ps-3 pe-3 mt-4 mt-lg-5" id="section-title">
+        <div class="w-100 text-end">
+          Resultados:
+        </div>
+      </div>
+      
+      <div class="pt-5  ">
+      <div class="col-12 d-flex justify-content-lg-center justify-content-around flex-wrap mt-lg-5 pt-5">
+
+        <a href="./files/resultats/General 140K.pdf" class="btn btn-primary btn-lg bold mx-3 mx-lg-3 my-shadow2 m-4"
+        target="_blank" rel="" class="mt-lg-2" id="classificacio"><i class="fas fa-file-pdf "></i> Clasificación General Recorrido Largo</a>
+
+        <a href="./files/resultats/Femeni_140K.pdf" class="btn btn-primary btn-lg bold mx-3 mx-lg-3 my-shadow2 m-4"
+            target="_blank" rel="" class="mt-lg-2" id="classificacio"><i class="fas fa-file-pdf "></i> Clasificación Femenina Recorrido Largo</a>
+
+            <a href="./files/resultats/Masculi_140K.pdf" class="btn btn-primary btn-lg bold mx-3 mx-lg-3 my-shadow2 m-4"
+            target="_blank" rel="" class="mt-lg-2" id="classificacio"><i class="fas fa-file-pdf "></i> Clasificación Masculina Recorrido Largo</a>
+
+      </div>
+
+      <div class="col-12 d-flex justify-content-lg-center justify-content-around flex-wrap mt-lg-4 pt-5">
+
+        <a href="./files/resultats/General_96K.pdf" class="btn btn-success btn-lg bold mx-3 mx-lg-3 my-shadow2 m-4"
+        target="_blank" rel="" class="mt-lg-2" id="classificacio"><i class="fas fa-file-pdf "></i> Clasificación General Recorrido Corto</a>
+
+        <a href="./files/resultats/Femeni_96K.pdf" class="btn btn-success btn-lg bold mx-3 mx-lg-3 my-shadow2 m-4"
+            target="_blank" rel="" class="mt-lg-2" id="classificacio"><i class="fas fa-file-pdf "></i> Clasificación Femenina Recorrido Corto</a>
+
+            <a href="./files/resultats/Masculi_96K.pdf" class="btn btn-success btn-lg bold mx-3 mx-lg-3 my-shadow2 m-4"
+            target="_blank" rel="" class="mt-lg-2" id="classificacio"><i class="fas fa-file-pdf "></i> Clasificación Masculina Recorrido Corto</a>
+
+  
+      </div>
+    </div>
+      
+     
     </div>
     
 
@@ -549,6 +603,8 @@ var pymParent = new pym.Parent('dframe', 'https://www.rockthesport.com/es/evento
                 src="./images/bianchiStoreEs.png" alt="logo bianchistorees bianchi" class=" logo my-auto mx-auto"></a>
         </div>
         <div class=" d-flex justify-content-around flex-wrap align-content-around">
+          <a href="https://fullgas.org/es/" rel="noreferrer" class="my-auto mx-auto pb-3"
+            id="fullgas"><img src="./images/FULLGAS.png" alt="logo full gas nutrition" class=" logo2 "></a>
           <a href="https://www.hyundai.es/concesionarios/motorprim" rel="noreferrer" class="my-auto mx-auto pb-3" id="hyundai"><img
               src="./images/hyundai.png" alt="logo gobik" class=" logo2 "></a>
           <a href="https://www.gobik.com" rel="noreferrer" class="my-auto mx-auto pb-3" id="gobik"><img loading="lazy" src="./images/gobik.png" alt="logo gobik"
@@ -563,7 +619,7 @@ var pymParent = new pym.Parent('dframe', 'https://www.rockthesport.com/es/evento
               src="./images/granja-montseny.png" alt="logo la granja del montseny" class=" logo2 my-auto mx-auto"></a>
 
           <div id="copy" class="col-12 align-center mx-auto bg px-2 text-white">
-            © Todos los derechos reservados 2021 | La Ports del Maresme
+            © Todos los derechos reservados 2022 | La Ports del Maresme
           </div>
         </div>
       </div>

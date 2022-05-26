@@ -139,7 +139,7 @@ t_road_disc = [
     },
     {
         nom: "Colnago V3 RS", //
-        preu: 4638,
+        preu: 4789,
         brand: "Colnago",
         img: "v3rs_disc.jpg"
     },
@@ -2381,11 +2381,11 @@ t_portabido = [{
 
 t_pedalier = [{
         nom: "CeramicSpeed ", //
-        preu: 282
+        preu: 319
     },
     {
         nom: "CeramicSpeed coated", //
-        preu: 387
+        preu: 425
     }
 ];
 
@@ -2395,15 +2395,15 @@ t_roldanes = [{
     },
     {
         nom: "Campagnolo EPS", //
-        preu: 503
+        preu: 511
     },
     {
         nom: "Shimano", //
-        preu: 482
+        preu: 513
     },
     {
         nom: "Sram", //
-        preu: 503
+        preu: 511
     }
 ];
 
@@ -2452,13 +2452,13 @@ t_bieles_road = [{
     },
     {
         nom: "Red AXS", //
-        preu: 700,
+        preu: 735,
         img: "red.jpg",
         brand:"Sram"
     },
     {
         nom: "Force AXS", //
-        preu: 435,
+        preu: 263,
         img: "force.jpg",
         brand:"Sram"
     },
@@ -2520,7 +2520,7 @@ t_bieles_road = [{
     },
     {
         nom: "Red AXS", //
-        preu: 1200,
+        preu: 1260,
         img: "quarq_red.jpg",
         brand:"Quarq"
     },

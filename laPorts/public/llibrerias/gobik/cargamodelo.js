@@ -218,8 +218,16 @@ function nuevoModeloEscena(propiedades,renderizar=false, callback=null)
 	let materials = [];
 	let mesh;
 	
-	// carga el modelo
-		loader.load( 'escena/modelos/'+propiedades.modelo, function (geometry, materials) {
+	/** Modificación: 18/06/2021 Modificación: Permite cargar modelos desde un repositorio. **/
+	
+		// carga el modelo
+		var url = "";
+		if (propiedades.modelo.startsWith("http")) url = propiedades.modelo;
+		else url = 'escena/modelos/'+propiedades.modelo;
+	
+		loader.load( url, function (geometry, materials) {
+	
+	/** Fin Modificación 18/06/2021 **/
 
 			// crea la geometría
 			let ext = propiedades.modelo.substr(propiedades.modelo.lastIndexOf('.') + 1);
@@ -274,15 +282,24 @@ function nuevoModeloEscena(propiedades,renderizar=false, callback=null)
 						
 						/** Modificación: 18/02/2021 Modificación: Incluir y modificar el parámetro "cache_version" en el archivo usuario.json para usarlo como semilla para evitar caché al republicar una escena. **/
 						
-							materials[0][propiedad] = textureLoader.load('escena/modelos/'+propiedades[propiedad], function (texture) {
-								materials[0][propiedad].wrapS = materials[0][propiedad].wrapT = THREE.RepeatWrapping;
-								materials[0][propiedad].offset.set( 0, 0 );
-								if (renderizar) { renderer.render(scene,camera); }
-								controlCarga++;
-								}, null,function(error){
-									console.log("Error cargando ",propiedad ,propiedades[propiedad], error);
+							/** Modificación: 23/06/2021 Modificación: Adaptación enlace público para cargar mapas y diseños desde el repositorio. **/
+								// Adaptación para cargar mapas desde el repositorio
+								var mapa = "";
+								if (propiedades[propiedad].startsWith("http")) mapa = propiedades[propiedad];
+								else mapa = 'escena/modelos/'+propiedades[propiedad];
+							
+								materials[0][propiedad] = textureLoader.load("escena/modelos/"+propiedades[propiedad], function (texture) {
+								
+							/** Fin Modificación 23/06/2021 **/
+								
+									materials[0][propiedad].wrapS = materials[0][propiedad].wrapT = THREE.RepeatWrapping;
+									materials[0][propiedad].offset.set( 0, 0 );
+									if (renderizar) { renderer.render(scene,camera); }
 									controlCarga++;
-									});
+									}, null,function(error){
+										console.log("Error cargando ",propiedad ,propiedades[propiedad], error);
+										controlCarga++;
+										});
 									
 						/** Fin Modificación 18/02/2021 **/
 						}
@@ -462,7 +479,6 @@ function montarEscena(propiedades)
 							if (cursor)	cursor.innerHTML = "";
 							
 							// activa el orbitControls para el control de la escena
-							console.log(camera,container)
 							controls = new THREE.OrbitControls( camera, container );
 							reiniciarCamara();
 							
