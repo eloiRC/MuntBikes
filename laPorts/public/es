@@ -112,7 +112,11 @@
         <h1 class="bold">22 de Mayo</h1>
         <br>-->
         <a href="#resultats" class="btn btn-lg btn-outline-light " id="btn_resultados"> <span class="bold ">Resultados</span> </a>
-
+        <br>
+        <br>
+        <a href="https://drive.google.com/drive/folders/1DVcgDLllAeaX2PmcM29hyfiS9C6ztrji?usp=sharing" class="btn btn-lg btn-outline-light " id="btn_resultats" target="_blank" rel="" class="mt-lg-2" id="btn_fotos"> 
+         <span class="bold "><i class="fa-solid fa-image"></i> Fotos 2022</span>
+        </a>
       </div>
 
     </div>
@@ -472,7 +476,7 @@ var pymParent = new pym.Parent('dframe', 'https://www.rockthesport.com/es/evento
       <div class="pt-5  ">
       <div class="col-12 d-flex justify-content-lg-center justify-content-around flex-wrap mt-lg-5 pt-5">
 
-        <a href="./files/resultats/General 140K.pdf" class="btn btn-primary btn-lg bold mx-3 mx-lg-3 my-shadow2 m-4"
+        <a href="./files/resultats/General_140K.pdf" class="btn btn-primary btn-lg bold mx-3 mx-lg-3 my-shadow2 m-4"
         target="_blank" rel="" class="mt-lg-2" id="classificacio"><i class="fas fa-file-pdf "></i> Clasificación General Recorrido Largo</a>
 
         <a href="./files/resultats/Femeni_140K.pdf" class="btn btn-primary btn-lg bold mx-3 mx-lg-3 my-shadow2 m-4"
