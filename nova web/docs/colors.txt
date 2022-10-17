@@ -1,0 +1,23 @@
+palet 1 
+url: https://coolors.co/000000-212121-ac0025-cecccc-fefcfd
+
+Black
+#000000
+
+Grey	
+#212121
+
+Red
+#AC0025
+
+hover red 
+#f50034
+
+light gray
+#CECCCC
+
+White
+#fefcfd
+
+
+

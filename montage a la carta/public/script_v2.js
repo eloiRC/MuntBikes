@@ -773,55 +773,55 @@ t_rodes_disc = [{
     },
     {
         nom: "Peak 4550 (tune) tubular", //
-        preu: 3050,
+        preu: 3600,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
     {
         nom: "Peak 4550 (carbon-ti) tubular", //
-        preu: 3200,
+        preu: 3960,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
     {
         nom: "Peak 4550 (dt-240) tubular", //
-        preu: 3300,
+        preu: 3990,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
     {
         nom: "Peak 4550 (dt-180) tubular", //
-        preu: 3950,
+        preu: 4490,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
     {
         nom: "Grid 4540 (tune) cubierta", //
-        preu: 2850,
+        preu: 4320,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
     {
         nom: "Peak 4550 (tune) cubierta", //
-        preu: 3050,
+        preu: 3600,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
     {
         nom: "Peak 4550 (carbon-ti) cubierta", //
-        preu: 3200,
+        preu: 3960,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
     {
         nom: "Peak 4550 (dt-240) cubierta", //
-        preu: 3300,
+        preu: 3990,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
     {
         nom: "Peak 4550 (dt-180) cubierta", //
-        preu: 3950,
+        preu: 4490,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
@@ -1053,31 +1053,31 @@ t_rodes_road = [
     },
     {
         nom: "Peak 4550 (tune) tubular", //
-        preu: 3050,
+        preu: 3600,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
     {
         nom: "Peak 4550 (carbon-ti) tubular", //
-        preu: 3200,
+        preu: 3960,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
     {
         nom: "Grid 4540 (tune) cubierta", //
-        preu: 2850,
+        preu: 4320,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
     {
         nom: "Peak 4550 (tune) cubierta", //
-        preu: 3050,
+        preu: 3600,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
     {
         nom: "Peak 4550 (carbon-ti) cubierta", //
-        preu: 3200,
+        preu: 3960,
         img: "peak4550.jpg",
         brand:"Princeton"
     },
