@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/eloiRC/MuntBikes#readme",
   "dependencies": {
-    "firebase": "^8.7.0"
+    "firebase": "^8.10.1"
   }
 }
